@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duzz System - Soluções em Tecnologia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #97CBFD;
+            color: #0F1F2E;
+            line-height: 1.6;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        .snap-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: transform 0.6s ease-in-out;
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .snap-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #17497f;
+        }
+
+        .hero,
+        .highlight-section,
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            background-color: #17497f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-comercial {
+            padding: 10px 1px;
+            background-color: #17497f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #123a66;
+        }
+
+        .highlight-section {
+            color: white;
+        }
+
+        .landing-pages {
+            background: linear-gradient(to right, #17497f, #2566a8);
+        }
+
+        .ia-agents {
+            background: linear-gradient(to right, #1c3f5c, #2b6db3);
+        }
+
+        .gestao-sistemas {
+            background: linear-gradient(to right, #143659, #3b82f6);
+        }
+
+        .highlight-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            background-color: #97CBFD;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #17497f;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background-color: #17497f;
+            color: white;
+        }
+
+        .scroll-buttons {
+            position: fixed;
+            right: 1rem;
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 1001;
+        }
+
+        .scroll-buttons button {
+            background-color: #17497f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .float-img {
+            float: left;
+            width: 80px;
+            height: 50px;
+            margin: 0 1rem 0.5rem 0;
+        }
+
+        .footer {
+            text-align: justify;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .highlight-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <nav>
+                <div class="logo">Duzz System</div>
+                <a href="https://api.whatsapp.com/send/?phone=5538998588893&text=Olá&type=phone_number&app_absent=0"
+                    target="_blank" class="btn">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="snap-section hero" id="section0">
+        <div class="container">
+            <h1>Transformamos tecnologia em soluções inteligentes</h1>
+            <p>Consultoria em tecnologia, desenvolvimento de software sob medida e soluções SaaS inovadoras.</p>
+            <a href="#contato" class="btn">Solicite uma Consultoria</a>
+        </div>
+    </section>
+
+    <section class="snap-section highlight-section landing-pages" id="section1">
+        <div class="container">
+            <h2>Landing Pages que Convertem</h2>
+            <p>Projetamos landing pages modernas e eficazes que maximizam a conversão e oferecem uma experiência fluida
+                e responsiva para seus visitantes.</p>
+        </div>
+    </section>
+
+    <section class="snap-section highlight-section ia-agents" id="section2">
+        <div class="container">
+            <h2>Criação de Agentes de Inteligência Artificial</h2>
+            <p>Desenvolvemos agentes inteligentes personalizados para otimizar processos, oferecer suporte automatizado
+                e inovar a experiência do usuário.</p>
+        </div>
+    </section>
+
+    <section class="snap-section highlight-section gestao-sistemas" id="section3">
+        <div class="container">
+            <h2>Sistemas de Gestão Comercial Não-Fiscal</h2>
+            <p>Implantamos sistemas de gestão eficientes e flexíveis, ideais para operações comerciais que não exigem
+                emissão fiscal, com controle total e relatórios completos.</p>
+        </div>
+    </section>
+
+    <section class="container services" id="section4">
+        <div class="service-card">
+            <h3>Consultoria Cloud</h3>
+            <p style="text-align: justify;">
+                <img src="icons/Made with insMind-image.png" alt="Cloud Icon" class="float-img" />
+                Estruturamos, migramos e mantemos ambientes em nuvem com foco em escalabilidade, segurança e alta
+                disponibilidade. Soluções personalizadas com custo otimizado.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Consultoria em Dados</h3>
+            <p style="text-align: justify;">
+                <img src="icons/dados.jpg" alt="Cloud Icon" class="float-img" />
+                Transforme dados em valor: ajudamos na coleta, estruturação e análise de
+                dados para acelerar insights e melhorar decisões estratégicas.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Consultoria em Automações</h3>
+            <p style="text-align: justify;">
+                <img src="icons/automacao.png" alt="Cloud Icon" class="float-img" />
+                Reduza erros e ganhe eficiência. Automatizamos rotinas e processos críticos
+                com ferramentas inteligentes e integração fluida.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Consultoria em Desenvolvimento</h3>
+            <p style="text-align: justify;">
+                <img src="icons/dev.png" alt="Cloud Icon" class="float-img" />
+                Projetamos e revisamos soluções de software sob medida. Arquitetura robusta,
+                código limpo e escalável, sempre alinhado às suas necessidades.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Software House</h3>
+            <p style="text-align: justify;">
+                <img src="icons/softwarehouse.png" alt="Cloud Icon" class="float-img" />
+                Time especializado no desenvolvimento de sistemas personalizados, com
+                metodologias ágeis e foco total em entrega de valor contínuo.
+            </p>
+        </div>
+        <div class="service-card">
+                <a href="https://loja.infinitepay.io/duzz_system" target="_blank">
+                <h3>Software Comercial Não-Fiscal</h3>
+            </a>
+                <p style="text-align: justify;">
+                    <img src="icons/commercial.png" alt="Cloud Icon" class="float-img" />
+                    Soluções inteligentes para gestão comercial sem obrigatoriedade fiscal.
+                    Interfaces simples, relatórios completos e integração facilitada.
+                </p>
+            </div>
+    </section>
+
+
+    <footer id="contato">
+        <div class="container footer">
+            <p>Entre em contato conosco e faça parte desta história </p>
+            <p>Email: <strong>contato@duzzsystem.com.br</strong></p>
+            <p>Whatsapp: <strong>(38) 9 9858-8893</strong></p>
+            <p>Instagram: <strong>@duzzsystem</strong></p>
+            <p>&copy; 2025 Duzz System - 40.554.697/0001-67. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const snapSections = document.querySelectorAll(".snap-section");
+        const upButton = document.getElementById("upButton");
+        const downButton = document.getElementById("downButton");
+        const header = document.getElementById("mainHeader");
+        let currentSection = 0;
+
+        function updateButtons() {
+            upButton.classList.toggle("hidden", currentSection === 0);
+            downButton.classList.toggle("hidden", currentSection === snapSections.length - 1);
+        }
+
+        function navigate(direction) {
+            const newIndex = currentSection + direction;
+            if (newIndex >= 0 && newIndex < snapSections.length) {
+                currentSection = newIndex;
+                snapSections[currentSection].scrollIntoView({ behavior: 'smooth' });
+                updateButtons();
+            }
+        }
+
+        window.addEventListener('wheel', (e) => {
+            if (e.deltaY > 50) navigate(1);
+            else if (e.deltaY < -50) navigate(-1);
+        }, { passive: true });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            snapSections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                    currentSection = index;
+                    updateButtons();
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        snapSections.forEach(section => observer.observe(section));
+
+        updateButtons();
+    </script>
+</body>
+
+</html>
