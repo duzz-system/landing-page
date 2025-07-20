@@ -5,6 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Duzz System - Soluções em Tecnologia</title>
+
+    <meta name="description"
+        content="Oferecemos consultoria em sistemas sob medida para empresas que desejam otimizar processos, integrar tecnologias e escalar resultados com eficiência.">
+    <meta name="keywords"
+        content="consultoria em sistemas, otimização de processos, sistemas empresariais, tecnologia para empresas, integração de sistemas, ERP, automação empresarial, gestão, MEI, automação">
+
+
+    <meta property="og:title" content="Duzz System - Consultoria e soluções tecnológicas">
+    <meta property="og:description"
+        content="Soluções em tecnologia, sites, landingpages, automação e integração de sistemas para transformar sua empresa.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_banner.png">
+    <meta property="og:url" content="https://duzzsystem.com.br">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Duzz System - Consultoria e soluções tecnológicas">
+    <meta name="twitter:description"
+        content="Soluções em tecnologia, sites, landingpages, automação e integração de sistemas para transformar sua empresa.">
+    <meta name="twitter:image" content="https://duzzsystem.com.br/icons/logo_banner.png">
+
+    <link rel="icon" type="image/x-icon" href="icons/logo_com_fundo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -238,7 +258,8 @@
     <header id="mainHeader">
         <div class="container">
             <nav>
-                <div class="logo">Duzz System</div>
+                <img src="icons/logo_banner.png" width="10%" height="5%" class="logo" />
+                <!-- <div class="logo">Duzz System</div> -->
                 <a href="https://api.whatsapp.com/send/?phone=5538998588893&text=Olá&type=phone_number&app_absent=0"
                     target="_blank" class="btn">Fale Conosco</a>
             </nav>
@@ -247,7 +268,7 @@
 
     <section class="snap-section hero" id="section0">
         <div class="container">
-            <h1>Transformamos tecnologia em soluções inteligentes</h1>
+            <h1 class="logo">Transformamos tecnologia em soluções inteligentes</h1>
             <p>Consultoria em tecnologia, desenvolvimento de software sob medida e soluções SaaS inovadoras.</p>
             <a href="#contato" class="btn">Solicite uma Consultoria</a>
         </div>
@@ -320,22 +341,22 @@
             </p>
         </div>
         <div class="service-card">
-                <a href="https://loja.infinitepay.io/duzz_system" target="_blank">
+            <a href="https://loja.infinitepay.io/duzz_system" target="_blank">
                 <h3>Software Comercial Não-Fiscal</h3>
             </a>
-                <p style="text-align: justify;">
-                    <img src="icons/commercial.png" alt="Cloud Icon" class="float-img" />
-                    Soluções inteligentes para gestão comercial sem obrigatoriedade fiscal.
-                    Interfaces simples, relatórios completos e integração facilitada.
-                </p>
-            </div>
+            <p style="text-align: justify;">
+                <img src="icons/commercial.png" alt="Cloud Icon" class="float-img" />
+                Soluções inteligentes para gestão comercial sem obrigatoriedade fiscal.
+                Interfaces simples, relatórios completos e integração facilitada.
+            </p>
+        </div>
     </section>
 
 
     <footer id="contato">
         <div class="container footer">
             <p>Entre em contato conosco e faça parte desta história </p>
-            <p>Email: <strong>contato@duzzsystem.com.br</strong></p>
+            <p>Email: <strong>duzzsystem@gmail.com</strong></p>
             <p>Whatsapp: <strong>(38) 9 9858-8893</strong></p>
             <p>Instagram: <strong>@duzzsystem</strong></p>
             <p>&copy; 2025 Duzz System - 40.554.697/0001-67. Todos os direitos reservados.</p>
@@ -344,22 +365,14 @@
 
     <script>
         const snapSections = document.querySelectorAll(".snap-section");
-        const upButton = document.getElementById("upButton");
-        const downButton = document.getElementById("downButton");
         const header = document.getElementById("mainHeader");
         let currentSection = 0;
-
-        function updateButtons() {
-            upButton.classList.toggle("hidden", currentSection === 0);
-            downButton.classList.toggle("hidden", currentSection === snapSections.length - 1);
-        }
 
         function navigate(direction) {
             const newIndex = currentSection + direction;
             if (newIndex >= 0 && newIndex < snapSections.length) {
                 currentSection = newIndex;
                 snapSections[currentSection].scrollIntoView({ behavior: 'smooth' });
-                updateButtons();
             }
         }
 
