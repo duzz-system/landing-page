@@ -137,6 +137,29 @@
     footer p {
       margin: 0.3rem 0;
     }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+    }
   </style>
 </head>
 
@@ -209,6 +232,11 @@
     <p>CNPJ: 40.554.697/0001-67</p>
     <p>&copy; 2025 Duzz System</p>
   </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=5538998588893&text=Olá! Vim pelo site e gostaria de conhecer mais"
+    class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
 </body>
 
 </html>
