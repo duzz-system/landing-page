@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Otimizado -->
-    <meta name="description" content="Duzz Commercial: Sistema de Gestão e PDV Online para Lojas, Oficinas, Salões e Restaurantes. Controle de estoque (Curva ABC), financeiro, serviços e fiado. Teste 7 dias grátis!">
-    <meta name="keywords" content="sistema de gestão online, pdv frente de caixa, sistema para oficinas, sistema para salão de beleza, controle de estoque curva abc, sistema não fiscal, controle de fiado, duzz commercial, sistema para restaurantes, comanda eletrônica">
+    <title>Duzz Commercial | Sistema de Gestão e PDV Online</title>
+    <meta name="description" content="Sistema de Gestão Comercial e PDV Online. Controle de estoque, financeiro, comandas e serviços. Ideal para Lojas, Bares e Oficinas. Teste 7 dias grátis!">
+    <meta name="keywords" content="sistema pdv, gestão comercial, controle de estoque, sistema para loja, sistema para restaurante, duzz system, controle financeiro, emissor de comanda">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Duzz System">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Duzz Commercial | Controle Total do seu Negócio">
-    <meta property="og:description" content="Chega de planilhas. Tenha PDV, Estoque (Curva ABC), Serviços e Financeiro na palma da mão. Comece agora!">
+    <meta property="og:title" content="Duzz Commercial | Controle Total na Palma da Mão">
+    <meta property="og:description" content="Chega de planilhas. Tenha PDV, Estoque e Financeiro integrados. Comece seu teste grátis hoje!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://duzzsystem.com.br/">
     <meta property="og:image" content="https://duzzsystem.com.br/icons/abc-curve.png">
-    
-    <title>Duzz Commercial | Sistema de Gestão e PDV Online</title>
-    <link rel="shortcut icon" href="icons/logo_com_fundo.png">
-    
-    <!-- Tailwind CSS -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Duzz Commercial",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "39.90",
+        "priceCurrency": "BRL",
+        "priceValidUntil": "2025-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
@@ -59,7 +74,7 @@
             }
         }
     </script>
-    
+
     <style>
         /* Estilos adicionais para ícones e detalhes */
         .glass-effect {
@@ -97,10 +112,11 @@
           align-items: center;
           transition: background 0.3s;
         }
-
-        .whatsapp-float:hover {
-          background-color: #1ebe5d;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        
+        /* Ajuste fino para detalhes do accordion */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
