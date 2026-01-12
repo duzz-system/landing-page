@@ -897,19 +897,19 @@
                                     </div>
                                 </div>
                                 <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700">Seu negócio</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="company" id="company" required
+                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm px-4 py-3 bg-gray-50 border"
+                                            placeholder="Nome do seu negócio">
+                                    </div>
+                                </div>
+                                <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
                                     <div class="mt-1">
                                         <input type="email" name="email" id="email" required
                                             class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm px-4 py-3 bg-gray-50 border"
                                             placeholder="seu@email.com">
-                                    </div>
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700">WhatsApp</label>
-                                    <div class="mt-1">
-                                        <input type="tel" name="phone" id="phone" required
-                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm px-4 py-3 bg-gray-50 border"
-                                            placeholder="(00) 00000-0000">
                                     </div>
                                 </div>
                             </div>
@@ -1055,12 +1055,12 @@
             const plan = formData.get('plan_id');
             const name = formData.get('name');
             const email = formData.get('email');
-            const phone = formData.get('phone');
+            const company = formData.get('company');
 
             let planName = plan === 'basic' ? 'Plano Básico (R$ 39,90)' : 'Plano Essencial (R$ 69,90)';
 
             // Message Construction
-            const message = `Olá! Gostaria de assinar o *${planName}* do Duzz Commercial.\n\n*Meus dados:*\nNome: ${name}\nEmail: ${email}\nTelefone: ${phone}`;
+            const message = `Olá! Gostaria de assinar o *${planName}* do Duzz Commercial.\n\n*Meus dados:*\nNome: ${name}\nEmail: ${email}\nMeu Negócio: ${company}`;
 
             // WhatsApp Link
             // Phone number: 5538998588893 (from the floating button)
