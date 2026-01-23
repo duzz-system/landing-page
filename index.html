@@ -191,6 +191,26 @@
         details>summary::-webkit-details-marker {
             display: none;
         }
+
+        .gradient-text-blue {
+            background: linear-gradient(90deg, #0056b3, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .countdown-pill {
+            background: rgba(0, 86, 179, 0.1);
+            border: 1px solid rgba(0, 86, 179, 0.2);
+            color: #0056b3;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
     </style>
 </head>
 
@@ -239,7 +259,11 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
-                            Testar Grátis
+                            <div class="flex flex-col items-start leading-none">
+                                <span>Testar Grátis</span>
+                                <span class="text-[8px] opacity-70 uppercase mt-0.5">Expira em: <span
+                                        class="countdown-timer">00:00:00</span></span>
+                            </div>
                         </a>
                     </div>
 
@@ -399,6 +423,55 @@
                 class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-orange-100 rounded-full opacity-50 blur-3xl">
             </div>
         </header>
+
+        <!-- THE JOURNEY SECTION (PORTED FROM ALTERNATIVE) -->
+        <section class="py-20 bg-gray-50 border-y border-gray-100 italic">
+            <div class="container mx-auto px-6 text-center mb-12">
+                <h2 class="text-3xl font-black text-gray-900 mb-4 uppercase">Você ainda trabalha no <span
+                        class="text-red-600 underline decoration-wavy">PASSADO</span>?</h2>
+                <p class="text-gray-500 font-medium">O caminho da ruína de quem ignora a tecnologia.</p>
+            </div>
+
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center group">
+                        <img src="doodle_notebook.png" alt="Caderno"
+                            class="w-32 h-32 mx-auto mb-4 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                        <h4 class="font-bold text-gray-800 uppercase text-xs">1. O Caderninho</h4>
+                        <p class="text-[10px] text-gray-400 mt-1">"Tá tudo anotado aqui..."</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center group">
+                        <img src="doodle_vanishing.png" alt="Sumiço"
+                            class="w-32 h-32 mx-auto mb-4 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                        <h4 class="font-bold text-gray-800 uppercase text-xs">2. O Furo no Caixa</h4>
+                        <p class="text-[10px] text-gray-400 mt-1">O dinheiro "some" misteriosamente.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center group">
+                        <img src="doodle_panic.png" alt="Pânico"
+                            class="w-32 h-32 mx-auto mb-4 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                        <h4 class="font-bold text-gray-800 uppercase text-xs">3. O Pânico Mensal</h4>
+                        <p class="text-[10px] text-gray-400 mt-1">Boletos vencendo e estoque vago.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="text-center group">
+                        <img src="doodle_time.png" alt="Tempo"
+                            class="w-32 h-32 mx-auto mb-4 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                        <h4 class="font-bold text-gray-800 uppercase text-xs">4. A Escravidão</h4>
+                        <p class="text-[10px] text-gray-400 mt-1">Você não tem vida, só trabalho.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="#planos"
+                        class="inline-block bg-red-600 text-white px-8 py-3 rounded-full font-black text-sm uppercase tracking-widest animate-pulse hover:bg-red-700 hover:scale-110 transition shadow-lg">
+                        PARE O CICLO AGORA 💀
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- FEATURES GRID -->
         <section id="funcionalidades" class="py-20 bg-white">
@@ -713,16 +786,7 @@
                                         d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </a>
-
-                            <div class="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500">
-                                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                    </path>
-                                </svg>
-                                Pagamento Seguro via <strong>Mercado Pago</strong>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -818,14 +882,7 @@
                                         d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </a>
-
-                            <div class="mt-4 flex items-center justify-center gap-2 text-xs text-brand-blue/70">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                Acesso Imediato + Garantia de 7 dias
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1079,6 +1136,27 @@
             resetTimer();
         });
 
+        // === Countdown Urgency Logic ===
+        function updateCountdown() {
+            const now = new Date();
+            const tomorrow = new Date();
+            tomorrow.setHours(24, 0, 0, 0); // Reset at midnight
+
+            const diff = tomorrow - now;
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            document.querySelectorAll('.countdown-timer').forEach(el => {
+                el.textContent = display;
+            });
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 
