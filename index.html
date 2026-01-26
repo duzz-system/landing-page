@@ -198,19 +198,6 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .countdown-pill {
-            background: rgba(0, 86, 179, 0.1);
-            border: 1px solid rgba(0, 86, 179, 0.2);
-            color: #0056b3;
-            font-size: 0.65rem;
-            padding: 2px 8px;
-            border-radius: 9999px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
     </style>
 </head>
 
@@ -259,11 +246,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
-                            <div class="flex flex-col items-start leading-none">
-                                <span>Testar Grátis</span>
-                                <span class="text-[8px] opacity-70 uppercase mt-0.5">Expira em: <span
-                                        class="countdown-timer">00:00:00</span></span>
-                            </div>
+                            <span>Testar Grátis</span>
                         </a>
                     </div>
 
@@ -280,17 +263,23 @@
             </div>
 
             <!-- Mobile Menu Panel -->
-            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
-                <div class="flex flex-col px-6 py-4 space-y-4">
-                    <a href="#funcionalidades" class="text-gray-700 font-medium">Funcionalidades</a>
-                    <a href="#segmentos" class="text-gray-700 font-medium">Segmentos</a>
-                    <a href="#planos" class="text-gray-700 font-medium">Planos</a>
-                    <a href="https://painel.duzzsystem.com.br/" class="text-brand-blue font-bold text-sm">Acessar Painel
-                        (Login)</a>
-                    <a href="https://app.duzzsystem.com.br" class="text-gray-500 font-medium text-sm">Login Antigo</a>
-                    <a href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=mobile_nav&utm_content=testar_gratis"
-                        onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Começar Teste Grátis' });"
-                        class="text-brand-blue font-bold">Começar Teste Grátis</a>
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+                <div class="flex flex-col px-6 py-6 space-y-4">
+                    <a href="#funcionalidades"
+                        class="text-gray-700 font-medium hover:text-brand-blue">Funcionalidades</a>
+                    <a href="#segmentos" class="text-gray-700 font-medium hover:text-brand-blue">Para quem é?</a>
+                    <a href="#planos" class="text-gray-700 font-medium hover:text-brand-blue">Planos</a>
+
+                    <div class="pt-4 border-t border-gray-100 flex flex-col gap-4">
+                        <a href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=mobile_nav&utm_content=criar_conta"
+                            onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Criar Conta Grátis' });"
+                            class="bg-green-500 text-white text-center py-3 rounded-xl font-bold shadow-md">
+                            CRIAR CONTA GRÁTIS
+                        </a>
+                        <a href="https://painel.duzzsystem.com.br/" class="text-brand-blue font-bold text-center py-2">
+                            Acessar Painel (Login)
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -301,17 +290,13 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <!-- Text Content -->
                     <div class="lg:w-1/2 text-center lg:text-left">
-                        <span
-                            class="inline-block py-1 px-3 rounded-full bg-blue-100 text-brand-blue text-sm font-bold mb-6 tracking-wide uppercase">
-                            Sistema Comercial Não Fiscal
-                        </span>
-                        <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                            O Controle Total do seu Negócio <span class="text-brand-blue">na Palma da Mão</span>
+                        <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 mt-4">
+                            Duzz: O PDV <span class="text-brand-blue">Mais Simples e Completo</span> para Lojas e
+                            Restaurantes
                         </h1>
                         <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Chega de planilhas complicadas! Tenha controle de caixa, estoque e financeiro em um sistema
-                            100%
-                            online. Comece a usar em minutos no celular ou computador.
+                            Controle total do seu negócio em um sistema 100% online. Comece a usar em minutos no celular
+                            ou computador.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -319,7 +304,7 @@
                                 target="_blank"
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'hero', 'button_name': 'Testar Grátis' });"
                                 class="bg-green-500 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-green-600 transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
-                                <span>TESTAR GRÁTIS</span>
+                                <span>COMEÇAR AGORA (Acesso Rápido)</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -330,12 +315,11 @@
                                 Ver Planos e Preços
                             </a>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4 font-medium">* Sem necessidade de cartão de crédito para
-                            testar.</p>
+                        <p class="text-xs text-gray-500 mt-4 font-medium">Acesso seguro verificado pelo Google.</p>
                     </div>
 
                     <!-- CAROUSEL SECTION -->
-                    <div class="lg:w-1/2 relative">
+                    <div class="hidden lg:block lg:w-1/2 relative">
                         <!-- Moldura Principal -->
                         <div
                             class="bg-white rounded-2xl shadow-2xl p-2 border border-gray-200 transform rotate-1 hover:rotate-0 transition duration-500 relative group">
@@ -431,9 +415,9 @@
                     <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Inteligência de
                         Dados</span>
                     <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-2 mb-4 uppercase">Relatórios que <span
-                            class="text-brand-blue">Trabalham por Você</span></h2>
-                    <p class="text-gray-600 text-lg">Saia do escuro. Tome decisões baseadas em números reais e pare de
-                        tentar adivinhar o futuro do seu negócio.</p>
+                            class="text-brand-blue">Trabalham Enquanto Você Vende</span></h2>
+                    <p class="text-gray-600 text-lg">A facilidade de uso que você quer, com os números que você precisa.
+                        Tudo automático, sem complicação.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -448,10 +432,12 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Visão Geral do Negócio</h3>
-                        <p class="text-gray-600 mb-6">Controle o pulso da sua empresa em tempo real. Saiba exatamente
-                            quanto faturou, quais os meios de pagamento mais usados e identifique quem são seus melhores
-                            clientes.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Inteligência Automática</h3>
+                        <p class="text-gray-600 mb-4 font-semibold">Você vende, o sistema <span
+                                class="text-brand-blue">calcula o resto.</span></p>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">Mantenha a agilidade no balcão: o PDV
+                            continua simples e rápido. Cada venda gera, automaticamente, as métricas que você precisa
+                            para crescer, sem planilhas extras.</p>
                         <ul class="space-y-3 text-sm text-gray-500">
                             <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
                                 Histórico de faturamento detalhado</li>
@@ -479,7 +465,8 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Saúde & Planejamento</h3>
                         <p class="text-gray-600 mb-6">O "Raio X" do seu lucro. Antecipe problemas de caixa e visualize a
                             <strong>PREVISÃO</strong> de faturamento para o próximo mês com base na sua performance
-                            atual.</p>
+                            atual.
+                        </p>
                         <ul class="space-y-3 text-sm text-gray-500">
                             <li class="flex items-center gap-2 text-indigo-600 font-bold"><i
                                     class="bi bi-lightning-fill"></i> Previsão inteligente do próximo mês</li>
@@ -1297,27 +1284,7 @@
             resetTimer();
         });
 
-        // === Countdown Urgency Logic ===
-        function updateCountdown() {
-            const now = new Date();
-            const tomorrow = new Date();
-            tomorrow.setHours(24, 0, 0, 0); // Reset at midnight
-
-            const diff = tomorrow - now;
-
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-            document.querySelectorAll('.countdown-timer').forEach(el => {
-                el.textContent = display;
-            });
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        setInterval(updateCarousel, 5000); // 5 seconds
     </script>
 </body>
 
