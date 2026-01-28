@@ -137,19 +137,22 @@
     </script>
 
     <style>
-        /* Estilos adicionais para ícones e detalhes */
+        /* ====== MODERN CSS UTILITIES ====== */
+
+        /* Glassmorphism Effect */
         .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
+        /* Check Icon */
         .check-icon {
             color: #10b981;
-            /* Green-500 */
             flex-shrink: 0;
         }
 
-        /* Ocultar barra de rolagem no carrossel se necessário */
+        /* Hide Scrollbar */
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
@@ -159,31 +162,165 @@
             scrollbar-width: none;
         }
 
+        /* ====== GRADIENT ANIMATIONS ====== */
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(0, 86, 179, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(0, 86, 179, 0.6);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Animated Gradient Background */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f0fdf4, #fef3c7);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        /* Floating Animation */
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Pulse Glow for Featured Elements */
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        /* ====== MODERN BUTTON STYLES ====== */
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-secondary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.2);
+        }
+
+        /* ====== CARD ENHANCEMENTS ====== */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Featured Card Glow */
+        .featured-card {
+            position: relative;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #0056b3, #00d4ff, #0056b3);
+            border-radius: 1.1rem;
+            z-index: -1;
+            opacity: 0.7;
+            filter: blur(8px);
+            transition: opacity 0.3s;
+        }
+
+        .featured-card:hover::before {
+            opacity: 1;
+        }
+
+        /* ====== WHATSAPP FLOAT BUTTON ====== */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
+            width: 64px;
+            height: 64px;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
             color: white;
             border-radius: 50%;
             text-align: center;
-            font-size: 28px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
         }
 
-        /* Ajuste fino para detalhes do accordion */
+        /* ====== ACCORDION STYLES ====== */
         details>summary {
             list-style: none;
         }
@@ -192,11 +329,98 @@
             display: none;
         }
 
+        details {
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            box-shadow: 0 10px 40px rgba(0, 86, 179, 0.1);
+        }
+
+        details summary {
+            transition: color 0.2s;
+        }
+
+        details[open] summary {
+            color: #0056b3;
+        }
+
+        /* ====== GRADIENT TEXT ====== */
         .gradient-text-blue {
-            background: linear-gradient(90deg, #0056b3, #00d4ff);
+            background: linear-gradient(135deg, #0056b3, #00d4ff);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-text-green {
+            background: linear-gradient(135deg, #22c55e, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ====== SECTION DIVIDERS ====== */
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+
+        /* ====== ICON CONTAINERS ====== */
+        .icon-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover .icon-container {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        /* ====== NAV LINK UNDERLINE EFFECT ====== */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0056b3, #00d4ff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ====== PRICING BADGE ANIMATION ====== */
+        .pricing-badge {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        /* ====== SMOOTH SCROLL BEHAVIOR ====== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ====== FOCUS STATES FOR ACCESSIBILITY ====== */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -216,13 +440,14 @@
 
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center space-x-8">
+                        <a href="#planos"
+                            class="nav-link text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
+                        <a href="#segmentos"
+                            class="nav-link text-gray-600 hover:text-brand-blue font-medium transition">Versatilidade</a>
                         <a href="#funcionalidades"
-                            class="text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
-                        <a href="#segmentos" class="text-gray-600 hover:text-brand-blue font-medium transition">Para
-                            quem
-                            é?</a>
-                        <a href="#planos" class="text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
-                        <a href="#faq" class="text-gray-600 hover:text-brand-blue font-medium transition">Dúvidas</a>
+                            class="nav-link text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
+                        <a href="#faq"
+                            class="nav-link text-gray-600 hover:text-brand-blue font-medium transition">Dúvidas</a>
                     </div>
 
                     <!-- CTA Button & Login Link -->
@@ -241,7 +466,7 @@
                         <a href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=nav_cta&utm_content=top_right"
                             target="_blank"
                             onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Grátis' });"
-                            class="bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2">
+                            class="btn-primary text-white px-6 py-2.5 rounded-full font-bold flex items-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -265,10 +490,10 @@
             <!-- Mobile Menu Panel -->
             <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
                 <div class="flex flex-col px-6 py-6 space-y-4">
+                    <a href="#planos" class="text-gray-700 font-medium hover:text-brand-blue">Planos</a>
+                    <a href="#segmentos" class="text-gray-700 font-medium hover:text-brand-blue">Versatilidade</a>
                     <a href="#funcionalidades"
                         class="text-gray-700 font-medium hover:text-brand-blue">Funcionalidades</a>
-                    <a href="#segmentos" class="text-gray-700 font-medium hover:text-brand-blue">Para quem é?</a>
-                    <a href="#planos" class="text-gray-700 font-medium hover:text-brand-blue">Planos</a>
 
                     <div class="pt-4 border-t border-gray-100 flex flex-col gap-4">
                         <a href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=mobile_nav&utm_content=criar_conta"
@@ -285,13 +510,13 @@
         </nav>
 
         <!-- HERO SECTION -->
-        <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-blue-50 to-white overflow-hidden relative">
+        <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 animated-gradient overflow-hidden relative">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <!-- Text Content -->
                     <div class="lg:w-1/2 text-center lg:text-left">
                         <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 mt-4">
-                            Duzz: O PDV <span class="text-brand-blue">Mais Simples e Completo</span> para Lojas e
+                            Duzz: O PDV <span class="gradient-text-blue">Mais Simples e Completo</span> para Lojas e
                             Restaurantes
                         </h1>
                         <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -303,7 +528,7 @@
                             <a href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=hero_cta&utm_content=main_banner"
                                 target="_blank"
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'hero', 'button_name': 'Testar Grátis' });"
-                                class="bg-green-500 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-green-600 transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                                class="btn-primary text-white text-lg font-bold px-8 py-4 rounded-xl text-center flex items-center justify-center gap-2">
                                 <span>COMEÇAR AGORA (Acesso Rápido)</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -311,7 +536,7 @@
                                 </svg>
                             </a>
                             <a href="#planos"
-                                class="bg-white text-brand-blue border-2 border-brand-blue text-lg font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition text-center">
+                                class="btn-secondary bg-white text-brand-blue border-2 border-brand-blue text-lg font-bold px-8 py-4 rounded-xl text-center">
                                 Ver Planos e Preços
                             </a>
                         </div>
@@ -409,203 +634,308 @@
         </header>
 
         <!-- SEÇÃO: RELATÓRIOS DE INTELIGÊNCIA -->
-        <section id="relatorios" class="py-24 bg-gray-50 border-y border-gray-100">
+        <!-- GUARANTEE SECTION -->
+        <section class="py-16 bg-blue-900 text-white relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+                    <div class="bg-white/10 p-4 rounded-full backdrop-blur-sm border border-white/20">
+                        <svg class="w-16 h-16 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="max-w-xl">
+                        <h3 class="text-2xl font-bold mb-2">Garantia e Teste Grátis</h3>
+                        <p class="text-blue-100">Teste o Duzz Commercial sem riscos. Oferecemos períodos de teste
+                            gratuitos para que você conheça todas as ferramentas antes de decidir. Sem compromisso e
+                            transparente.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Decor -->
+            <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-blue-500 rounded-full opacity-20 blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-purple-500 rounded-full opacity-20 blur-3xl">
+            </div>
+        </section>
+
+
+        <!-- PRICING / PLANOS -->
+        <section id="planos" class="py-20 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Inteligência de
-                        Dados</span>
-                    <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-2 mb-4 uppercase">Relatórios que <span
-                            class="text-brand-blue">Trabalham Enquanto Você Vende</span></h2>
-                    <p class="text-gray-600 text-lg">A facilidade de uso que você quer, com os números que você precisa.
-                        Tudo automático, sem complicação.</p>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Planos Transparentes</h2>
+                    <p class="text-gray-600 text-lg">Escolha a opção ideal para o momento da sua empresa. Sem taxas
+                        escondidas.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    <!-- Relatório 1: Visão Geral -->
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-500 group">
-                        <div
-                            class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:scale-110 transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2">
-                                </path>
-                            </svg>
+                <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
+
+                    <!-- PLANO BÁSICO -->
+                    <div class="card-hover flex-1 bg-white border border-gray-200 rounded-2xl p-8 shadow-lg relative">
+                        <h3 class="text-2xl font-bold text-gray-800">Plano Básico</h3>
+
+                        <!-- Preço Plano Básico -->
+                        <div class="mt-2 mb-2 flex items-baseline">
+                            <span class="text-3xl font-bold text-gray-900">R$ 39,90</span>
+                            <span class="text-gray-500 ml-1 text-sm">/mês</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Inteligência Automática</h3>
-                        <p class="text-gray-600 mb-4 font-semibold">Você vende, o sistema <span
-                                class="text-brand-blue">calcula o resto.</span></p>
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">Mantenha a agilidade no balcão: o PDV
-                            continua simples e rápido. Cada venda gera, automaticamente, as métricas que você precisa
-                            para crescer, sem planilhas extras.</p>
-                        <ul class="space-y-3 text-sm text-gray-500">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Histórico de faturamento detalhado</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Ranking de produtos e serviços</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Perfil de consumo dos clientes</li>
+
+                        <p class="text-gray-500 text-sm">O essencial para decolar e organizar a casa.</p>
+                        <div class="my-6 h-px bg-gray-100"></div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm"><strong>PDV</strong> Frente de Caixa Rápido</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Venda de <strong>Produtos e Serviços</strong></span>
+                            </li>
+                            <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-yellow-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                    </path>
+                                </svg>
+                                <span class="text-gray-800 text-sm font-semibold">Gestão de Fiado (Notas
+                                    Promissórias)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Controle de Caixa (Abertura/Fechamento)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm"><strong>Ficha Técnica</strong> de Produtos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Acesso Online (PC e Celular)</span>
+                            </li>
                         </ul>
+
+                        <div class="mt-auto">
+                            <p class="text-xs text-center text-gray-500 mb-2">7 Dias de Teste Grátis</p>
+
+                            <!-- BOTÃO CHECKOUT - BÁSICO -->
+                            <a target="_blank"
+                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_basico"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Básico' });"
+                                class="block w-full py-4 bg-gray-800 text-white font-bold rounded-xl text-center hover:bg-gray-900 transition flex items-center justify-center gap-2 group cursor-pointer">
+                                <span>Começar Teste Grátis</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Relatório 2: Saúde e Planejamento -->
+                    <!-- PLANO ESSENCIAL -->
                     <div
-                        class="bg-white p-8 rounded-3xl shadow-xl border-2 border-brand-blue transform lg:-translate-y-4 relative overflow-hidden group">
-                        <div
-                            class="absolute top-0 right-0 bg-brand-blue text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase">
-                            Exclusivo</div>
-                        <div
-                            class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 text-indigo-600 group-hover:scale-110 transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                </path>
-                            </svg>
+                        class="card-hover flex-1 bg-white border-2 border-brand-blue rounded-2xl p-8 shadow-2xl relative transform md:-translate-y-4">
+                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
+                            <span
+                                class="bg-brand-blue text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase shadow-md">Mais
+                                Completo</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Saúde & Planejamento</h3>
-                        <p class="text-gray-600 mb-6">O "Raio X" do seu lucro. Antecipe problemas de caixa e visualize a
-                            <strong>PREVISÃO</strong> de faturamento para o próximo mês com base na sua performance
-                            atual.
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-500">
-                            <li class="flex items-center gap-2 text-indigo-600 font-bold"><i
-                                    class="bi bi-lightning-fill"></i> Previsão inteligente do próximo mês</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Controle rigoroso de inadimplência</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Análise de custos e padrões de compra</li>
+
+                        <h3 class="text-2xl font-bold text-brand-blue">Plano Essencial</h3>
+
+                        <!-- Preço Plano Essencial -->
+                        <div class="mt-2 mb-2 flex items-baseline gap-2">
+                            <span class="text-3xl font-bold text-brand-blue">R$ 69,90</span>
+                            <span class="text-gray-500 text-sm">/mês</span>
+                        </div>
+
+                        <p class="text-gray-500 text-sm">Inteligência total para escalar o negócio.</p>
+                        <div class="my-6 h-px bg-blue-100"></div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-brand-blue font-semibold text-sm">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                Tudo do Plano Básico, e mais:
+                            </li>
+                            <li class="flex items-start bg-blue-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2">
+                                    </path>
+                                </svg>
+                                <div class="text-sm">
+                                    <span class="text-brand-blue font-bold block">Visão Geral do Negócio</span>
+                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos
+                                        atrativos</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-indigo-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <div class="text-sm">
+                                    <span class="text-indigo-700 font-bold block">Saúde e Planejamento (Raio X)</span>
+                                    <span class="text-gray-600 text-xs">Métricas, inadimplência e PREVISÃO mensal</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-orange-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <div class="text-sm">
+                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC</span>
+                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e excesso</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm font-bold">Comanda Eletrônica (Garçom)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm">Importação de XML (Nota Fiscal)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm">CRM e Histórico de Clientes</span>
+                            </li>
                         </ul>
+
+                        <div class="mt-auto">
+                            <p class="text-xs text-center text-blue-600 font-bold mb-2">15 Dias de Teste Grátis</p>
+
+                            <!-- BOTÃO CHECKOUT - ESSENCIAL -->
+                            <a target="_blank"
+                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_essencial"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Essencial' });"
+                                class="block w-full py-4 bg-brand-blue text-white font-bold rounded-xl text-center hover:bg-blue-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group cursor-pointer">
+                                <span>Começar Teste Grátis</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Relatório 3: Estoque Inteligente -->
+                    <!-- PLANO ESSENCIAL ANUAL -->
                     <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-500 group">
-                        <div
-                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-orange-600 group-hover:scale-110 transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                            </svg>
+                        class="card-hover flex-1 bg-gradient-to-b from-blue-50 to-white border border-blue-200 rounded-2xl p-8 shadow-lg relative">
+                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
+                            <span
+                                class="bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm">Melhor
+                                Valor</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão de Estoque ABC</h3>
-                        <p class="text-gray-600 mb-6">Pare de perder dinheiro com produtos parados ou falta de estoque.
-                            Nossa análise de curva ABC diz o que realmente traz lucro e o que precisa ser comprado hoje.
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-500">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Alerta de ponto de compra urgente</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Identificação de excesso de volume</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
-                                Curva ABC de rentabilidade</li>
-                        </ul>
-                    </div>
-                </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Essencial Anual</h3>
 
-                <div class="mt-16 text-center">
-                    <p class="text-gray-500 mb-6 italic">"Parei de anotar no caderninho e agora sei exatamente quanto
-                        vou ganhar no mês que vem."</p>
-                    <a href="#planos"
-                        class="inline-block bg-brand-blue text-white px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:bg-blue-700 hover:scale-105 transition shadow-2xl">
-                        QUERO ESSA INTELIGÊNCIA NO MEU NEGÓCIO
-                    </a>
+                        <div class="mt-2 mb-2 flex flex-col">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-sm text-gray-400 line-through">R$ 838,80</span>
+                                <span class="text-3xl font-bold text-green-600">R$ 796,86</span>
+                                <span class="text-gray-500 text-sm">/ano</span>
+                            </div>
+                            <span class="text-[10px] text-green-600 font-bold uppercase italic">Economia de R$
+                                41,94</span>
+                        </div>
+
+                        <p class="text-gray-500 text-sm">O poder total do Duzz com o melhor preço para sua empresa.</p>
+                        <div class="my-6 h-px bg-gray-100"></div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm font-bold">Tudo do Plano Essencial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700 text-sm">Suporte Prioritário</span>
+                            </li>
+
+                        </ul>
+
+                        <div class="mt-auto">
+                            <p class="text-xs text-center text-green-600 font-bold mb-2">30 Dias de Teste Grátis</p>
+
+                            <!-- BOTÃO CHECKOUT - ESSENCIAL ANUAL -->
+                            <a target="_blank"
+                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_essencial_anual"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Essencial Anual' });"
+                                class="block w-full py-4 bg-green-600 text-white font-bold rounded-xl text-center hover:bg-green-700 transition flex items-center justify-center gap-2 group cursor-pointer">
+                                <span>Aproveitar Desconto</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- FEATURES GRID -->
-        <section id="funcionalidades" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por que o Duzz Commercial é melhor que
-                        planilhas?</h2>
-                    <p class="text-gray-600">Esqueça fórmulas quebradas e arquivos perdidos. Tenha segurança e agilidade
-                        profissional.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                    <!-- Feature 1 -->
-                    <div
-                        class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
-                        <div
-                            class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">100% Online e Seguro</h3>
-                        <p class="text-gray-600">Acesse do PC ou Celular. Seus dados ficam salvos na nuvem, sem risco de
-                            perder o arquivo se o computador estragar.</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div
-                        class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
-                        <div
-                            class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600 group-hover:bg-green-600 group-hover:text-white transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">PDV Frente de Caixa</h3>
-                        <p class="text-gray-600">Venda em segundos, sem travamentos. Controle abertura, fechamento,
-                            suprimentos e sangrias (retiradas) facilmente.</p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div
-                        class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
-                        <div
-                            class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Implementação Rápida</h3>
-                        <p class="text-gray-600">Sem instalações complexas. Cadastre seus produtos e comece a vender em
-                            até
-                            24 horas. Foco total nas suas vendas.</p>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div
-                        class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
-                        <div
-                            class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Ficha Técnica</h3>
-                        <p class="text-gray-600 text-sm">Controle a composição dos produtos. Ideal para quem produz (ex:
-                            lanchonetes) e precisa abater estoque de insumos.</p>
-                    </div>
-
-                    <!-- Feature 5 (Reports) -->
-                    <div
-                        class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-indigo-100 group">
-                        <div
-                            class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Inteligência Real</h3>
-                        <p class="text-gray-600 text-sm">Diferente de tabelas estáticas, tenha Visão Geral, Saúde do
-                            Negócio com Previsão e Curva ABC automática.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- USE CASES / NICHOS (EXPANDED) -->
         <section id="segmentos" class="py-20 bg-gray-50">
@@ -722,318 +1052,204 @@
             </div>
         </section>
 
-        <!-- GUARANTEE SECTION -->
-        <section class="py-16 bg-blue-900 text-white relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
-                    <div class="bg-white/10 p-4 rounded-full backdrop-blur-sm border border-white/20">
-                        <svg class="w-16 h-16 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="max-w-xl">
-                        <h3 class="text-2xl font-bold mb-2">Garantia e Teste Grátis</h3>
-                        <p class="text-blue-100">Teste o Duzz Commercial sem riscos. Oferecemos períodos de teste
-                            gratuitos para que você conheça todas as ferramentas antes de decidir. Sem compromisso e
-                            transparente.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Decor -->
-            <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-blue-500 rounded-full opacity-20 blur-3xl">
-            </div>
-            <div
-                class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-purple-500 rounded-full opacity-20 blur-3xl">
-            </div>
-        </section>
-
-        <!-- PRICING / PLANOS -->
-        <section id="planos" class="py-20 bg-white relative">
+        <section id="relatorios" class="py-24 bg-gray-50 border-y border-gray-100">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Planos Transparentes</h2>
-                    <p class="text-gray-600 text-lg">Escolha a opção ideal para o momento da sua empresa. Sem taxas
-                        escondidas.</p>
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Inteligência de
+                        Dados</span>
+                    <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-2 mb-4 uppercase">Relatórios que <span
+                            class="text-brand-blue">Trabalham Enquanto Você Vende</span></h2>
+                    <p class="text-gray-600 text-lg">A facilidade de uso que você quer, com os números que você precisa.
+                        Tudo automático, sem complicação.</p>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
-
-                    <!-- PLANO BÁSICO -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Relatório 1: Visão Geral -->
                     <div
-                        class="flex-1 bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition relative">
-                        <h3 class="text-2xl font-bold text-gray-800">Plano Básico</h3>
-
-                        <!-- Preço Plano Básico -->
-                        <div class="mt-2 mb-2 flex items-baseline">
-                            <span class="text-3xl font-bold text-gray-900">R$ 39,90</span>
-                            <span class="text-gray-500 ml-1 text-sm">/mês</span>
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-500 group">
+                        <div
+                            class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:scale-110 transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2">
+                                </path>
+                            </svg>
                         </div>
-
-                        <p class="text-gray-500 text-sm">O essencial para decolar e organizar a casa.</p>
-                        <div class="my-6 h-px bg-gray-100"></div>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm"><strong>PDV</strong> Frente de Caixa Rápido</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Venda de <strong>Produtos e Serviços</strong></span>
-                            </li>
-                            <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-yellow-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
-                                    </path>
-                                </svg>
-                                <span class="text-gray-800 text-sm font-semibold">Gestão de Fiado (Notas
-                                    Promissórias)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Controle de Caixa (Abertura/Fechamento)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm"><strong>Ficha Técnica</strong> de Produtos</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Acesso Online (PC e Celular)</span>
-                            </li>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Inteligência Automática</h3>
+                        <p class="text-gray-600 mb-4 font-semibold">Você vende, o sistema <span
+                                class="text-brand-blue">calcula o resto.</span></p>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">Mantenha a agilidade no balcão: o PDV
+                            continua simples e rápido. Cada venda gera, automaticamente, as métricas que você precisa
+                            para crescer, sem planilhas extras.</p>
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Histórico de faturamento detalhado</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Ranking de produtos e serviços</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Perfil de consumo dos clientes</li>
                         </ul>
-
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-gray-500 mb-2">7 Dias de Teste Grátis</p>
-
-                            <!-- BOTÃO CHECKOUT - BÁSICO -->
-                            <a target="_blank"
-                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_basico"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Básico' });"
-                                class="block w-full py-4 bg-gray-800 text-white font-bold rounded-xl text-center hover:bg-gray-900 transition flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Começar Teste Grátis</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
 
-                    <!-- PLANO ESSENCIAL -->
+                    <!-- Relatório 2: Saúde e Planejamento -->
                     <div
-                        class="flex-1 bg-white border-2 border-brand-blue rounded-2xl p-8 shadow-2xl relative transform md:-translate-y-4">
-                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                            <span
-                                class="bg-brand-blue text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase shadow-sm">Mais
-                                Completo</span>
+                        class="bg-white p-8 rounded-3xl shadow-xl border-2 border-brand-blue transform lg:-translate-y-4 relative overflow-hidden group">
+                        <div
+                            class="absolute top-0 right-0 bg-brand-blue text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase">
+                            Exclusivo</div>
+                        <div
+                            class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 text-indigo-600 group-hover:scale-110 transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
                         </div>
-
-                        <h3 class="text-2xl font-bold text-brand-blue">Plano Essencial</h3>
-
-                        <!-- Preço Plano Essencial -->
-                        <div class="mt-2 mb-2 flex items-baseline gap-2">
-                            <span class="text-sm text-gray-400 line-through">R$ 109,90</span>
-                            <span class="text-3xl font-bold text-brand-blue">R$ 69,90</span>
-                            <span class="text-gray-500 text-sm">/mês</span>
-                        </div>
-
-                        <p class="text-gray-500 text-sm">Inteligência total para escalar o negócio.</p>
-                        <div class="my-6 h-px bg-blue-100"></div>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center text-brand-blue font-semibold text-sm">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                </svg>
-                                Tudo do Plano Básico, e mais:
-                            </li>
-                            <li class="flex items-start bg-blue-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-brand-blue font-bold block">Visão Geral do Negócio</span>
-                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos
-                                        atrativos</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start bg-indigo-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-indigo-700 font-bold block">Saúde e Planejamento (Raio X)</span>
-                                    <span class="text-gray-600 text-xs">Métricas, inadimplência e PREVISÃO mensal</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start bg-orange-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC</span>
-                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e excesso</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm font-bold">Comanda Eletrônica (Garçom)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Importação de XML (Nota Fiscal)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">CRM e Histórico de Clientes</span>
-                            </li>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Saúde & Planejamento</h3>
+                        <p class="text-gray-600 mb-6">O "Raio X" do seu lucro. Antecipe problemas de caixa e visualize a
+                            <strong>PREVISÃO</strong> de faturamento para o próximo mês com base na sua performance
+                            atual.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center gap-2 text-indigo-600 font-bold"><i
+                                    class="bi bi-lightning-fill"></i> Previsão inteligente do próximo mês</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Controle rigoroso de inadimplência</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Análise de custos e padrões de compra</li>
                         </ul>
-
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-blue-600 font-bold mb-2">15 Dias de Teste Grátis</p>
-
-                            <!-- BOTÃO CHECKOUT - ESSENCIAL -->
-                            <a target="_blank"
-                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_essencial"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Essencial' });"
-                                class="block w-full py-4 bg-brand-blue text-white font-bold rounded-xl text-center hover:bg-blue-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Começar Teste Grátis</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
 
-                    <!-- PLANO ESSENCIAL ANUAL -->
+                    <!-- Relatório 3: Estoque Inteligente -->
                     <div
-                        class="flex-1 bg-gradient-to-b from-blue-50 to-white border border-blue-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition relative">
-                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                            <span
-                                class="bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm">Melhor
-                                Valor</span>
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-500 group">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-orange-600 group-hover:scale-110 transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Essencial Anual</h3>
-
-                        <div class="mt-2 mb-2 flex flex-col">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-sm text-gray-400 line-through">R$ 1.318,80</span>
-                                <span class="text-3xl font-bold text-green-600">R$ 796,86</span>
-                                <span class="text-gray-500 text-sm">/ano</span>
-                            </div>
-                            <span class="text-[10px] text-green-600 font-bold uppercase italic">Economia de R$
-                                521,94</span>
-                        </div>
-
-                        <p class="text-gray-500 text-sm">O poder total do Duzz com o melhor preço para sua empresa.</p>
-                        <div class="my-6 h-px bg-gray-100"></div>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm font-bold">Tudo do Plano Essencial</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Suporte Prioritário</span>
-                            </li>
-                            <li class="flex items-start bg-green-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11 5L15 9M15 9L11 13M15 9H3"></path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-green-700 font-bold block">Desconto de 40%</span>
-                                    <span class="text-gray-600 text-xs">Comparado ao plano mensal</span>
-                                </div>
-                            </li>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão de Estoque ABC</h3>
+                        <p class="text-gray-600 mb-6">Pare de perder dinheiro com produtos parados ou falta de estoque.
+                            Nossa análise de curva ABC diz o que realmente traz lucro e o que precisa ser comprado hoje.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Alerta de ponto de compra urgente</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Identificação de excesso de volume</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Curva ABC de rentabilidade</li>
                         </ul>
+                    </div>
+                </div>
 
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-green-600 font-bold mb-2">30 Dias de Teste Grátis</p>
+                <div class="mt-16 text-center">
+                    <p class="text-gray-500 mb-6 italic">"Parei de anotar no caderninho e agora sei exatamente quanto
+                        vou ganhar no mês que vem."</p>
+                    <a href="#planos"
+                        class="inline-block bg-brand-blue text-white px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:bg-blue-700 hover:scale-105 transition shadow-2xl">
+                        QUERO ESSA INTELIGÊNCIA NO MEU NEGÓCIO
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                            <!-- BOTÃO CHECKOUT - ESSENCIAL ANUAL -->
-                            <a target="_blank"
-                                href="https://painel.duzzsystem.com.br/?utm_source=landing_page&utm_medium=button_click&utm_campaign=pricing&utm_content=plano_essencial_anual"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Essencial Anual' });"
-                                class="block w-full py-4 bg-green-600 text-white font-bold rounded-xl text-center hover:bg-green-700 transition flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Aproveitar Desconto</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+        <!-- FEATURES GRID -->
+        <section id="funcionalidades" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por que o Duzz Commercial é melhor que
+                        planilhas?</h2>
+                    <p class="text-gray-600">Esqueça fórmulas quebradas e arquivos perdidos. Tenha segurança e agilidade
+                        profissional.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="card-hover p-8 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 group">
+                        <div
+                            class="icon-container w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">100% Online e Seguro</h3>
+                        <p class="text-gray-600">Acesse do PC ou Celular. Seus dados ficam salvos na nuvem, sem risco de
+                            perder o arquivo se o computador estragar.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="card-hover p-8 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 group">
+                        <div
+                            class="icon-container w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600 group-hover:bg-green-600 group-hover:text-white transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">PDV Frente de Caixa</h3>
+                        <p class="text-gray-600">Venda em segundos, sem travamentos. Controle abertura, fechamento,
+                            suprimentos e sangrias (retiradas) facilmente.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="card-hover p-8 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 group">
+                        <div
+                            class="icon-container w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Implementação Rápida</h3>
+                        <p class="text-gray-600">Sem instalações complexas. Cadastre seus produtos e comece a vender em
+                            até
+                            24 horas. Foco total nas suas vendas.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="card-hover p-8 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 group">
+                        <div
+                            class="icon-container w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Ficha Técnica</h3>
+                        <p class="text-gray-600 text-sm">Controle a composição dos produtos. Ideal para quem produz (ex:
+                            lanchonetes) e precisa abater estoque de insumos.</p>
+                    </div>
+
+                    <!-- Feature 5 (Reports) -->
+                    <div class="card-hover p-8 rounded-2xl bg-gray-50 hover:bg-white border border-indigo-100 group">
+                        <div
+                            class="icon-container w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Inteligência Real</h3>
+                        <p class="text-gray-600 text-sm">Diferente de tabelas estáticas, tenha Visão Geral, Saúde do
+                            Negócio com Previsão e Curva ABC automática.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+
+
+
 
         <!-- FAQ -->
         <section id="faq" class="py-20 bg-gray-50">
@@ -1134,8 +1350,13 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12 text-sm">
-            <div class="container mx-auto px-6">
+        <footer
+            class="bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800 text-gray-400 py-16 text-sm relative overflow-hidden">
+            <!-- Decorative gradient orb -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-brand-blue/10 rounded-full blur-3xl">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
                     <!-- Coluna 1: Logo e Info -->
                     <div class="text-center md:text-left">
@@ -1144,12 +1365,13 @@
                         <p class="mt-1">Sistema Comercial Não Fiscal</p>
                         <div class="flex justify-center md:justify-start gap-4 mt-6">
                             <a href="https://www.instagram.com/duzzsystem/" target="_blank"
-                                class="text-gray-400 hover:text-pink-500 transition text-2xl"
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-pink-600 hover:text-white transition-all duration-300 text-xl"
                                 title="Siga-nos no Instagram">
                                 <i class="bi bi-instagram"></i>
                             </a>
                             <a href="https://wa.me/5538998588893" target="_blank"
-                                class="text-gray-400 hover:text-green-500 transition text-2xl" title="Fale no WhatsApp">
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition-all duration-300 text-xl"
+                                title="Fale no WhatsApp">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
                         </div>
