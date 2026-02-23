@@ -442,6 +442,13 @@
             outline: 2px solid #0056b3;
             outline-offset: 2px;
         }
+
+        /* ====== MOBILE STICKY CTA SPACING ====== */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 80px;
+            }
+        }
     </style>
 </head>
 
@@ -484,13 +491,13 @@
                         </a>
 
                         <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
-                            onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Grátis' }); fbq('track', 'Lead');"
+                            onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Começar Teste Grátis' }); fbq('track', 'Lead');"
                             class="btn-primary text-white px-6 py-2.5 rounded-full font-bold flex items-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
-                            <span>Testar Grátis</span>
+                            <span>Começar Teste Grátis</span>
                         </a>
                     </div>
 
@@ -546,9 +553,9 @@
 
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'hero', 'button_name': 'Começar Agora' }); fbq('track', 'Lead');"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'hero', 'button_name': 'Organizar Meu Negócio' }); fbq('track', 'Lead');"
                                 class="btn-primary text-white text-lg font-bold px-8 py-4 rounded-xl text-center flex items-center justify-center gap-2">
-                                <span>COMEÇAR AGORA (Acesso Rápido)</span>
+                                <span>ORGANIZAR MEU NEGÓCIO AGORA</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -559,7 +566,44 @@
                                 Ver Planos e Preços
                             </a>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4 font-medium">Acesso seguro verificado pelo Google.</p>
+
+                        <!-- Social Proof & Trust Indicators -->
+                        <div class="mt-6 space-y-3">
+                            <div class="flex items-center justify-center lg:justify-start gap-2">
+                                <span class="text-2xl">🔥</span>
+                                <span class="text-sm font-bold text-gray-700">Mais de 150 empresas já utilizam o
+                                    Duzz</span>
+                            </div>
+                            <div
+                                class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-gray-600">
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Sem cartão de crédito
+                                </span>
+                                <span class="text-gray-400">•</span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Cancele quando quiser
+                                </span>
+                                <span class="text-gray-400">•</span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Suporte humano
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- CAROUSEL SECTION -->
@@ -652,6 +696,47 @@
             </div>
         </header>
 
+        <!-- BENEFITS BAR -->
+        <div class="bg-white border-y border-gray-200 py-6 shadow-sm">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-sm">
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                            <path fill-rule="evenodd"
+                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="font-semibold">100% Online</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="font-semibold">Sem Instalação</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                            </path>
+                        </svg>
+                        <span class="font-semibold">Funciona no Celular</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="font-semibold">Suporte Humano</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- SEÇÃO: RELATÓRIOS DE INTELIGÊNCIA -->
         <!-- GUARANTEE SECTION -->
         <section class="py-16 bg-blue-900 text-white relative overflow-hidden">
@@ -691,88 +776,7 @@
 
                 <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
 
-                    <!-- PLANO BÁSICO -->
-                    <div class="card-hover flex-1 bg-white border border-gray-200 rounded-2xl p-8 shadow-lg relative">
-                        <h3 class="text-2xl font-bold text-gray-800">Plano Básico</h3>
-
-                        <!-- Preço Plano Básico -->
-                        <div class="mt-2 mb-2 flex items-baseline">
-                            <span class="text-3xl font-bold text-gray-900">R$ 39,90</span>
-                            <span class="text-gray-500 ml-1 text-sm">/mês</span>
-                        </div>
-
-                        <p class="text-gray-500 text-sm">O essencial para decolar e organizar a casa.</p>
-                        <div class="my-6 h-px bg-gray-100"></div>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm"><strong>PDV</strong> Frente de Caixa Rápido</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Venda de <strong>Produtos e Serviços</strong></span>
-                            </li>
-                            <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-yellow-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
-                                    </path>
-                                </svg>
-                                <span class="text-gray-800 text-sm font-semibold">Gestão de Fiado (Notas
-                                    Promissórias)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Controle de Caixa (Abertura/Fechamento)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm"><strong>Ficha Técnica</strong> de Produtos</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 check-icon mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-600 text-sm">Acesso Online (PC e Celular)</span>
-                            </li>
-                        </ul>
-
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-gray-500 mb-2">7 Dias de Teste Grátis</p>
-
-                            <!-- BOTÃO CHECKOUT - BÁSICO -->
-                            <a target="_blank" href="https://painel.duzzsystem.com.br/onboarding?plan=basic"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Básico' }); fbq('track', 'Lead');"
-                                class="block w-full py-4 bg-gray-800 text-white font-bold rounded-xl text-center hover:bg-gray-900 transition flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Começar Teste Grátis</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                    
 
                     <!-- PLANO ESSENCIAL -->
                     <div
@@ -795,12 +799,15 @@
                         <div class="my-6 h-px bg-blue-100"></div>
 
                         <ul class="space-y-4 mb-8">
-                            <li class="flex items-center text-brand-blue font-semibold text-sm">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            <li class="flex items-start bg-green-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                Tudo do Plano Básico, e mais:
+                                <div class="text-sm">
+                                    <span class="text-green-700 font-bold block">PDV Frente de Caixa Rápido</span>
+                                    <span class="text-gray-600 text-xs">Venda ágil de produtos e serviços</span>
+                                </div>
                             </li>
                             <li class="flex items-start bg-blue-50 p-2 rounded -ml-2">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
@@ -811,8 +818,7 @@
                                 </svg>
                                 <div class="text-sm">
                                     <span class="text-brand-blue font-bold block">Visão Geral do Negócio</span>
-                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos
-                                        atrativos</span>
+                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos atrativos</span>
                                 </div>
                             </li>
                             <li class="flex items-start bg-indigo-50 p-2 rounded -ml-2">
@@ -834,23 +840,33 @@
                                         d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                                 </svg>
                                 <div class="text-sm">
-                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC</span>
-                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e excesso</span>
+                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC e Ficha Técnica</span>
+                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e composição de produtos</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
+                                <svg class="w-5 h-5 text-yellow-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                    </path>
+                                </svg>
+                                <div class="text-sm">
+                                    <span class="text-yellow-700 font-bold block">Gestão de Fiado (Notas Promissórias)</span>
+                                    <span class="text-gray-600 text-xs">Controle total de pendências de clientes</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber)</span>
+                                <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber e Caixa)</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700 text-sm font-bold">Comanda Eletrônica (Garçom)</span>
                             </li>
@@ -865,10 +881,9 @@
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-gray-700 text-sm">CRM e Histórico de Clientes</span>
+                                <span class="text-gray-700 text-sm">CRM, Histórico de Clientes e Acesso Online</span>
                             </li>
                         </ul>
 
@@ -877,9 +892,9 @@
 
                             <!-- BOTÃO CHECKOUT - ESSENCIAL -->
                             <a target="_blank" href="https://painel.duzzsystem.com.br/onboarding?plan=pro"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Essencial' }); fbq('track', 'Lead');"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Essencial 15 Dias' }); fbq('track', 'Lead');"
                                 class="block w-full py-4 bg-brand-blue text-white font-bold rounded-xl text-center hover:bg-blue-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Começar Teste Grátis</span>
+                                <span>TESTAR 15 DIAS GRÁTIS</span>
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1428,6 +1443,16 @@
             </div>
         </footer>
     </main>
+
+    <!-- STICKY MOBILE CTA -->
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40 md:hidden shadow-lg safe-area-inset-bottom">
+        <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+            onclick="gtag('event', 'click_cta', { 'button_location': 'sticky_mobile', 'button_name': 'Sticky CTA Mobile' }); fbq('track', 'Lead');"
+            class="block w-full py-3 bg-green-600 text-white font-bold rounded-xl text-center hover:bg-green-700 transition shadow-md">
+            🚀 TESTAR GRÁTIS AGORA
+        </a>
+    </div>
 
     <a href="https://api.whatsapp.com/send?phone=5538998588893&text=Olá! Quero utilizar o Duzz Commercial"
         onclick="gtag('event', 'click_cta', { 'button_location': 'whatsapp_float', 'button_name': 'WhatsApp' });"
