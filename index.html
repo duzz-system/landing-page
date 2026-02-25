@@ -1555,6 +1555,12 @@
                         placeholder="Ex: João da Silva">
                 </div>
                 <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Seu WhatsApp</label>
+                    <input type="tel" id="wa-phone" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                        placeholder="(00) 00000-0000">
+                </div>
+                <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Sua Mensagem</label>
                     <textarea id="wa-user-message" required rows="3"
                         class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition resize-none"
@@ -1697,6 +1703,15 @@
             const waForm = document.getElementById('wa-form');
             const waMessageInput = document.getElementById('wa-message');
 
+            // Mask for phone input
+            const phoneInput = document.getElementById('wa-phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function (e) {
+                    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+                    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+                });
+            }
+
             // Close modal
             function closeWaModal() {
                 modal.classList.remove('opacity-100');
@@ -1723,19 +1738,25 @@
                     e.preventDefault();
 
                     const name = document.getElementById('wa-name').value.trim();
+                    const phone = document.getElementById('wa-phone').value.trim();
                     const userMessage = document.getElementById('wa-user-message').value.trim();
 
                     // Compose the final message with the person's name
                     const finalMessage = `Olá, meu nome é ${name}. ${userMessage}`;
 
                     // Send lead data to formsubmit.co (fire-and-forget to not block the user)
-                    const formData = new FormData();
-                    formData.append('Nome', name);
-                    formData.append('Mensagem', userMessage);
-                    formData.append('_subject', `Lead WhatsApp - ${name}`);
                     fetch('https://formsubmit.co/ajax/duzzsystem@gmail.com', {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            Nome: name,
+                            Mensagem: userMessage,
+                            Whatsapp: phone,
+                            _subject: `Lead WhatsApp - ${name}`
+                        })
                     }).catch(() => { }); // silently ignore errors
 
                     // Track event if FB/Analytics is available
