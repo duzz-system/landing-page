@@ -449,6 +449,45 @@
                 padding-bottom: 80px;
             }
         }
+
+        /* ====== WHATSAPP TOOLTIP ====== */
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 95px;
+            right: 24px;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            color: #374151;
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            max-width: 250px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .whatsapp-tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 24px;
+            width: 12px;
+            height: 12px;
+            background: white;
+            transform: rotate(45deg);
+            border-bottom: 1px solid #e5e7eb;
+            border-right: 1px solid #e5e7eb;
+        }
     </style>
 </head>
 
@@ -776,7 +815,7 @@
 
                 <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
 
-                    
+
 
                     <!-- PLANO ESSENCIAL -->
                     <div
@@ -802,7 +841,8 @@
                             <li class="flex items-start bg-green-50 p-2 rounded -ml-2">
                                 <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <div class="text-sm">
                                     <span class="text-green-700 font-bold block">PDV Frente de Caixa Rápido</span>
@@ -818,7 +858,8 @@
                                 </svg>
                                 <div class="text-sm">
                                     <span class="text-brand-blue font-bold block">Visão Geral do Negócio</span>
-                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos atrativos</span>
+                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos
+                                        atrativos</span>
                                 </div>
                             </li>
                             <li class="flex items-start bg-indigo-50 p-2 rounded -ml-2">
@@ -840,8 +881,10 @@
                                         d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                                 </svg>
                                 <div class="text-sm">
-                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC e Ficha Técnica</span>
-                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e composição de produtos</span>
+                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC e Ficha
+                                        Técnica</span>
+                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e composição de
+                                        produtos</span>
                                 </div>
                             </li>
                             <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
@@ -852,21 +895,24 @@
                                     </path>
                                 </svg>
                                 <div class="text-sm">
-                                    <span class="text-yellow-700 font-bold block">Gestão de Fiado (Notas Promissórias)</span>
+                                    <span class="text-yellow-700 font-bold block">Gestão de Fiado (Notas
+                                        Promissórias)</span>
                                     <span class="text-gray-600 text-xs">Controle total de pendências de clientes</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber e Caixa)</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700 text-sm font-bold">Comanda Eletrônica (Garçom)</span>
                             </li>
@@ -881,7 +927,8 @@
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700 text-sm">CRM, Histórico de Clientes e Acesso Online</span>
                             </li>
@@ -917,11 +964,11 @@
                         <div class="mt-2 mb-2 flex flex-col">
                             <div class="flex items-baseline gap-2">
                                 <span class="text-sm text-gray-400 line-through">R$ 838,80</span>
-                                <span class="text-3xl font-bold text-green-600">R$ 796,86</span>
+                                <span class="text-3xl font-bold text-green-600">R$ 718,80</span>
                                 <span class="text-gray-500 text-sm">/ano</span>
                             </div>
                             <span class="text-[10px] text-green-600 font-bold uppercase italic">Economia de R$
-                                41,94</span>
+                                120</span>
                         </div>
 
                         <p class="text-gray-500 text-sm">O poder total do Duzz com o melhor preço para sua empresa.</p>
@@ -1358,8 +1405,8 @@
                         Fale conosco: <br>
                         <a href="mailto:suporte@duzzsystem.com.br"
                             class="hover:text-brand-blue transition">suporte@duzzsystem.com.br</a> |
-                        <a href="https://wa.me/5538998588893"
-                            onclick="gtag('event', 'click_cta', { 'button_location': 'whatsapp', 'button_name': 'WhatsApp' });"
+                        <a href="#"
+                            onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero tirar uma dúvida antes de começar o teste grátis.', 'contato_whatsapp_link')"
                             class="hover:text-brand-blue transition">+55 38 99858-8893</a>
                     </p>
                     <form class="space-y-4" action="https://formsubmit.co/duzzsystem@gmail.com" method="POST"
@@ -1401,8 +1448,8 @@
                                 title="Siga-nos no Instagram">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a href="https://wa.me/5538998588893" target="_blank"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'whatsapp', 'button_name': 'WhatsApp' });"
+                            <a href="#" target="_blank"
+                                onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero tirar uma dúvida antes de começar o teste grátis.', 'footer_whatsapp_icon')"
                                 class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition-all duration-300 text-xl"
                                 title="Fale no WhatsApp">
                                 <i class="bi bi-whatsapp"></i>
@@ -1418,8 +1465,8 @@
                                     class="hover:text-white transition">suporte@duzzsystem.com.br</a></li>
                             <li>Financeiro: <a href="mailto:financeiro@duzzsystem.com.br"
                                     class="hover:text-white transition">financeiro@duzzsystem.com.br</a></li>
-                            <li>WhatsApp: <a href="https://wa.me/5538998588893" target="_blank"
-                                    onclick="gtag('event', 'click_cta', { 'button_location': 'whatsapp', 'button_name': 'WhatsApp' });"
+                            <li>WhatsApp: <a href="#" target="_blank"
+                                    onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero tirar uma dúvida antes de começar o teste grátis.', 'footer_whatsapp_link')"
                                     class="hover:text-white transition"> (38) 99858-8893</a></li>
                         </ul>
                     </div>
@@ -1454,11 +1501,77 @@
         </a>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=5538998588893&text=Olá! Quero utilizar o Duzz Commercial"
-        onclick="gtag('event', 'click_cta', { 'button_location': 'whatsapp_float', 'button_name': 'WhatsApp' });"
-        class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <div id="whatsapp-tooltip" class="whatsapp-tooltip">
+        <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
+                <img src="icons/vitoria.jpeg" alt="Consultor Duzz" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold text-gray-800 text-sm mb-1">Vitória Izabel</p>
+                <p class="text-xs leading-tight">Olá! Posso te ajudar com um orçamento ou dúvidas sobre o sistema?</p>
+            </div>
+            <button id="close-tooltip" class="text-gray-400 hover:text-gray-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- WHATSAPP BUTTON -->
+    <button
+        onclick="handleWhatsAppClick(event, 'Estava navegando no site do Sistema Duzz e vi que vocês têm um teste grátis de 15 dias. Gostaria de entender como o sistema pode ajudar na gestão do meu negócio.', 'whatsapp_float')"
+        class="whatsapp-float cursor-pointer border-0" title="Fale conosco no WhatsApp">
         <i class="bi bi-whatsapp"></i>
-    </a>
+    </button>
+
+    <!-- WHATSAPP MODAL (DESKTOP) -->
+    <div id="wa-modal"
+        class="fixed inset-0 z-[1001] hidden flex items-center justify-center bg-gray-900/50 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl p-6 w-11/12 max-w-md transform scale-95 transition-transform duration-300"
+            id="wa-modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center gap-2">
+                    <i class="bi bi-whatsapp text-green-500 text-2xl"></i>
+                    <h3 class="text-xl font-bold text-gray-800">Falar com especialista</h3>
+                </div>
+                <button id="close-wa-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <p class="text-gray-600 text-sm mb-6">Escreva sua mensagem abaixo e enviaremos diretamente para nosso
+                WhatsApp:</p>
+
+            <form id="wa-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Seu Nome</label>
+                    <input type="text" id="wa-name" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                        placeholder="Ex: João da Silva">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Sua Mensagem</label>
+                    <textarea id="wa-user-message" required rows="3"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition resize-none"
+                        placeholder="Ex: Gostaria de saber mais sobre o sistema..."></textarea>
+                </div>
+
+                <input type="hidden" id="wa-message" value="">
+
+                <button type="submit"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl transition flex justify-center items-center gap-2 mt-2">
+                    <span>Enviar pelo WhatsApp</span>
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+            </form>
+            <p class="text-xs text-center text-gray-400 mt-4">Você será redirecionado para o WhatsApp Web.</p>
+        </div>
+    </div>
 
 
     <!-- Scripts -->
@@ -1549,6 +1662,132 @@
             // Start Autoplay
             resetTimer();
         });
+
+        // === WhatsApp Logic (Tooltip & Desktop Modal) ===
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Tooltip Logic
+            const tooltip = document.getElementById('whatsapp-tooltip');
+            const closeTooltipBtn = document.getElementById('close-tooltip');
+            let tooltipTimeout;
+
+            // Show tooltip after 5 seconds
+            tooltipTimeout = setTimeout(() => {
+                tooltip.classList.add('show');
+            }, 5000);
+
+            // Close tooltip manually
+            if (closeTooltipBtn) {
+                closeTooltipBtn.addEventListener('click', () => {
+                    tooltip.classList.remove('show');
+                });
+            }
+
+            // Hide tooltip when clicking on the main whatsapp float button
+            const mainWaBtn = document.querySelector('.whatsapp-float');
+            if (mainWaBtn) {
+                mainWaBtn.addEventListener('click', () => {
+                    tooltip.classList.remove('show');
+                });
+            }
+
+            // 2. Modal Logic
+            const modal = document.getElementById('wa-modal');
+            const modalContent = document.getElementById('wa-modal-content');
+            const closeModalBtn = document.getElementById('close-wa-modal');
+            const waForm = document.getElementById('wa-form');
+            const waMessageInput = document.getElementById('wa-message');
+
+            // Close modal
+            function closeWaModal() {
+                modal.classList.remove('opacity-100');
+                modalContent.classList.remove('scale-100');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeWaModal);
+            }
+
+            // Close on click outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeWaModal();
+                }
+            });
+
+            // Form Submit
+            if (waForm) {
+                waForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('wa-name').value.trim();
+                    const userMessage = document.getElementById('wa-user-message').value.trim();
+
+                    // Compose the final message with the person's name
+                    const finalMessage = `Olá, meu nome é ${name}. ${userMessage}`;
+
+                    // Send lead data to formsubmit.co (fire-and-forget to not block the user)
+                    const formData = new FormData();
+                    formData.append('Nome', name);
+                    formData.append('Mensagem', userMessage);
+                    formData.append('_subject', `Lead WhatsApp - ${name}`);
+                    fetch('https://formsubmit.co/ajax/duzzsystem@gmail.com', {
+                        method: 'POST',
+                        body: formData
+                    }).catch(() => { }); // silently ignore errors
+
+                    // Track event if FB/Analytics is available
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', { 'lead_source': 'whatsapp_desktop_modal' });
+                    }
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Lead');
+                    }
+
+                    // Format URL and redirect to WhatsApp Web
+                    const encodedMessage = encodeURIComponent(finalMessage);
+                    const waUrl = `https://api.whatsapp.com/send?phone=5538998588893&text=${encodedMessage}`;
+
+                    closeWaModal();
+
+                    window.open(waUrl, '_blank');
+                });
+            }
+        });
+
+        // Dynamic WhatsApp Click Handler
+        function handleWhatsAppClick(event, copyText, trackingLocation) {
+            event.preventDefault();
+
+            // Track click
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_cta', { 'button_location': trackingLocation, 'button_name': 'WhatsApp' });
+            }
+
+            // Always open modal (both mobile and desktop) to capture name + message
+            const waMessageInput = document.getElementById('wa-message');
+            if (waMessageInput) {
+                waMessageInput.value = copyText;
+            }
+
+            // Pre-fill the message textarea with the default copy
+            const userMessageField = document.getElementById('wa-user-message');
+            if (userMessageField) {
+                userMessageField.value = copyText;
+            }
+
+            const modal = document.getElementById('wa-modal');
+            const modalContent = document.getElementById('wa-modal-content');
+
+            modal.classList.remove('hidden');
+            // Small delay to allow display block to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
     </script>
 </body>
 
