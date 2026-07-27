@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Margem de Lucro e Revenda Grátis | Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html">
+    <meta name="description"
+        content="Calculadora de margem de lucro e precificação de revenda online e gratuita. Descubra o preço de venda ideal considerando impostos, frete, taxas de cartão e comissão.">
+    <meta name="keywords"
+        content="calculadora de margem de lucro, calculadora de revenda, precificação de produtos, como calcular markup, margem bruta e liquida, duzz system">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html">
+    <meta property="og:title" content="Calculadora de Margem de Lucro e Revenda Grátis">
+    <meta property="og:description"
+        content="Precifique seus produtos corretamente. Calcule o preço de venda ideal, lucro líquido e markup multiplicador em segundos.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/abc-curve.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calculadora de Margem de Revenda Duzz",
+        "url": "https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual a diferença entre Margem de Lucro e Markup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Margem de Lucro é a porcentagem do PREÇO DE VENDA que é lucro líquido no caixa. O Markup é o multiplicador aplicado diretamente sobre o CUSTO do produto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Por que devo incluir a taxa de cartão e frete no cálculo de precificação?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Se você não contabilizar impostos, frete por unidade e taxas de máquina de cartão ou marketplaces, a sua margem de lucro real será muito menor do que o esperado ou causará prejuízo mascarado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual é uma margem de lucro saudável para revenda no comércio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para a maioria dos comércios e e-commerces, a margem de lucro líquida saudável varia de 20% a 35% sobre o preço final de venda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Multiplicar por 2 garante 100% de lucro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Se você compra um produto por R$ 50 e vende por R$ 100, sua margem bruta é de 50%, e não 100%. Nenhuma empresa no mundo possui margem de lucro superior a 100%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como calcular o preço considerando taxas de parcelamento no cartão?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você deve somar a porcentagem da taxa de antecipação e parcelamento à porcentagem de impostos e utilizar a fórmula de divisor da calculadora Duzz."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '393783260467767');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=393783260467767&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#0056b3', dark: '#0f172a', light: '#f8fafc', accent: '#f59e0b' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f0fdf4, #fef3c7);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #0056b3 0%, #00d4ff 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAV BAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#planos" class="text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
+                    <a href="../index.html#funcionalidades" class="text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
+                    <a href="index.html" class="text-brand-blue font-bold">Ferramentas Gratuitas</a>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Duzz Grátis' }); fbq('track', 'Lead');"
+                        class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-blue-700 transition">
+                        Testar Duzz Grátis
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-6 space-y-4">
+                <a href="../index.html" class="text-gray-700 font-medium">Início</a>
+                <a href="index.html" class="text-brand-blue font-bold">Todas as Ferramentas</a>
+                <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                    onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Criar Conta Grátis' }); fbq('track', 'Lead');"
+                    class="block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-bold">
+                    CRIAR CONTA GRÁTIS
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header class="pt-32 pb-12 animated-gradient text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-blue-100 text-brand-blue text-xs font-bold uppercase px-3 py-1.5 rounded-full mb-4">
+                <i class="bi bi-calculator"></i> Precificação Inteligente
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                Calculadora de Margem de Revenda
+            </h1>
+            <p class="text-gray-600 text-base sm:text-lg">
+                Calcule o preço de venda ideal dos seus produtos e conheça sua margem de lucro real descontando impostos, frete e comissões.
+            </p>
+        </div>
+    </header>
+
+    <!-- CALCULATOR APP -->
+    <main class="py-12 container mx-auto px-6 max-w-5xl">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- FORM INPUTS (7 COLS) -->
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 flex items-center gap-2">
+                    <i class="bi bi-box-seam text-brand-blue"></i> Custos do Produto
+                </h2>
+
+                <!-- Product / Business Name (Optional) -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nome do Produto ou Empresa (Opcional)</label>
+                    <input type="text" id="input-product-name" placeholder="Ex: Camiseta Algodão Premium, Tênis Esportivo..."
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue font-medium text-gray-800 outline-none text-sm">
+                    <p class="text-[11px] text-gray-400 mt-1">Identifica o item ao exportar ou copiar a precificação.</p>
+                </div>
+
+                <!-- Mode selection -->
+                <div class="bg-gray-100 p-1.5 rounded-2xl flex text-xs font-bold">
+                    <button type="button" id="mode-margin" class="flex-1 py-2.5 rounded-xl bg-white shadow-sm text-brand-blue text-center transition">
+                        Calcular Preço por Margem Desejada (%)
+                    </button>
+                    <button type="button" id="mode-price" class="flex-1 py-2.5 rounded-xl text-gray-600 text-center transition hover:text-gray-900">
+                        Calcular Margem por Preço de Venda (R$)
+                    </button>
+                </div>
+
+                <!-- Custo de Aquisição -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Preço de Custo / Compra (R$)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-3 text-gray-400 font-bold text-sm">R$</span>
+                            <input type="number" id="input-cost" step="0.01" value="50.00" min="0"
+                                class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue font-bold text-gray-800 outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Frete / Embalagem por Unidade (R$)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-3 text-gray-400 font-bold text-sm">R$</span>
+                            <input type="number" id="input-freight" step="0.01" value="5.00" min="0"
+                                class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue font-bold text-gray-800 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-sm font-bold text-gray-900 border-b border-gray-100 pb-2 pt-2">Impostos e Taxas Adicionais</h3>
+
+                <!-- Impostos e Taxas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Impostos (%) (Simples / ICMS)</label>
+                        <div class="relative">
+                            <input type="number" id="input-tax" step="0.1" value="6.0" min="0" max="90"
+                                class="w-full pr-8 pl-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue font-bold text-gray-800 outline-none">
+                            <span class="absolute right-3 top-3 text-gray-400 font-bold text-sm">%</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Taxas Cartão / Comissão (%)</label>
+                        <div class="relative">
+                            <input type="number" id="input-fee" step="0.1" value="5.0" min="0" max="90"
+                                class="w-full pr-8 pl-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue font-bold text-gray-800 outline-none">
+                            <span class="absolute right-3 top-3 text-gray-400 font-bold text-sm">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Target Input -->
+                <div id="target-margin-container" class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
+                    <label class="block text-xs font-bold text-brand-blue uppercase mb-1">Margem de Lucro Desejada sobre a Venda (%)</label>
+                    <div class="relative">
+                        <input type="number" id="input-target-margin" step="0.5" value="30.0" min="0" max="89"
+                            class="w-full pr-8 pl-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-brand-blue font-bold text-brand-blue text-lg outline-none bg-white">
+                        <span class="absolute right-3 top-3 text-brand-blue font-bold">%</span>
+                    </div>
+                    <p class="text-xs text-blue-600 mt-1.5">Margem líquida desejada no caixa após pagar todos os custos e taxas.</p>
+                </div>
+
+                <div id="target-price-container" class="hidden bg-green-50 p-4 rounded-2xl border border-green-100">
+                    <label class="block text-xs font-bold text-green-700 uppercase mb-1">Preço de Venda Praticado (R$)</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-3 text-green-600 font-bold text-lg">R$</span>
+                        <input type="number" id="input-target-price" step="0.5" value="100.00" min="0"
+                            class="w-full pl-10 pr-4 py-3 rounded-xl border border-green-300 focus:ring-2 focus:ring-green-500 font-bold text-green-800 text-lg outline-none bg-white">
+                    </div>
+                    <p class="text-xs text-green-700 mt-1.5">Preço que você pretende cobrar do seu cliente final.</p>
+                </div>
+
+            </div>
+
+            <!-- RESULTS & VISUAL BREAKDOWN (5 COLS) -->
+            <div class="lg:col-span-5 bg-gray-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-1">Resultado do Cálculo</span>
+                    
+                    <!-- Preço de Venda Final -->
+                    <div class="mb-6 border-b border-gray-800 pb-6">
+                        <span class="text-xs text-gray-400 block mb-1">Preço de Venda Sugerido</span>
+                        <div class="text-3xl sm:text-4xl font-extrabold text-green-400" id="res-sale-price">R$ 0,00</div>
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-sm border-b border-gray-800/60 pb-3">
+                            <span class="text-gray-400">Custo Total por Unidade:</span>
+                            <span class="font-bold text-gray-200" id="res-total-cost">R$ 0,00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-gray-800/60 pb-3">
+                            <span class="text-gray-400">Total Impostos + Taxas:</span>
+                            <span class="font-bold text-orange-400" id="res-total-taxes">R$ 0,00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-gray-800/60 pb-3">
+                            <span class="text-gray-400">Lucro Líquido em Dinheiro:</span>
+                            <span class="font-bold text-green-400 text-base" id="res-net-profit">R$ 0,00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-gray-800/60 pb-3">
+                            <span class="text-gray-400">Margem Líquida Real:</span>
+                            <span class="font-bold text-green-300" id="res-net-margin">%</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-400">Markup Aplicado (Multiplicador):</span>
+                            <span class="font-bold text-blue-300" id="res-markup">0.00x</span>
+                        </div>
+                    </div>
+
+                    <!-- Composition Bar -->
+                    <div class="mt-8">
+                        <span class="text-xs font-semibold text-gray-400 block mb-2">Composição do Preço de Venda:</span>
+                        <div class="h-4 w-full bg-gray-800 rounded-full overflow-hidden flex">
+                            <div id="bar-cost" class="bg-blue-500 h-full transition-all duration-300" style="width: 50%" title="Custo do Produto"></div>
+                            <div id="bar-taxes" class="bg-orange-500 h-full transition-all duration-300" style="width: 20%" title="Impostos e Taxas"></div>
+                            <div id="bar-profit" class="bg-green-500 h-full transition-all duration-300" style="width: 30%" title="Lucro Líquido"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-gray-400 mt-2">
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500 inline-block"></span> Custo</span>
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-orange-500 inline-block"></span> Taxas</span>
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span> Lucro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="space-y-3 pt-2">
+                    <button id="copy-summary-btn" type="button" class="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-xs">
+                        <i class="bi bi-clipboard-check text-green-400"></i>
+                        <span>Copiar Resumo da Precificação</span>
+                    </button>
+
+                    <button type="button" onclick="window.print()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition text-xs">
+                        <i class="bi bi-printer"></i>
+                        <span>Imprimir / Salvar PDF</span>
+                    </button>
+
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'margin_tool_card', 'button_name': 'Controlar Margens no Duzz System' }); fbq('track', 'Lead');"
+                        class="block text-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-xl transition shadow-lg text-sm">
+                        Controlar Margens no Duzz System
+                    </a>
+
+                    <!-- Toast Notification -->
+                    <div id="toast" class="hidden text-center text-xs text-green-400 bg-gray-800 font-bold py-2.5 rounded-lg border border-green-500/30">
+                        ✅ Resumo de precificação copiado para a área de transferência!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO GUIDE & EXPLANATION -->
+        <section class="mt-16 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Qual a diferença entre Markup e Margem de Lucro?</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Um dos erros mais comuns de empreendedores e lojistas é confundir a <strong>Margem de Lucro</strong> com o <strong>Markup</strong>. Essa confusão faz muitas lojas venderem produtos no prejuízo achando que estão tendo lucro.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                    <h3 class="font-bold text-brand-blue text-lg mb-2">📊 Margem de Lucro (sobre a Venda)</h3>
+                    <p class="text-sm text-gray-600 mb-4">É a porcentagem do <strong>Preço Final de Venda</strong> que sobra como lucro no seu caixa depois de pagar todos os custos e impostos.</p>
+                    <div class="bg-white p-3 rounded-xl border border-gray-200 text-xs font-mono text-gray-700">
+                        Margem (%) = (Lucro Líquido ÷ Preço de Venda) × 100
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                    <h3 class="font-bold text-purple-700 text-lg mb-2">✖️ Markup (Multiplicador de Custo)</h3>
+                    <p class="text-sm text-gray-600 mb-4">É o multiplicador que você aplica em cima do <strong>Custo de Aquisição</strong> para chegar ao preço de venda.</p>
+                    <div class="bg-white p-3 rounded-xl border border-gray-200 text-xs font-mono text-gray-700">
+                        Markup = Preço de Venda ÷ Custo do Produto
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ SECTION -->
+            <h3 class="text-xl font-bold text-gray-900 mt-12 mb-4">Dúvidas Frequentes sobre Precificação e Revenda</h3>
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Por que devo incluir a taxa de cartão e frete no cálculo?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Se você não contabilizar impostos, frete por unidade e taxas da maquininha ou marketplace (ex: iFood, Mercado Livre, Shopee), a sua margem de lucro real será muito menor do que o esperado ou pode gerar prejuízo silencioso.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Qual é uma margem de lucro saudável para o comércio?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Para a maioria das lojas físicas e e-commerces de revenda, a margem de lucro líquida saudável varia de <strong>20% a 35%</strong> sobre o valor final de venda.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Multiplicar por 2 garante 100% de lucro?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Não. Se você compra um produto por R$ 50 e vende por R$ 100, sua margem bruta é de 50%, e não 100%. Matematicamente nenhuma empresa pode ter margem de lucro superior a 100% sobre o preço de venda.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Como calcular a margem se vendo parcelado no cartão?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Some a taxa total da maquininha (incluindo taxa de antecipação ou juros de parcelamento) no campo <strong>Taxas Cartão / Comissão (%)</strong> da nossa calculadora para garantir que o preço final cubra todos os descontos.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">O que fazer quando a margem de lucro calculada dá um preço muito alto?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Nesses casos você pode renegociar o custo de compra do lote com o fornecedor, otimizar custos de frete/embalagem ou ajustar a margem de lucro alinhada com o preço praticado pela concorrência.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Como o Duzz System ajuda a controlar preços e estoque?</summary>
+                    <p class="text-sm text-gray-600 mt-2">O Duzz System calcula automaticamente a margem de lucro de cada item cadastrado no seu estoque, emite alertas quando um produto fica com margem negativa e gera notas de venda e orçamentos em segundos.</p>
+                </details>
+            </div>
+        </section>
+
+            <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Erros fatais na precificação de revenda</h3>
+            <ul class="list-disc pl-6 text-sm text-gray-600 space-y-2">
+                <li><strong>Esquecer a taxa da maquininha de cartão:</strong> Taxas de parcelamento podem consumir até 12% do valor da sua venda.</li>
+                <li><strong>Não contabilizar frete de compra e embalagens:</strong> Caixas, sacolas e frete por unidade aumentam o custo real do produto.</li>
+                <li><strong>Multiplicar por 2 achando que tem 100% de lucro:</strong> Se você compra por R$ 50 e vende por R$ 100, sua margem bruta é de 50%, e não 100%! Nenhuma empresa pode ter margem de lucro superior a 100%.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-xs border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Duzz System. Todos os direitos reservados. | <a href="index.html" class="underline hover:text-white">Todas as Ferramentas</a></p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modeMarginBtn = document.getElementById('mode-margin');
+            const modePriceBtn = document.getElementById('mode-price');
+            const targetMarginContainer = document.getElementById('target-margin-container');
+            const targetPriceContainer = document.getElementById('target-price-container');
+
+            const inputCost = document.getElementById('input-cost');
+            const inputFreight = document.getElementById('input-freight');
+            const inputTax = document.getElementById('input-tax');
+            const inputFee = document.getElementById('input-fee');
+            const inputTargetMargin = document.getElementById('input-target-margin');
+            const inputTargetPrice = document.getElementById('input-target-price');
+
+            let currentMode = 'margin'; // 'margin' or 'price'
+
+            modeMarginBtn.addEventListener('click', () => setMode('margin'));
+            modePriceBtn.addEventListener('click', () => setMode('price'));
+
+            function setMode(mode) {
+                currentMode = mode;
+                if (mode === 'margin') {
+                    modeMarginBtn.className = 'flex-1 py-2.5 rounded-xl bg-white shadow-sm text-brand-blue text-center transition font-bold';
+                    modePriceBtn.className = 'flex-1 py-2.5 rounded-xl text-gray-600 text-center transition hover:text-gray-900 font-medium';
+                    targetMarginContainer.classList.remove('hidden');
+                    targetPriceContainer.classList.add('hidden');
+                } else {
+                    modePriceBtn.className = 'flex-1 py-2.5 rounded-xl bg-white shadow-sm text-green-700 text-center transition font-bold';
+                    modeMarginBtn.className = 'flex-1 py-2.5 rounded-xl text-gray-600 text-center transition hover:text-gray-900 font-medium';
+                    targetPriceContainer.classList.remove('hidden');
+                    targetMarginContainer.classList.add('hidden');
+                }
+                calculate();
+            }
+
+            [inputCost, inputFreight, inputTax, inputFee, inputTargetMargin, inputTargetPrice].forEach(el => {
+                el.addEventListener('input', calculate);
+            });
+
+            function calculate() {
+                const cost = parseFloat(inputCost.value) || 0;
+                const freight = parseFloat(inputFreight.value) || 0;
+                const taxPct = (parseFloat(inputTax.value) || 0) / 100;
+                const feePct = (parseFloat(inputFee.value) || 0) / 100;
+
+                const directCost = cost + freight;
+                const deductionPct = taxPct + feePct;
+
+                let salePrice = 0;
+                let netProfit = 0;
+                let netMarginPct = 0;
+
+                if (currentMode === 'margin') {
+                    const desiredMarginPct = (parseFloat(inputTargetMargin.value) || 0) / 100;
+                    // Formula: SalePrice = DirectCost / (1 - deductionPct - desiredMarginPct)
+                    const divisor = 1 - deductionPct - desiredMarginPct;
+                    if (divisor > 0) {
+                        salePrice = directCost / divisor;
+                    } else {
+                        salePrice = 0; // Invalid
+                    }
+                    netMarginPct = desiredMarginPct * 100;
+                    netProfit = salePrice * desiredMarginPct;
+                } else {
+                    salePrice = parseFloat(inputTargetPrice.value) || 0;
+                    const totalTaxes = salePrice * deductionPct;
+                    netProfit = salePrice - directCost - totalTaxes;
+                    netMarginPct = salePrice > 0 ? (netProfit / salePrice) * 100 : 0;
+                }
+
+                const totalTaxesVal = salePrice * deductionPct;
+                const markup = directCost > 0 ? (salePrice / directCost) : 0;
+
+                // Render Results
+                document.getElementById('res-sale-price').textContent = formatBRL(salePrice);
+                document.getElementById('res-total-cost').textContent = formatBRL(directCost);
+                document.getElementById('res-total-taxes').textContent = formatBRL(totalTaxesVal);
+                document.getElementById('res-net-profit').textContent = formatBRL(netProfit);
+                document.getElementById('res-net-margin').textContent = netMarginPct.toFixed(1) + '%';
+                document.getElementById('res-markup').textContent = markup.toFixed(2) + 'x';
+
+                // Render Progress Bar Composition
+                if (salePrice > 0) {
+                    const costBarPct = Math.min(100, Math.max(0, (directCost / salePrice) * 100));
+                    const taxBarPct = Math.min(100, Math.max(0, (totalTaxesVal / salePrice) * 100));
+                    const profitBarPct = Math.min(100, Math.max(0, (netProfit / salePrice) * 100));
+
+                    document.getElementById('bar-cost').style.width = costBarPct + '%';
+                    document.getElementById('bar-taxes').style.width = taxBarPct + '%';
+                    document.getElementById('bar-profit').style.width = profitBarPct + '%';
+                }
+            }
+
+            function formatBRL(val) {
+                return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            }
+
+            const copyBtn = document.getElementById('copy-summary-btn');
+            const toast = document.getElementById('toast');
+            const inputProductName = document.getElementById('input-product-name');
+
+            copyBtn.addEventListener('click', () => {
+                const prodName = inputProductName ? inputProductName.value.trim() : '';
+                const salePrice = document.getElementById('res-sale-price').textContent;
+                const totalCost = document.getElementById('res-total-cost').textContent;
+                const totalTaxes = document.getElementById('res-total-taxes').textContent;
+                const netProfit = document.getElementById('res-net-profit').textContent;
+                const netMargin = document.getElementById('res-net-margin').textContent;
+                const markup = document.getElementById('res-markup').textContent;
+
+                let summaryText = `📊 RESUMO DE PRECIFICAÇÃO\n`;
+                if (prodName) summaryText += `📦 Item: ${prodName}\n`;
+                summaryText += `-----------------------------------\n`;
+                summaryText += `💰 Preço de Venda Sugerido: ${salePrice}\n`;
+                summaryText += `🏷️ Custo Direto (Compra + Frete): ${totalCost}\n`;
+                summaryText += `🏛️ Impostos + Taxas de Cartão: ${totalTaxes}\n`;
+                summaryText += `💵 Lucro Líquido: ${netProfit}\n`;
+                summaryText += `📈 Margem Real: ${netMargin}\n`;
+                summaryText += `✖️ Markup: ${markup}\n`;
+                summaryText += `-----------------------------------\n`;
+                summaryText += `Calculado gratuitamente em duzzsystem.com.br`;
+
+                const showToast = () => {
+                    toast.classList.remove('hidden');
+                    setTimeout(() => toast.classList.add('hidden'), 3000);
+                };
+
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(summaryText).then(showToast).catch(() => fallbackCopy());
+                } else {
+                    fallbackCopy();
+                }
+
+                function fallbackCopy() {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = summaryText;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        showToast();
+                    } catch (e) {
+                        prompt('Copie o resumo abaixo:', summaryText);
+                    }
+                    document.body.removeChild(tempInput);
+                }
+            });
+
+            calculate();
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+
+</html>

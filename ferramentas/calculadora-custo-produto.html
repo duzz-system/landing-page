@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Custo de Produto com Insumos e Ficha Técnica | Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html">
+    <meta name="description"
+        content="Calculadora de custo de produto com insumos e ingredientes online. Monte a ficha técnica da sua receita, hambúrguer, doce ou produto artesanal e calcule o custo por porção e lucro.">
+    <meta name="keywords"
+        content="calculadora de insumos, ficha técnica de produto, custo por porção, calculadora de receitas, precificação restaurante confeitaria, duzz system">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html">
+    <meta property="og:title" content="Calculadora de Custo de Produto com Insumos e Ficha Técnica">
+    <meta property="og:description"
+        content="Monte a ficha técnica dos seus produtos, calcule o custo por porção e descubra o preço de venda ideal com margem de lucro exata.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/abc-curve.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calculadora de Insumos e Ficha Técnica Duzz",
+        "url": "https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é uma Ficha Técnica de Produto ou Receita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Ficha Técnica é um documento que padroniza os ingredientes, insumos e custos diretos e indiretos necessários para produzir um prato, porção ou produto artesanal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como calcular o custo por porção de uma receita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Soma-se o custo proporcional de cada ingrediente usado na receita mais custos indiretos (embalagem, gás) e divide-se pelo número total de porções produzidas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como contabilizar custos de gás e embalagem no produto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Adiciona-se o valor proporcional do gás, energia e embalagem primária/secundária no campo de Custos Adicionais por Lote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Por que é importante calcular a comissão de aplicativos (iFood, Rappi)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aplicativos de entrega cobram taxas de 12% a 27%. Sem incluir a taxa no cálculo de precificação, o lucro por porção é totalmente consumido pelo app."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '393783260467767');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=393783260467767&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#0056b3', dark: '#0f172a', light: '#f8fafc', accent: '#f59e0b' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f0fdf4, #fef3c7);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAV BAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#planos" class="text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
+                    <a href="../index.html#funcionalidades" class="text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
+                    <a href="index.html" class="text-brand-blue font-bold">Ferramentas Gratuitas</a>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Duzz Grátis' }); fbq('track', 'Lead');"
+                        class="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-orange-700 transition">
+                        Testar Duzz Grátis
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-6 space-y-4">
+                <a href="../index.html" class="text-gray-700 font-medium">Início</a>
+                <a href="index.html" class="text-brand-blue font-bold">Todas as Ferramentas</a>
+                <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                    onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Criar Conta Grátis' }); fbq('track', 'Lead');"
+                    class="block w-full bg-orange-600 text-white text-center py-3 rounded-xl font-bold">
+                    CRIAR CONTA GRÁTIS
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header class="pt-32 pb-12 animated-gradient text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-xs font-bold uppercase px-3 py-1.5 rounded-full mb-4">
+                <i class="bi bi-basket3"></i> Ficha Técnica e Custos
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                Calculadora de Custo com Insumos
+            </h1>
+            <p class="text-gray-600 text-base sm:text-lg">
+                Monte a ficha técnica completa das suas receitas, pratos ou produtos fabricados. Calcule o custo por porção e defina a margem de lucro exata.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="py-12 container mx-auto px-6 max-w-6xl">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-xl p-6 sm:p-10 space-y-8">
+            
+            <!-- SECTION 1: NOME DA RECEITA & RENDIMENTO -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-100 pb-6">
+                <div class="md:col-span-2">
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nome do Produto / Receita / Prato</label>
+                    <input type="text" id="recipe-name" value="Bolo de Chocolate Gourmet" placeholder="Ex: Hambúrguer Artesanal, Coxinha..."
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 font-bold text-gray-800 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Rendimento (Porções / Unidades)</label>
+                    <input type="number" id="recipe-yield" value="12" min="1" step="1"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 font-bold text-gray-800 outline-none">
+                    <p class="text-[11px] text-gray-400 mt-1">Ex: 12 fatias, 50 unidades, 1 bolo completo</p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: DYNAMIC INGREDIENTS TABLE -->
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                        <i class="bi bi-list-check text-orange-500"></i> Ingredientes & Insumos da Receita
+                    </h2>
+                    <button type="button" id="add-insumo-btn"
+                        class="px-4 py-2 bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold text-xs rounded-xl transition flex items-center gap-1">
+                        <i class="bi bi-plus-lg"></i> Adicionar Insumo
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-gray-50 border-y border-gray-200 text-xs font-bold text-gray-600 uppercase">
+                                <th class="py-3 px-3">Insumo / Ingrediente</th>
+                                <th class="py-3 px-3">Preço Compra (R$)</th>
+                                <th class="py-3 px-3">Embalagem Comprada</th>
+                                <th class="py-3 px-3">Qtd Usada na Receita</th>
+                                <th class="py-3 px-3 text-right">Custo Proporcional</th>
+                                <th class="py-3 px-3 text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="insumos-table-body" class="divide-y divide-gray-100">
+                            <!-- JS will inject rows here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION 3: CUSTOS INDIRETOS & MARGEM -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Custos Adicionais por Lote (R$)</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-3 text-gray-400 font-bold text-sm">R$</span>
+                        <input type="number" id="input-indirect-cost" step="0.5" value="8.00" min="0"
+                            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 font-bold text-gray-800 outline-none bg-white">
+                    </div>
+                    <p class="text-[11px] text-gray-400 mt-1">Gás, embalagem secundária, energia.</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Margem de Lucro Desejada (%)</label>
+                    <div class="relative">
+                        <input type="number" id="input-margin-pct" step="1" value="50" min="0" max="90"
+                            class="w-full pr-8 pl-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 font-bold text-gray-800 outline-none bg-white">
+                        <span class="absolute right-3 top-2.5 text-gray-400 font-bold text-sm">%</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mt-1">Margem de lucro sobre o preço de venda.</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Taxas Venda / Cartão / App (%)</label>
+                    <div class="relative">
+                        <input type="number" id="input-fee-pct" step="0.5" value="5" min="0" max="90"
+                            class="w-full pr-8 pl-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 font-bold text-gray-800 outline-none bg-white">
+                        <span class="absolute right-3 top-2.5 text-gray-400 font-bold text-sm">%</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mt-1">Comissão iFood, maquininha ou cartão.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 4: RESUMO & RESULTADOS -->
+            <div class="bg-gray-900 text-white rounded-2xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="border-b md:border-b-0 md:border-r border-gray-800 pb-4 md:pb-0 md:pr-4">
+                    <span class="text-xs text-gray-400 uppercase font-bold block mb-1">Custo Total da Receita</span>
+                    <div class="text-2xl font-extrabold text-orange-400" id="res-total-recipe-cost">R$ 0,00</div>
+                </div>
+
+                <div class="border-b md:border-b-0 md:border-r border-gray-800 pb-4 md:pb-0 md:pr-4">
+                    <span class="text-xs text-gray-400 uppercase font-bold block mb-1">Custo por Porção</span>
+                    <div class="text-2xl font-extrabold text-white" id="res-portion-cost">R$ 0,00</div>
+                </div>
+
+                <div class="border-b md:border-b-0 md:border-r border-gray-800 pb-4 md:pb-0 md:pr-4">
+                    <span class="text-xs text-gray-400 uppercase font-bold block mb-1">Preço de Venda Sugerido</span>
+                    <div class="text-3xl font-extrabold text-green-400" id="res-portion-sale-price">R$ 0,00</div>
+                </div>
+
+                <div>
+                    <span class="text-xs text-gray-400 uppercase font-bold block mb-1">Lucro por Porção</span>
+                    <div class="text-2xl font-extrabold text-green-300" id="res-portion-profit">R$ 0,00</div>
+                </div>
+            </div>
+
+            <!-- PRINT / COPY SUMMARY BUTTONS -->
+            <div class="space-y-3 pt-2">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                    <button id="copy-summary-btn" type="button" class="w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="bi bi-clipboard-check text-green-400"></i> Copiar Resumo da Ficha Técnica
+                    </button>
+
+                    <button type="button" onclick="window.print()" class="w-full sm:w-auto px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="bi bi-printer"></i> Imprimir Ficha Técnica / PDF
+                    </button>
+
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'recipe_tool_card', 'button_name': 'Cadastrar Cardápio & Estoque no Duzz' }); fbq('track', 'Lead');"
+                        class="w-full sm:w-auto btn-primary text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg text-xs text-center">
+                        Cadastrar Cardápio & Estoque no Duzz
+                    </a>
+                </div>
+
+                <!-- Toast Notification -->
+                <div id="toast" class="hidden text-center text-xs text-green-700 bg-green-100 font-bold py-2.5 rounded-lg border border-green-200 shadow-sm">
+                    ✅ Resumo da Ficha Técnica copiado para a área de transferência!
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO GUIDE & FAQ -->
+        <section class="mt-16 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">O que é uma Ficha Técnica de Alimentos ou Produtos?</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                A <strong>Ficha Técnica</strong> é o documento mais importante para restaurantes, lanchonetes, confeitarias, padarias e produtores artesanais. Ela padroniza a receita e garante que você saiba exatamente o custo de cada ingrediente usado na fabricação do seu produto.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-8">
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100">
+                    <h3 class="font-bold text-orange-700 mb-1">🥖 Fim do Prejuízo</h3>
+                    <p class="text-xs text-gray-600">Identifique variações de preços dos seus fornecedores antes que afetem o seu caixa.</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                    <h3 class="font-bold text-brand-blue mb-1">⚖️ Padronização de Porção</h3>
+                    <p class="text-xs text-gray-600">Garante que todas as porções servidas tenham o mesmo peso e qualidade.</p>
+                </div>
+                <div class="p-4 bg-green-50 rounded-2xl border border-green-100">
+                    <h3 class="font-bold text-green-700 mb-1">💰 Precificação Justa</h3>
+                    <p class="text-xs text-gray-600">Cobre o valor correto que garante o crescimento sustentável da sua empresa.</p>
+                </div>
+            </div>
+
+            <!-- FAQ ACCORDION -->
+            <h3 class="text-xl font-bold text-gray-900 mt-12 mb-4">Dúvidas Frequentes sobre Ficha Técnica e Insumos</h3>
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Como calcular o custo proporcional de um ingrediente?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Divida o valor total pago na embalagem do ingrediente pelo peso/quantidade total da embalagem e multiplique pela quantidade exata utilizada na sua receita.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">O que deve ser incluído em Custos Adicionais por Lote?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Você deve somar o valor estimado de gás de cozinha, energia elétrica gasta na produção, embalagens plásticas, caixas ou etiquetas por lote de receita.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Como precificar pratos para venda em aplicativos (iFood / Rappi)?</summary>
+                    <p class="text-sm text-gray-600 mt-2">Adicione a porcentagem cobrada pelo aplicativo no campo <strong>Taxas Venda / Cartão / App (%)</strong>. Isso garante que o valor cobrado na plataforma cubra as comissões sem reduzir seu lucro por porção.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">O que é Fator de Correção (perda de insumos na preparação)?</summary>
+                    <p class="text-sm text-gray-600 mt-2">É a diferença entre o peso bruto de um alimento (com casca, osso ou apara) e o peso líquido aproveitado na receita. Sempre considere a quantidade bruta comprada ao calcular o custo.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <summary class="font-bold text-gray-800 cursor-pointer">Como o Duzz System automatiza a ficha técnica do meu restaurante/loja?</summary>
+                    <p class="text-sm text-gray-600 mt-2">No Duzz System, ao realizar uma venda, os insumos da ficha técnica têm baixa automática no estoque, e quando o preço de compra de um ingrediente muda, o sistema recalcula o custo e alerta o gestor.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-xs border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Duzz System. Todos os direitos reservados. | <a href="index.html" class="underline hover:text-white">Todas as Ferramentas</a></p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.getElementById('insumos-table-body');
+            const addBtn = document.getElementById('add-insumo-btn');
+            const recipeYield = document.getElementById('recipe-yield');
+            const inputIndirect = document.getElementById('input-indirect-cost');
+            const inputMargin = document.getElementById('input-margin-pct');
+            const inputFee = document.getElementById('input-fee-pct');
+
+            // Helper to convert quantities to base units (g, ml, un) for accurate proportional cost calculation
+            function convertToBaseUnit(qty, unit) {
+                const val = parseFloat(qty) || 0;
+                switch (unit) {
+                    case 'kg': return val * 1000;
+                    case 'L': return val * 1000;
+                    case 'g':
+                    case 'ml':
+                    case 'un':
+                    default: return val;
+                }
+            }
+
+            function calculateRowCost(item) {
+                const basePackageQty = convertToBaseUnit(item.packageQty, item.packageUnit);
+                const baseRecipeQty = convertToBaseUnit(item.recipeQty, item.recipeUnit);
+
+                if (basePackageQty <= 0) return 0;
+                return (item.packagePrice / basePackageQty) * baseRecipeQty;
+            }
+
+            // Default initial items
+            let insumos = [
+                { name: 'Farinha de Trigo', packagePrice: 20.00, packageQty: 5, packageUnit: 'kg', recipeQty: 500, recipeUnit: 'g' },
+                { name: 'Chocolate em Pó', packagePrice: 35.00, packageQty: 1, packageUnit: 'kg', recipeQty: 200, recipeUnit: 'g' },
+                { name: 'Manteiga', packagePrice: 12.00, packageQty: 500, packageUnit: 'g', recipeQty: 150, recipeUnit: 'g' },
+                { name: 'Ovos', packagePrice: 18.00, packageQty: 30, packageUnit: 'un', recipeQty: 4, recipeUnit: 'un' }
+            ];
+
+            addBtn.addEventListener('click', () => {
+                insumos.push({ name: 'Novo Insumo', packagePrice: 10.00, packageQty: 1, packageUnit: 'kg', recipeQty: 100, recipeUnit: 'g' });
+                renderTable();
+                calculate();
+            });
+
+            function renderTable() {
+                tableBody.innerHTML = '';
+                insumos.forEach((item, index) => {
+                    const rowCost = calculateRowCost(item);
+
+                    const tr = document.createElement('tr');
+                    tr.className = 'hover:bg-gray-50';
+                    tr.innerHTML = `
+                        <td class="py-3 px-3">
+                            <input type="text" value="${item.name}" data-index="${index}" data-field="name"
+                                class="w-full px-2 py-1 border border-gray-300 rounded-lg text-xs font-semibold focus:outline-none focus:border-orange-500">
+                        </td>
+                        <td class="py-3 px-3">
+                            <input type="number" step="0.01" value="${item.packagePrice}" data-index="${index}" data-field="packagePrice"
+                                class="w-24 px-2 py-1 border border-gray-300 rounded-lg text-xs font-semibold focus:outline-none focus:border-orange-500">
+                        </td>
+                        <td class="py-3 px-3">
+                            <div class="flex gap-1">
+                                <input type="number" step="0.01" value="${item.packageQty}" data-index="${index}" data-field="packageQty"
+                                    class="w-20 px-2 py-1 border border-gray-300 rounded-lg text-xs font-semibold focus:outline-none focus:border-orange-500">
+                                <select data-index="${index}" data-field="packageUnit" class="text-xs bg-gray-100 border border-gray-300 rounded-lg px-1 font-semibold">
+                                    <option value="kg" ${item.packageUnit==='kg'?'selected':''}>kg</option>
+                                    <option value="g" ${item.packageUnit==='g'?'selected':''}>g</option>
+                                    <option value="L" ${item.packageUnit==='L'?'selected':''}>L</option>
+                                    <option value="ml" ${item.packageUnit==='ml'?'selected':''}>ml</option>
+                                    <option value="un" ${item.packageUnit==='un'?'selected':''}>un</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td class="py-3 px-3">
+                            <div class="flex gap-1">
+                                <input type="number" step="0.01" value="${item.recipeQty}" data-index="${index}" data-field="recipeQty"
+                                    class="w-20 px-2 py-1 border border-gray-300 rounded-lg text-xs font-semibold focus:outline-none focus:border-orange-500">
+                                <select data-index="${index}" data-field="recipeUnit" class="text-xs bg-gray-100 border border-gray-300 rounded-lg px-1 font-semibold">
+                                    <option value="g" ${item.recipeUnit==='g'?'selected':''}>g</option>
+                                    <option value="kg" ${item.recipeUnit==='kg'?'selected':''}>kg</option>
+                                    <option value="ml" ${item.recipeUnit==='ml'?'selected':''}>ml</option>
+                                    <option value="L" ${item.recipeUnit==='L'?'selected':''}>L</option>
+                                    <option value="un" ${item.recipeUnit==='un'?'selected':''}>un</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td class="py-3 px-3 text-right font-bold text-gray-800">
+                            ${formatBRL(rowCost)}
+                        </td>
+                        <td class="py-3 px-3 text-center">
+                            <button type="button" data-index="${index}" class="remove-btn text-red-500 hover:text-red-700 text-base">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+
+                // Attach listeners
+                tableBody.querySelectorAll('input, select').forEach(el => {
+                    el.addEventListener('input', (e) => {
+                        const idx = e.target.getAttribute('data-index');
+                        const field = e.target.getAttribute('data-field');
+                        let val = e.target.value;
+                        if (field !== 'name' && field !== 'packageUnit' && field !== 'recipeUnit') {
+                            val = parseFloat(val) || 0;
+                        }
+                        insumos[idx][field] = val;
+                        renderTable();
+                        calculate();
+                    });
+                });
+
+                tableBody.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const idx = e.currentTarget.getAttribute('data-index');
+                        insumos.splice(idx, 1);
+                        renderTable();
+                        calculate();
+                    });
+                });
+            }
+
+            [recipeYield, inputIndirect, inputMargin, inputFee].forEach(el => {
+                el.addEventListener('input', calculate);
+            });
+
+            function calculate() {
+                let ingredientsCost = 0;
+                insumos.forEach(item => {
+                    ingredientsCost += calculateRowCost(item);
+                });
+
+                const indirectCost = parseFloat(inputIndirect.value) || 0;
+                const totalRecipeCost = ingredientsCost + indirectCost;
+
+                const yieldCount = Math.max(1, parseInt(recipeYield.value) || 1);
+                const portionCost = totalRecipeCost / yieldCount;
+
+                const marginPct = (parseFloat(inputMargin.value) || 0) / 100;
+                const feePct = (parseFloat(inputFee.value) || 0) / 100;
+
+                const divisor = 1 - marginPct - feePct;
+                let portionSalePrice = 0;
+                if (divisor > 0) {
+                    portionSalePrice = portionCost / divisor;
+                }
+                const portionProfit = portionSalePrice * marginPct;
+
+                // Render Results
+                document.getElementById('res-total-recipe-cost').textContent = formatBRL(totalRecipeCost);
+                document.getElementById('res-portion-cost').textContent = formatBRL(portionCost);
+                document.getElementById('res-portion-sale-price').textContent = formatBRL(portionSalePrice);
+                document.getElementById('res-portion-profit').textContent = formatBRL(portionProfit);
+            }
+
+            function formatBRL(val) {
+                return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            }
+
+            const copyBtn = document.getElementById('copy-summary-btn');
+            const toast = document.getElementById('toast');
+            const recipeNameInput = document.getElementById('recipe-name');
+
+            copyBtn.addEventListener('click', () => {
+                const recipeName = recipeNameInput ? recipeNameInput.value.trim() : 'Ficha Técnica';
+                const yieldCount = recipeYield.value || '1';
+                const totalCost = document.getElementById('res-total-recipe-cost').textContent;
+                const portionCost = document.getElementById('res-portion-cost').textContent;
+                const salePrice = document.getElementById('res-portion-sale-price').textContent;
+                const portionProfit = document.getElementById('res-portion-profit').textContent;
+
+                let summaryText = `📋 FICHA TÉCNICA E PRECIFICAÇÃO\n`;
+                summaryText += `🍽️ Produto: ${recipeName}\n`;
+                summaryText += `📦 Rendimento: ${yieldCount} porção(ões)\n`;
+                summaryText += `-----------------------------------\n`;
+                summaryText += `🛒 Custo Total da Receita: ${totalCost}\n`;
+                summaryText += `💵 Custo por Porção: ${portionCost}\n`;
+                summaryText += `🏷️ Preço de Venda Sugerido: ${salePrice}\n`;
+                summaryText += `📈 Lucro por Porção: ${portionProfit}\n`;
+                summaryText += `-----------------------------------\n`;
+                summaryText += `Calculado gratuitamente em duzzsystem.com.br`;
+
+                const showToast = () => {
+                    toast.classList.remove('hidden');
+                    setTimeout(() => toast.classList.add('hidden'), 3000);
+                };
+
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(summaryText).then(showToast).catch(() => fallbackCopy());
+                } else {
+                    fallbackCopy();
+                }
+
+                function fallbackCopy() {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = summaryText;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        showToast();
+                    } catch (e) {
+                        prompt('Copie o resumo abaixo:', summaryText);
+                    }
+                    document.body.removeChild(tempInput);
+                }
+            });
+
+            renderTable();
+            calculate();
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+
+</html>
