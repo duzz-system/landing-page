@@ -149,6 +149,35 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
         }
+
+        /* Printable Ficha Técnica Styling */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #printable-ficha,
+            #printable-ficha * {
+                visibility: visible;
+            }
+
+            #printable-ficha {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 24px;
+                box-shadow: none !important;
+                border: 2px solid #ea580c !important;
+                border-radius: 20px !important;
+                background-color: #ffffff !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -212,8 +241,19 @@
 
     <!-- MAIN APP CONTAINER -->
     <main class="py-12 container mx-auto px-6 max-w-6xl">
-        <div class="bg-white rounded-3xl border border-gray-200 shadow-xl p-6 sm:p-10 space-y-8">
+        <div id="printable-ficha" class="bg-white rounded-3xl border border-gray-200 shadow-xl p-6 sm:p-10 space-y-8">
             
+            <!-- PRINTABLE HEADER -->
+            <div class="flex items-center justify-between pb-4 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                    <img src="../icons/logo_sem_fundo.png" alt="Duzz System" class="h-6 w-auto">
+                    <span class="text-xs font-black text-gray-400 tracking-wider uppercase">Ficha Técnica de Produto</span>
+                </div>
+                <span class="bg-orange-50 text-orange-700 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md border border-orange-200">
+                    Duzz System
+                </span>
+            </div>
+
             <!-- SECTION 1: NOME DA RECEITA & RENDIMENTO -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-100 pb-6">
                 <div class="md:col-span-2">
@@ -236,7 +276,7 @@
                         <i class="bi bi-list-check text-orange-500"></i> Ingredientes & Insumos da Receita
                     </h2>
                     <button type="button" id="add-insumo-btn"
-                        class="px-4 py-2 bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold text-xs rounded-xl transition flex items-center gap-1">
+                        class="px-4 py-2 bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold text-xs rounded-xl transition flex items-center gap-1 no-print">
                         <i class="bi bi-plus-lg"></i> Adicionar Insumo
                     </button>
                 </div>
@@ -250,7 +290,7 @@
                                 <th class="py-3 px-3">Embalagem Comprada</th>
                                 <th class="py-3 px-3">Qtd Usada na Receita</th>
                                 <th class="py-3 px-3 text-right">Custo Proporcional</th>
-                                <th class="py-3 px-3 text-center">Ações</th>
+                                <th class="py-3 px-3 text-center no-print">Ações</th>
                             </tr>
                         </thead>
                         <tbody id="insumos-table-body" class="divide-y divide-gray-100">
@@ -317,7 +357,7 @@
             </div>
 
             <!-- PRINT / COPY SUMMARY BUTTONS -->
-            <div class="space-y-3 pt-2">
+            <div class="space-y-3 pt-2 no-print">
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
                     <button id="copy-summary-btn" type="button" class="w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2">
                         <i class="bi bi-clipboard-check text-green-400"></i> Copiar Resumo da Ficha Técnica
@@ -338,6 +378,13 @@
                 <div id="toast" class="hidden text-center text-xs text-green-700 bg-green-100 font-bold py-2.5 rounded-lg border border-green-200 shadow-sm">
                     ✅ Resumo da Ficha Técnica copiado para a área de transferência!
                 </div>
+            </div>
+
+            <!-- PLACA FOOTER BRANDING -->
+            <div class="pt-6 border-t border-gray-100 text-center">
+                <p class="text-[11px] font-medium text-gray-400">
+                    Criado com a Ferramenta Gratuita do <strong class="text-gray-600">Duzz System</strong> • duzzsystem.com.br
+                </p>
             </div>
         </div>
 
@@ -490,7 +537,7 @@
                         <td class="py-3 px-3 text-right font-bold text-gray-800">
                             ${formatBRL(rowCost)}
                         </td>
-                        <td class="py-3 px-3 text-center">
+                        <td class="py-3 px-3 text-center no-print">
                             <button type="button" data-index="${index}" class="remove-btn text-red-500 hover:text-red-700 text-base">
                                 <i class="bi bi-trash-fill"></i>
                             </button>

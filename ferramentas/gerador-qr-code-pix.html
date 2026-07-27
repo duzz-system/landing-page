@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de QR Code Pix Grátis com Chave Copia e Cola | Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html">
+    <meta name="description"
+        content="Gerador de QR Code Pix 100% gratuito e seguro. Crie seu código Pix Copia e Cola estático com chave CPF, CNPJ, celular, e-mail ou aleatória, defina valor opcional e baixe sua Placa Pix em PDF.">
+    <meta name="keywords"
+        content="gerador de qr code pix, criar qr code pix gratis, pix copia e cola, placa do pix pdf, gerador chave pix, qr code pix estatico, pix celular cpf cnpj">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html">
+    <meta property="og:title" content="Gerador de QR Code Pix Grátis com Chave Copia e Cola | Duzz System">
+    <meta property="og:description"
+        content="Gerador de QR Code Pix estático 100% gratuito. Máscara inteligente para CPF, CNPJ, Celular e E-mail. Baixe seu QR Code e Placa Pix.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/abc-curve.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Gerador de QR Code Pix Duzz System",
+        "url": "https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O QR Code Pix gerado nesta ferramenta é seguro e oficial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! O QR Code é gerado seguindo rigorosamente o padrão EMV QRCPS / BR Code estipulado pelo Banco Central do Brasil (BCB). Os valores vão direto para a sua conta bancária sem intermediários."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como a máscara inteligente identifica o tipo da Chave Pix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A ferramenta identifica automaticamente a quantidade de dígitos ou caracteres especiais digitados: Celular (11 dígitos com DDD), CPF (11 dígitos), CNPJ (14 dígitos), E-mail (com @) ou Chave Aleatória (EVP/UUID)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso gerar um QR Code Pix com valor fixo ou sem valor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! Se você preencher o campo 'Valor', o QR Code virá com o valor travado no app do banco do cliente. Se deixar em branco, o cliente poderá digitar o valor desejado no momento de pagar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O QR Code Pix tem prazo de validade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. QR Codes estáticos de chave Pix não expiram e podem ser impressos em balcões de atendimento, cardápios ou cartões de visita por tempo indeterminado."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '393783260467767');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=393783260467767&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#0056b3', dark: '#0f172a', light: '#f8fafc', accent: '#f59e0b', pix: '#32bcad' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f0fdfa, #ccfbf1, #f0f9ff, #e0f2fe);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .btn-pix {
+            background: linear-gradient(135deg, #32bcad 0%, #0d9488 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-pix:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(50, 188, 173, 0.35);
+        }
+
+        .pix-badge {
+            background: rgba(50, 188, 173, 0.12);
+            color: #0f766e;
+            border: 1px solid rgba(50, 188, 173, 0.3);
+        }
+
+        /* Printable Placa Pix Styling */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #printable-placa,
+            #printable-placa * {
+                visibility: visible;
+            }
+
+            #printable-placa {
+                position: absolute;
+                left: 50%;
+                top: 20px;
+                transform: translateX(-50%);
+                width: 100%;
+                max-width: 550px;
+                margin: 0 auto;
+                padding: 32px;
+                box-shadow: none !important;
+                border: 2px solid #0d9488 !important;
+                border-radius: 24px !important;
+                background-color: #ffffff !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#planos"
+                        class="text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
+                    <a href="../index.html#funcionalidades"
+                        class="text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
+                    <a href="index.html" class="text-brand-blue font-bold">Ferramentas Gratuitas</a>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Duzz Grátis' }); fbq('track', 'Lead');"
+                        class="bg-teal-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-teal-700 transition shadow-sm">
+                        Testar Duzz Grátis
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-6 space-y-4">
+                <a href="../index.html" class="text-gray-700 font-medium">Início</a>
+                <a href="index.html" class="text-brand-blue font-bold">Todas as Ferramentas</a>
+                <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                    onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Criar Conta Grátis' }); fbq('track', 'Lead');"
+                    class="block w-full bg-teal-600 text-white text-center py-3 rounded-xl font-bold">
+                    CRIAR CONTA GRÁTIS
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header class="pt-32 pb-12 animated-gradient text-center">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div
+                class="inline-flex items-center gap-2 pix-badge px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                <i class="bi bi-qr-code-scan text-teal-600"></i> Padrão Banco Central do Brasil (BCB)
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
+                Gerador de <span class="text-teal-600">QR Code Pix</span> com Máscara Inteligente
+            </h1>
+            <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                Crie seu código **Pix Copia e Cola** estático e gere a imagem do QR Code para cobrança presencial, redes
+                sociais ou mensagens. 100% gratuito e sem intermediários.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN TOOL SECTION -->
+    <main class="py-12 container mx-auto px-4 max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- FORM COLUMN (7 COLS) -->
+            <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        <i class="bi bi-input-cursor-text text-teal-600"></i>
+                        <span>Dados do Pix</span>
+                    </h2>
+                    <p class="text-xs text-gray-500 mt-1">Preencha sua chave Pix. Nossa máscara inteligente detecta o
+                        tipo automaticamente.</p>
+                </div>
+
+                <!-- KEY TYPE OVERRIDE PILLS -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Tipo de Chave Pix</label>
+                    <div class="flex flex-wrap gap-2 text-xs" id="key-type-pills">
+                        <button type="button" data-type="auto"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-teal-600 bg-teal-600 text-white font-bold transition flex items-center gap-1">
+                            <i class="bi bi-magic"></i> Auto-detectar
+                        </button>
+                        <button type="button" data-type="phone"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition">
+                            📱 Celular
+                        </button>
+                        <button type="button" data-type="cpf"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition">
+                            📄 CPF
+                        </button>
+                        <button type="button" data-type="cnpj"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition">
+                            🏢 CNPJ
+                        </button>
+                        <button type="button" data-type="email"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition">
+                            ✉️ E-mail
+                        </button>
+                        <button type="button" data-type="evp"
+                            class="pill-btn px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition">
+                            🔑 Aleatória
+                        </button>
+                    </div>
+                </div>
+
+                <!-- INPUT CHAVE PIX WITH DETECTED BADGE -->
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="input-pix-key" class="text-xs font-bold text-gray-700 uppercase">
+                            Chave Pix <span class="text-red-500">*</span>
+                        </label>
+                        <span id="detected-type-badge"
+                            class="pix-badge px-2.5 py-0.5 rounded-full text-xs font-bold flex items-center gap-1">
+                            <i class="bi bi-eye"></i> Aguardando digitação...
+                        </span>
+                    </div>
+                    <div class="relative">
+                        <input type="text" id="input-pix-key"
+                            placeholder="Digite Celular, CPF, CNPJ, E-mail ou Chave Aleatória"
+                            class="w-full px-4 py-3.5 pl-11 border-2 border-teal-500/40 rounded-xl font-bold text-gray-800 text-sm focus:outline-none focus:border-teal-600 transition shadow-sm">
+                        <div class="absolute left-3.5 top-3.5 text-teal-600 text-lg">
+                            <i class="bi bi-key-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BENEFICIARY NAME (OPTIONAL) -->
+                <div>
+                    <label for="input-merchant-name" class="block text-xs font-bold text-gray-700 uppercase mb-1">
+                        Nome do Negócio / Beneficiário <span class="text-gray-400 font-normal">(Opcional)</span>
+                    </label>
+                    <input type="text" id="input-merchant-name" maxlength="25"
+                        placeholder="Ex: Minha Loja ou Seu Nome"
+                        class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-800 text-xs focus:outline-none focus:border-teal-600">
+                    <p class="text-[10px] text-gray-400 mt-1">Aparece no topo da placa e no título do QR Code</p>
+                </div>
+
+                <!-- VALUE & TXID (OPTIONAL) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-gray-100">
+                    <div>
+                        <label for="input-amount" class="block text-xs font-bold text-gray-700 uppercase mb-1">
+                            Valor R$ <span class="text-gray-400 font-normal">(Opcional)</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute left-3.5 top-2.5 text-xs font-bold text-gray-500">R$</span>
+                            <input type="number" id="input-amount" step="0.01" min="0"
+                                placeholder="0,00 (Deixe livre se quiser)"
+                                class="w-full pl-9 pr-3.5 py-2.5 border border-gray-300 rounded-xl font-bold text-gray-800 text-xs focus:outline-none focus:border-teal-600">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="input-txid" class="block text-xs font-bold text-gray-700 uppercase mb-1">
+                            Identificador / TxID <span class="text-gray-400 font-normal">(Opcional)</span>
+                        </label>
+                        <input type="text" id="input-txid" maxlength="25" placeholder="Ex: PEDIDO123"
+                            class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-800 text-xs focus:outline-none focus:border-teal-600">
+                    </div>
+                </div>
+
+                <!-- DESCRIPTION (OPTIONAL) -->
+                <div>
+                    <label for="input-description" class="block text-xs font-bold text-gray-700 uppercase mb-1">
+                        Descrição / Mensagem da Cobrança <span class="text-gray-400 font-normal">(Opcional)</span>
+                    </label>
+                    <input type="text" id="input-description" maxlength="40"
+                        placeholder="Ex: Pagamento referente ao pedido #102"
+                        class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-800 text-xs focus:outline-none focus:border-teal-600">
+                </div>
+            </div>
+
+            <!-- RESULT COLUMN / PLACA PIX (5 COLS) -->
+            <div class="lg:col-span-5 space-y-6">
+
+                <!-- CARD DO QR CODE & PLACA PRINT -->
+                <div id="printable-placa"
+                    class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl text-center relative space-y-5">
+
+                    <!-- HEADER PLACA -->
+                    <div class="flex items-center justify-between pb-4 border-b border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <img src="../icons/logo_sem_fundo.png" alt="Duzz System" class="h-6 w-auto">
+                            <span class="text-xs font-black text-gray-400 tracking-wider uppercase">Pagamento Pix</span>
+                        </div>
+                        <span
+                            class="bg-teal-50 text-teal-700 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md border border-teal-200">
+                            Oficial BCB
+                        </span>
+                    </div>
+
+                    <!-- MERCHANT INFO -->
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Pague para</p>
+                        <h3 id="display-merchant-name" class="text-lg font-black text-gray-900 mt-0.5">DUZZ SYSTEM</h3>
+                        <p id="display-pix-key"
+                            class="text-xs font-semibold text-teal-700 bg-teal-50 inline-block px-3 py-1 rounded-full mt-2 border border-teal-200/60">
+                            Chave: Digite sua chave ao lado
+                        </p>
+                    </div>
+
+                    <!-- QR CODE CONTAINER -->
+                    <div
+                        class="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-4 border border-gray-200/80 min-h-[220px]">
+                        <div id="qrcode" class="p-3 bg-white rounded-xl shadow-md border border-gray-100"></div>
+                        <p class="text-xs text-gray-400 mt-2 font-medium">Escaneie com o aplicativo do seu banco</p>
+                        <p id="display-amount" class="text-base font-black text-gray-900 mt-2 hidden">
+                            Valor: <span class="text-teal-600">R$ 0,00</span>
+                        </p>
+                    </div>
+
+                    <!-- PIX COPIA E COLA PAYLOAD BOX -->
+                    <div class="text-left space-y-1.5 no-print">
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase">Código Pix Copia e
+                            Cola</label>
+                        <textarea id="payload-output" readonly rows="2"
+                            class="w-full p-2.5 bg-gray-900 text-teal-400 font-mono text-[11px] rounded-xl border border-gray-800 focus:outline-none resize-none break-all select-all"></textarea>
+                    </div>
+
+                    <!-- ACTIONS BUTTONS -->
+                    <div class="space-y-2.5 pt-2 no-print">
+                        <button id="copy-payload-btn" type="button"
+                            class="btn-pix w-full text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg text-xs">
+                            <i class="bi bi-clipboard-check text-lg"></i>
+                            <span>Copiar Pix Copia e Cola</span>
+                        </button>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <button id="download-qr-btn" type="button"
+                                class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 text-xs transition">
+                                <i class="bi bi-download"></i> Baixar QR Code
+                            </button>
+                            <button type="button" onclick="window.print()"
+                                class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 text-xs transition border border-gray-200">
+                                <i class="bi bi-printer"></i> Imprimir Placa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TOAST NOTIFICATION -->
+                    <div id="toast"
+                        class="hidden text-center text-xs text-teal-800 bg-teal-100 font-bold py-2 rounded-lg border border-teal-200 shadow-sm no-print">
+                        ✅ Código Pix Copia e Cola copiado com sucesso!
+                    </div>
+
+                    <!-- PLACA FOOTER BRANDING -->
+                    <div class="pt-4 border-t border-gray-100 text-center">
+                        <p class="text-[11px] font-medium text-gray-400">
+                            Criado com a Ferramenta Gratuita do <strong class="text-gray-600">Duzz System</strong> • duzzsystem.com.br
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROMO DUZZ BANNER -->
+                <div
+                    class="bg-gradient-to-br from-gray-900 via-teal-950 to-gray-900 text-white rounded-3xl p-6 shadow-xl border border-gray-800 space-y-4">
+                    <span
+                        class="bg-teal-500/20 text-teal-300 font-semibold text-[10px] uppercase px-2.5 py-1 rounded-full border border-teal-500/30">
+                        Automação de Vendas no PDV
+                    </span>
+                    <h4 class="text-base font-extrabold leading-snug">
+                        Quer receber Pix no caixa com baixa automática no estoque e conciliação bancária?
+                    </h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        O **Duzz System** integra recebimentos Pix ao seu caixa, gera comprovantes automáticos e
+                        gerencia o estoque sem digitação manual.
+                    </p>
+                    <a href="https://painel.duzzsystem.com.br/onboarding" target="_blank"
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'pix_tool_banner', 'button_name': 'Testar Duzz 7 Dias Grátis' }); fbq('track', 'Lead');"
+                        class="block w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-black py-3 rounded-xl text-center text-xs shadow-md transition">
+                        Testar Duzz 7 Dias Grátis
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- EDUCATIONAL SEO SECTION -->
+        <section class="mt-20 border-t border-gray-200 pt-16 space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">
+                    Tudo o que você precisa saber sobre o QR Code Pix Estático
+                </h2>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    O Pix revolucionou o comércio brasileiro. Ter um QR Code Pix visível no seu balcão ou nas suas redes
+                    sociais acelera as vendas e reduz custos com taxas de maquininha de cartão.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm space-y-3">
+                    <div
+                        class="w-10 h-10 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-base">Padrão Oficial do Banco Central</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Geramos a string BR Code exatamente no formato EMV QRCPS exigido pelo BCB. Qualquer aplicativo
+                        bancário do Brasil consegue ler e pagar instantaneamente.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm space-y-3">
+                    <div
+                        class="w-10 h-10 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-base">Máscara Inteligente sem Erros</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Identificamos se sua chave é Celular, CPF, CNPJ, E-mail ou Chave Aleatória em tempo real,
+                        formatando os dados para evitar rejeições de pagamento.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm space-y-3">
+                    <div
+                        class="w-10 h-10 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="bi bi-printer"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-base">Imprima sua Placa Pix Pronta</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Clique em "Imprimir Placa" e tenha uma exibição profissional para colocar em balcões de lojas,
+                        mesas de restaurante ou feiras de artesanato.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ SECTION -->
+            <div class="max-w-3xl mx-auto space-y-4 pt-8">
+                <h3 class="text-xl font-bold text-gray-900 text-center mb-6">Perguntas Frequentes (FAQ)</h3>
+
+                <details class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
+                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">O QR Code Pix gerado nesta
+                        ferramenta é seguro e oficial?</summary>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">Sim! O QR Code é gerado inteiramente no seu
+                        próprio navegador seguindo a especificação EMV QRCPS / BR Code do Banco Central. Nenhum dado
+                        financeiro ou chave Pix é armazenado em nossos servidores.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
+                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">Como funciona a máscara inteligente
+                        de tipo de chave?</summary>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">A ferramenta analisa os caracteres digitados.
+                        Se você digitar 11 números, ela verifica se é um celular (com DDD e 9) ou CPF. Com 14 números,
+                        identifica CNPJ. Com o caractere "@", identifica E-mail. E com formato UUID, identifica Chave
+                        Aleatória.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
+                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">Posso gerar um QR Code Pix com valor
+                        fixo ou sem valor?</summary>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">Sim. Se você preencher o campo 'Valor', o
+                        aplicativo do banco do cliente abre já com aquele valor exato preenchido. Se deixar em branco, o
+                        próprio cliente digita o valor ao realizar a transferência.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
+                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">Como o Duzz System ajuda meu
+                        comércio no Pix?</summary>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">No Duzz System, ao realizar uma venda no PDV
+                        ou comanda, o sistema gera o QR Code com o valor exato da compra e dá baixa automática no
+                        estoque e no fluxo de caixa ao confirmar a venda.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-xs border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Duzz System. Todos os direitos reservados. | <a href="index.html"
+                    class="underline hover:text-white">Todas as Ferramentas</a></p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputKey = document.getElementById('input-pix-key');
+            const inputName = document.getElementById('input-merchant-name');
+            const inputAmount = document.getElementById('input-amount');
+            const inputTxid = document.getElementById('input-txid');
+            const inputDescription = document.getElementById('input-description');
+
+            const badgeType = document.getElementById('detected-type-badge');
+            const displayMerchantName = document.getElementById('display-merchant-name');
+            const displayPixKey = document.getElementById('display-pix-key');
+            const displayAmount = document.getElementById('display-amount');
+            const payloadOutput = document.getElementById('payload-output');
+            const copyBtn = document.getElementById('copy-payload-btn');
+            const downloadQrBtn = document.getElementById('download-qr-btn');
+            const toast = document.getElementById('toast');
+            const pills = document.querySelectorAll('.pill-btn');
+
+            let qrInstance = null;
+            let currentMode = 'auto'; // 'auto', 'phone', 'cpf', 'cnpj', 'email', 'evp'
+
+            // Mode Pills Selection
+            pills.forEach(pill => {
+                pill.addEventListener('click', (e) => {
+                    pills.forEach(p => {
+                        p.classList.remove('bg-teal-600', 'text-white', 'border-teal-600', 'font-bold');
+                        p.classList.add('bg-gray-50', 'text-gray-700', 'border-gray-200', 'font-medium');
+                    });
+                    const target = e.currentTarget;
+                    target.classList.remove('bg-gray-50', 'text-gray-700', 'border-gray-200', 'font-medium');
+                    target.classList.add('bg-teal-600', 'text-white', 'border-teal-600', 'font-bold');
+
+                    currentMode = target.getAttribute('data-type');
+                    processInput();
+                });
+            });
+
+            // Sanitize text (remove accents and special chars)
+            function sanitizeText(text) {
+                if (!text) return '';
+                return text.normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/[^a-zA-Z0-9 ]/g, '')
+                    .toUpperCase();
+            }
+
+            // CRC16-CCITT Calculation
+            function crc16(str) {
+                let crc = 0xFFFF;
+                for (let i = 0; i < str.length; i++) {
+                    crc ^= (str.charCodeAt(i) << 8);
+                    for (let j = 0; j < 8; j++) {
+                        if ((crc & 0x8000) !== 0) {
+                            crc = ((crc << 1) ^ 0x1021) & 0xFFFF;
+                        } else {
+                            crc = (crc << 1) & 0xFFFF;
+                        }
+                    }
+                }
+                return crc.toString(16).toUpperCase().padStart(4, '0');
+            }
+
+            function tlv(id, value) {
+                const len = String(value.length).padStart(2, '0');
+                return `${id}${len}${value}`;
+            }
+
+            // Smart Mask & Type Detector
+            function analyzeKey(rawVal) {
+                const trimmed = rawVal.trim();
+                const digits = trimmed.replace(/\D/g, '');
+
+                if (currentMode === 'email' || (currentMode === 'auto' && trimmed.includes('@'))) {
+                    return {
+                        type: 'E-mail',
+                        icon: 'bi-envelope-fill',
+                        rawKey: trimmed.toLowerCase(),
+                        formattedDisplay: trimmed.toLowerCase()
+                    };
+                }
+
+                if (currentMode === 'evp' || (currentMode === 'auto' && (trimmed.length > 25 && /^[0-9a-fA-F-]+$/.test(trimmed)))) {
+                    return {
+                        type: 'Chave Aleatória (EVP)',
+                        icon: 'bi-key-fill',
+                        rawKey: trimmed.toLowerCase(),
+                        formattedDisplay: trimmed.toLowerCase()
+                    };
+                }
+
+                if (currentMode === 'cnpj' || (currentMode === 'auto' && digits.length === 14)) {
+                    const f = digits.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5");
+                    return {
+                        type: 'CNPJ',
+                        icon: 'bi-building-fill',
+                        rawKey: digits,
+                        formattedDisplay: f
+                    };
+                }
+
+                if (currentMode === 'phone' || (currentMode === 'auto' && (digits.length === 10 || (digits.length === 11 && digits.charAt(2) === '9')))) {
+                    let f = digits;
+                    if (digits.length === 11) {
+                        f = digits.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+                    } else if (digits.length === 10) {
+                        f = digits.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
+                    }
+                    return {
+                        type: 'Telefone Celular',
+                        icon: 'bi-phone-fill',
+                        rawKey: '+55' + digits,
+                        formattedDisplay: f
+                    };
+                }
+
+                if (currentMode === 'cpf' || (currentMode === 'auto' && digits.length === 11)) {
+                    const f = digits.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
+                    return {
+                        type: 'CPF',
+                        icon: 'bi-person-vcard-fill',
+                        rawKey: digits,
+                        formattedDisplay: f
+                    };
+                }
+
+                // Default fallback
+                return {
+                    type: currentMode !== 'auto' ? currentMode.toUpperCase() : 'Chave Pix',
+                    icon: 'bi-key-fill',
+                    rawKey: trimmed,
+                    formattedDisplay: trimmed
+                };
+            }
+
+            function generatePixPayload({ key, name, city, amount, txid, description }) {
+                if (!key) return '';
+
+                let payload = tlv('00', '01');
+
+                // Merchant Account Info
+                let mai = tlv('00', 'br.gov.bcb.pix');
+                mai += tlv('01', key);
+                if (description && description.trim()) {
+                    mai += tlv('02', sanitizeText(description).substring(0, 40));
+                }
+                payload += tlv('26', mai);
+
+                payload += tlv('52', '0000'); // Merchant Category Code
+                payload += tlv('53', '986');  // BRL Currency
+
+                if (amount && parseFloat(amount) > 0) {
+                    const formattedAmount = parseFloat(amount).toFixed(2);
+                    payload += tlv('54', formattedAmount);
+                }
+
+                payload += tlv('58', 'BR'); // Country Code
+                payload += tlv('59', sanitizeText(name || 'DUZZ SYSTEM').substring(0, 25));
+                payload += tlv('60', sanitizeText(city || 'BRASILIA').substring(0, 15));
+
+                const refTxid = sanitizeText(txid || '***').substring(0, 25) || '***';
+                payload += tlv('62', tlv('05', refTxid));
+
+                payload += '6304';
+                payload += crc16(payload);
+
+                return payload;
+            }
+
+            function processInput() {
+                const rawKey = inputKey.value;
+                const merchantName = inputName.value.trim();
+                const merchantCity = 'BRASILIA';
+                const amountVal = inputAmount.value;
+                const txidVal = inputTxid.value;
+                const descVal = inputDescription.value;
+
+                const analysis = analyzeKey(rawKey);
+
+                if (rawKey.trim().length > 0) {
+                    badgeType.innerHTML = `<i class="bi ${analysis.icon}"></i> ${analysis.type}`;
+                    badgeType.classList.remove('bg-gray-100', 'text-gray-600');
+                    badgeType.classList.add('bg-teal-50', 'text-teal-700');
+                } else {
+                    badgeType.innerHTML = `<i class="bi bi-eye"></i> Aguardando digitação...`;
+                }
+
+                displayMerchantName.textContent = merchantName ? sanitizeText(merchantName) : 'DUZZ SYSTEM';
+                displayPixKey.textContent = `Chave: ${analysis.formattedDisplay || 'Sua chave Pix'}`;
+
+                if (amountVal && parseFloat(amountVal) > 0) {
+                    const fmt = parseFloat(amountVal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                    displayAmount.innerHTML = `Valor: <span class="text-teal-600">${fmt}</span>`;
+                    displayAmount.classList.remove('hidden');
+                } else {
+                    displayAmount.classList.add('hidden');
+                }
+
+                const payload = generatePixPayload({
+                    key: analysis.rawKey,
+                    name: merchantName || 'DUZZ SYSTEM',
+                    city: merchantCity,
+                    amount: amountVal,
+                    txid: txidVal,
+                    description: descVal
+                });
+
+                payloadOutput.value = payload;
+
+                // Render QR Code
+                const qrContainer = document.getElementById('qrcode');
+                qrContainer.innerHTML = '';
+                if (payload) {
+                    qrInstance = new QRCode(qrContainer, {
+                        text: payload,
+                        width: 200,
+                        height: 200,
+                        colorDark: "#0f172a",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                } else {
+                    qrContainer.innerHTML = '<div class="text-xs text-gray-400 text-center py-10 font-medium">Digite uma chave Pix para gerar o QR Code</div>';
+                }
+            }
+
+            [inputKey, inputName, inputAmount, inputTxid, inputDescription].forEach(el => {
+                el.addEventListener('input', processInput);
+            });
+
+            // Copy Payload
+            copyBtn.addEventListener('click', () => {
+                const payload = payloadOutput.value;
+                if (!payload) return;
+
+                navigator.clipboard.writeText(payload).then(() => {
+                    toast.classList.remove('hidden');
+                    setTimeout(() => toast.classList.add('hidden'), 3500);
+                });
+            });
+
+            // Download Branded QR Code Handler (Canvas HTML5 Client-Side HD)
+            downloadQrBtn.addEventListener('click', () => {
+                const imgEl = document.querySelector('#qrcode img');
+                const canvasEl = document.querySelector('#qrcode canvas');
+                let qrSource = null;
+
+                if (imgEl && imgEl.src) {
+                    qrSource = imgEl;
+                } else if (canvasEl) {
+                    qrSource = canvasEl;
+                }
+
+                if (!qrSource) {
+                    alert('Por favor, informe sua chave Pix para gerar o QR Code.');
+                    return;
+                }
+
+                const merchantName = inputName.value.trim() || 'DUZZ SYSTEM';
+                const amountVal = inputAmount.value;
+                const analysis = analyzeKey(inputKey.value);
+
+                // Create off-screen Canvas (600x780 HD resolution)
+                const c = document.createElement('canvas');
+                c.width = 600;
+                c.height = 780;
+                const ctx = c.getContext('2d');
+
+                // 1. Background
+                ctx.fillStyle = '#f8fafc';
+                ctx.fillRect(0, 0, 600, 780);
+
+                // 2. Top Header Gradient Bar (Duzz Blue to Pix Teal)
+                const grad = ctx.createLinearGradient(0, 0, 600, 0);
+                grad.addColorStop(0, '#0056b3');
+                grad.addColorStop(1, '#0d9488');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, 600, 135);
+
+                // Header Text
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '900 24px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                const mainTitle = sanitizeText(merchantName).toUpperCase() || 'DUZZ SYSTEM';
+                ctx.fillText(mainTitle, 300, 55);
+
+                ctx.font = '600 13px Inter, sans-serif';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.fillText('PAGAMENTO INSTANTÂNEO VIA PIX', 300, 85);
+
+                // 3. Central White Card Frame for QR Code
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.08)';
+                ctx.shadowBlur = 20;
+                ctx.shadowOffsetY = 10;
+
+                const drawCard = (x, y, w, h, r) => {
+                    ctx.beginPath();
+                    ctx.moveTo(x + r, y);
+                    ctx.lineTo(x + w - r, y);
+                    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+                    ctx.lineTo(x + w, y + h - r);
+                    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+                    ctx.lineTo(x + r, y + h);
+                    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+                    ctx.lineTo(x, y + r);
+                    ctx.quadraticCurveTo(x, y, x + r, y);
+                    ctx.closePath();
+                    ctx.fill();
+                };
+                drawCard(60, 155, 480, 520, 24);
+
+                // Reset Shadow
+                ctx.shadowColor = 'transparent';
+
+                // Inner QR Code Border
+                ctx.strokeStyle = '#e2e8f0';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // 4. Draw QR Code in Center (sized 300x300)
+                ctx.drawImage(qrSource, 150, 185, 300, 300);
+
+                // 5. Merchant Details & Key below QR Code
+                ctx.fillStyle = '#0f172a';
+                ctx.font = '800 18px Inter, sans-serif';
+                ctx.fillText(analysis.formattedDisplay ? `Chave: ${analysis.formattedDisplay}` : 'Chave Pix', 300, 525);
+
+                if (amountVal && parseFloat(amountVal) > 0) {
+                    const fmt = parseFloat(amountVal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                    ctx.fillStyle = '#0d9488';
+                    ctx.font = '800 20px Inter, sans-serif';
+                    ctx.fillText(`Valor: ${fmt}`, 300, 560);
+
+                    ctx.fillStyle = '#64748b';
+                    ctx.font = '600 13px Inter, sans-serif';
+                    ctx.fillText('Escaneie no app do seu banco para pagar', 300, 595);
+                } else {
+                    ctx.fillStyle = '#64748b';
+                    ctx.font = '600 14px Inter, sans-serif';
+                    ctx.fillText('Escaneie no app do seu banco para pagar', 300, 565);
+                }
+
+                // 6. Footer Branding
+                ctx.fillStyle = '#94a3b8';
+                ctx.font = '500 12px Inter, sans-serif';
+                ctx.fillText('Criado com a Ferramenta Gratuita do Duzz System • duzzsystem.com.br', 300, 730);
+
+                // Export PNG Download
+                const dataUrl = c.toDataURL('image/png');
+                const downloadLink = document.createElement('a');
+                downloadLink.href = dataUrl;
+                downloadLink.download = `qrcode-pix-${sanitizeText(merchantName).toLowerCase() || 'duzz'}.png`;
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            });
+
+            // Initial trigger
+            inputKey.value = '38998588893';
+            processInput();
+        });
+    </script>
+</body>
+
+</html>

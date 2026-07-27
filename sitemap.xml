@@ -18,4 +18,34 @@
       <changefreq>yearly</changefreq>
       <priority>0.3</priority>
    </url>
+   <url>
+      <loc>https://duzzsystem.com.br/ferramentas/</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>

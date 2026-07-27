@@ -48,6 +48,12 @@
           "position": 3,
           "name": "Calculadora de Custo de Produto com Insumos",
           "url": "https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Gerador de QR Code Pix",
+          "url": "https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html"
         }
       ]
     }
@@ -231,58 +237,76 @@
 
     <!-- TOOLS GRID -->
     <main class="py-16 container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             <!-- Tool 1: WhatsApp -->
-            <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                 <div>
-                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
                         <i class="bi bi-whatsapp"></i>
                     </div>
                     <span class="text-xs font-bold text-green-600 uppercase tracking-wider">Vendas e Contato</span>
-                    <h2 class="text-xl font-bold text-gray-900 mt-1 mb-3">Gerador de Link de WhatsApp</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        Crie links curtos personalizados com mensagem pronta e gere QR Codes para suas redes sociais, cartões de visita e anúncios.
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Gerador de Link WhatsApp</h2>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
+                        Crie links curtos personalizados com mensagem pronta e gere QR Codes para suas redes sociais.
                     </p>
                 </div>
-                <a href="gerador-link-whatsapp.html" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold rounded-xl transition duration-300">
-                    <span>Usar Gerador Grátis</span>
+                <a href="gerador-link-whatsapp.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
+                    <span>Usar Gerador</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
 
             <!-- Tool 2: Margem Revenda -->
-            <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                 <div>
-                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center text-3xl mb-6">
+                    <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-4">
                         <i class="bi bi-calculator-fill"></i>
                     </div>
                     <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Precificação e Lucro</span>
-                    <h2 class="text-xl font-bold text-gray-900 mt-1 mb-3">Calculadora de Margem de Revenda</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        Descubra o preço de venda ideal para produtos comprados para revenda considerando impostos, frete, comissão e taxa de cartão.
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Revenda</h2>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
+                        Descubra o preço de venda ideal considerando impostos, frete, comissão e taxa de cartão.
                     </p>
                 </div>
-                <a href="calculadora-margem-revenda.html" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold rounded-xl transition duration-300">
+                <a href="calculadora-margem-revenda.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
                     <span>Calcular Margem</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
 
             <!-- Tool 3: Ficha Técnica / Insumos -->
-            <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                 <div>
-                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
                         <i class="bi bi-basket3-fill"></i>
                     </div>
                     <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Ficha Técnica e Gastronomia</span>
-                    <h2 class="text-xl font-bold text-gray-900 mt-1 mb-3">Calculadora de Custo com Insumos</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        Monte a ficha técnica completa da sua receita ou produto artesanal. Calcule custo por porção e margem de lucro por unidade.
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Insumos</h2>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
+                        Monte a ficha técnica completa da sua receita ou produto artesanal. Calcule custo por porção.
                     </p>
                 </div>
-                <a href="calculadora-custo-produto.html" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold rounded-xl transition duration-300">
+                <a href="calculadora-custo-produto.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
                     <span>Montar Ficha Técnica</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Tool 4: QR Code Pix -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="bi bi-qr-code-scan"></i>
+                    </div>
+                    <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Pagamentos Pix</span>
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Gerador de QR Code Pix</h2>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
+                        Crie seu código Pix Copia e Cola estático com máscara inteligente para Celular, CPF, CNPJ ou E-mail.
+                    </p>
+                </div>
+                <a href="gerador-qr-code-pix.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-teal-600 text-white font-bold text-xs rounded-xl transition duration-300">
+                    <span>Gerar QR Code Pix</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -327,6 +351,7 @@
                         <li><a href="gerador-link-whatsapp.html" class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
                         <li><a href="calculadora-margem-revenda.html" class="hover:text-white transition">Calculadora de Margem de Revenda</a></li>
                         <li><a href="calculadora-custo-produto.html" class="hover:text-white transition">Calculadora de Custo com Insumos</a></li>
+                        <li><a href="gerador-qr-code-pix.html" class="hover:text-white transition">Gerador de QR Code Pix</a></li>
                     </ul>
                 </div>
                 <div>
