@@ -534,7 +534,7 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="py-3 px-3 text-right font-bold text-gray-800">
+                        <td class="py-3 px-3 text-right font-bold text-gray-800 row-cost">
                             ${formatBRL(rowCost)}
                         </td>
                         <td class="py-3 px-3 text-center no-print">
@@ -546,24 +546,33 @@
                     tableBody.appendChild(tr);
                 });
 
-                // Attach listeners
+                // Attach listeners without full table re-render on input
                 tableBody.querySelectorAll('input, select').forEach(el => {
                     el.addEventListener('input', (e) => {
-                        const idx = e.target.getAttribute('data-index');
+                        const idx = parseInt(e.target.getAttribute('data-index'), 10);
                         const field = e.target.getAttribute('data-field');
                         let val = e.target.value;
                         if (field !== 'name' && field !== 'packageUnit' && field !== 'recipeUnit') {
                             val = parseFloat(val) || 0;
                         }
                         insumos[idx][field] = val;
-                        renderTable();
+
+                        // Atualiza o custo proporcional da linha diretamente na DOM sem perder o foco
+                        const tr = e.target.closest('tr');
+                        if (tr) {
+                            const costCell = tr.querySelector('.row-cost');
+                            if (costCell) {
+                                costCell.textContent = formatBRL(calculateRowCost(insumos[idx]));
+                            }
+                        }
+
                         calculate();
                     });
                 });
 
                 tableBody.querySelectorAll('.remove-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
-                        const idx = e.currentTarget.getAttribute('data-index');
+                        const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
                         insumos.splice(idx, 1);
                         renderTable();
                         calculate();
