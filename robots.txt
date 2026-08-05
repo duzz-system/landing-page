@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://duzzsystem.com.br/sitemap.xml
+
+# LLM / AI Crawler Summary
+# https://duzzsystem.com.br/llms.txt
+# https://duzzsystem.com.br/llms-full.txt

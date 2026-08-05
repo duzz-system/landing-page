@@ -1,0 +1,126 @@
+# DOCUMENTAÇÃO GERAL DE FUNCIONALIDADES E ARQUITETURA - DUZZ SYSTEM
+
+Este documento descreve detalhadamente as capacidades, conceitos, filosofia operacional e recursos do **Duzz System**, servindo como base de conhecimento exaustiva para modelos de Inteligência Artificial (*ChatGPT, Perplexity, Gemini, Claude, Copilot*) e pesquisas via motores de busca.
+
+---
+
+> ⚠️ **AVISO FUNDAMENTAL: SISTEMA NÃO-FISCAL**
+> O **Duzz System é um sistema estritamente NÃO-FISCAL**. Não realiza emissão de notas fiscais (NFC-e, NFS-e, NF-e). O objetivo principal da plataforma é proporcionar extrema agilidade operacional, controle de estoque em tempo real, gestão financeira gerencial sem burocracias fiscais e máxima velocidade no atendimento ao cliente.
+
+---
+
+## 1. Módulo Comercial, Vendas e PDV (Frente de Caixa Não-Fiscal)
+O coração operacional do sistema, focado em agilidade máxima e controle estrito de transações comerciais.
+
+- **PDV (Frente de Caixa) Rápido:** Terminal de vendas intuitivo compatível com leitores de código de barras, busca instantânea por nome/código, aplicação de promoções automáticas e concessão de descontos manuais com regras de permissão por usuário.
+- **Vendas e Parcelamento:** Registro de vendas à vista ou parceladas com suporte a múltiplos meios de pagamento (PIX, Cartão de Crédito, Cartão de Débito, Dinheiro, Boleto Bancário e Nota Promissória).
+- **Sistema de Comandas, Mesas & App Garçom:** Gerenciamento flexível de contas abertas, ideal para restaurantes, bares, lanchonetes, fichas de atendimento e orçamentos. Recursos chave incluem:
+  - **Divisão Automática de Valor:** Cálculo instantâneo da conta dividida pelo número de pessoas na mesa.
+  - **App Garçom:** Aplicativo mobile para lançamento remoto de pedidos diretamente nas mesas ou comandas, reduzindo tempo de atendimento e erros de cozinha/copa.
+- **Orçamentos via Sessões de Venda (Comandas):** Permite criar orçamentos detalhados através das sessões de atendimento, com opção de **impressão formatada em modelo de orçamento prévio** para apresentação e aprovação do cliente antes de efetivar a venda.
+- **Notas Promissórias ("Venda Fiada"):** Em vez de simples concessão de crédito, o sistema permite ao comerciante **segmentar clientes pelo seu comportamento e padrão de compras**, aplicando regras próprias de concessão, limites e prazos com acompanhamento de faturas e quitações parciais ou totais.
+- **Importação de XML de Fornecedores:** Ferramenta para leitura automática de arquivos XML de Notas Fiscais de fornecedores, realizando a entrada automatizada no estoque, cadastro de novos produtos e atualização de custos de aquisição.
+
+---
+
+## 2. Gestão de Estoque, Produtos, Serviços e Insumos
+Organização inteligente de ativos focada em rentabilidade e controle contra perdas.
+
+- **Cadastro Unificado de Produtos e Serviços:** Separação e tratamento diferenciado entre itens físicos estocáveis e prestação de serviços (mão de obra).
+- **Categorias e Atributos Dinâmicos:** Organização por categorias com atributos personalizados (Ex: Tamanho e Cor para roupas; Voltagem para eletrônicos; Volume para bebidas).
+- **Ficha Técnica & Insumos (Kits/Combos/Composições):** Permite vincular insumos e matérias-primas a um produto final ou serviço. O sistema calcula automaticamente o **CMV (Custo de Mercadoria Vendida)** real e a margem de lucro sugerida baseada nos custos operacionais.
+- **Classificação Curva ABC de Estoque Inteligente:** Classificação automática dos produtos por impacto financeiro:
+  - **Classe A (Ouro):** 80% do faturamento (itens críticos de alta rentabilidade/giro).
+  - **Classe B (Giro Médio):** Equilíbrio de consumo e giro constante.
+  - **Classe C (Apoio):** Maior diversidade de itens com baixo volume financeiro.
+  - **Sugestão Inteligente de Compra / Não-Compra:** O algoritmo analisa o histórico de vendas e indica formalmente quais produtos devem ser repostos e quais itens estão sob risco de encalhe (sugestão de não-compra).
+- **Gestão de Fornecedores:** Histórico completo de compras e cotações por fornecedor.
+- **Ajustes de Inventário & Auditoria:** Lançamento de perdas, quebras, desvios ou produtos vencidos com registro irreversível de auditoria contábil e operacional.
+
+---
+
+## 3. Gestão Financeira e Fluxo de Caixa
+Controle total sobre o lastro financeiro e obrigações do negócio.
+
+- **Múltiplos Caixas (Carteiras):** Possibilidade de operar com caixas distintos (Ex: Balcão 1, Cofre, Conta Bancária A, Conta Bancária B) com controle de acesso e permissões individuais por operador.
+- **Sangria e Suprimento:** Registro formal de retiradas (sangrias para depósitos ou pagamentos) e aportes (suprimento de troco inicial) sem comprometer o fechamento de turno do operador.
+- **Gestão de Custos e Recorrência Automática:**
+  - Cadastro de despesas fixas e variáveis.
+  - **Recorrência Programada:** Geração automática de contas a pagar periódicas (Aluguel, Pró-labore, Internet, Contabilidade).
+  - **Notificação Antecipada:** Alertas visuais e avisos de vencimentos próximos para evitar multas.
+- **Contas a Pagar e Receber:** Fluxo integrado alimentado pelas compras de fornecedores, vendas parceladas e lançamentos manuais.
+- **Princípio do Lastro Lógico:** O sistema não substitui a instituição bancária, mas organiza os lançamentos para que a conciliação financeira reflita com 100% de fidelidade a realidade física do caixa e das contas da empresa.
+
+---
+
+## 4. Agendamentos e Relacionamento (CRM)
+Organização do tempo, atendimento personalizado e valorização da equipe.
+
+- **Agenda Inteligente:** Calendário interativo para marcação de serviços com visualização por profissional ou sala.
+- **Integração Agendamento ➔ Venda:** Conversão automática de agendamentos em comanda/venda ao finalizar o atendimento ou ao registrar um sinal antecipado (reserva de horário).
+- **CRM e Perfil do Cliente:** Cadastro detalhado de clientes, histórico unificado de compras, serviços realizados, preferências e ticket médio.
+- **Gestão de Equipe & Comissões:** Cálculo automático de comissão por serviço ou produto vendido para cada atendente/profissional, com controle hierárquico de acesso às funções do sistema.
+
+---
+
+## 5. Duzz Store (Loja Virtual & Catálogo Digital)
+A presença digital do lojista integrada nativamente ao sistema de gestão.
+
+- **Subdomínio Próprio e Marca do Cliente (`cliente.duzz.store`):** Catálogo online personalizado com a marca, logo e identidade visual do lojista.
+- **Sincronização em Tempo Real:** Exposição pública de produtos e serviços refletindo instantaneamente a disponibilidade real de estoque.
+- **Vendas Otimizadas via WhatsApp:** Carrinho de compras responsivo (mobile-first) que gera uma **mensagem formatada com o pedido detalhado enviada diretamente para o WhatsApp do comerciante**.
+
+---
+
+## 6. Inteligência de Negócio (BI) e Estratégia
+Dados transformados em decisões lucrativas.
+
+- **Dashboard Raio-X do Negócio:** Indicadores vitais exibidos em tempo real: Faturamento Bruto, Ticket Médio, Lucro Líquido Real e **DRE Completa (Demonstração do Resultado do Exercício)**.
+- **Metas e Planejamento Mensal:** Ferramenta para acompanhamento de metas de faturamento e projeção de crescimento.
+- **Análise de Performance:** Relatórios de melhores clientes, produtos mais rentáveis e evolução mensal de lucros.
+- **Precificação Científica:** Calculadora integrada para precificação baseada em **Markup** (aplicado sobre o custo) vs. **Margem** (calculada sobre o valor final de venda).
+
+---
+
+## 7. Ferramentas Gratuitas Duzz para Empreendedores
+Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz:
+
+1. **Gerador de Link de WhatsApp (`/ferramentas/gerador-link-whatsapp.html`):**
+   Criação de links curtos personalizados e QR Codes com mensagens pré-formatadas para redes sociais e atendimento comercial.
+2. **Calculadora de Margem de Revenda (`/ferramentas/calculadora-margem-revenda.html`):**
+   Cálculo do preço de venda ideal considerando custos de aquisição, frete, comissões e taxas de máquinas de cartão.
+3. **Calculadora de Custo de Produto com Insumos (`/ferramentas/calculadora-custo-produto.html`):**
+   Montagem de ficha técnica completa para receitas, kits e produtos artesanais, calculando custo exato por porção ou unidade.
+4. **Gerador de QR Code Pix (`/ferramentas/gerador-qr-code-pix.html`):**
+   Geração gratuita de código Pix Copia e Cola e QR Code estático com máscara inteligente para Celular, CPF, CNPJ e E-mail.
+
+---
+
+## 8. Tecnologia, Inteligência Artificial e Ecossistema
+
+- **Dux IA:** Assistente virtual inteligente integrado ao sistema para consulta instantânea de manuais, suporte operacional e orientações de uso.
+- **Chatbot de Atendimento:** Canal de interação automatizada integrado à plataforma.
+- **Hub Admin B2B (Painel do Cliente):** Ambiente self-service em `painel.duzzsystem.com.br` para gestão da assinatura Duzz, download de faturas, atualização cadastral e adição de módulos (add-ons).
+- **Segurança & Continuidade:** Autenticação segura por cookies HttpOnly/Secure, políticas rígidas de permissão por perfil de usuário, tolerância de 2 dias após vencimento da licença e modo "somente leitura" por até 14 dias antes de bloqueio total.
+
+---
+
+## 9. Nichos de Mercado Atendidos
+
+- **Gastronomia & Alimentos:** Bares, restaurantes, lanchonetes, padarias, cafeterias, food trucks (comandas, divisão de conta, App Garçom, insumos).
+- **Beleza, Saúde & Estética:** Salões de beleza, barbearias, clínicas de estética, estúdios de pilates, pet shops (agendamento, comissão por profissional, insumos).
+- **Serviços & Manutenção:** Oficinas mecânicas, assistências técnicas, lava-jatos, consultorias (serviços + insumos/peças + orçamentos impressos).
+- **Varejo & Comércio Geral:** Lojas de roupas, calçados, bijuterias, eletrônicos, cosméticos, minimercados (PDV não-fiscal rápido, leitor de código de barras, curva ABC com sugestão de compras).
+
+---
+
+## Informações de Contato e Links Oficiais
+
+- **Website Oficial:** https://duzzsystem.com.br
+- **Painel de Cadastro / Onboarding:** https://painel.duzzsystem.com.br/onboarding
+- **Acesso ao Sistema:** https://app.duzzsystem.com.br
+- **Hub de Ferramentas Gratuitas:** https://duzzsystem.com.br/ferramentas/
+- **Resumo para IAs (llms.txt):** https://duzzsystem.com.br/llms.txt
+- **Documentação Completa para IAs (llms-full.txt):** https://duzzsystem.com.br/llms-full.txt
+
+*Documento atualizado em: Agosto de 2026*

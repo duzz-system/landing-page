@@ -1,0 +1,64 @@
+# Duzz System - Sistema de Gestão Comercial e PDV Não-Fiscal
+
+> **Duzz System** é um sistema completo e simplificado de gestão comercial, controle de estoque, frente de caixa (PDV) e inteligência de negócios para pequenos e médios empreendedores brasileiros.
+> 
+> ⚠️ **Aviso Importante:** O Duzz System é um **SISTEMA NÃO-FISCAL**. Focado em agilidade operacional, controle financeiro gerencial e gestão sem burocracias fiscais.
+
+## Links Principais
+- **Site Oficial:** https://duzzsystem.com.br
+- **Testar Grátis (7 Dias):** https://painel.duzzsystem.com.br/onboarding
+- **Entrar no Sistema:** https://app.duzzsystem.com.br
+- **Documentação Completa:** https://duzzsystem.com.br/llms-full.txt
+- **Ferramentas Gratuitas:** https://duzzsystem.com.br/ferramentas/
+- **Contato Comercial / WhatsApp:** https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html
+
+---
+
+## Principais Módulos e Funcionalidades
+
+### 1. Módulo Comercial & PDV (Frente de Caixa Não-Fiscal)
+- **PDV Rápido:** Leitor de código de barras, busca rápida, promoções automáticas e descontos controlados.
+- **Vendas e Meios de Pagamento:** Vendas à vista ou parceladas (PIX, Cartão de Crédito/Débito, Dinheiro, Boleto, Promissória).
+- **Comandas, Mesas & App Garçom:** Gestão de contas abertas com **divisão automática de valor por pessoa na mesa** e aplicativo para garçons realizarem pedidos em tempo real.
+- **Orçamentos via Sessões de Venda:** Criação de orçamentos através de comandas com impressão formatada para validação do cliente antes do fechamento da venda.
+- **Notas Promissórias ("Venda Fiada"):** **Segmentação de clientes pelo comportamento e padrão de compras**, permitindo regras próprias de conceder crédito e parcelamento com controle de quitações.
+- **Importação de XML de Fornecedor:** Entrada automatizada de produtos e atualização rápida de custos e estoques via XML de compras.
+
+### 2. Gestão de Estoque, Produtos & Insumos
+- **Cadastro Unificado:** Produtos físicos e serviços (mão de obra).
+- **Ficha Técnica & Insumos:** Cálculo automático de CMV (Custo de Mercadoria Vendida) e margem de lucro por composição/combo.
+- **Curva ABC Inteligente:** Classificação financeira (A, B e C) com **sugestão de compra ou não-compra do estoque**.
+- **Ajustes de Inventário:** Log irreversível para auditoria de perdas, quebras e validade.
+
+### 3. Gestão Financeira & Fluxo de Caixa
+- **Múltiplos Caixas (Carteiras):** Isolamento por operador (Balcão, Cofre, Bancos).
+- **Sangrias e Suprimentos:** Retiradas e aportes com registros estritos por turno.
+- **Contas a Pagar e Recorrências:** Automação de despesas fixas (aluguel, pró-labore) com alertas de vencimento.
+- **Princípio do Lastro Lógico:** Conciliação financeira perfeita que espelha o caixa físico.
+
+### 4. Agendamentos & CRM
+- **Agenda Inteligente:** Calendário interativo integrado diretamente com a conversão para vendas e sinais de reserva.
+- **CRM Completo:** Perfil do cliente, histórico de consumo e comissões automáticas para equipe/profissionais.
+
+### 5. Duzz Store (Loja Virtual & Catálogo Digital)
+- **Subdomínio Próprio (`cliente.duzz.store`):** Catálogo online com a identidade visual e marca do comerciante.
+- **Vendas via WhatsApp:** Carrinho de compras responsivo que gera **mensagem formatada enviada diretamente para o WhatsApp** do lojista.
+
+### 6. Inteligência de Negócio (BI) & Dux IA
+- **Dashboard Raio-X:** Faturamento, Ticket Médio, Lucro Líquido e DRE Completa em tempo real.
+- **Precificação Científica:** Calculadora de preços baseada em **Markup vs. Margem**.
+- **Dux IA:** Assistente virtual inteligente integrado para dúvidas operacionais e consulta de manuais.
+
+### 7. Ferramentas Gratuitas para Empreendedores
+- **Gerador de Link de WhatsApp:** https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html
+- **Calculadora de Margem de Revenda:** https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html
+- **Calculadora de Custo de Produto com Insumos:** https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html
+- **Gerador de QR Code Pix:** https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html
+
+---
+
+## Segmentos e Nichos Atendidos
+- **Gastronomia:** Bares, restaurantes, lanchonetes, food trucks (comandas, App Garçom, divisão de conta).
+- **Beleza & Estética:** Salões de beleza, barbearias, clínicas de estética, pet shops (agendamentos, comissões, insumos).
+- **Serviços & Manutenção:** Oficinas mecânicas, assistências técnicas, consultorias (serviços, insumos, orçamentos).
+- **Varejo Generalista:** Lojas de roupas, calçados, cosméticos, minimercados (PDV não-fiscal rápido, curva ABC).
