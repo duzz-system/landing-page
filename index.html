@@ -945,19 +945,29 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                     <!-- Text Content -->
                     <div class="lg:w-1/2 text-center lg:text-left">
-                        <span
-                            class="inline-block bg-blue-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 shadow-md">
-                            🚀 Novo Recurso
-                        </span>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4">
+                            <span
+                                class="bg-amber-500 text-white text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest shadow-md flex items-center gap-1.5">
+                                <span>🧩</span> Módulo Adicional (Add-on)
+                            </span>
+                            <span
+                                class="bg-blue-600 text-white text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest shadow-md">
+                                🚀 Duzz Store
+                            </span>
+                        </div>
                         <h2 class="text-3xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
                             Site para a sua loja <span class="gradient-text-blue">em segundos</span>
                         </h2>
-                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
                             Crie o <strong>seu site com domínio próprio da sua loja em segundos</strong> (ex: <code
                                 class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-base">sualoja.duzz.store</code>).
                             Apresente seus produtos e serviços de forma elegante e profissional em uma <strong>Vitrine
                                 Virtual completa</strong>.
                         </p>
+                        <div class="mb-6 text-xs font-semibold text-amber-800 bg-amber-50 border border-amber-200 rounded-xl p-3 text-left flex items-start gap-2">
+                            <span class="text-base leading-none">📌</span>
+                            <span><strong>Atenção:</strong> O Duzz Store (Catálogo Digital) é um <strong>módulo adicional (Add-on opcional)</strong> que pode ser ativado junto a qualquer plano do Duzz Commercial.</span>
+                        </div>
 
                         <div class="space-y-4 mb-8 text-left">
                             <div class="flex items-start gap-3">
@@ -1066,8 +1076,11 @@
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Planos Transparentes</h2>
-                    <p class="text-gray-600 text-lg">Escolha a opção ideal para o momento da sua empresa. Sem taxas
+                    <p class="text-gray-600 text-lg">Escolha a opção ideal para a gestão do seu negócio. Sem taxas
                         escondidas.</p>
+                    <p class="text-xs text-gray-500 mt-2 font-medium">
+                        * Os planos contemplam o sistema completo de PDV e gestão comercial. O <strong>Catálogo Digital (Duzz Store)</strong> é um módulo adicional opcional (Add-on).
+                    </p>
                 </div>
 
                 <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
@@ -1325,6 +1338,34 @@
                                         d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MÓDULOS ADICIONAIS / ADD-ONS -->
+                <div class="mt-12 bg-gradient-to-r from-amber-50 via-amber-100/50 to-orange-50 border-2 border-amber-200/80 rounded-2xl p-6 lg:p-8 max-w-5xl mx-auto shadow-md relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-200/40 rounded-full blur-2xl pointer-events-none"></div>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-amber-500/30">
+                                🧩
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5 flex-wrap">
+                                    <h4 class="text-xl font-bold text-gray-900">Módulo Adicional: Duzz Store (Catálogo Digital / Loja Virtual)</h4>
+                                    <span class="bg-amber-500 text-white text-[11px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm">Add-on Opcional</span>
+                                </div>
+                                <p class="text-gray-700 text-sm max-w-2xl leading-relaxed">
+                                    Deseja um site próprio (<code class="bg-amber-200/60 text-amber-900 px-1.5 py-0.5 rounded font-mono text-xs">sualoja.duzz.store</code>) para expor seus produtos e receber pedidos no WhatsApp?
+                                    O catálogo digital é um <strong>módulo adicional (Add-on)</strong> contratado à parte e pode ser ativado a qualquer momento no seu Painel Duzz.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 text-center md:text-right w-full md:w-auto">
+                            <a href="#site-sua-loja" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">
+                                Ver Detalhes do Catálogo
+                            </a>
+                            <span class="text-[11px] font-medium text-amber-800 block mt-1.5">Ativação simples pelo Painel</span>
                         </div>
                     </div>
                 </div>
@@ -1959,6 +2000,22 @@
                             7 dias (Básico), 15 dias (Essencial) ou **30 dias (Anual)**. Não pedimos cartão de
                             crédito.
                             Se gostar, você escolhe um plano e continua usando.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium text-gray-900 list-none">
+                            <span>O Catálogo Digital / Loja Virtual (Duzz Store) está incluso nos planos?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                            O <strong>Duzz Store</strong> é um <strong>módulo adicional (Add-on opcional)</strong>. Os planos base cobrem o sistema de gestão interna, PDV, caixa e estoque. Se você desejar ter um site próprio (<code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-xs">sualoja.duzz.store</code>) para expor produtos e receber pedidos via WhatsApp, basta ativar o módulo Add-on a qualquer momento diretamente pelo seu painel de assinatura.
                         </p>
                     </details>
                 </div>
