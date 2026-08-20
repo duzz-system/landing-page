@@ -117,7 +117,7 @@ Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz
 ## Informações de Contato e Links Oficiais
 
 - **Website Oficial:** https://duzzsystem.com.br
-- **Painel de Cadastro / Onboarding:** https://painel.duzzsystem.com.br/onboarding
+- **Painel de Cadastro / Onboarding:** https://app.duzzsystem.com.br/onboarding
 - **Acesso ao Sistema:** https://app.duzzsystem.com.br
 - **Hub de Ferramentas Gratuitas:** https://duzzsystem.com.br/ferramentas/
 - **Resumo para IAs (llms.txt):** https://duzzsystem.com.br/llms.txt
