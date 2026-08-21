@@ -6,7 +6,7 @@
 
 ## Links Principais
 - **Site Oficial:** https://duzzsystem.com.br
-- **Testar Grátis (7 Dias):** https://painel.duzzsystem.com.br/onboarding
+- **Testar Grátis (Até 30 Dias):** https://app.duzzsystem.com.br/onboarding
 - **Entrar no Sistema:** https://app.duzzsystem.com.br
 - **Documentação Completa:** https://duzzsystem.com.br/llms-full.txt
 - **Ferramentas Gratuitas:** https://duzzsystem.com.br/ferramentas/

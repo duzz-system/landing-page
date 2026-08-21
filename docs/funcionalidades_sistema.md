@@ -100,7 +100,7 @@ Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz
 
 - **Dux IA:** Assistente virtual inteligente integrado ao sistema para consulta instantânea de manuais, suporte operacional e orientações de uso.
 - **Chatbot de Atendimento:** Canal de interação automatizada integrado à plataforma.
-- **Hub Admin B2B (Painel do Cliente):** Ambiente self-service em `painel.duzzsystem.com.br` para gestão da assinatura Duzz, download de faturas, atualização cadastral e adição de módulos (add-ons).
+- **Gestão da Empresa e Assinatura B2B:** Ambiente self-service integrado no próprio aplicativo (`app.duzzsystem.com.br/home/gestao/empresa`) para gestão da assinatura Duzz, download de faturas, atualização cadastral e adição de módulos (add-ons).
 - **Segurança & Continuidade:** Autenticação segura por cookies HttpOnly/Secure, políticas rígidas de permissão por perfil de usuário, tolerância de 2 dias após vencimento da licença e modo "somente leitura" por até 14 dias antes de bloqueio total.
 
 ---
@@ -117,7 +117,7 @@ Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz
 ## Informações de Contato e Links Oficiais
 
 - **Website Oficial:** https://duzzsystem.com.br
-- **Painel de Cadastro / Onboarding:** https://painel.duzzsystem.com.br/onboarding
+- **Painel de Cadastro / Onboarding:** https://app.duzzsystem.com.br/onboarding
 - **Acesso ao Sistema:** https://app.duzzsystem.com.br
 - **Hub de Ferramentas Gratuitas:** https://duzzsystem.com.br/ferramentas/
 - **Resumo para IAs (llms.txt):** https://duzzsystem.com.br/llms.txt
