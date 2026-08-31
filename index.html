@@ -100,7 +100,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -170,13 +171,27 @@
 
         /* Animations */
         @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 86, 179, 0.25); }
-            50% { box-shadow: 0 0 35px rgba(0, 86, 179, 0.5); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(0, 86, 179, 0.25);
+            }
+
+            50% {
+                box-shadow: 0 0 35px rgba(0, 86, 179, 0.5);
+            }
         }
 
         .animated-gradient {
@@ -318,8 +333,13 @@
         }
 
         /* Details accordion */
-        details>summary { list-style: none; }
-        details>summary::-webkit-details-marker { display: none; }
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 
@@ -337,16 +357,26 @@
 
                     <!-- Desktop Menu Links -->
                     <div class="hidden lg:flex items-center space-x-7">
-                        <a href="#recursos" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Recursos</a>
-                        <a href="#duxia" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition flex items-center gap-1">
+                        <a href="#recursos"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Recursos</a>
+                        <a href="#duxia"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition flex items-center gap-1">
                             <span>DuxIA</span>
-                            <span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.2 rounded-full">Exclusivo</span>
+                            <span
+                                class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.2 rounded-full">Exclusivo</span>
                         </a>
-                        <a href="#segmentos" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Segmentos</a>
-                        <a href="#planos" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Planos</a>
-                        <a href="#onboarding" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Como Funciona</a>
-                        <a href="ferramentas/index.html" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas Grátis</a>
-                        <a href="#faq" class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">FAQ</a>
+                        <a href="#segmentos"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Segmentos</a>
+                        <a href="#planos"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Planos</a>
+                        <a href="#onboarding"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Como
+                            Funciona</a>
+                        <a href="ferramentas/index.html"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas
+                            Grátis</a>
+                        <a href="#faq"
+                            class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">FAQ</a>
                     </div>
 
                     <!-- CTA & Login -->
@@ -369,7 +399,8 @@
 
                     <!-- Mobile Menu Button -->
                     <div class="lg:hidden flex items-center">
-                        <button id="mobile-menu-btn" class="text-gray-700 p-2 focus:outline-none" aria-label="Abrir Menu">
+                        <button id="mobile-menu-btn" class="text-gray-700 p-2 focus:outline-none"
+                            aria-label="Abrir Menu">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6h16M4 12h16M4 18h16"></path>
@@ -382,13 +413,20 @@
             <!-- Mobile Menu Panel -->
             <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
                 <div class="flex flex-col px-6 py-5 space-y-3.5">
-                    <a href="#recursos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Recursos & Funcionalidades</a>
-                    <a href="#duxia" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">DuxIA (Inteligência Artificial)</a>
-                    <a href="#segmentos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Segmentos Atendidos</a>
-                    <a href="#planos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Planos e Preços</a>
-                    <a href="#onboarding" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Checklist de Implantação</a>
-                    <a href="ferramentas/index.html" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Ferramentas Gratuitas</a>
-                    <a href="#faq" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Dúvidas Frequentes</a>
+                    <a href="#recursos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Recursos &
+                        Funcionalidades</a>
+                    <a href="#duxia" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">DuxIA
+                        (Inteligência Artificial)</a>
+                    <a href="#segmentos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Segmentos
+                        Atendidos</a>
+                    <a href="#planos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Planos e
+                        Preços</a>
+                    <a href="#onboarding" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Checklist de
+                        Implantação</a>
+                    <a href="ferramentas/index.html"
+                        class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Ferramentas Gratuitas</a>
+                    <a href="#faq" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Dúvidas
+                        Frequentes</a>
 
                     <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
                         <a href="https://app.duzzsystem.com.br/onboarding"
@@ -410,19 +448,23 @@
         <header class="pt-28 pb-16 lg:pt-40 lg:pb-24 animated-gradient overflow-hidden relative">
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                    
+
                     <!-- Text Content -->
                     <div class="w-full lg:w-1/2 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 bg-blue-100/80 text-brand-blue border border-blue-200 px-3.5 py-1.5 rounded-full text-xs font-bold mb-4 shadow-sm">
+                        <div
+                            class="inline-flex items-center gap-2 bg-blue-100/80 text-brand-blue border border-blue-200 px-3.5 py-1.5 rounded-full text-xs font-bold mb-4 shadow-sm">
                             <span>🚀</span> Sistema Não Fiscal Rápido & Sem Burocracia
                         </div>
 
                         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-5">
-                            O Sistema de PDV & Gestão <span class="gradient-text-blue">Mais Simples e Completo</span> para o seu Negócio
+                            O Sistema de PDV & Gestão <span class="gradient-text-blue">Mais Simples e Completo</span>
+                            para o seu Negócio
                         </h1>
 
                         <p class="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Frente de caixa rápida, controle de estoque com Curva ABC, importação de XML de fornecedores, comandas e a exclusiva <strong class="text-brand-blue">DuxIA</strong> que analisa seus números em tempo real.
+                            Frente de caixa rápida, controle de estoque com Curva ABC, importação de XML de
+                            fornecedores, comandas e a exclusiva <strong class="text-brand-blue">DuxIA</strong> que
+                            analisa seus números em tempo real.
                         </p>
 
                         <!-- Action Buttons -->
@@ -447,9 +489,11 @@
                         <div class="mt-6 space-y-2.5">
                             <div class="flex items-center justify-center lg:justify-start gap-2">
                                 <span class="text-xl">🔥</span>
-                                <span class="text-xs sm:text-sm font-bold text-gray-700">Mais de 150 empresas utilizam o Duzz diariamente</span>
+                                <span class="text-xs sm:text-sm font-bold text-gray-700">Mais de 150 empresas utilizam o
+                                    Duzz diariamente</span>
                             </div>
-                            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-gray-600">
+                            <div
+                                class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-gray-600">
                                 <span class="flex items-center gap-1 font-medium">
                                     <i class="bi bi-check-circle-fill text-green-600"></i> 15 Dias de Teste Grátis
                                 </span>
@@ -467,7 +511,8 @@
 
                     <!-- Responsive Carousel / Mockup Display -->
                     <div class="w-full lg:w-1/2 relative mt-4 lg:mt-0">
-                        <div class="bg-white rounded-2xl shadow-2xl p-2.5 sm:p-3 border border-gray-200 relative group max-w-xl mx-auto">
+                        <div
+                            class="bg-white rounded-2xl shadow-2xl p-2.5 sm:p-3 border border-gray-200 relative group max-w-xl mx-auto">
                             <!-- Header Mockup Window -->
                             <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-gray-100">
                                 <div class="flex items-center gap-1.5">
@@ -482,46 +527,66 @@
                             </div>
 
                             <!-- Carousel Container -->
-                            <div class="overflow-hidden rounded-xl bg-gray-100 relative aspect-[16/10]" id="carousel-container">
+                            <div class="overflow-hidden rounded-xl bg-gray-100 relative aspect-[16/10]"
+                                id="carousel-container">
                                 <div id="carousel-track" class="flex transition-transform duration-500 ease-out h-full">
                                     <!-- Slide 1 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/nova-venda.png" alt="PDV Frente de Caixa Rápido Duzz Commercial" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/nova-venda.png" alt="PDV Frente de Caixa Rápido Duzz Commercial"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <!-- Slide 2 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/fluxo-caixa.png" alt="Fluxo de Caixa e Gestão Financeira" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/fluxo-caixa.png" alt="Fluxo de Caixa e Gestão Financeira"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <!-- Slide 3 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/abc-curve.png" alt="Curva ABC e Estoque Inteligente" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/abc-curve.png" alt="Curva ABC e Estoque Inteligente"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <!-- Slide 4 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/comandas.png" alt="Gestão de Comandas e App Garçom" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/comandas.png" alt="Gestão de Comandas e App Garçom"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <!-- Slide 5 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/duxia.png" alt="DuxIA Assistente Inteligente de Negócios" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/duxia.png" alt="DuxIA Assistente Inteligente de Negócios"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <!-- Slide 6 -->
-                                    <div class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
-                                        <img src="icons/clientes.png" alt="CRM e Análise de Clientes" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-full flex-shrink-0 h-full relative bg-gray-900 flex items-center justify-center">
+                                        <img src="icons/clientes.png" alt="CRM e Análise de Clientes"
+                                            class="w-full h-full object-cover">
                                     </div>
                                 </div>
 
                                 <!-- Arrows -->
                                 <button id="prevBtn" aria-label="Imagem anterior"
                                     class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition focus:outline-none">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
+                                    </svg>
                                 </button>
                                 <button id="nextBtn" aria-label="Próxima imagem"
                                     class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition focus:outline-none">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
                                 </button>
 
                                 <!-- Indicators -->
-                                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" id="carousel-indicators"></div>
+                                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5"
+                                    id="carousel-indicators"></div>
                             </div>
                         </div>
                     </div>
@@ -529,8 +594,12 @@
             </div>
 
             <!-- Background Orbs -->
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-orange-200/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-orange-200/40 rounded-full blur-3xl pointer-events-none">
+            </div>
         </header>
 
 
@@ -563,33 +632,45 @@
         <section id="recursos" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="bg-blue-100 text-brand-blue font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+                    <span
+                        class="bg-blue-100 text-brand-blue font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
                         Tudo em um só lugar
                     </span>
                     <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
                         Os 3 Pilares para <span class="gradient-text-blue">Organizar e Escalar</span> seu Negócio
                     </h2>
                     <p class="text-gray-600 text-base">
-                        Elimine o caos das anotações em papel e planilhas quebradas com ferramentas feitas para a rotina ágil do comércio.
+                        Elimine o caos das anotações em papel e planilhas quebradas com ferramentas feitas para a rotina
+                        ágil do comércio.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
+
                     <!-- Pilar 1: PDV & XML -->
-                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            <div
+                                class="w-14 h-14 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
                                 <i class="bi bi-cart-check-fill"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-3">PDV Ágil & Importação de XML</h3>
                             <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Frente de caixa rápida com leitura de código de barras, múltiplos pagamentos, descontos controlados e <strong>importação automática de XML de fornecedores</strong>: cadastre dezenas de produtos e atualize o estoque em 1 clique.
+                                Frente de caixa rápida com leitura de código de barras, múltiplos pagamentos, descontos
+                                controlados e <strong>importação automática de XML de fornecedores</strong>: cadastre
+                                dezenas de produtos e atualize o estoque em 1 clique.
                             </p>
                             <ul class="space-y-2 text-xs text-gray-600">
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Entrada automatizada de XML sem digitação</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Vendas à vista, parceladas e PIX instantâneo</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Gestão de notas promissórias (Fiado organizado)</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Entrada automatizada de XML
+                                    sem digitação</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Vendas à vista, parceladas e
+                                    PIX instantâneo</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Gestão de notas promissórias
+                                    (Fiado organizado)</li>
                             </ul>
                         </div>
                         <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-bold text-brand-blue">
@@ -598,19 +679,29 @@
                     </div>
 
                     <!-- Pilar 2: Estoque & CMV -->
-                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            <div
+                                class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
                                 <i class="bi bi-boxes"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Estoque com Curva ABC & Insumos</h3>
                             <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Pare de perder dinheiro com produtos encalhados ou falta de estoque. Nossa análise de <strong>Curva ABC</strong> indica exatamente o que traz 80% do seu lucro e sugere compras ideais.
+                                Pare de perder dinheiro com produtos encalhados ou falta de estoque. Nossa análise de
+                                <strong>Curva ABC</strong> indica exatamente o que traz 80% do seu lucro e sugere
+                                compras ideais.
                             </p>
                             <ul class="space-y-2 text-xs text-gray-600">
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Ficha técnica & kits (cálculo de CMV real)</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Sugestão inteligente de compra / não-compra</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Auditoria de perdas, quebras e validades</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Ficha técnica & kits (cálculo
+                                    de CMV real)</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Sugestão inteligente de
+                                    compra / não-compra</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Auditoria de perdas, quebras
+                                    e validades</li>
                             </ul>
                         </div>
                         <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-bold text-emerald-700">
@@ -619,19 +710,28 @@
                     </div>
 
                     <!-- Pilar 3: Financeiro & Caixas -->
-                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            <div
+                                class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
                                 <i class="bi bi-wallet2"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Financeiro com Múltiplos Caixas</h3>
                             <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Controle de fluxo de caixa com lastro lógico: separe caixa de balcão, cofre e contas bancárias. Registre sangrias, suprimentos e contas a pagar com alertas de vencimento.
+                                Controle de fluxo de caixa com lastro lógico: separe caixa de balcão, cofre e contas
+                                bancárias. Registre sangrias, suprimentos e contas a pagar com alertas de vencimento.
                             </p>
                             <ul class="space-y-2 text-xs text-gray-600">
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Sangria e suprimento formal por operador</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Contas a pagar com recorrência automática</li>
-                                <li class="flex items-center gap-2"><i class="bi bi-check2 text-green-600 font-bold"></i> Demonstrativo DRE e Raio-X de Lucro Real</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Sangria e suprimento formal
+                                    por operador</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Contas a pagar com
+                                    recorrência automática</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Demonstrativo DRE e Raio-X de
+                                    Lucro Real</li>
                             </ul>
                         </div>
                         <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-bold text-indigo-700">
@@ -645,81 +745,218 @@
 
 
         <!-- ==================== 5. DUXIA & INTELIGÊNCIA CONSOLIDADA ==================== -->
-        <section id="duxia" class="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <section id="duxia" class="py-20 bg-slate-900 text-white relative overflow-hidden border-y border-slate-800">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none">
+            </div>
 
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <!-- Header -->
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="inline-block bg-purple-500/20 text-purple-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3 border border-purple-500/30">
-                        🧠 Exclusivo Duzz — Inteligência Artificial Integrada
+                    <span
+                        class="inline-block bg-blue-500/10 text-blue-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3 border border-blue-500/20">
+                        👩‍💼 Exclusivo Duzz — Sua Assistente Executiva Digital
                     </span>
-                    <h2 class="text-3xl lg:text-5xl font-black mt-2 mb-4">
-                        Conheça a <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">DuxIA</span> & Inteligência de Negócio
+                    <h2 class="text-3xl lg:text-5xl font-black mt-2 mb-4 text-white">
+                        Deixe o trabalho chato e burocrático com a <span class="text-blue-400">DuxIA</span>
                     </h2>
-                    <p class="text-blue-200 text-base sm:text-lg">
-                        Uma assistente estratégica que analisa os dados do seu comércio e responde perguntas em português claro. É como ter um consultor financeiro e de vendas 24 horas por dia.
+                    <p class="text-slate-300 text-base sm:text-lg">
+                        Uma funcionária digital incansável que dá baixa em contas, lança despesas de balcão, organiza
+                        compras com fornecedores e transfere valores. Sem telas difíceis: você só fala o que aconteceu e
+                        aprova com 1 clique.
                     </p>
                 </div>
 
-                <!-- Grid de Destaques da IA -->
+                <!-- Grid de Especialistas da DuxIA -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-                    
-                    <!-- Card 1: Consultoria em Linguagem Natural -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 hover:border-purple-500/30 transition">
+
+                    <!-- Card 1: duxIA Financeiro -->
+                    <div
+                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-7 hover:border-blue-500/40 transition">
                         <div class="flex items-center gap-3 mb-5">
-                            <div class="w-11 h-11 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 text-xl">
-                                <i class="bi bi-chat-dots-fill"></i>
+                            <div
+                                class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl shadow-inner border border-blue-500/20">
+                                <i class="bi bi-wallet2"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-white">Perguntas em Linguagem Natural</h3>
-                                <span class="text-xs text-purple-300">Consultor 24h na palma da mão</span>
+                                <h3 class="text-xl font-bold text-white">duxIA Financeiro</h3>
+                                <span class="text-xs text-blue-300">Sua analista de caixa e contas a pagar</span>
                             </div>
                         </div>
-                        <div class="space-y-3">
-                            <div class="bg-white/5 rounded-xl p-3.5 border border-white/5 text-xs text-blue-100 italic">
-                                "Dux, qual foi meu lucro líquido real esta semana descontando as contas pagas?"
-                            </div>
-                            <div class="bg-white/5 rounded-xl p-3.5 border border-white/5 text-xs text-blue-100 italic">
-                                "Com base no meu ritmo de vendas, qual a projeção de faturamento para o fim do mês?"
-                            </div>
-                            <div class="bg-white/5 rounded-xl p-3.5 border border-white/5 text-xs text-blue-100 italic">
-                                "Quais itens da Curva A estão próximos do ponto de reposição?"
-                            </div>
-                        </div>
+                        <ul class="space-y-3.5 text-sm">
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Baixa de Contas sem Esforço:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Diga o que foi pago e ela localiza a conta,
+                                        dá baixa imediata e atualiza seu saldo.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Gastos do Dia a Dia no Balcão:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Comprou café, combustível ou insumos? A
+                                        despesa é lançada e liquidada no caixa no ato.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Custos Fixos com Recorrência Ativa:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Informe despesas recorrentes (aluguel,
+                                        internet) e deixe o sistema gerenciar os vencimentos.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Pró-labore e Sangrias Seguras:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Registre retiradas para si mesmo ou
+                                        transfira saldo da gaveta para o cofre com total conciliação.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- Card 2: CRM & Agente de Retenção -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 hover:border-cyan-500/30 transition">
+                    <!-- Card 2: duxIA Estoque -->
+                    <div
+                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-7 hover:border-emerald-500/40 transition">
                         <div class="flex items-center gap-3 mb-5">
-                            <div class="w-11 h-11 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400 text-xl">
-                                <i class="bi bi-people-fill"></i>
+                            <div
+                                class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-2xl shadow-inner border border-emerald-500/20">
+                                <i class="bi bi-box-seam-fill"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-white">Score de Saúde & Retenção de Clientes</h3>
-                                <span class="text-xs text-cyan-300">Fidelização e cobrança inteligente</span>
+                                <h3 class="text-xl font-bold text-white">duxIA Estoque</h3>
+                                <span class="text-xs text-emerald-300">Sua compradora e gestora de reposição</span>
                             </div>
                         </div>
-                        <div class="space-y-3">
-                            <div class="bg-cyan-500/10 rounded-xl p-3.5 border border-cyan-500/20 text-xs">
-                                <p class="font-bold text-cyan-300 mb-1">🎯 Recuperação de Clientes Inativos</p>
-                                <p class="text-blue-100">A IA identifica clientes que não compram há mais de 30 dias e gera mensagens personalizadas prontas para enviar no WhatsApp.</p>
-                            </div>
-                            <div class="bg-white/5 rounded-xl p-3.5 border border-white/5 text-xs">
-                                <p class="font-bold text-purple-300 mb-1">⭐ Classificação Automática de Perfis</p>
-                                <p class="text-blue-100">Identifique instantaneamente seus clientes VIPs, clientes fiéis e clientes com risco de inadimplência.</p>
-                            </div>
-                        </div>
+                        <ul class="space-y-3.5 text-sm">
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Alerta Antecipado de Reposição:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Avisa com antecedência quais fornecedores
+                                        precisam de pedido na semana para sua loja nunca ficar sem produto.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Proteção dos Produtos Campeões:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Prioriza os itens mais vendidos do seu
+                                        comércio, evitando dinheiro parado em excesso de mercadoria.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Lista Pronta para o WhatsApp:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Monta o pedido de compras completo e
+                                        formatado, com botão para copiar e colar direto no WhatsApp do fornecedor.</p>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
+                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
+                                <div>
+                                    <strong class="text-white">Mais Tempo Livre para Você:</strong>
+                                    <p class="text-xs text-slate-300 mt-0.5">Esqueça horas contando prateleiras ou
+                                        montando planilhas manuais de compras.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
 
+                <!-- Mockup Visual de Action Cards (A IA prepara, você só aprova) -->
+                <div class="max-w-3xl mx-auto bg-slate-950 border border-slate-800 rounded-2xl p-6 mb-12 shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-xs font-bold text-slate-300">DuxIA em Ação — Chat Executivo</span>
+                        </div>
+                        <span
+                            class="text-[11px] bg-blue-500/10 text-blue-300 border border-blue-500/20 px-2.5 py-0.5 rounded-full font-semibold">Aprovação
+                            com 1 Clique</span>
+                    </div>
+
+                    <!-- Conversa Simulada -->
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Usuário -->
+                        <div class="flex justify-end">
+                            <div
+                                class="bg-blue-600 text-white rounded-2xl rounded-tr-none px-4 py-2.5 max-w-[85%] shadow-md">
+                                "Paguei a internet de R$ 120 no PIX da Gestão e fiz uma sangria de R$ 500 do PDV pro
+                                cofre"
+                            </div>
+                        </div>
+
+                        <!-- DuxIA -->
+                        <div class="flex items-start gap-2.5">
+                            <div
+                                class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white shadow">
+                                D
+                            </div>
+                            <div class="space-y-2.5 flex-1">
+                                <div
+                                    class="bg-slate-800 text-slate-100 rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[90%] border border-slate-700/60">
+                                    Prontinho! Preparei as 2 ações no sistema para você conferir e confirmar:
+                                </div>
+
+                                <!-- Action Cards no Chat -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-[95%]">
+                                    <!-- Action 1 -->
+                                    <div class="bg-slate-900 border border-slate-700 rounded-xl p-3 shadow-lg">
+                                        <div class="flex items-center justify-between mb-1.5">
+                                            <span class="text-[10px] font-bold uppercase text-blue-300">Baixar
+                                                Conta</span>
+                                            <span class="text-xs font-black text-emerald-400">R$ 120,00</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-300 mb-2.5">Internet Fibra • Caixa Gestão (PIX)
+                                        </p>
+                                        <div
+                                            class="w-full bg-blue-600 text-white text-center py-1.5 rounded-lg text-xs font-bold shadow hover:bg-blue-500 cursor-default">
+                                            ✓ Confirmar Pagamento
+                                        </div>
+                                    </div>
+
+                                    <!-- Action 2 -->
+                                    <div class="bg-slate-900 border border-slate-700 rounded-xl p-3 shadow-lg">
+                                        <div class="flex items-center justify-between mb-1.5">
+                                            <span class="text-[10px] font-bold uppercase text-emerald-300">Sangria de
+                                                Caixa</span>
+                                            <span class="text-xs font-black text-emerald-400">R$ 500,00</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-300 mb-2.5">PDV ➜ Cofre / Gestão</p>
+                                        <div
+                                            class="w-full bg-slate-800 text-emerald-400 border border-emerald-500/30 text-center py-1.5 rounded-lg text-xs font-bold shadow hover:bg-slate-700 cursor-default">
+                                            ✓ Transferir Valor
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="text-center">
+                    <p class="text-xs text-slate-400 mb-4">Inclusa no Duzz System para você ter mais tempo livre e focar
+                        em fazer seu comércio crescer.</p>
                     <a href="#planos"
-                        onclick="gtag('event', 'click_cta', { 'button_location': 'duxia_section', 'button_name': 'Quero Inteligencia' });"
-                        class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3.5 rounded-full font-bold text-sm sm:text-base uppercase tracking-wider hover:from-purple-500 hover:to-blue-500 transition shadow-xl">
-                        QUERO ESSA INTELIGÊNCIA NO MEU NEGÓCIO
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'duxia_section', 'button_name': 'Quero Assistente DuxIA' });"
+                        class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full font-bold text-sm sm:text-base uppercase tracking-wider transition shadow-xl hover:scale-105 transform">
+                        QUERO UMA ASSISTENTE NO MEU COMÉRCIO
                     </a>
                 </div>
             </div>
@@ -730,17 +967,19 @@
         <section id="segmentos" class="py-20 bg-white">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="text-brand-blue font-bold tracking-wider uppercase text-xs">Versatilidade Comprovada</span>
+                    <span class="text-brand-blue font-bold tracking-wider uppercase text-xs">Versatilidade
+                        Comprovada</span>
                     <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-2 mb-4">
                         Feito para o Fluxo Exato do seu Segmento
                     </h2>
                     <p class="text-gray-600 text-base">
-                        Seja no comércio varejista, atendimento gastronômico ou prestação de serviços, o Duzz se adapta à sua rotina.
+                        Seja no comércio varejista, atendimento gastronômico ou prestação de serviços, o Duzz se adapta
+                        à sua rotina.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    
+
                     <!-- Nicho 1: Lojas e Varejo -->
                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 card-hover">
                         <div class="flex items-center gap-3 mb-4">
@@ -751,14 +990,18 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-600">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Leitor de código de barras e busca instantânea</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Grade dinâmica por tamanho, cor e atributos</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Controle de fiado com notas promissórias</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Leitor de código de barras e busca instantânea</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Grade dinâmica por tamanho, cor e atributos</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Controle de fiado com notas promissórias</li>
                         </ul>
                     </div>
 
                     <!-- Nicho 2: Bares e Restaurantes -->
-                    <div class="bg-blue-50/60 p-6 rounded-2xl border border-blue-200 card-hover relative overflow-hidden">
+                    <div
+                        class="bg-blue-50/60 p-6 rounded-2xl border border-blue-200 card-hover relative overflow-hidden">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="bg-red-100 p-2.5 rounded-xl text-2xl">🍽️</span>
                             <div>
@@ -767,9 +1010,12 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-700">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i> <strong>App Garçom:</strong> pedidos lançados na mesa pelo celular</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i> <strong>Divisão Automática:</strong> cálculo por pessoa na mesa</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i> Ficha técnica para baixa automática de insumos</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i>
+                                <strong>App Garçom:</strong> pedidos lançados na mesa pelo celular</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i>
+                                <strong>Divisão Automática:</strong> cálculo por pessoa na mesa</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-blue-600"></i>
+                                Ficha técnica para baixa automática de insumos</li>
                         </ul>
                     </div>
 
@@ -783,9 +1029,12 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-600">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> <strong>Orçamento formatado</strong> para impressão prévia</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Separação de peças vendidas de mão de obra</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Histórico de manutenções por cliente</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                <strong>Orçamento formatado</strong> para impressão prévia</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Separação de peças vendidas de mão de obra</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Histórico de manutenções por cliente</li>
                         </ul>
                     </div>
 
@@ -799,9 +1048,12 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-600">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Agenda inteligente por profissional ou cadeira</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Cálculo automático de comissão por serviço</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Venda conjunta de produtos e atendimentos</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Agenda inteligente por profissional ou cadeira</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Cálculo automático de comissão por serviço</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Venda conjunta de produtos e atendimentos</li>
                         </ul>
                     </div>
 
@@ -815,9 +1067,12 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-600">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Leitura veloz e compatibilidade com leitores USB</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Sugestão de compras pela Curva ABC</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Fechamento de caixa por turno de operador</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Leitura veloz e compatibilidade com leitores USB</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Sugestão de compras pela Curva ABC</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Fechamento de caixa por turno de operador</li>
                         </ul>
                     </div>
 
@@ -831,9 +1086,12 @@
                             </div>
                         </div>
                         <ul class="text-xs space-y-2.5 text-gray-600">
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Controle de taxas de entrega por bairro/distância</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Gestão e acerto de repasses a motoboys parceiros</li>
-                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Faturamento real separado dos custos de frete</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Controle de taxas de entrega por bairro/distância</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Gestão e acerto de repasses a motoboys parceiros</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i>
+                                Faturamento real separado dos custos de frete</li>
                         </ul>
                     </div>
 
@@ -845,25 +1103,29 @@
         <!-- ==================== 7. PLANOS & PREÇOS (CONVERSÃO) ==================== -->
         <section id="planos" class="py-20 bg-gray-50 border-t border-gray-200 relative">
             <div class="container mx-auto px-4 lg:px-6">
-                
+
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="bg-green-100 text-green-800 font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+                    <span
+                        class="bg-green-100 text-green-800 font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
                         Transparência Total
                     </span>
                     <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mb-4">
                         Planos Simples e Transparentes
                     </h2>
                     <p class="text-gray-600 text-base sm:text-lg">
-                        Comece seu teste sem riscos. Sem fidelidade, sem pegadinhas e sem necessidade de cartão de crédito.
+                        Comece seu teste sem riscos. Sem fidelidade, sem pegadinhas e sem necessidade de cartão de
+                        crédito.
                     </p>
                 </div>
 
                 <div class="flex flex-col lg:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
 
                     <!-- PLANO ESSENCIAL MENSAL -->
-                    <div class="flex-1 bg-white border-2 border-blue-600 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300 transform lg:-translate-y-2">
+                    <div
+                        class="flex-1 bg-white border-2 border-blue-600 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300 transform lg:-translate-y-2">
                         <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
-                            <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
+                            <span
+                                class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
                                 ⭐ Mais Popular
                             </span>
                         </div>
@@ -871,10 +1133,12 @@
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <h3 class="text-2xl font-black text-gray-900">Plano Essencial</h3>
-                                <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">Mensal</span>
+                                <span
+                                    class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">Mensal</span>
                             </div>
 
-                            <p class="text-gray-500 text-xs mb-4">Gestão completa, PDV ágil e inteligência para o seu negócio.</p>
+                            <p class="text-gray-500 text-xs mb-4">Gestão completa, PDV ágil e inteligência para o seu
+                                negócio.</p>
 
                             <!-- Preço -->
                             <div class="mt-2 mb-6 flex items-baseline gap-1.5 pb-4 border-b border-gray-100">
@@ -908,15 +1172,18 @@
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
                                     <div><strong>Gestão de Fiado (Promissórias) & Orçamentos</strong></div>
                                 </li>
-                                <li class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                <li
+                                    class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Integrada</strong> (20 consultas de gestão/mês)</div>
+                                    <div><strong class="text-purple-900">DuxIA Integrada</strong> (20 consultas de
+                                        gestão/mês)</div>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <p class="text-xs text-center text-blue-600 font-bold mb-2 flex items-center justify-center gap-1">
+                            <p
+                                class="text-xs text-center text-blue-600 font-bold mb-2 flex items-center justify-center gap-1">
                                 <span>⚡</span> 15 Dias de Teste Grátis • Sem cartão de crédito
                             </p>
 
@@ -924,15 +1191,20 @@
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Essencial 15 Dias' }); fbq('track', 'Lead');"
                                 class="block w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold rounded-xl text-center hover:from-blue-700 hover:to-indigo-700 transition shadow-md flex items-center justify-center gap-2">
                                 <span>TESTAR 15 DIAS GRÁTIS</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- PLANO ESSENCIAL ANUAL -->
-                    <div class="flex-1 bg-gradient-to-b from-emerald-50/50 via-white to-white border-2 border-emerald-500 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300">
+                    <div
+                        class="flex-1 bg-gradient-to-b from-emerald-50/50 via-white to-white border-2 border-emerald-500 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300">
                         <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
-                            <span class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
+                            <span
+                                class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
                                 🎁 ECONOMIZE R$ 240/ANO
                             </span>
                         </div>
@@ -940,10 +1212,13 @@
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <h3 class="text-2xl font-black text-gray-900">Essencial Anual</h3>
-                                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">Plano Anual</span>
+                                <span
+                                    class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">Plano
+                                    Anual</span>
                             </div>
 
-                            <p class="text-gray-500 text-xs mb-4">O poder total do Duzz com a máxima economia e suporte VIP.</p>
+                            <p class="text-gray-500 text-xs mb-4">O poder total do Duzz com a máxima economia e suporte
+                                VIP.</p>
 
                             <!-- Preço -->
                             <div class="mt-2 mb-6 pb-4 border-b border-gray-100">
@@ -953,7 +1228,8 @@
                                     <span class="text-xs text-gray-400 line-through">R$ 838,80</span>
                                 </div>
                                 <div class="mt-1">
-                                    <span class="text-xs font-black text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">
+                                    <span
+                                        class="text-xs font-black text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">
                                         Equivale a apenas R$ 49,90/mês
                                     </span>
                                 </div>
@@ -963,15 +1239,19 @@
                             <ul class="space-y-3 mb-8 text-left text-xs sm:text-sm">
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Tudo incluso no Plano Mensal</strong> (PDV, XML, Comandas, Estoque)</div>
+                                    <div><strong>Tudo incluso no Plano Mensal</strong> (PDV, XML, Comandas, Estoque)
+                                    </div>
                                 </li>
-                                <li class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                <li
+                                    class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Expandida</strong> (50 consultas/mês - 150% mais poder)</div>
+                                    <div><strong class="text-purple-900">DuxIA Expandida</strong> (50 consultas/mês -
+                                        150% mais poder)</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>30 Dias de Teste Grátis</strong> (o dobro do período de avaliação)</div>
+                                    <div><strong>30 Dias de Teste Grátis</strong> (o dobro do período de avaliação)
+                                    </div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
@@ -985,7 +1265,8 @@
                         </div>
 
                         <div>
-                            <p class="text-xs text-center text-emerald-600 font-bold mb-2 flex items-center justify-center gap-1">
+                            <p
+                                class="text-xs text-center text-emerald-600 font-bold mb-2 flex items-center justify-center gap-1">
                                 <span>🎉</span> 30 Dias Grátis • Satisfação ou Reembolso
                             </p>
 
@@ -993,7 +1274,10 @@
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Anual' }); fbq('track', 'Lead');"
                                 class="block w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold rounded-xl text-center hover:from-emerald-700 hover:to-teal-700 transition shadow-md flex items-center justify-center gap-2">
                                 <span>APROVEITAR COM DESCONTO</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -1001,19 +1285,28 @@
                 </div>
 
                 <!-- ==================== 8. MÓDULOS ADICIONAIS (ADD-ONS) ==================== -->
-                <div class="mt-12 bg-gradient-to-r from-amber-50 via-amber-100/40 to-orange-50 border-2 border-amber-200 rounded-3xl p-6 lg:p-8 max-w-5xl mx-auto shadow-md">
+                <div
+                    class="mt-12 bg-gradient-to-r from-amber-50 via-amber-100/40 to-orange-50 border-2 border-amber-200 rounded-3xl p-6 lg:p-8 max-w-5xl mx-auto shadow-md">
                     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div class="flex items-start gap-4">
-                            <div class="w-13 h-13 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md p-3">
+                            <div
+                                class="w-13 h-13 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md p-3">
                                 🧩
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5 flex-wrap">
-                                    <h4 class="text-lg sm:text-xl font-bold text-gray-900">Módulo Adicional: Duzz Store (Loja Virtual & Catálogo Online)</h4>
-                                    <span class="bg-amber-500 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">Add-on Opcional</span>
+                                    <h4 class="text-lg sm:text-xl font-bold text-gray-900">Módulo Adicional: Duzz Store
+                                        (Loja Virtual & Catálogo Online)</h4>
+                                    <span
+                                        class="bg-amber-500 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">Add-on
+                                        Opcional</span>
                                 </div>
                                 <p class="text-gray-700 text-xs sm:text-sm max-w-2xl leading-relaxed">
-                                    Deseja um site próprio (<code class="bg-amber-200/60 text-amber-900 px-1 py-0.5 rounded text-xs font-mono">sualoja.duzz.store</code>) para expor produtos com sincronização de estoque em tempo real e receber pedidos organizados direto no WhatsApp? O <strong>Duzz Store</strong> é um módulo adicional que você pode ativar a qualquer momento no seu Painel de Assinatura.
+                                    Deseja um site próprio (<code
+                                        class="bg-amber-200/60 text-amber-900 px-1 py-0.5 rounded text-xs font-mono">sualoja.duzz.store</code>)
+                                    para expor produtos com sincronização de estoque em tempo real e receber pedidos
+                                    organizados direto no WhatsApp? O <strong>Duzz Store</strong> é um módulo adicional
+                                    que você pode ativar a qualquer momento no seu Painel de Assinatura.
                                 </p>
                             </div>
                         </div>
@@ -1021,16 +1314,18 @@
                             <a target="_blank" href="https://app.duzzsystem.com.br/onboarding"
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'site_loja_section', 'button_name': 'Criar Meu Site Agora' }); fbq('track', 'Lead');"
                                 class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition shadow-md w-full md:w-auto">
-                                Conhecer no Trial Grátis
+                                Conhecer no Teste Grátis
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Garantia Integrada -->
-                <div class="mt-8 max-w-3xl mx-auto text-center flex items-center justify-center gap-3 text-xs sm:text-sm text-gray-600 bg-white p-4 rounded-2xl border border-gray-200">
+                <div
+                    class="mt-8 max-w-3xl mx-auto text-center flex items-center justify-center gap-3 text-xs sm:text-sm text-gray-600 bg-white p-4 rounded-2xl border border-gray-200">
                     <i class="bi bi-shield-check text-2xl text-green-600"></i>
-                    <span><strong>Garantia Incondicional Duzz:</strong> Teste todas as funções sem restrições. Se por qualquer motivo não se adaptar, cancele facilmente sem burocracia ou taxas de rescisão.</span>
+                    <span><strong>Garantia Incondicional Duzz:</strong> Teste todas as funções sem restrições. Se por
+                        qualquer motivo não se adaptar, cancele facilmente sem burocracia ou taxas de rescisão.</span>
                 </div>
 
             </div>
@@ -1042,24 +1337,29 @@
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="max-w-5xl mx-auto">
                     <div class="flex flex-col lg:flex-row items-center gap-10">
-                        
+
                         <div class="lg:w-1/2 text-center lg:text-left">
-                            <span class="text-brand-blue font-bold tracking-wider uppercase text-xs">Fácil de Começar</span>
+                            <span class="text-brand-blue font-bold tracking-wider uppercase text-xs">Fácil de
+                                Começar</span>
                             <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-2 mb-4 leading-tight">
                                 Checklist Inteligente de Primeiro Acesso por Nicho
                             </h2>
                             <p class="text-gray-600 text-base mb-6 leading-relaxed">
-                                Você não fica perdido. Assim que entra no Duzz, o sistema reconhece o seu segmento comercial e cria um <strong>passo a passo interativo</strong> com missões rápidas para você cadastrar produtos, configurar caixas e realizar suas primeiras vendas em minutos.
+                                Você não fica perdido. Assim que entra no Duzz, o sistema reconhece o seu segmento
+                                comercial e cria um <strong>passo a passo interativo</strong> com missões rápidas para
+                                você cadastrar produtos, configurar caixas e realizar suas primeiras vendas em minutos.
                             </p>
-                            
+
                             <div class="space-y-3.5 text-left text-sm text-gray-700 mb-6">
                                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200">
                                     <span class="text-green-600 font-bold text-base">✓</span>
-                                    <span><strong>Reconhecimento Automático:</strong> o checklist avança sozinho conforme você usa o sistema.</span>
+                                    <span><strong>Reconhecimento Automático:</strong> o checklist avança sozinho
+                                        conforme você usa o sistema.</span>
                                 </div>
                                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200">
                                     <span class="text-green-600 font-bold text-base">✓</span>
-                                    <span><strong>Segmentação Específica:</strong> missões sob medida para Roupas, Restaurantes, Oficinas ou Varejo.</span>
+                                    <span><strong>Segmentação Específica:</strong> missões sob medida para Roupas,
+                                        Restaurantes, Oficinas ou Varejo.</span>
                                 </div>
                             </div>
 
@@ -1073,13 +1373,16 @@
 
                         <!-- Visual Card / Mockup do Onboarding -->
                         <div class="lg:w-1/2 w-full">
-                            <div class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                            <div
+                                class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
                                 <div class="flex items-center justify-between mb-5 border-b border-white/10 pb-4">
                                     <div class="flex items-center gap-2">
                                         <span class="text-xl">🎯</span>
                                         <h4 class="font-bold text-base">Missões de Primeiro Acesso</h4>
                                     </div>
-                                    <span class="text-xs bg-green-500/20 text-green-300 font-bold px-2.5 py-1 rounded-full border border-green-500/30">75% Concluído</span>
+                                    <span
+                                        class="text-xs bg-green-500/20 text-green-300 font-bold px-2.5 py-1 rounded-full border border-green-500/30">75%
+                                        Concluído</span>
                                 </div>
 
                                 <div class="space-y-3 text-xs sm:text-sm">
@@ -1107,12 +1410,14 @@
                                         <span class="text-[10px] text-green-300 font-bold">Feito</span>
                                     </div>
 
-                                    <div class="bg-white/20 p-3 rounded-xl flex items-center justify-between border border-blue-400/40">
+                                    <div
+                                        class="bg-white/20 p-3 rounded-xl flex items-center justify-between border border-blue-400/40">
                                         <div class="flex items-center gap-2.5">
                                             <i class="bi bi-circle text-yellow-400 text-base"></i>
                                             <span class="font-bold">Consultar DuxIA para diagnóstico de vendas</span>
                                         </div>
-                                        <span class="text-[10px] bg-yellow-400 text-gray-900 font-bold px-2 py-0.5 rounded">Próximo</span>
+                                        <span
+                                            class="text-[10px] bg-yellow-400 text-gray-900 font-bold px-2 py-0.5 rounded">Próximo</span>
                                     </div>
                                 </div>
                             </div>
@@ -1137,11 +1442,17 @@
                         <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
                             <span>Como funciona o período de teste grátis?</span>
                             <span class="transition group-open:rotate-180">
-                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Você cria sua conta em segundos e tem acesso total ao sistema por <strong>15 dias</strong> no plano mensal ou <strong>30 dias</strong> no plano anual. <strong>Não solicitamos dados de cartão de crédito</strong> para iniciar.
+                            Você cria sua conta em segundos e tem acesso total ao sistema por <strong>15 dias</strong>
+                            no plano mensal ou <strong>30 dias</strong> no plano anual. <strong>Não solicitamos dados de
+                                cartão de crédito</strong> para iniciar.
                         </p>
                     </details>
 
@@ -1149,11 +1460,18 @@
                         <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
                             <span>O sistema emite Nota Fiscal (NFC-e / NF-e)?</span>
                             <span class="transition group-open:rotate-180">
-                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            O Duzz Commercial é um <strong>sistema estritamente Gerencial Não Fiscal</strong>. Ele foca no controle interno (estoque em tempo real, caixas, comissões, vendas ágeis, fiado e inteligência) com velocidade máxima, sem as burocracias, certificados digitais e lentidão de módulos fiscais.
+                            O Duzz Commercial é um <strong>sistema estritamente Gerencial Não Fiscal</strong>. Ele foca
+                            no controle interno (estoque em tempo real, caixas, comissões, vendas ágeis, fiado e
+                            inteligência) com velocidade máxima, sem as burocracias, certificados digitais e lentidão de
+                            módulos fiscais.
                         </p>
                     </details>
 
@@ -1161,11 +1479,16 @@
                         <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
                             <span>Preciso de um computador potente para rodar?</span>
                             <span class="transition group-open:rotate-180">
-                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Não! O sistema é 100% online e ultraleve. Funciona em qualquer computador comum, notebook, tablet ou smartphone com navegador moderno e acesso à internet.
+                            Não! O sistema é 100% online e ultraleve. Funciona em qualquer computador comum, notebook,
+                            tablet ou smartphone com navegador moderno e acesso à internet.
                         </p>
                     </details>
 
@@ -1173,11 +1496,17 @@
                         <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
                             <span>O Catálogo Digital / Loja Virtual (Duzz Store) é obrigatório?</span>
                             <span class="transition group-open:rotate-180">
-                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Não. O Duzz Store é um <strong>módulo adicional (Add-on opcional)</strong>. Os planos base cobrem todo o PDV, financeiro, estoque e IA. Caso você queira uma vitrine virtual com pedidos no WhatsApp, basta ativar o add-on no seu painel.
+                            Não. O Duzz Store é um <strong>módulo adicional (Add-on opcional)</strong>. Os planos base
+                            cobrem todo o PDV, financeiro, estoque e IA. Caso você queira uma vitrine virtual com
+                            pedidos no WhatsApp, basta ativar o add-on no seu painel.
                         </p>
                     </details>
 
@@ -1185,11 +1514,16 @@
                         <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
                             <span>Como cancelo se eu não quiser continuar?</span>
                             <span class="transition group-open:rotate-180">
-                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Você pode cancelar a qualquer momento diretamente pelo seu Painel de Assinante em 1 clique, sem multas contratuais e sem pegadinhas.
+                            Você pode cancelar a qualquer momento diretamente pelo seu Painel de Assinante em 1 clique,
+                            sem multas contratuais e sem pegadinhas.
                         </p>
                     </details>
                 </div>
@@ -1205,11 +1539,14 @@
                     Não perca mais tempo com desorganização. Comece o teste grátis ou fale com nossos especialistas.
                 </p>
 
-                <div class="bg-white/10 p-6 sm:p-8 rounded-3xl max-w-lg mx-auto backdrop-blur-md border border-white/10">
+                <div
+                    class="bg-white/10 p-6 sm:p-8 rounded-3xl max-w-lg mx-auto backdrop-blur-md border border-white/10">
                     <h3 class="text-xl font-bold mb-2">Fale com um Consultor</h3>
                     <p class="text-xs text-gray-300 mb-6 font-medium">
-                        Suporte: <a href="mailto:suporte@duzzsystem.com.br" class="hover:text-brand-blue underline">suporte@duzzsystem.com.br</a> |
-                        <a href="#" onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero tirar uma dúvida antes de começar o teste grátis.', 'contato_whatsapp_link')"
+                        Suporte: <a href="mailto:suporte@duzzsystem.com.br"
+                            class="hover:text-brand-blue underline">suporte@duzzsystem.com.br</a> |
+                        <a href="#"
+                            onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero tirar uma dúvida antes de começar o teste grátis.', 'contato_whatsapp_link')"
                             class="hover:text-brand-blue underline">+55 38 99858-8893</a>
                     </p>
 
@@ -1246,7 +1583,8 @@
         <section id="ferramentas" class="py-20 bg-gray-100 border-t border-gray-200">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="bg-blue-100 text-brand-blue font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+                    <span
+                        class="bg-blue-100 text-brand-blue font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
                         Utilidades Abertas
                     </span>
                     <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-3">
@@ -1259,13 +1597,16 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Ferramenta 1 -->
-                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-4">
                                 <i class="bi bi-whatsapp"></i>
                             </div>
                             <h3 class="text-base font-bold text-gray-900 mb-2">Gerador de Link WhatsApp</h3>
-                            <p class="text-gray-600 text-xs mb-4">Crie links curtos personalizados com mensagens pré-formatadas e QR Code.</p>
+                            <p class="text-gray-600 text-xs mb-4">Crie links curtos personalizados com mensagens
+                                pré-formatadas e QR Code.</p>
                         </div>
                         <a href="ferramentas/gerador-link-whatsapp.html"
                             class="text-green-600 font-bold text-xs inline-flex items-center gap-1 hover:underline">
@@ -1274,13 +1615,16 @@
                     </div>
 
                     <!-- Ferramenta 2 -->
-                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-4">
                                 <i class="bi bi-calculator-fill"></i>
                             </div>
                             <h3 class="text-base font-bold text-gray-900 mb-2">Calculadora de Margem</h3>
-                            <p class="text-gray-600 text-xs mb-4">Calcule o preço de venda ideal considerando taxas de cartão, frete e comissões.</p>
+                            <p class="text-gray-600 text-xs mb-4">Calcule o preço de venda ideal considerando taxas de
+                                cartão, frete e comissões.</p>
                         </div>
                         <a href="ferramentas/calculadora-margem-revenda.html"
                             class="text-brand-blue font-bold text-xs inline-flex items-center gap-1 hover:underline">
@@ -1289,13 +1633,16 @@
                     </div>
 
                     <!-- Ferramenta 3 -->
-                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <div
+                                class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-4">
                                 <i class="bi bi-basket3-fill"></i>
                             </div>
                             <h3 class="text-base font-bold text-gray-900 mb-2">Calculadora de Insumos</h3>
-                            <p class="text-gray-600 text-xs mb-4">Monte fichas técnicas de receitas e produtos artesanais com custo exato por porção.</p>
+                            <p class="text-gray-600 text-xs mb-4">Monte fichas técnicas de receitas e produtos
+                                artesanais com custo exato por porção.</p>
                         </div>
                         <a href="ferramentas/calculadora-custo-produto.html"
                             class="text-orange-600 font-bold text-xs inline-flex items-center gap-1 hover:underline">
@@ -1304,13 +1651,16 @@
                     </div>
 
                     <!-- Ferramenta 4 -->
-                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <div
+                                class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-4">
                                 <i class="bi bi-qr-code-scan"></i>
                             </div>
                             <h3 class="text-base font-bold text-gray-900 mb-2">Gerador de QR Code Pix</h3>
-                            <p class="text-gray-600 text-xs mb-4">Crie códigos Pix Copia e Cola estáticos com máscara inteligente para Celular, CPF ou CNPJ.</p>
+                            <p class="text-gray-600 text-xs mb-4">Crie códigos Pix Copia e Cola estáticos com máscara
+                                inteligente para Celular, CPF ou CNPJ.</p>
                         </div>
                         <a href="ferramentas/gerador-qr-code-pix.html"
                             class="text-teal-600 font-bold text-xs inline-flex items-center gap-1 hover:underline">
@@ -1320,7 +1670,8 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="ferramentas/index.html" class="inline-flex items-center gap-2 font-bold text-brand-blue hover:underline text-sm">
+                    <a href="ferramentas/index.html"
+                        class="inline-flex items-center gap-2 font-bold text-brand-blue hover:underline text-sm">
                         <span>Ver todas as ferramentas gratuitas</span> <i class="bi bi-arrow-right-short text-lg"></i>
                     </a>
                 </div>
@@ -1332,7 +1683,7 @@
         <footer class="bg-gray-950 border-t border-gray-800 text-gray-400 py-14 text-sm relative overflow-hidden">
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
-                    
+
                     <div>
                         <h4 class="text-white font-bold text-base mb-3">Duzz System</h4>
                         <p class="text-xs">CNPJ: 40.554.697/0001-67</p>
@@ -1355,18 +1706,24 @@
                     <div>
                         <h4 class="text-white font-bold mb-3 text-sm">Ferramentas Gratuitas</h4>
                         <ul class="space-y-2 text-xs">
-                            <li><a href="ferramentas/gerador-link-whatsapp.html" class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
-                            <li><a href="ferramentas/calculadora-margem-revenda.html" class="hover:text-white transition">Calculadora Margem Revenda</a></li>
-                            <li><a href="ferramentas/calculadora-custo-produto.html" class="hover:text-white transition">Calculadora Custo Insumos</a></li>
-                            <li><a href="ferramentas/gerador-qr-code-pix.html" class="hover:text-white transition">Gerador de QR Code Pix</a></li>
+                            <li><a href="ferramentas/gerador-link-whatsapp.html"
+                                    class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
+                            <li><a href="ferramentas/calculadora-margem-revenda.html"
+                                    class="hover:text-white transition">Calculadora Margem Revenda</a></li>
+                            <li><a href="ferramentas/calculadora-custo-produto.html"
+                                    class="hover:text-white transition">Calculadora Custo Insumos</a></li>
+                            <li><a href="ferramentas/gerador-qr-code-pix.html"
+                                    class="hover:text-white transition">Gerador de QR Code Pix</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 class="text-white font-bold mb-3 text-sm">Contato</h4>
                         <ul class="space-y-2 text-xs">
-                            <li>Suporte: <a href="mailto:suporte@duzzsystem.com.br" class="hover:text-white transition">suporte@duzzsystem.com.br</a></li>
-                            <li>Financeiro: <a href="mailto:financeiro@duzzsystem.com.br" class="hover:text-white transition">financeiro@duzzsystem.com.br</a></li>
+                            <li>Suporte: <a href="mailto:suporte@duzzsystem.com.br"
+                                    class="hover:text-white transition">suporte@duzzsystem.com.br</a></li>
+                            <li>Financeiro: <a href="mailto:financeiro@duzzsystem.com.br"
+                                    class="hover:text-white transition">financeiro@duzzsystem.com.br</a></li>
                             <li>WhatsApp: <a href="#" target="_blank"
                                     onclick="handleWhatsAppClick(event, 'Olá, vi o site da Duzz e quero falar com o suporte.', 'footer_whatsapp_link')"
                                     class="hover:text-white transition">(38) 99858-8893</a></li>
@@ -1377,9 +1734,11 @@
                         <h4 class="text-white font-bold mb-3 text-sm">Institucional</h4>
                         <ul class="space-y-2 text-xs">
                             <li><a href="terms.html" class="hover:text-white transition">Termos de Uso</a></li>
-                            <li><a href="privacy.html" class="hover:text-white transition">Política de Privacidade</a></li>
+                            <li><a href="privacy.html" class="hover:text-white transition">Política de Privacidade</a>
+                            </li>
                             <li><a href="#faq" class="hover:text-white transition">Dúvidas Frequentes</a></li>
-                            <li><a href="reseller.html" class="text-brand-blue font-bold hover:underline">Seja Revendedor</a></li>
+                            <li><a href="reseller.html" class="text-brand-blue font-bold hover:underline">Seja
+                                    Revendedor</a></li>
                         </ul>
                     </div>
 
@@ -1394,7 +1753,8 @@
 
 
     <!-- ==================== STICKY MOBILE CTA ==================== -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-3 z-40 lg:hidden shadow-xl">
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-3 z-40 lg:hidden shadow-xl">
         <a href="https://app.duzzsystem.com.br/onboarding" target="_blank"
             onclick="gtag('event', 'click_cta', { 'button_location': 'sticky_mobile', 'button_name': 'Sticky CTA Mobile' }); fbq('track', 'Lead');"
             class="block w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-center text-sm shadow-md transition">
@@ -1411,10 +1771,14 @@
             </div>
             <div>
                 <p class="font-bold text-gray-800 text-xs mb-0.5">Vitória Souza</p>
-                <p class="text-[11px] leading-tight text-gray-600">Olá! Quer ajuda com um orçamento ou dúvidas sobre o sistema?</p>
+                <p class="text-[11px] leading-tight text-gray-600">Olá! Quer ajuda com um orçamento ou dúvidas sobre o
+                    sistema?</p>
             </div>
             <button id="close-tooltip" class="text-gray-400 hover:text-gray-600" aria-label="Fechar">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
         </div>
     </div>
@@ -1436,12 +1800,17 @@
                     <i class="bi bi-whatsapp text-green-500 text-2xl"></i>
                     <h3 class="text-lg font-bold text-gray-900">Falar com especialista Duzz</h3>
                 </div>
-                <button id="close-wa-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar modal">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <button id="close-wa-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none"
+                    aria-label="Fechar modal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
                 </button>
             </div>
 
-            <p class="text-gray-600 text-xs mb-5">Preencha seus dados para iniciarmos o atendimento com nossa equipe:</p>
+            <p class="text-gray-600 text-xs mb-5">Preencha seus dados para iniciarmos o atendimento com nossa equipe:
+            </p>
 
             <form id="wa-form" class="space-y-3.5">
                 <div>
@@ -1610,7 +1979,7 @@
                             Whatsapp: phone,
                             _subject: `Lead WhatsApp - ${name}`
                         })
-                    }).catch(() => {});
+                    }).catch(() => { });
 
                     if (typeof gtag === 'function') gtag('event', 'generate_lead', { 'lead_source': 'whatsapp_modal' });
                     if (typeof fbq === 'function') fbq('track', 'Lead');
