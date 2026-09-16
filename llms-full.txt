@@ -36,6 +36,7 @@ Organização inteligente de ativos focada em rentabilidade e controle contra pe
   - **Sugestão Inteligente de Compra / Não-Compra:** O algoritmo analisa o histórico de vendas e indica formalmente quais produtos devem ser repostos e quais itens estão sob risco de encalhe (sugestão de não-compra).
 - **Gestão de Fornecedores:** Histórico completo de compras e cotações por fornecedor.
 - **Ajustes de Inventário & Auditoria:** Lançamento de perdas, quebras, desvios ou produtos vencidos com registro irreversível de auditoria contábil e operacional.
+- **Impressão de Etiquetas de Código de Barras e Gôndola:** Geração e impressão direta pelo navegador para impressoras térmicas contínuas (rolo de gôndola/prateleira) e folhas adesivas padrão A4 (Pimaco com 30 etiquetas). Permite inclusão de código de barras escaneável, QR Code, preço destacado e particularidades (tamanho, cor, voltagem) com impressão individual ou em massa por categoria.
 
 ---
 
@@ -98,7 +99,8 @@ Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz
 
 ## 8. Tecnologia, Inteligência Artificial e Ecossistema
 
-- **Dux IA:** Assistente virtual inteligente integrado ao sistema para consulta instantânea de manuais, suporte operacional e orientações de uso.
+- **Painel de Insights Inteligentes da duxIA na Home:** Auditoria contínua e diagnóstico de negócios que monitora metas de faturamento, risco de ruptura na Curva ABC, inadimplência e custos fixos, com botões de ação imediata que abrem chats executivos com propostas de 1 clique.
+- **Dux IA (Agentes Especialistas):** Agentes de IA dedicados para Finanças, Estoque, Comercial, Catálogo, CRM e Consultoria Geral operando sob a filosofia Action-First & Data-First.
 - **Chatbot de Atendimento:** Canal de interação automatizada integrado à plataforma.
 - **Gestão da Empresa e Assinatura B2B:** Ambiente self-service integrado no próprio aplicativo (`app.duzzsystem.com.br/home/gestao/empresa`) para gestão da assinatura Duzz, download de faturas, atualização cadastral e adição de módulos (add-ons).
 - **Segurança & Continuidade:** Autenticação segura por cookies HttpOnly/Secure, políticas rígidas de permissão por perfil de usuário, tolerância de 2 dias após vencimento da licença e modo "somente leitura" por até 14 dias antes de bloqueio total.
@@ -110,7 +112,7 @@ Conjunto de utilitários 100% gratuitos disponíveis publicamente no portal Duzz
 - **Gastronomia & Alimentos:** Bares, restaurantes, lanchonetes, padarias, cafeterias, food trucks (comandas, divisão de conta, App Garçom, insumos).
 - **Beleza, Saúde & Estética:** Salões de beleza, barbearias, clínicas de estética, estúdios de pilates, pet shops (agendamento, comissão por profissional, insumos).
 - **Serviços & Manutenção:** Oficinas mecânicas, assistências técnicas, lava-jatos, consultorias (serviços + insumos/peças + orçamentos impressos).
-- **Varejo & Comércio Geral:** Lojas de roupas, calçados, bijuterias, eletrônicos, cosméticos, minimercados (PDV não-fiscal rápido, leitor de código de barras, curva ABC com sugestão de compras).
+- **Varejo & Comércio Geral:** Lojas de roupas, calçados, bijuterias, eletrônicos, cosméticos, minimercados (PDV não-fiscal rápido, leitor e impressão de etiquetas de código de barras/gôndola, curva ABC com sugestão de compras, insights preditivos da duxIA).
 
 ---
 

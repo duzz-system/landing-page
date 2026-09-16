@@ -26,6 +26,7 @@
 
 ### 2. Gestão de Estoque, Produtos & Insumos
 - **Cadastro Unificado:** Produtos físicos e serviços (mão de obra).
+- **Impressão de Etiquetas de Código de Barras e Gôndola:** Suporte para impressoras térmicas contínuas (rolo) e folhas A4 (Pimaco com 30 etiquetas), com código de barras, QR Code, preço e particularidades (tamanho, cor, voltagem). Impressão unitária ou em lotes rápidos.
 - **Ficha Técnica & Insumos:** Cálculo automático de CMV (Custo de Mercadoria Vendida) e margem de lucro por composição/combo.
 - **Curva ABC Inteligente:** Classificação financeira (A, B e C) com **sugestão de compra ou não-compra do estoque**.
 - **Ajustes de Inventário:** Log irreversível para auditoria de perdas, quebras e validade.
@@ -45,9 +46,10 @@
 - **Vendas via WhatsApp:** Carrinho de compras responsivo que gera **mensagem formatada enviada diretamente para o WhatsApp** do lojista.
 
 ### 6. Inteligência de Negócio (BI) & Dux IA
+- **Painel de Insights Inteligentes da DuxIA na Home:** Auditoria contínua dos números da empresa com diagnósticos em tempo real (faturamento vs. metas, alertas de ruptura na Curva ABC, inadimplência e custos ocultos) acompanhados de CTAs de 1 clique para resolução imediata no chat executivo.
 - **Dashboard Raio-X:** Faturamento, Ticket Médio, Lucro Líquido e DRE Completa em tempo real.
 - **Precificação Científica:** Calculadora de preços baseada em **Markup vs. Margem**.
-- **Dux IA:** Assistente virtual inteligente integrado para dúvidas operacionais e consulta de manuais.
+- **Dux IA:** Assistente virtual inteligente com agentes especializados (Financeiro, Estoque, Comercial, Catálogo, CRM e Geral) para ações executáveis em 1 clique.
 
 ### 7. Ferramentas Gratuitas para Empreendedores
 - **Gerador de Link de WhatsApp:** https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html
@@ -61,4 +63,4 @@
 - **Gastronomia:** Bares, restaurantes, lanchonetes, food trucks (comandas, App Garçom, divisão de conta).
 - **Beleza & Estética:** Salões de beleza, barbearias, clínicas de estética, pet shops (agendamentos, comissões, insumos).
 - **Serviços & Manutenção:** Oficinas mecânicas, assistências técnicas, consultorias (serviços, insumos, orçamentos).
-- **Varejo Generalista:** Lojas de roupas, calçados, cosméticos, minimercados (PDV não-fiscal rápido, curva ABC).
+- **Varejo Generalista:** Lojas de roupas, calçados, cosméticos, minimercados (PDV não-fiscal rápido, leitor e impressão de etiquetas, curva ABC, insights da DuxIA).

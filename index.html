@@ -666,6 +666,8 @@
                                         class="bi bi-check2 text-green-600 font-bold"></i> Entrada automatizada de XML
                                     sem digitação</li>
                                 <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Leitor e impressão de etiquetas de código de barras (térmica e A4)</li>
+                                <li class="flex items-center gap-2"><i
                                         class="bi bi-check2 text-green-600 font-bold"></i> Vendas à vista, parceladas e
                                     PIX instantâneo</li>
                                 <li class="flex items-center gap-2"><i
@@ -769,112 +771,159 @@
                 </div>
 
                 <!-- Grid de Especialistas da DuxIA -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
 
                     <!-- Card 1: duxIA Financeiro -->
                     <div
-                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-7 hover:border-blue-500/40 transition">
-                        <div class="flex items-center gap-3 mb-5">
-                            <div
-                                class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl shadow-inner border border-blue-500/20">
-                                <i class="bi bi-wallet2"></i>
+                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 hover:border-blue-500/40 transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div
+                                    class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-xl shadow-inner border border-blue-500/20">
+                                    <i class="bi bi-wallet2"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">duxIA Financeiro</h3>
+                                    <span class="text-xs text-blue-300">Analista de caixa e contas a pagar</span>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">duxIA Financeiro</h3>
-                                <span class="text-xs text-blue-300">Sua analista de caixa e contas a pagar</span>
-                            </div>
+                            <ul class="space-y-3 text-xs sm:text-sm">
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Baixa de Contas sem Esforço:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Diga o que foi pago e ela localiza a conta, dá baixa e atualiza o saldo.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Gastos do Balcão no Ato:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Despesas com café, fretes ou manutenção liquidadas no caixa na hora.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Custos Fixos com Recorrência:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Automatize aluguel e despesas fixas com alertas antes do vencimento.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Pró-labore & Sangrias:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Retiradas para sócios e transferências para cofre com conciliação real.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="space-y-3.5 text-sm">
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Baixa de Contas sem Esforço:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Diga o que foi pago e ela localiza a conta,
-                                        dá baixa imediata e atualiza seu saldo.</p>
-                                </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Gastos do Dia a Dia no Balcão:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Comprou café, combustível ou insumos? A
-                                        despesa é lançada e liquidada no caixa no ato.</p>
-                                </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Custos Fixos com Recorrência Ativa:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Informe despesas recorrentes (aluguel,
-                                        internet) e deixe o sistema gerenciar os vencimentos.</p>
-                                </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-blue-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Pró-labore e Sangrias Seguras:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Registre retiradas para si mesmo ou
-                                        transfira saldo da gaveta para o cofre com total conciliação.</p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
 
                     <!-- Card 2: duxIA Estoque -->
                     <div
-                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-7 hover:border-emerald-500/40 transition">
-                        <div class="flex items-center gap-3 mb-5">
-                            <div
-                                class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-2xl shadow-inner border border-emerald-500/20">
-                                <i class="bi bi-box-seam-fill"></i>
+                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 hover:border-emerald-500/40 transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div
+                                    class="w-11 h-11 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-xl shadow-inner border border-emerald-500/20">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">duxIA Estoque</h3>
+                                    <span class="text-xs text-emerald-300">Compradora e gestora de reposição</span>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">duxIA Estoque</h3>
-                                <span class="text-xs text-emerald-300">Sua compradora e gestora de reposição</span>
-                            </div>
+                            <ul class="space-y-3 text-xs sm:text-sm">
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Alerta Semanal de Reposição:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Indica quais fornecedores precisam de pedido na semana para sua loja não parar.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Proteção da Curva A:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Protege seus produtos mais rentáveis, prevenindo dinheiro encalhado.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Lista Pronta para WhatsApp:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Monta a lista de compras formatada com botão para copiar e enviar ao fornecedor.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Sem Contagens Manuais:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Economize horas semanais de conferência e elimine erros de contagem.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="space-y-3.5 text-sm">
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Alerta Antecipado de Reposição:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Avisa com antecedência quais fornecedores
-                                        precisam de pedido na semana para sua loja nunca ficar sem produto.</p>
+                    </div>
+
+                    <!-- Card 3: duxIA Insights na Home -->
+                    <div
+                        class="bg-slate-800/60 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 hover:border-purple-500/40 transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div
+                                    class="w-11 h-11 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl shadow-inner border border-purple-500/20">
+                                    <i class="bi bi-lightbulb-fill"></i>
                                 </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
                                 <div>
-                                    <strong class="text-white">Proteção dos Produtos Campeões:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Prioriza os itens mais vendidos do seu
-                                        comércio, evitando dinheiro parado em excesso de mercadoria.</p>
+                                    <h3 class="text-lg font-bold text-white">duxIA Insights</h3>
+                                    <span class="text-xs text-purple-300">Auditoria executiva na tela inicial</span>
                                 </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Lista Pronta para o WhatsApp:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Monta o pedido de compras completo e
-                                        formatado, com botão para copiar e colar direto no WhatsApp do fornecedor.</p>
-                                </div>
-                            </li>
-                            <li
-                                class="flex items-start gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-700/50">
-                                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5 text-base"></i>
-                                <div>
-                                    <strong class="text-white">Mais Tempo Livre para Você:</strong>
-                                    <p class="text-xs text-slate-300 mt-0.5">Esqueça horas contando prateleiras ou
-                                        montando planilhas manuais de compras.</p>
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                            <ul class="space-y-3 text-xs sm:text-sm">
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-purple-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Diagnósticos Proativos:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">A IA alerta se o faturamento estiver abaixo da meta antes do fim do mês.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-purple-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Risco de Ruptura de Estoque:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Identifica itens campeões zerados ou em falta iminente nas prateleiras.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-purple-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Radar de Fiado & CMV:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Detecta picos de inadimplência e custos de mercadoria fora do padrão.</p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
+                                    <i class="bi bi-check-circle-fill text-purple-400 mt-0.5 text-sm flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-white">Ação Rápida em 1 Clique:</strong>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Clique no insight e ela já abre o chat com a solução pronta para executar.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
@@ -1154,6 +1203,10 @@
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Impressão de Etiquetas de Código de Barras</strong> (térmica e A4)</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
                                     <div><strong>Importação de XML de Fornecedores</strong> automática</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
@@ -1175,8 +1228,7 @@
                                 <li
                                     class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Integrada</strong> (20 consultas de
-                                        gestão/mês)</div>
+                                    <div><strong class="text-purple-900">DuxIA Integrada & Painel de Insights</strong> (auditoria na Home + 20 consultas/mês)</div>
                                 </li>
                             </ul>
                         </div>
@@ -1239,14 +1291,13 @@
                             <ul class="space-y-3 mb-8 text-left text-xs sm:text-sm">
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Tudo incluso no Plano Mensal</strong> (PDV, XML, Comandas, Estoque)
+                                    <div><strong>Tudo incluso no Plano Mensal</strong> (PDV, Etiquetas, XML, Comandas, Estoque)
                                     </div>
                                 </li>
                                 <li
                                     class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Expandida</strong> (50 consultas/mês -
-                                        150% mais poder)</div>
+                                    <div><strong class="text-purple-900">DuxIA Expandida & Insights Ativos</strong> (auditoria na Home + 50 consultas/mês)</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
@@ -1524,6 +1575,48 @@
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
                             Você pode cancelar a qualquer momento diretamente pelo seu Painel de Assinante em 1 clique,
                             sem multas contratuais e sem pegadinhas.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>O sistema imprime etiquetas de código de barras para gôndolas e produtos?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            <strong>Sim, com suporte completo e sem custos adicionais!</strong> Você pode gerar e imprimir
+                            etiquetas personalizadas tanto em <strong>impressoras térmicas de rolo contínuo</strong> (etiquetas
+                            de prateleira e gôndola, como 50x30mm e 40x25mm) quanto em <strong>folhas adesivas A4 convencionais</strong>
+                            (padrão Pimaco de 30 etiquetas por folha). A etiqueta estampa o código de barras legível por
+                            qualquer leitor óptico, QR Code, nome do item, preço de venda em destaque e particularidades customizáveis
+                            no topo (tamanho, cor, voltagem). É possível imprimir produtos individuais ou categorias inteiras em lote.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Como funciona o Painel de Insights da duxIA na tela inicial?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            O Painel de Insights da duxIA é o seu <strong>raio-X executivo diário</strong>. A inteligência artificial
+                            audita continuamente seus dados em segundo plano e entrega alertas no topo da sua tela inicial: avisa se o ritmo
+                            de faturamento estiver correndo abaixo da meta do mês, se produtos campeões (Curva A) estão prestes a esgotar,
+                            se a taxa de inadimplência no fiado subiu ou se existem despesas fixas esquecidas. Ao lado de cada diagnóstico,
+                            há um <strong>botão de ação de 1 clique</strong> que abre a duxIA no chat com a solução pronta para você aprovar
+                            na hora, sem gastar horas analisando planilhas manuais.
                         </p>
                     </details>
                 </div>
