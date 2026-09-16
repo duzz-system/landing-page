@@ -805,246 +805,314 @@
 
 
         <!-- PRICING / PLANOS -->
-        <section id="planos" class="py-20 bg-white relative">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Planos Transparentes</h2>
-                    <p class="text-gray-600 text-lg">Escolha a opção ideal para o momento da sua empresa. Sem taxas
-                        escondidas.</p>
+        <section id="planos" class="py-20 bg-gray-50 border-t border-gray-200 relative">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="bg-blue-100 text-brand-blue font-bold text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+                        Transparência Total & Sem Pegadinhas
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mb-4">
+                        Planos que Cabem no Caixa do seu Salão ou Clínica
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Comece seu teste de 15 a 30 dias sem risco. Sem fidelidade, sem taxa de adesão e sem pedir cartão de crédito.
+                    </p>
+
+                    <!-- TOGGLE MENSAL / ANUAL -->
+                    <div class="mt-8 inline-flex items-center bg-gray-200/80 p-1.5 rounded-2xl border border-gray-300">
+                        <button id="toggle-mensal-btn" onclick="setBillingFrequency('monthly')"
+                            class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm">
+                            Mensal
+                        </button>
+                        <button id="toggle-anual-btn" onclick="setBillingFrequency('annual')"
+                            class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5">
+                            <span>Anual</span>
+                            <span class="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                🎁 Ganhe até 4 Meses Grátis
+                            </span>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
+                <!-- 3 CARDS DE PLANOS -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
 
-
-
-                    <!-- PLANO ESSENCIAL -->
-                    <div
-                        class="card-hover flex-1 bg-white border-2 border-brand-blue rounded-2xl p-8 shadow-2xl relative transform md:-translate-y-4">
-                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                            <span
-                                class="bg-brand-blue text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase shadow-md">Mais
-                                Completo</span>
-                        </div>
-
-                        <h3 class="text-2xl font-bold text-brand-blue">Plano Essencial</h3>
-
-                        <!-- Preço Plano Essencial -->
-                        <div class="mt-2 mb-2 flex items-baseline gap-2">
-                            <span class="text-3xl font-bold text-brand-blue">R$ 69,90</span>
-                            <span class="text-gray-500 text-sm">/mês</span>
-                        </div>
-
-                        <p class="text-gray-500 text-sm">Inteligência total para escalar o negócio.</p>
-                        <div class="my-6 h-px bg-blue-100"></div>
-
-                        <ul class="space-y-3 mb-8">
-                            <!-- GRUPO: OPERACIONAL -->
-                            <li class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pt-1">Operacional
-                            </li>
-                            <li class="flex items-start bg-green-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-green-700 font-bold block">PDV Frente de Caixa Rápido</span>
-                                    <span class="text-gray-600 text-xs">Venda ágil de produtos e serviços</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm font-bold">Comanda Eletrônica (Garçom)</span>
-                            </li>
-                            <li class="flex items-start bg-yellow-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-yellow-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-yellow-700 font-bold block">Gestão de Fiado (Notas
-                                        Promissórias)</span>
-                                    <span class="text-gray-600 text-xs">Controle total de pendências de clientes</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Importação de XML (Nota Fiscal)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">CRM, Histórico de Clientes e Acesso Online</span>
-                            </li>
-
-                            <!-- GRUPO: GERENCIAL -->
-                            <li class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pt-3">Gerencial
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Financeiro (Contas a Pagar/Receber e Caixa)</span>
-                            </li>
-                            <li class="flex items-start bg-blue-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-brand-blue mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-brand-blue font-bold block">Visão Geral do Negócio</span>
-                                    <span class="text-gray-600 text-xs">Faturamento, pagamentos, clientes e produtos
-                                        atrativos</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start bg-indigo-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-indigo-700 font-bold block">Saúde e Planejamento (Raio X)</span>
-                                    <span class="text-gray-600 text-xs">Métricas, inadimplência e PREVISÃO mensal</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start bg-orange-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-orange-700 font-bold block">Estoque: Curva ABC e Ficha
-                                        Técnica</span>
-                                    <span class="text-gray-600 text-xs">Análise de ponto de compra e composição de
-                                        produtos</span>
-                                </div>
-                            </li>
-
-                            <!-- GRUPO: INTELIGÊNCIA ARTIFICIAL -->
-                            <li class="text-[10px] font-bold text-purple-400 uppercase tracking-widest pt-3">
-                                Inteligência Artificial</li>
-                            <li class="flex items-start bg-purple-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-purple-700 font-bold block">🧠 DuxIA: 20 mensagens/mês</span>
-                                    <span class="text-gray-600 text-xs">Assistente de gestão com IA</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-blue-600 font-bold mb-2">15 Dias de Teste Grátis</p>
-
-                            <!-- BOTÃO CHECKOUT - ESSENCIAL -->
-                            <a target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=pro"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Essencial 15 Dias' }); fbq('track', 'Lead');"
-                                class="block w-full py-4 bg-brand-blue text-white font-bold rounded-xl text-center hover:bg-blue-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>TESTAR 15 DIAS GRÁTIS</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- PLANO ESSENCIAL ANUAL -->
-                    <div
-                        class="card-hover flex-1 bg-gradient-to-b from-blue-50 to-white border border-blue-200 rounded-2xl p-8 shadow-lg relative">
-                        <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                            <span
-                                class="bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm">Melhor
-                                Valor</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Essencial Anual</h3>
-
-                        <div class="mt-2 mb-2 flex flex-col">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-sm text-gray-400 line-through">R$ 838,80</span>
-                                <span class="text-3xl font-bold text-green-600">R$ 718,80</span>
-                                <span class="text-gray-500 text-sm">/ano</span>
+                    <!-- CARD 1: GESTÃO BÁSICA -->
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-black text-gray-900">Gestão Básica</h3>
+                                <span class="text-xs font-bold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-lg">1 Caixa</span>
                             </div>
-                            <span class="text-[10px] text-green-600 font-bold uppercase italic">Economia de R$
-                                120</span>
+                            <p class="text-gray-500 text-xs mb-5">O essencial para vendas de serviços, cosméticos e controle de caixa.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight" id="price-start-value">R$ 59,90</span>
+                                    <span class="text-gray-500 text-xs sm:text-sm font-semibold" id="price-start-period">/mês</span>
+                                </div>
+                                <div class="mt-1.5 flex items-center gap-2">
+                                    <span class="text-xs font-bold text-brand-blue bg-blue-50 px-2 py-0.5 rounded" id="price-start-daily">
+                                        R$ 1,99 por dia
+                                    </span>
+                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded hidden" id="badge-start-bonus">
+                                        🎁 2 Meses Grátis
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Lista de Recursos -->
+                            <ul class="space-y-3 mb-8 text-left text-xs">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>1 Caixa PDV Rápido</strong> (Serviços, produtos, PIX e Cartões)</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>1 Usuário / Atendente</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Importação de XML</strong> de Fornecedores de Cosméticos</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Controle de Estoque Essencial</strong> de Produtos</div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-purple-50/70 p-2 rounded-lg border border-purple-100">
+                                    <span>🧠</span>
+                                    <div><strong class="text-purple-900">DuxIA Copiloto</strong> (10 consultas/mês)</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Checklist de Implantação Salões & Beleza</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div>Suporte Padrão no WhatsApp</div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <p class="text-gray-500 text-sm">O poder total do Duzz com o melhor preço para sua empresa.</p>
-                        <div class="my-6 h-px bg-gray-100"></div>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm font-bold">Tudo do Plano Essencial</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700 text-sm">Suporte Prioritário</span>
-                            </li>
-                            <li class="flex items-start bg-purple-50 p-2 rounded -ml-2">
-                                <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                                    </path>
-                                </svg>
-                                <div class="text-sm">
-                                    <span class="text-purple-700 font-bold block">🧠 DuxIA: 50 mensagens/mês</span>
-                                    <span class="text-gray-600 text-xs">Mais poder para análises e CRM com IA</span>
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <div class="mt-auto">
-                            <p class="text-xs text-center text-green-600 font-bold mb-2">30 Dias de Teste Grátis</p>
-
-                            <!-- BOTÃO CHECKOUT - ESSENCIAL ANUAL -->
-                            <a target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=enterprise"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Anual' }); fbq('track', 'Lead');"
-                                class="block w-full py-4 bg-green-600 text-white font-bold rounded-xl text-center hover:bg-green-700 transition flex items-center justify-center gap-2 group cursor-pointer">
-                                <span>Aproveitar Desconto</span>
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
+                        <div>
+                            <p class="text-[11px] text-center text-gray-500 font-bold mb-2.5">
+                                ⚡ 15 Dias de Teste Grátis • Sem cartão
+                            </p>
+                            <a id="btn-cta-start" target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=basico&nicho=beleza"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Start' }); fbq('track', 'Lead');"
+                                class="block w-full py-3 bg-gray-900 hover:bg-gray-800 text-white font-extrabold rounded-xl text-center transition shadow-sm text-xs sm:text-sm">
+                                TESTAR BÁSICO GRÁTIS
                             </a>
                         </div>
                     </div>
+
+
+                    <!-- CARD 2: GESTÃO PRO (MAIS ESCOLHIDO) -->
+                    <div class="bg-white border-2 border-brand-blue rounded-3xl p-7 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300 transform lg:-translate-y-2">
+                        <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
+                            <span class="bg-brand-blue text-white px-4 py-1 rounded-full text-[11px] font-black tracking-wider uppercase shadow-md flex items-center gap-1">
+                                ⭐ MAIS ESCOLHIDO (75% DAS CLÍNICAS)
+                            </span>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2 mt-1">
+                                <h3 class="text-2xl font-black text-gray-900">Gestão Pro</h3>
+                                <span class="text-xs font-bold text-brand-blue bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">Mais Escolhido</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mb-5">Agendamentos, comandas, comissões e gestão de pacotes/fiado.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight" id="price-pro-value">R$ 99,90</span>
+                                    <span class="text-gray-500 text-xs sm:text-sm font-semibold" id="price-pro-period">/mês</span>
+                                </div>
+                                <div class="mt-1.5 flex items-center gap-2">
+                                    <span class="text-xs font-bold text-brand-blue bg-blue-50 px-2 py-0.5 rounded" id="price-pro-daily">
+                                        R$ 3,33 por dia
+                                    </span>
+                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded hidden" id="badge-pro-bonus">
+                                        🎁 3 Meses Grátis (1 Trimestre)
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Lista de Recursos -->
+                            <ul class="space-y-3 mb-8 text-left text-xs">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Tudo incluso no Gestão Básica +</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-blue-50/70 p-2 rounded-lg border border-blue-100">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    <div><strong class="text-blue-950">Agendamentos & Comandas de Atendimento</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>2 Caixas / Recepções Simultâneas</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>2 Usuários / Profissionais / Operadores</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Fichas Técnicas & Custo de Procedimentos</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Gestão de Pacotes & Fiado de Clientes</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Contas a Pagar & Despesas Fixas</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-purple-50/70 p-2 rounded-lg border border-purple-100">
+                                    <span>🧠</span>
+                                    <div><strong class="text-purple-900">DuxIA Copiloto Expandida</strong> (30 consultas/mês)</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Suporte Prioritário VIP no WhatsApp</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] text-center text-brand-blue font-bold mb-2.5">
+                                ⚡ 15 Dias de Teste Grátis • Sem cartão
+                            </p>
+                            <a id="btn-cta-pro" target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=pro&nicho=beleza"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Profissional' }); fbq('track', 'Lead');"
+                                class="block w-full py-3.5 bg-brand-blue hover:bg-blue-700 text-white font-black rounded-xl text-center transition shadow-md text-xs sm:text-sm">
+                                TESTAR GESTÃO PRO 15 DIAS
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 3: GESTÃO FISCAL (MÓDULO FISCAL COMPLETO) -->
+                    <div class="bg-white border-2 border-emerald-600 rounded-3xl p-7 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between relative">
+                        <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
+                            <span class="bg-emerald-600 text-white px-4 py-1 rounded-full text-[11px] font-black tracking-wider uppercase shadow-md flex items-center gap-1">
+                                🧾 MÓDULO FISCAL COMPLETO
+                            </span>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2 mt-1">
+                                <h3 class="text-xl font-black text-gray-900">Gestão Fiscal</h3>
+                                <span class="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">Fiscal Completo</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mb-5">Emissão fiscal ilimitada (NFC-e e NF-e), catálogo e agendamento digital.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight" id="price-adv-value">R$ 169,90</span>
+                                    <span class="text-gray-500 text-xs sm:text-sm font-semibold" id="price-adv-period">/mês</span>
+                                </div>
+                                <div class="mt-1.5 flex items-center gap-2">
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded" id="price-adv-daily">
+                                        R$ 5,66 por dia
+                                    </span>
+                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded hidden" id="badge-adv-bonus">
+                                        🎁 4 Meses Grátis (1/3 do Ano)
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Lista de Recursos -->
+                            <ul class="space-y-3 mb-8 text-left text-xs">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Tudo incluso no Gestão Pro +</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+                                    <svg class="w-4 h-4 text-emerald-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <div><strong class="text-emerald-950">Emissão Ilimitada de NFC-e e NF-e (Modelo 55)</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+                                    <svg class="w-4 h-4 text-emerald-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                    <div><strong class="text-emerald-950">Integração SEFAZ Direta (Certificado Digital A1)</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Envio Automático de XML/DANFE</strong> para o seu Contador</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Profissionais e Caixas Ilimitados</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+                                    <svg class="w-4 h-4 text-emerald-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                                    <div><strong class="text-emerald-950">Catálogo e Agendamento Digital (Duzz Store) INCLUSO</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Demonstrativo DRE & Lucro Líquido por Serviço</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2 bg-purple-50/70 p-2 rounded-lg border border-purple-100">
+                                    <span>🧠</span>
+                                    <div><strong class="text-purple-900">DuxIA Alta Performance</strong> (100 consultas/mês)</div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div><strong>Gerente de Contas & Suporte VIP Prioritário</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] text-center text-gray-500 font-bold mb-2.5">
+                                ⚡ 15 a 30 Dias de Teste • Sem cartão
+                            </p>
+                            <a id="btn-cta-adv" target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=fiscal&nicho=beleza"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Avancado' }); fbq('track', 'Lead');"
+                                class="block w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl text-center transition shadow-sm text-xs sm:text-sm">
+                                TESTAR GESTÃO FISCAL GRÁTIS
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ADD-ONS TRANSPARENTES -->
+                <div class="mt-12 bg-white border border-gray-200 rounded-3xl p-6 lg:p-8 max-w-6xl mx-auto shadow-sm">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-xl">🧩</span>
+                        <h4 class="text-base sm:text-lg font-bold text-gray-900">Precisa de capacidade extra? Adicione quando quiser sem mudar de plano:</h4>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                            <span class="font-bold text-gray-900 block mb-1">👤 +1 Profissional / Usuário</span>
+                            <span class="text-brand-blue font-extrabold">R$ 10,00 /mês</span>
+                        </div>
+                        <div class="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                            <span class="font-bold text-gray-900 block mb-1">🖥️ +1 Caixa Extra</span>
+                            <span class="text-brand-blue font-extrabold">R$ 10,00 /mês</span>
+                        </div>
+                        <div class="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                            <span class="font-bold text-gray-900 block mb-1">🛍️ Agendamento Online (Duzz Store)</span>
+                            <span class="text-brand-blue font-extrabold">R$ 19,90 /mês</span>
+                        </div>
+                        <div class="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                            <span class="font-bold text-gray-900 block mb-1">🧠 +100 msgs DuxIA</span>
+                            <span class="text-brand-blue font-extrabold">R$ 20,00 (pacote)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selo de Garantia -->
+                <div class="mt-8 max-w-4xl mx-auto text-center flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-gray-600 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center gap-2 text-green-700 font-bold">
+                        <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <span>Zero Taxa de Adesão • Sem Taxa de Cancelamento • Sem Cartão de Crédito</span>
+                    </div>
+                    <span class="hidden sm:inline text-gray-300">|</span>
+                    <span>Teste todas as funções do plano escolhido por 15 a 30 dias sem nenhum compromisso.</span>
                 </div>
             </div>
         </section>
@@ -1518,6 +1586,21 @@
 
                     <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
                         <summary class="flex justify-between items-center font-medium text-gray-900 list-none">
+                            <span>O sistema emite Nota Fiscal (NFC-e / NF-e)?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 mt-3">
+                            <strong>Sim!</strong> No plano <strong>Gestão Fiscal</strong>, você emite NFC-e e NF-e (modelo 55) com integração direta à SEFAZ via Certificado Digital A1 e envio automático para a contabilidade. Caso seu salão ou clínica não precise de emissão fiscal imediata e queira agilidade no atendimento e comissionamento de parceiros, os planos <strong>Gestão Básica</strong> e <strong>Gestão Pro</strong> são 100% gerenciais e sem burocracias.
+                        </p>
+                    </details>
+                    <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium text-gray-900 list-none">
                             <span>Posso criar pacotes e combos de serviços?</span>
                             <span class="transition group-open:rotate-180">
                                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
@@ -1952,6 +2035,85 @@
                 modal.classList.add('opacity-100');
                 modalContent.classList.add('scale-100');
             }, 10);
+        }
+
+        // === Pricing Billing Frequency Toggle ===
+        function setBillingFrequency(freq) {
+            const mensalBtn = document.getElementById('toggle-mensal-btn');
+            const anualBtn = document.getElementById('toggle-anual-btn');
+
+            const priceStartVal = document.getElementById('price-start-value');
+            const priceStartPeriod = document.getElementById('price-start-period');
+            const priceStartDaily = document.getElementById('price-start-daily');
+            const badgeStartBonus = document.getElementById('badge-start-bonus');
+            const btnStart = document.getElementById('btn-cta-start');
+
+            const priceProVal = document.getElementById('price-pro-value');
+            const priceProPeriod = document.getElementById('price-pro-period');
+            const priceProDaily = document.getElementById('price-pro-daily');
+            const badgeProBonus = document.getElementById('badge-pro-bonus');
+            const btnPro = document.getElementById('btn-cta-pro');
+
+            const priceAdvVal = document.getElementById('price-adv-value');
+            const priceAdvPeriod = document.getElementById('price-adv-period');
+            const priceAdvDaily = document.getElementById('price-adv-daily');
+            const badgeAdvBonus = document.getElementById('badge-adv-bonus');
+            const btnAdv = document.getElementById('btn-cta-adv');
+
+            if (freq === 'annual') {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center gap-1.5';
+                }
+
+                // Gestão Básica Anual: R$ 599,00 /ano (2 meses grátis)
+                if (priceStartVal) priceStartVal.textContent = 'R$ 599,00';
+                if (priceStartPeriod) priceStartPeriod.textContent = '/ano';
+                if (priceStartDaily) priceStartDaily.textContent = 'R$ 1,64 por dia';
+                if (badgeStartBonus) badgeStartBonus.classList.remove('hidden');
+                if (btnStart) btnStart.href = 'https://app.duzzsystem.com.br/onboarding?plan=basico&billing=annual&nicho=beleza';
+
+                // Gestão Pro Anual: R$ 899,10 /ano (3 meses grátis)
+                if (priceProVal) priceProVal.textContent = 'R$ 899,10';
+                if (priceProPeriod) priceProPeriod.textContent = '/ano';
+                if (priceProDaily) priceProDaily.textContent = 'R$ 2,46 por dia';
+                if (badgeProBonus) badgeProBonus.classList.remove('hidden');
+                if (btnPro) btnPro.href = 'https://app.duzzsystem.com.br/onboarding?plan=pro&billing=annual&nicho=beleza';
+
+                // Gestão Fiscal Anual: R$ 1.359,20 /ano (4 meses grátis)
+                if (priceAdvVal) priceAdvVal.textContent = 'R$ 1.359,20';
+                if (priceAdvPeriod) priceAdvPeriod.textContent = '/ano';
+                if (priceAdvDaily) priceAdvDaily.textContent = 'R$ 3,72 por dia';
+                if (badgeAdvBonus) badgeAdvBonus.classList.remove('hidden');
+                if (btnAdv) btnAdv.href = 'https://app.duzzsystem.com.br/onboarding?plan=fiscal&billing=annual&nicho=beleza';
+
+            } else {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5';
+                }
+
+                // Gestão Básica Mensal: R$ 59,90
+                if (priceStartVal) priceStartVal.textContent = 'R$ 59,90';
+                if (priceStartPeriod) priceStartPeriod.textContent = '/mês';
+                if (priceStartDaily) priceStartDaily.textContent = 'R$ 1,99 por dia';
+                if (badgeStartBonus) badgeStartBonus.classList.add('hidden');
+                if (btnStart) btnStart.href = 'https://app.duzzsystem.com.br/onboarding?plan=basico&nicho=beleza';
+
+                // Gestão Pro Mensal: R$ 99,90
+                if (priceProVal) priceProVal.textContent = 'R$ 99,90';
+                if (priceProPeriod) priceProPeriod.textContent = '/mês';
+                if (priceProDaily) priceProDaily.textContent = 'R$ 3,33 por dia';
+                if (badgeProBonus) badgeProBonus.classList.add('hidden');
+                if (btnPro) btnPro.href = 'https://app.duzzsystem.com.br/onboarding?plan=pro&nicho=beleza';
+
+                // Gestão Fiscal Mensal: R$ 169,90
+                if (priceAdvVal) priceAdvVal.textContent = 'R$ 169,90';
+                if (priceAdvPeriod) priceAdvPeriod.textContent = '/mês';
+                if (priceAdvDaily) priceAdvDaily.textContent = 'R$ 5,66 por dia';
+                if (badgeAdvBonus) badgeAdvBonus.classList.add('hidden');
+                if (btnAdv) btnAdv.href = 'https://app.duzzsystem.com.br/onboarding?plan=fiscal&nicho=beleza';
+            }
         }
     </script>
 </body>
