@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IA Para Controle de Estoque e Compras: Da Curva ABC ao WhatsApp | Blog Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/ia-para-controle-de-estoque-e-compras.html">
+    <meta name="description"
+        content="Como usar Inteligência Artificial para automatizar pedidos de compras, prever ruptura de estoque e enviar listas formatadas no WhatsApp do fornecedor em 1 clique.">
+    <meta name="keywords"
+        content="ia para compras comercio, controle de estoque inteligente, gestao compras fornecedor whatsapp, duxia estoque compras, previsao de ruptura estoque">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/ia-para-controle-de-estoque-e-compras.html">
+    <meta property="og:title" content="IA Para Controle de Estoque e Compras: Da Curva ABC ao WhatsApp">
+    <meta property="og:description"
+        content="Automatize suas listas de compras e nunca mais perca vendas por falta de produtos campeões.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IA no Controle de Estoque | Duzz System">
+    <meta name="twitter:description" content="Guia de automação de compras e controle de estoque com a duxIA.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "IA Para Controle de Estoque e Compras: Da Curva ABC à Lista de Fornecedor no WhatsApp",
+      "image": "https://duzzsystem.com.br/icons/logo_com_fundo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duzz System"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      },
+      "datePublished": "2026-03-11",
+      "dateModified": "2026-03-17",
+      "description": "Como a duxIA automatiza o reabastecimento de fornecedores e previne ruptura de estoque com inteligência preditiva."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            purple: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gradient-text-purple {
+            background: linear-gradient(135deg, #7c3aed, #0056b3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100 hidden sm:inline-block">Blog & Guias</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Início</a>
+                    <a href="../ferramentas/index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas Grátis</a>
+                    <a href="index.html" class="text-brand-blue text-sm font-bold transition">Blog</a>
+                    <a href="https://painel.duzzsystem.com.br" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Entrar</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all hidden sm:inline-flex items-center gap-2">
+                        <span>Testar 15 Dias Grátis</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <button class="md:hidden text-slate-700 focus:outline-none p-2" id="mobile-menu-btn" aria-label="Abrir Menu">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4 pb-2 border-t border-slate-100 mt-3" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-slate-700 font-semibold py-2">Início</a>
+                    <a href="../ferramentas/index.html" class="text-slate-700 font-semibold py-2">Ferramentas Gratuitas</a>
+                    <a href="index.html" class="text-brand-blue font-bold py-2">Blog</a>
+                    <a href="https://painel.duzzsystem.com.br" class="text-slate-700 font-semibold py-2">Fazer Login</a>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 text-white py-3 rounded-xl font-bold text-center mt-2 shadow-sm">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER -->
+    <header class="pt-32 pb-12 lg:pt-38 lg:pb-16 bg-white border-b border-slate-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-blue-600">Início</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <a href="index.html" class="hover:text-blue-600">Blog</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <span class="text-slate-800 font-medium truncate">IA no Controle de Estoque e Compras</span>
+            </nav>
+
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-purple-200 flex items-center gap-1.5">
+                    <i class="bi bi-stars"></i> Inteligência Artificial & DuxIA
+                </span>
+                <span class="text-slate-400 text-xs flex items-center gap-1.5">
+                    <i class="bi bi-clock"></i> 7 min de leitura
+                </span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                IA Para Controle de Estoque e Compras: <span class="gradient-text-purple">Da Curva ABC ao WhatsApp</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6">
+                Descubra como os algoritmos da duxIA avaliam o ciclo médio de entrega de cada fornecedor, calculam os dias de cobertura e montam pedidos formatados prontos para disparar no WhatsApp sem usar planilhas.
+            </p>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                <div class="w-8 h-8 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-slate-800">Equipe de Inteligência Duzz</span>
+                    <span class="block text-[11px] text-slate-400">Guia de Compras e Suprimentos com IA</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE BODY -->
+    <main class="py-12">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <article class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-8 text-base sm:text-lg">
+
+                <div class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-2xl">
+                    <p class="text-purple-900 font-medium mb-0">
+                        <strong>O Dilema das Compras no Varejo:</strong> Comprar de menos causa ruptura de estoque e faz seu cliente ir direto para a concorrência. Comprar de mais engole seu capital de giro e encalha produtos na prateleira. A solução é cruzar o <strong>tempo de reposição do fornecedor</strong> com a <strong>velocidade de vendas</strong> dos itens Curva A.
+                    </p>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">O Fluxo de Reabastecimento com a duxIA Estoque</h2>
+                <p>
+                    Em vez de gastar horas revisando prateleira por prateleira todo domingo, a <strong>duxIA Estoque</strong> faz o trabalho pesado de cálculo em quatro etapas contínuas:
+                </p>
+
+                <!-- STEP BY STEP CARDS -->
+                <div class="space-y-4 my-6 not-prose">
+                    <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <span class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-base flex-shrink-0">1</span>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Mapeamento dos Ciclos por Fornecedor</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                A IA analisa o histórico de compras anteriores para identificar a periodicidade de cada distribuidor (ex: Distribuidora de Bebidas entrega semanalmente; Fornecedor de Roupas entrega mensalmente).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <span class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-base flex-shrink-0">2</span>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Cálculo de Dias de Cobertura</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Cruza a média diária de saídas no PDV com o estoque físico atual. Se um produto Curva A tem apenas 4 dias de cobertura e o fornecedor leva 5 dias para entregar, o alerta de ruptura crítica dispara no painel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <span class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-base flex-shrink-0">3</span>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Dimensionamento do Lote Ideal de Compra</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                A IA não sugere comprar "um monte". Ela calcula a quantidade exata para cobrir o próximo ciclo com margem de segurança, preservando o caixa da empresa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <span class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-base flex-shrink-0">4</span>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Card "Copiar Lista de Compras" no Chat</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Toda segunda-feira, a duxIA entrega o card com a lista formatada: códigos de referência, descrições, quantidades e valor estimado do pedido, pronta para ser colada no WhatsApp do vendedor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Exemplo Real: Da Mensagem da IA ao WhatsApp do Fornecedor</h2>
+                <div class="bg-slate-900 text-white p-6 rounded-3xl font-mono text-xs sm:text-sm my-6 not-prose shadow-lg space-y-2">
+                    <div class="text-purple-400 font-bold">📋 LISTA DE REPOSIÇÃO SEMANAL - FORNECEDOR: DISTRIBUIDORA VALE</div>
+                    <div class="text-slate-400 text-xs pb-2 border-b border-slate-800">Gerado automaticamente pela duxIA Estoque com base no consumo dos últimos 14 dias:</div>
+                    <div class="text-slate-200">• [CÓD 1042] Refrigerante Cola 2L - Pedir: 15 fardos (Cobertura: 3 dias)</div>
+                    <div class="text-slate-200">• [CÓD 1089] Suco Uva 1L - Pedir: 8 caixas (Cobertura: 4 dias)</div>
+                    <div class="text-slate-200">• [CÓD 2041] Água Mineral 500ml - Pedir: 20 fardos (Ponto de Reposição)</div>
+                    <div class="text-emerald-400 font-bold pt-2 border-t border-slate-800">Previsão Total de Compra: R$ 1.280,00 | Economia de tempo: 2 horas de inventário</div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Combos Inteligentes: Desovando Estoque Parado</h2>
+                <p>
+                    Outro recurso poderoso da <strong>duxIA Comercial</strong> é o algoritmo de criação de combos baseados em LLM. Quando a IA percebe que há itens parados na Curva C (baixo giro), ela busca automaticamente itens da Curva A (alta procura) que tenham <strong>sinergia real de consumo</strong>.
+                </p>
+                <p>
+                    A IA formula o combo garantindo que o produto principal continue lucrativo e que o produto parado seja liquidado com pelo menos 15% de margem sobre o custo de compra. O comerciante aprova a ação no chat e o combo já aparece ativo no PDV e no Catálogo Digital!
+                </p>
+
+                <!-- CONVERSION CTA BOX -->
+                <div class="my-12 bg-gradient-to-r from-purple-800 via-indigo-800 to-blue-900 rounded-3xl p-8 sm:p-10 text-white not-prose shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="max-w-xl">
+                        <span class="bg-purple-400/20 text-purple-200 text-xs uppercase tracking-wider font-extrabold px-3.5 py-1 rounded-full inline-block mb-3 border border-purple-400/30">
+                            Gestão Automatizada de Compras
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-black mb-3">Nunca mais compre mercadoria no chute</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            Controle o estoque da sua loja com Curva ABC e a inteligência proativa da duxIA. Experimente grátis por 15 dias!
+                        </p>
+                    </div>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-white text-purple-950 hover:bg-purple-50 px-7 py-4 rounded-2xl font-black text-sm whitespace-nowrap shadow-xl transition-all hover:scale-105">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Artigos Relacionados</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+                    <a href="como-usar-ia-na-gestao-do-comercio-duxia.html" class="p-5 bg-white border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-md transition group">
+                        <span class="text-xs font-bold text-purple-600 uppercase block mb-1">Guia Geral de IA</span>
+                        <h4 class="font-bold text-slate-900 group-hover:text-purple-600 transition">Como Usar IA na Gestão: O Guia da duxIA</h4>
+                        <p class="text-xs text-slate-500 mt-1">Conheça os 6 agentes especialistas integrados no Duzz Commercial.</p>
+                    </a>
+                    <a href="curva-abc-gestao-de-estoque.html" class="p-5 bg-white border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-md transition group">
+                        <span class="text-xs font-bold text-amber-600 uppercase block mb-1">Fundamento Teórico</span>
+                        <h4 class="font-bold text-slate-900 group-hover:text-purple-600 transition">Curva ABC: Como Evitar Dinheiro Parado</h4>
+                        <p class="text-xs text-slate-500 mt-1">Aprenda os princípios matemáticos que guiam as decisões da duxIA Estoque.</p>
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12 text-sm mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Duzz System</h4>
+                    <p class="text-xs">Sistema de Gestão Comercial e PDV Online com Inteligência Artificial integrada.</p>
+                    <p class="mt-3 text-xs">CNPJ: 40.554.697/0001-67</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Blog & Conteúdo</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="como-usar-ia-na-gestao-do-comercio-duxia.html" class="hover:text-white transition">Guia Geral da duxIA</a></li>
+                        <li><a href="ia-para-controle-de-estoque-e-compras.html" class="text-purple-400 font-bold hover:text-white transition">IA no Controle de Compras</a></li>
+                        <li><a href="curva-abc-gestao-de-estoque.html" class="hover:text-white transition">Gestão com Curva ABC</a></li>
+                        <li><a href="markup-vs-margem-de-lucro.html" class="hover:text-white transition">Markup vs Margem de Lucro</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Ferramentas Gratuitas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../ferramentas/calculadora-margem-revenda.html" class="hover:text-white transition">Calculadora de Margem</a></li>
+                        <li><a href="../ferramentas/calculadora-custo-produto.html" class="hover:text-white transition">Calculadora de Insumos</a></li>
+                        <li><a href="../ferramentas/gerador-link-whatsapp.html" class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links & Suporte</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../index.html" class="hover:text-white transition">Página Inicial</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Blog Principal</a></li>
+                        <li><a href="https://wa.me/5538998588893" target="_blank" class="hover:text-white transition">WhatsApp: (38) 99858-8893</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs">
+                <p>&copy; 2026 Duzz System. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

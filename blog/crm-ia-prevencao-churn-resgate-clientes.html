@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRM com IA e Prevenção de Churn: Como Resgatar Clientes Inativos | Blog Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/crm-ia-prevencao-churn-resgate-clientes.html">
+    <meta name="description"
+        content="Como a duxIA Clientes monitora intervalos de recompra, detecta clientes em risco de abandono (+45 dias) e cria réguas automáticas de resgate via WhatsApp.">
+    <meta name="keywords"
+        content="crm com ia comercio, prevencao de churn varejo, resgatar clientes inativos whatsapp, duxia clientes duzz, ltv retencao clientes pequenas empresas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/crm-ia-prevencao-churn-resgate-clientes.html">
+    <meta property="og:title" content="CRM com IA e Prevenção de Churn: Como Resgatar Clientes Inativos">
+    <meta property="og:description"
+        content="Pare de perder clientes silenciosamente. Descubra como a IA calcula o capital em risco e dispara mensagens humanizadas de reativação pelo WhatsApp.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prevenção de Churn e CRM com IA | duxIA Clientes">
+    <meta name="twitter:description" content="Automatize a retenção e resgate de clientes no varejo e serviços locais com inteligência preditiva.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CRM com IA e Prevenção de Churn: Como Resgatar Clientes Inativos no Pequeno Varejo",
+      "image": "https://duzzsystem.com.br/icons/logo_com_fundo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duzz System"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      },
+      "datePublished": "2026-03-15",
+      "dateModified": "2026-03-17",
+      "description": "Estratégia prática e automação de retenção de clientes com IA para comércios, lojas e pequenos negócios."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            purple: '#7c3aed',
+                            emerald: '#059669'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gradient-text-purple {
+            background: linear-gradient(135deg, #7c3aed, #0284c7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100 hidden sm:inline-block">Blog & Guias</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Início</a>
+                    <a href="index.html" class="text-brand-blue text-sm font-bold transition">Artigos & Blog</a>
+                    <a href="../ferramentas/index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas Grátis</a>
+                    <a href="../index.html#planos" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Planos</a>
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition shadow-md shadow-blue-500/20 hover:shadow-lg">Experimentar Grátis</a>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue text-white text-xs font-semibold px-4 py-2 rounded-full">Testar</a>
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-blue focus:outline-none" aria-label="Abrir Menu">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-slate-100 flex flex-col space-y-3 pb-2">
+                <a href="../index.html" class="text-slate-600 font-medium py-1">Início</a>
+                <a href="index.html" class="text-brand-blue font-bold py-1">Artigos & Blog</a>
+                <a href="../ferramentas/index.html" class="text-slate-600 font-medium py-1">Ferramentas Grátis</a>
+                <a href="../index.html#planos" class="text-slate-600 font-medium py-1">Planos</a>
+                <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue text-white text-center font-semibold py-2.5 rounded-xl mt-2">Começar Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / BREADCRUMB -->
+    <header class="pt-32 pb-12 bg-gradient-to-b from-purple-50/60 via-slate-50 to-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-brand-blue transition">Home</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <a href="index.html" class="hover:text-brand-blue transition">Blog</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <span class="text-purple-700 font-semibold">duxIA & Clientes</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold mb-4 border border-purple-200">
+                <i class="bi bi-person-heart"></i> duxIA Clientes & CRM
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                CRM com IA e Prevenção de Churn: Como Resgatar Clientes Inativos <span class="gradient-text-purple">Pelo WhatsApp</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal mb-6">
+                Conquistar um novo cliente custa entre 5 a 7 vezes mais do que manter um cliente atual. Descubra como a <strong>duxIA Clientes</strong> previne a perda invisível de consumidores e monta mensagens de reativação hiperpersonalizadas em 1 clique.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-4 border-t border-slate-200">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-xs">DX</div>
+                    <span class="font-medium text-slate-700">Equipe duxIA & Duzz System</span>
+                </div>
+                <span>•</span>
+                <span><i class="bi bi-clock me-1"></i> Leitura: 8 min</span>
+                <span>•</span>
+                <span><i class="bi bi-calendar-check me-1"></i> Atualizado em Março/2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container mx-auto px-6 max-w-4xl py-8 flex-1">
+        <article class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand-blue hover:prose-a:text-blue-700">
+
+            <!-- Context: The Leaky Bucket Problem -->
+            <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-2xl mb-8">
+                <div class="flex items-start gap-3">
+                    <i class="bi bi-person-x-fill text-red-600 text-xl mt-0.5"></i>
+                    <div>
+                        <h2 class="text-red-900 font-bold text-base not-prose mb-1">O drama do balde furado no comércio de bairro</h2>
+                        <p class="text-red-800 text-sm leading-relaxed not-prose">
+                            O comerciante gasta com panfletos, anúncios no Instagram e promoções de fachada para trazer novos clientes. Enquanto comemora 10 clientes novos que entraram na loja nesta semana, outros 15 clientes fiéis pararam de comprar há 60 dias e ninguém notou. Isso é o <strong>churn silencioso</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                Na maioria dos sistemas de PDV tradicionais, o cadastro de clientes serve apenas para emitir cupom fiscal ou anotar <a href="venda-fiada-e-nota-promissoria.html" class="underline font-semibold">venda a prazo</a>. Os dados ficam inertes, sem gerar nenhuma ação de venda.
+            </p>
+
+            <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                A <strong>duxIA Clientes</strong> transforma essa base morta em uma máquina ativa de retenção. O agente monitora a frequência natural de compra de cada consumidor e avisa o lojista no momento exato em que o vínculo começa a esfriar.
+            </p>
+
+            <!-- Como a duxIA previne churn -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-activity text-purple-600"></i>
+                1. Os 3 Estágios da Inatividade Monitorados pela IA
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Nem todo cliente inativo está perdido da mesma forma. A duxIA classifica a base em três níveis de risco dinâmicos:
+            </p>
+
+            <div class="space-y-4 my-6 not-prose">
+                <!-- Zona Amarela -->
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-200/70 px-2.5 py-1 rounded-full">
+                            Estágio 1: Atenção (45 a 60 dias sem compra)
+                        </span>
+                        <span class="text-xs font-bold text-amber-700">Chance de Resgate: 85%</span>
+                    </div>
+                    <p class="text-slate-800 text-sm mb-2">
+                        O cliente tinha hábito de compra mensal, mas pulou seu ciclo habitual. Geralmente foi apenas falta de lembrança ou correria do dia a dia.
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        <strong>Ação duxIA:</strong> Mensagem leve e amigável lembrando de um produto que ele costuma repor ou convidando para conhecer as novidades.
+                    </p>
+                </div>
+
+                <!-- Zona Laranja -->
+                <div class="bg-orange-50 border border-orange-200 rounded-2xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-orange-800 bg-orange-200/70 px-2.5 py-1 rounded-full">
+                            Estágio 2: Risco Iminente (61 a 90 dias sem compra)
+                        </span>
+                        <span class="text-xs font-bold text-orange-700">Chance de Resgate: 55%</span>
+                    </div>
+                    <p class="text-slate-800 text-sm mb-2">
+                        O consumidor provavelmente já realizou compras na concorrência ou mudou de rotina. A inércia está prestes a se consolidar.
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        <strong>Ação duxIA:</strong> Oferta com incentivo financeiro direto (ex: cupom de cashback ou frete grátis na loja online).
+                    </p>
+                </div>
+
+                <!-- Zona Vermelha -->
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-red-800 bg-red-200/70 px-2.5 py-1 rounded-full">
+                            Estágio 3: Churn Quase Consolidado (91 a 180+ dias)
+                        </span>
+                        <span class="text-xs font-bold text-red-700">Chance de Resgate: 25%</span>
+                    </div>
+                    <p class="text-slate-800 text-sm mb-2">
+                        O cliente quase esqueceu a existência da sua loja física ou digital. Apenas uma abordagem de alto impacto emocional ou financeiro o trará de volta.
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        <strong>Ação duxIA:</strong> Campanha de "Sentimos sua falta" com benefício imperdível e pesquisa simples de feedback.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Capital Histórico em Risco -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-cash-coin text-emerald-600"></i>
+                2. O que é o "Capital Histórico em Risco"?
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Para dar clareza financeira ao empresário, a duxIA não mostra apenas "você tem 40 clientes inativos". Ela calcula em reais quanto esses clientes já deixaram no seu caixa nos últimos 12 meses.
+            </p>
+
+            <div class="bg-slate-900 text-white rounded-2xl p-6 my-6 not-prose shadow-xl">
+                <div class="text-xs font-mono text-purple-400 uppercase tracking-widest mb-2">// Diagnóstico do Agente duxIA Clientes</div>
+                <div class="text-lg sm:text-xl font-medium text-slate-200 mb-2">
+                    "Você possui <strong>38 clientes fiéis</strong> sem realizar pedidos há mais de 45 dias."
+                </div>
+                <div class="text-2xl sm:text-3xl font-bold text-emerald-400 font-mono mb-3">
+                    Capital Histórico em Risco: R$ 24.680,00
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    Esse valor representa o que esse grupo comprou de você no último ano. Se eles forem para a concorrência em definitivo, seu faturamento anual cairá nesse montante.
+                </p>
+            </div>
+
+            <!-- Score de Saúde e Mensagens WhatsApp -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-whatsapp text-emerald-600"></i>
+                3. Mensagens Humanizadas no WhatsApp em 1 Toque
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Nenhum cliente gosta de mensagens frias de robô que parecem SPAM em massa. A duxIA lê o histórico de compras do cliente e monta uma mensagem contextualizada:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <div class="text-xs font-bold text-purple-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <i class="bi bi-bag-heart"></i> Para Varejo de Moda / Cosméticos
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl font-mono text-xs text-slate-800 leading-relaxed border border-slate-200">
+                        "Oi, Juliana! Tudo bem? Lembrei de você hoje porque acabou de chegar uma nova coleção de <em>[Categoria favorita dela: Vestidos Midi]</em> aqui na loja! Como faz um tempinho que você não passa para tomar um café com a gente, reservei um cupom especial de 10% para você: <strong>VOLTAJU</strong>. Dá uma olhadinha no catálogo: [Link]"
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <div class="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <i class="bi bi-tools"></i> Para Materiais / Autopeças / B2B
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl font-mono text-xs text-slate-800 leading-relaxed border border-slate-200">
+                        "Olá, Roberto! Notei que suas compras de <em>[Insumos recorrentes]</em> estão prestes a vencer o ciclo de reposição. Conseguimos uma cotação especial com o fornecedor para pedidos fechados até sexta-feira. Posso separar seu kit habitual para entrega rápida?"
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-slate-700 leading-relaxed">
+                No painel da duxIA, cada sugestão vem acompanhada do botão <strong>[Abrir no WhatsApp]</strong>. O sistema já formata o número com o DDI/DDD correto e carrega o texto pronto no seu WhatsApp Web ou aplicativo de celular — basta você revisar e enviar com um único clique.
+            </p>
+
+            <!-- Comparativo -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-speedometer2 text-brand-blue"></i>
+                4. Antes vs. Depois da duxIA Clientes
+            </h2>
+
+            <div class="overflow-x-auto my-6 not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100 text-slate-700 font-bold">
+                        <tr>
+                            <th class="p-3.5 border-b border-slate-200">Critério</th>
+                            <th class="p-3.5 border-b border-slate-200 text-red-600">Sem IA (Tradicional)</th>
+                            <th class="p-3.5 border-b border-slate-200 text-emerald-700 bg-emerald-50">Com duxIA Clientes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-700">
+                        <tr>
+                            <td class="p-3.5 font-semibold">Percepção de Churn</td>
+                            <td class="p-3.5">Só nota meses depois que o faturamento caiu</td>
+                            <td class="p-3.5 bg-emerald-50/50 font-medium text-emerald-900">Alerta diário aos 45 dias de inatividade</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-semibold">Personalização da Mensagem</td>
+                            <td class="p-3.5">Disparos genéricos "Compre na nossa loja"</td>
+                            <td class="p-3.5 bg-emerald-50/50 font-medium text-emerald-900">Cita o nome e os itens que o cliente mais compra</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-semibold">Tempo Operacional</td>
+                            <td class="p-3.5">Horas exportando planilhas no Excel</td>
+                            <td class="p-3.5 bg-emerald-50/50 font-medium text-emerald-900">Zero planilhas: sugestão pronta no chat em 1 toque</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-semibold">Impacto no LTV</td>
+                            <td class="p-3.5">Perda de até 30% da carteira por ano</td>
+                            <td class="p-3.5 bg-emerald-50/50 font-medium text-emerald-900">Recuperação média de 18% a 25% dos clientes inativos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Conclusão e CTA -->
+            <div class="bg-gradient-to-br from-purple-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 my-12 not-prose shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-emerald-800/60 px-3 py-1 rounded-full border border-emerald-600/50 inline-block mb-4">
+                    duxIA Clientes & CRM
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-black mb-4 tracking-tight">
+                    Recupere milhares de reais em vendas que estão escapando da sua loja
+                </h3>
+                <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-2xl">
+                    Descubra hoje mesmo quem são os clientes que pararam de comprar e reative o contato com inteligência artificial humanizada.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3.5 rounded-full transition shadow-lg shadow-purple-600/30 text-center flex items-center justify-center gap-2">
+                        <span>Testar duxIA Gratuitamente</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="como-usar-ia-na-gestao-do-comercio-duxia.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-full transition border border-white/20 text-center flex items-center justify-center gap-2">
+                        <span>Ver todos os 6 Agentes</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Artigos Relacionados -->
+            <div class="mt-12 pt-8 border-t border-slate-200 not-prose">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">Continue aprendendo sobre gestão de clientes:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="como-criar-catalogo-digital-whatsapp.html" class="block p-5 bg-white border border-slate-200 rounded-2xl hover:border-brand-blue hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">Catálogo Online</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Como Criar um Catálogo Digital Integrado ao WhatsApp</h4>
+                        <p class="text-slate-600 text-xs">Transforme seu WhatsApp em um canal direto de vendas com vitrine conectada ao estoque.</p>
+                    </a>
+                    <a href="combos-inteligentes-queima-estoque-ia.html" class="block p-5 bg-white border border-slate-200 rounded-2xl hover:border-purple-300 hover:shadow-md transition">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-wider block mb-1">Vendas & Estoque</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Combos Inteligentes e Queima de Estoque com IA</h4>
+                        <p class="text-slate-600 text-xs">Descubra como criar bundles de alta atratividade para vender produtos parados sem prejuízo.</p>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="../icons/logo_sem_fundo.png" alt="Duzz System Logo" class="h-8 brightness-0 invert">
+                    <span class="text-slate-500 text-xs">© 2026 Duzz System. Todos os direitos reservados.</span>
+                </div>
+                <div class="flex flex-wrap gap-6 text-xs">
+                    <a href="../index.html" class="hover:text-white transition">Início</a>
+                    <a href="index.html" class="hover:text-white transition">Blog</a>
+                    <a href="../ferramentas/index.html" class="hover:text-white transition">Ferramentas</a>
+                    <a href="../termos.html" class="hover:text-white transition">Termos de Uso</a>
+                    <a href="../privacidade.html" class="hover:text-white transition">Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
