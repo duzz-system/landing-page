@@ -276,11 +276,40 @@
                 </p>
                 <ol class="space-y-3 list-decimal pl-6">
                     <li>Acesse o cadastro do produto ou serviço.</li>
-                    <li>Ative a opção <strong>"Este item possui composição / insumos"</strong>.</li>
+                    <li>Ative a opção <strong>"Este item possui composição / insumos"</strong> (ou utilize o cadastro em <em>Serviços &gt; Novo Serviço</em>).</li>
                     <li>Busque os insumos cadastrados e informe a quantidade consumida (ex: 0.150 kg de queijo, 1
                         unidade de embalagem).</li>
-                    <li>O sistema soma os custos dos insumos e sugere o preço de venda com a margem desejada!</li>
+                    <li>O sistema soma os custos dos insumos, calcula o CMV e sugere o preço de venda com a margem desejada!</li>
                 </ol>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Venda Fracionada: Comprar em Caixa/Fardo e Vender por Unidade</h2>
+                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-6 not-prose">
+                    <h3 class="text-blue-950 font-bold text-base mb-2 flex items-center gap-2">
+                        <i class="bi bi-boxes text-blue-600"></i> Como resolver a venda a varejo no Duzz Commercial:
+                    </h3>
+                    <p class="text-blue-900 text-xs sm:text-sm leading-relaxed mb-4">
+                        Muito comum em mercearias, tabacarias, bares e oficinas: você compra do distribuidor em caixa ou fardo fechado, mas o cliente compra o maço ou unidade avulsa. Veja a forma recomendada no Duzz:
+                    </p>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                        <div class="bg-white p-3.5 rounded-xl border border-blue-100">
+                            <strong>Passo 1 (Cadastrar a Compra/Estoque):</strong> Em <em>Produtos &gt; Novo Produto</em>, cadastre a unidade fechada como vem na nota (ex: <code>Caixa de Bebida c/ 12 unidades</code> ou <code>Fardo c/ 20 maços</code>). Informe o custo total e o estoque de caixas.
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-blue-100">
+                            <strong>Passo 2 (Cadastrar o Item de Balcão):</strong> Em <em>Serviços &gt; Novo Serviço</em>, cadastre a unidade individual de venda (ex: <code>Lata Avulsa</code> ou <code>Maço Avulso</code>) com o preço final ao consumidor.
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-blue-100">
+                            <strong>Passo 3 (Vincular a Fração do Insumo):</strong> Em <em>Insumos Vinculados</em>, selecione a caixa fechada e informe a quantidade proporcional (se a caixa tem 20 maços, a fração consumida é <code>0,05</code>, que corresponde a <code>1 ÷ 20</code>).
+                        </div>
+                    </div>
+                    <div class="mt-4 text-xs text-blue-800 bg-blue-100/60 p-3 rounded-lg">
+                        ✅ <strong>Resultado:</strong> A cada unidade vendida no PDV, o sistema baixa automaticamente <code>0,05</code> da caixa no estoque físico. Ao reabastecer, você dá entrada direto na caixa do fornecedor sem conversões manuais!
+                    </div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Criação Automática de Combos com a duxIA</h2>
+                <p>
+                    Se você não sabe quais produtos juntar para criar kits lucrativos, a <strong>duxIA Comercial</strong> faz o trabalho por você. Ela cruza produtos de altíssimo giro (Curva A) com insumos encalhados (Curva C), batiza o combo, calcula o preço com margem garantida e cria a composição no Duzz pronta para vender com 1 clique.
+                </p>
 
                 <!-- CONVERSION CTA BOX -->
                 <div
