@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Duzz System | Dicas Práticas de Gestão Comercial, Vendas e Finanças</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/">
+    <meta name="description"
+        content="Artigos, tutoriais e guias práticos sobre gestão comercial, controle de estoque com curva ABC, cálculo de margem e markup, fechamento de caixa e catálogo digital via WhatsApp.">
+    <meta name="keywords"
+        content="blog gestão comercial, dicas pequenas empresas, controle de estoque curva abc, como calcular markup margem, fechamento de caixa diário, catálogo digital whatsapp, pdv comercial">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/">
+    <meta property="og:title" content="Blog Duzz System | Dicas Práticas de Gestão Comercial, Vendas e Finanças">
+    <meta property="og:description"
+        content="Aprenda a organizar seu estoque, controlar o caixa diário, precificar com lucro real e alavancar suas vendas no comércio e serviços.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Duzz System | Gestão Comercial Descomplicada">
+    <meta name="twitter:description"
+        content="Artigos práticos e diretos ao ponto para lojistas, prestadores de serviços e empreendedores.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Duzz System",
+      "description": "Guias, tutoriais e artigos práticos sobre gestão comercial, finanças, estoque e vendas para pequenas e médias empresas.",
+      "url": "https://duzzsystem.com.br/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f0fdf4, #fef3c7);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #0056b3, #0284c7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-article {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-article:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(0, 86, 179, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100 hidden sm:inline-block">Blog
+                        & Guias</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Início</a>
+                    <a href="../index.html#recursos"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Funcionalidades</a>
+                    <a href="../ferramentas/index.html"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas
+                        Grátis</a>
+                    <a href="index.html" class="text-brand-blue text-sm font-bold transition flex items-center gap-1.5">
+                        <span>Blog & Guias</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
+                    </a>
+                    <a href="https://painel.duzzsystem.com.br"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Entrar</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all hidden sm:inline-flex items-center gap-2">
+                        <span>Testar 15 Dias Grátis</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <button class="md:hidden text-slate-700 focus:outline-none p-2" id="mobile-menu-btn"
+                        aria-label="Abrir Menu">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4 pb-2 border-t border-slate-100 mt-3" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-slate-700 font-semibold py-2">Início</a>
+                    <a href="../ferramentas/index.html" class="text-slate-700 font-semibold py-2">Ferramentas
+                        Gratuitas</a>
+                    <a href="index.html" class="text-brand-blue font-bold py-2">Blog & Guias Práticos</a>
+                    <a href="https://painel.duzzsystem.com.br" class="text-slate-700 font-semibold py-2">Fazer Login</a>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 text-white py-3 rounded-xl font-bold text-center mt-2 shadow-sm">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-14 lg:pt-40 lg:pb-16 animated-gradient border-b border-slate-200/80">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <span
+                class="bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full inline-flex items-center gap-2 mb-4 border border-blue-200">
+                <i class="bi bi-journal-bookmark-fill text-blue-600"></i> Central de Conteúdo e Conhecimento Duzz
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                Domine a Gestão Comercial e <span class="gradient-text-blue">Potencialize seu Lucro</span>
+            </h1>
+            <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+                Guias aprofundados, metodologias descomplicadas e dicas práticas sobre estoque, fechamento de caixa,
+                precificação e vendas pelo WhatsApp.
+            </p>
+
+            <!-- Search & Filters -->
+            <div class="max-w-2xl mx-auto">
+                <div class="relative mb-6">
+                    <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg"></i>
+                    <input type="text" id="search-input"
+                        placeholder="Buscar por tema (ex: Curva ABC, Markup, Caixa, WhatsApp)..."
+                        class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base text-slate-800">
+                </div>
+
+                <!-- Category Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2" id="filter-container">
+                    <button data-cat="all"
+                        class="filter-btn active bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs font-bold transition shadow-sm">Todos</button>
+                    <button data-cat="financas"
+                        class="filter-btn bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">Finanças
+                        & Caixa</button>
+                    <button data-cat="estoque"
+                        class="filter-btn bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">Estoque
+                        & Insumos</button>
+                    <button data-cat="vendas"
+                        class="filter-btn bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">Vendas
+                        & Catálogo</button>
+                    <button data-cat="gestao"
+                        class="filter-btn bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">Estratégia
+                        & Rotinas</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN ARTICLES GRID -->
+    <main class="flex-1 py-14">
+        <div class="container mx-auto px-6 max-w-7xl">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+
+                <!-- Artigo 1: Curva ABC -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="estoque" data-keywords="curva abc cmv estoque giro capital mercadoria produtos">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-amber-50 text-amber-700 border border-amber-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Estoque & Insumos
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 6 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="curva-abc-gestao-de-estoque.html">Curva ABC na Gestão de Estoque: Como Evitar
+                                Dinheiro Parado</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Aprenda a classificar produtos em Classes A, B e C, entender o CMV e proteger seu Capital de
+                            Giro com a regra 80/20.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Por Equipe Duzz</span>
+                        <a href="curva-abc-gestao-de-estoque.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 2: Markup vs Margem -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="financas"
+                    data-keywords="markup margem de lucro precificacao desconto custo preco venda">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-blue-50 text-blue-700 border border-blue-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Finanças & Caixa
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 5 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="markup-vs-margem-de-lucro.html">Markup vs Margem de Lucro: A Diferença Crucial Para
+                                Não Tomar Prejuízo</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Entenda por que aplicar 20% de desconto em uma mercadoria com 20% de margem zera seu lucro e
+                            como calcular o preço correto.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Inclui Calculadora</span>
+                        <a href="markup-vs-margem-de-lucro.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 3: Fechamento de Caixa -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="financas"
+                    data-keywords="caixa fechamento abertura sangria suprimento quebra operador turno pdv">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Finanças & Caixa
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 7 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="como-fazer-fechamento-de-caixa.html">Como Fazer o Fechamento de Caixa Diário sem
+                                Divergências</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            O checklist definitivo para operadores e gerentes: sangrias, suprimentos, quebra de caixa e
+                            conciliação de cartões e Pix.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Por Equipe Duzz</span>
+                        <a href="como-fazer-fechamento-de-caixa.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 4: Catálogo Digital WhatsApp -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="vendas"
+                    data-keywords="catalogo digital whatsapp vitrine virtual loja online pedidos cardapio site">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-purple-50 text-purple-700 border border-purple-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Vendas & Catálogo
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 5 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="como-criar-catalogo-digital-whatsapp.html">Catálogo Digital no WhatsApp: Como Criar
+                                sua Vitrine Sem Taxas</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Como colocar seus produtos na internet com link próprio (sualoja.duzz.store), receber
+                            pedidos formatados e fechar no Pix.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Vendas Online</span>
+                        <a href="como-criar-catalogo-digital-whatsapp.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 5: Venda Fiada e Nota Promissória -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="vendas"
+                    data-keywords="venda fiada nota promissoria crediario cobranca inadimplencia juridica">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-indigo-50 text-indigo-700 border border-indigo-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Vendas & Catálogo
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 6 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="venda-fiada-e-nota-promissoria.html">Venda Fiada com Segurança: Como Usar a Nota
+                                Promissória no Crediário</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Como proteger os recebimentos da sua loja, garantir validade jurídica das promissórias e
+                            evitar calotes com organização.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Segurança Jurídica</span>
+                        <a href="venda-fiada-e-nota-promissoria.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 6: Composição e Ficha Técnica -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="estoque"
+                    data-keywords="ficha tecnica composicao combos kits insumos custo receita fracionamento">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-orange-50 text-orange-700 border border-orange-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Estoque & Insumos
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 6 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="composicao-de-produtos-e-ficha-tecnica.html">Ficha Técnica e Composição: Como Criar
+                                Kits, Combos e Rastrear Insumos</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Aprenda a vincular produtos a serviços, calcular custos de matérias-primas e garantir que o
+                            estoque dê baixa automática.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Inclui Calculadora</span>
+                        <a href="composicao-de-produtos-e-ficha-tecnica.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 7: DRE e Indicadores Financeiros -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="gestao"
+                    data-keywords="dre relatorios financeiros lucro liquido faturamento ticket medio pareto metas">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-teal-50 text-teal-700 border border-teal-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Estratégia & Rotinas
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 8 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="como-analisar-dre-relatorios-financeiros.html">DRE para Pequenas Empresas:
+                                Faturamento é Vaidade, Lucro é Sanidade</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Como cruzar receitas, despesas, CMV e descontos para descobrir seu lucro real, ticket médio
+                            e padrões dos melhores dias de venda.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Por Equipe Duzz</span>
+                        <a href="como-analisar-dre-relatorios-financeiros.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 8: Organização de Produtos e Categorias -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="gestao"
+                    data-keywords="organizacao produtos categorias particularidades grades tamanho cores">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-cyan-50 text-cyan-700 border border-cyan-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Estratégia & Rotinas
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 4 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="organizacao-de-produtos-grade-e-variacoes.html">Categorias e Particularidades: Como
+                                Organizar Produtos Sem Duplicações</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            A estrutura ideal para cadastrar tamanhos, cores, volumes e variações sem poluir a lista de
+                            estoque nem complicar a venda no PDV.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Boas Práticas</span>
+                        <a href="organizacao-de-produtos-grade-e-variacoes.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artigo 9: FAQ e Dúvidas Frequentes -->
+                <article
+                    class="card-article bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between"
+                    data-category="gestao" data-keywords="faq duvidas suporte perguntas frequentes sistema comercial">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">
+                                Dúvidas & Suporte
+                            </span>
+                            <span class="text-slate-400 text-xs flex items-center gap-1">
+                                <i class="bi bi-clock"></i> 5 min
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-blue-600 transition">
+                            <a href="faq-gestao-comercial-e-duzz.html">FAQ: Respostas Rápidas Para as Dúvidas Mais
+                                Comuns de Gestão</a>
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Tudo o que você precisa saber sobre fechamento diário, vigência de estoque, customização de
+                            links e suporte técnico.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Canal de Suporte</span>
+                        <a href="faq-gestao-comercial-e-duzz.html"
+                            class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform">
+                            Ler Guia <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Empty State when filter finds nothing -->
+            <div id="no-results" class="hidden text-center py-16">
+                <div
+                    class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 mx-auto mb-4 text-2xl">
+                    <i class="bi bi-search"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-1">Nenhum artigo encontrado</h3>
+                <p class="text-slate-500 text-sm">Tente buscar por outro termo ou selecione a categoria "Todos".</p>
+            </div>
+
+            <!-- FEATURED SECTION: FERRAMENTAS GRATUITAS -->
+            <section
+                class="mt-20 bg-gradient-to-br from-blue-900 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-xl">
+                <div class="relative z-10 max-w-3xl">
+                    <span
+                        class="bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full inline-block mb-3">
+                        Utilidades Gratuitas
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mb-4 leading-tight">
+                        Experimente Nossas Calculadoras e Geradores Gratuitos
+                    </h2>
+                    <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-6">
+                        Criamos ferramentas abertas para você calcular margem de revenda, precificar fichas técnicas com
+                        insumos, gerar links curtos para WhatsApp e criar QR Code Pix sem pagar nada.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="../ferramentas/index.html"
+                            class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl transition shadow-lg inline-flex items-center gap-2 text-sm">
+                            <i class="bi bi-tools"></i> Acessar Central de Ferramentas
+                        </a>
+                        <a href="https://app.duzzsystem.com.br/onboarding"
+                            class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl transition border border-white/20 inline-flex items-center gap-2 text-sm">
+                            Experimentar Sistema Duzz Grátis
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl pointer-events-none">
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Duzz System</h4>
+                    <p class="text-xs">Sistema de Gestão Comercial e PDV Online. Simplifique seu estoque, finanças e
+                        catálogo digital.</p>
+                    <p class="mt-3 text-xs">CNPJ: 40.554.697/0001-67</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Blog & Conteúdo</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="curva-abc-gestao-de-estoque.html" class="hover:text-white transition">Gestão com
+                                Curva ABC</a></li>
+                        <li><a href="markup-vs-margem-de-lucro.html" class="hover:text-white transition">Markup vs
+                                Margem de Lucro</a></li>
+                        <li><a href="como-fazer-fechamento-de-caixa.html" class="hover:text-white transition">Rotina de
+                                Fechamento de Caixa</a></li>
+                        <li><a href="como-criar-catalogo-digital-whatsapp.html"
+                                class="hover:text-white transition">Catálogo Digital WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Ferramentas Gratuitas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../ferramentas/calculadora-margem-revenda.html"
+                                class="hover:text-white transition">Calculadora de Margem</a></li>
+                        <li><a href="../ferramentas/calculadora-custo-produto.html"
+                                class="hover:text-white transition">Calculadora de Insumos</a></li>
+                        <li><a href="../ferramentas/gerador-link-whatsapp.html"
+                                class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
+                        <li><a href="../ferramentas/gerador-qr-code-pix.html"
+                                class="hover:text-white transition">Gerador QR Code Pix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links & Suporte</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../index.html" class="hover:text-white transition">Página Inicial</a></li>
+                        <li><a href="https://painel.duzzsystem.com.br" class="hover:text-white transition">Painel do
+                                Cliente</a></li>
+                        <li><a href="faq-gestao-comercial-e-duzz.html" class="hover:text-white transition">Dúvidas
+                                Frequentes</a></li>
+                        <li><a href="https://wa.me/5538998588893" target="_blank"
+                                class="hover:text-white transition">WhatsApp: (38) 99858-8893</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs">
+                <p>&copy; 2026 Duzz System. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY SCRIPT -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Filtering & Search
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('#articles-grid article');
+        const noResults = document.getElementById('no-results');
+
+        let activeCategory = 'all';
+
+        function applyFilters() {
+            const query = (searchInput.value || '').toLowerCase().trim();
+            let visibleCount = 0;
+
+            articles.forEach(article => {
+                const category = article.getAttribute('data-category');
+                const textContent = (article.textContent || '').toLowerCase();
+                const keywords = (article.getAttribute('data-keywords') || '').toLowerCase();
+
+                const matchesCat = activeCategory === 'all' || category === activeCategory;
+                const matchesQuery = query === '' || textContent.includes(query) || keywords.includes(query);
+
+                if (matchesCat && matchesQuery) {
+                    article.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    article.classList.add('hidden');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.add('active', 'bg-blue-600', 'text-white');
+                btn.classList.remove('bg-white', 'text-slate-600');
+                activeCategory = btn.getAttribute('data-cat');
+                applyFilters();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+        }
+    </script>
+</body>
+
+</html>

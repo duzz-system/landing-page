@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Curva ABC na Gestão de Estoque: Como Evitar Dinheiro Parado | Blog Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/curva-abc-gestao-de-estoque.html">
+    <meta name="description"
+        content="Aprenda a aplicar a Curva ABC no comércio: classifique produtos em A, B e C, reduza perdas, controle o CMV e proteja o capital de giro da sua loja.">
+    <meta name="keywords"
+        content="curva abc estoque, controle de estoque comercio, cmv custo mercadoria vendida, capital de giro estoque, regra 80 20 estoque, como fazer curva abc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/curva-abc-gestao-de-estoque.html">
+    <meta property="og:title" content="Curva ABC na Gestão de Estoque: Como Evitar Dinheiro Parado">
+    <meta property="og:description"
+        content="Descubra quais produtos geram 80% do seu faturamento e pare de perder dinheiro com mercadorias encalhadas.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curva ABC na Gestão de Estoque | Duzz System">
+    <meta name="twitter:description"
+        content="Guia prático para lojistas e comerciantes protegerem seu capital de giro com a Curva ABC.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Curva ABC na Gestão de Estoque: Como Evitar Dinheiro Parado no Comércio",
+      "image": "https://duzzsystem.com.br/icons/logo_com_fundo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duzz System"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      },
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-15",
+      "description": "Guia prático sobre Curva ABC, CMV e otimização de compras para lojas e comércios."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #0056b3, #0284c7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100 hidden sm:inline-block">Blog
+                        & Guias</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Início</a>
+                    <a href="../ferramentas/index.html"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas
+                        Grátis</a>
+                    <a href="index.html" class="text-brand-blue text-sm font-bold transition">Blog</a>
+                    <a href="https://painel.duzzsystem.com.br"
+                        class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Entrar</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all hidden sm:inline-flex items-center gap-2">
+                        <span>Testar 15 Dias Grátis</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <button class="md:hidden text-slate-700 focus:outline-none p-2" id="mobile-menu-btn"
+                        aria-label="Abrir Menu">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4 pb-2 border-t border-slate-100 mt-3" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-slate-700 font-semibold py-2">Início</a>
+                    <a href="../ferramentas/index.html" class="text-slate-700 font-semibold py-2">Ferramentas
+                        Gratuitas</a>
+                    <a href="index.html" class="text-brand-blue font-bold py-2">Blog</a>
+                    <a href="https://painel.duzzsystem.com.br" class="text-slate-700 font-semibold py-2">Fazer Login</a>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-blue-600 text-white py-3 rounded-xl font-bold text-center mt-2 shadow-sm">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER -->
+    <header class="pt-32 pb-12 lg:pt-38 lg:pb-16 bg-white border-b border-slate-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-blue-600">Início</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <a href="index.html" class="hover:text-blue-600">Blog</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <span class="text-slate-800 font-medium truncate">Curva ABC na Gestão de Estoque</span>
+            </nav>
+
+            <div class="flex items-center gap-3 mb-4">
+                <span
+                    class="bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-200">
+                    Estoque & Insumos
+                </span>
+                <span class="text-slate-400 text-xs flex items-center gap-1.5">
+                    <i class="bi bi-clock"></i> 6 min de leitura
+                </span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Curva ABC na Gestão de Estoque: Como Evitar <span class="gradient-text-blue">Dinheiro Parado</span> no
+                Comércio
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6">
+                Seu estoque não é apenas um amontoado de produtos na prateleira: ele é dinheiro imobilizado. Entenda
+                como a regra 80/20 protege seu capital de giro e impede que sua loja fique sem os itens mais vendidos.
+            </p>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center">D
+                </div>
+                <div>
+                    <span class="font-bold text-slate-800">Equipe de Conteúdo Duzz</span>
+                    <span class="block text-[11px] text-slate-400">Publicado para lojistas e empreendedores</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE BODY -->
+    <main class="py-12">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <article class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-8 text-base sm:text-lg">
+
+                <!-- INTRO BOX -->
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-2xl">
+                    <p class="text-blue-900 font-medium mb-0">
+                        <strong>Princípio Fundamental:</strong> O maior erro de um lojista ou comerciante é tratar todos
+                        os produtos com a mesma importância. Enquanto 20% dos itens geram a maior parte do seu
+                        faturamento, outros 50% apenas consomem espaço e capital de giro. A Curva ABC é a bússola para
+                        decidir onde investir seu dinheiro.
+                    </p>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">O que é a Curva ABC de Estoque?</h2>
+                <p>
+                    A Curva ABC é um método de categorização de itens baseado no <strong>Princípio de Pareto (regra
+                        80/20)</strong>. No contexto do comércio varejista, ela agrupa os produtos em três grandes
+                    classes de acordo com a sua representatividade no faturamento total:
+                </p>
+
+                <!-- 3 CARDS CLASSES -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
+                    <div class="bg-white border-2 border-emerald-500 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="w-10 h-10 rounded-xl bg-emerald-500 text-white font-black flex items-center justify-center text-lg">A</span>
+                            <span
+                                class="text-xs font-bold uppercase text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Ativos
+                                Críticos</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Classe A (Ouro)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Correspondem a cerca de <strong>20% dos produtos</strong>, mas representam <strong>80% do
+                                faturamento</strong> da sua empresa.
+                        </p>
+                        <div class="text-[11px] bg-emerald-50 text-emerald-800 p-2.5 rounded-lg font-semibold">
+                            ⚠️ Ação: Nunca podem faltar. Monitore diariamente.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-amber-400 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="w-10 h-10 rounded-xl bg-amber-400 text-slate-900 font-black flex items-center justify-center text-lg">B</span>
+                            <span
+                                class="text-xs font-bold uppercase text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">Giro
+                                Médio</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Classe B (Prata)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Representam cerca de <strong>30% dos produtos</strong> e geram aproximadamente <strong>15%
+                                da receita</strong>.
+                        </p>
+                        <div class="text-[11px] bg-amber-50 text-amber-800 p-2.5 rounded-lg font-semibold">
+                            🔄 Ação: Reposição periódica baseada na média de consumo.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-red-400 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="w-10 h-10 rounded-xl bg-red-500 text-white font-black flex items-center justify-center text-lg">C</span>
+                            <span
+                                class="text-xs font-bold uppercase text-red-600 bg-red-50 px-2.5 py-1 rounded-md">Apoio
+                                / Cauda</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Classe C (Bronze)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            São <strong>50% da variedade</strong> do estoque, mas somam apenas <strong>5% do
+                                faturamento</strong>.
+                        </p>
+                        <div class="text-[11px] bg-red-50 text-red-800 p-2.5 rounded-lg font-semibold">
+                            🛑 Ação: Estoque mínimo. Cuidado para não encalhar.
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">A Relação entre CMV e Capital de Giro
+                </h2>
+                <p>
+                    Para entender a Curva ABC a fundo, é essencial acompanhar o <strong>CMV (Custo de Mercadoria
+                        Vendida)</strong>. O CMV indica quanto em dinheiro você precisou desembolsar diretamente aos
+                    seus fornecedores para adquirir as mercadorias que foram vendidas em determinado período.
+                </p>
+                <div
+                    class="bg-slate-100 p-6 rounded-2xl border border-slate-200 font-mono text-sm sm:text-base text-slate-800 my-6">
+                    <strong>Fórmula do CMV:</strong><br>
+                    CMV = Estoque Inicial + Compras do Período - Estoque Final
+                </div>
+                <p>
+                    Se o seu CMV está alto demais ou crescendo mais rápido do que a receita, significa que você está
+                    recomprando produtos errados ou acumulando estoque que não está girando. Cada real imobilizado em um
+                    item de Classe C é um real a menos na sua conta bancária para pagar fornecedores, aluguel ou
+                    salários.
+                </p>
+
+                <!-- VISUAL INFOGRAPHIC TABLE -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Tabela Prática: Como Tomar Decisões de
+                    Compra</h2>
+                <div class="overflow-x-auto my-6 not-prose">
+                    <table
+                        class="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm text-sm">
+                        <thead class="bg-slate-100 text-slate-700 text-xs font-bold uppercase">
+                            <tr>
+                                <th class="p-4 border-b">Classe</th>
+                                <th class="p-4 border-b">% dos Produtos</th>
+                                <th class="p-4 border-b">% do Faturamento</th>
+                                <th class="p-4 border-b">Frequência de Compra</th>
+                                <th class="p-4 border-b">Estratégia Recomendada</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-emerald-600">Classe A</td>
+                                <td class="p-4">20%</td>
+                                <td class="p-4 font-bold text-slate-900">80%</td>
+                                <td class="p-4">Semanal / Quinzenal</td>
+                                <td class="p-4 text-xs">Negocie melhores prazos e descontos por volume com fornecedores.
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-amber-600">Classe B</td>
+                                <td class="p-4">30%</td>
+                                <td class="p-4 font-bold text-slate-900">15%</td>
+                                <td class="p-4">Mensal</td>
+                                <td class="p-4 text-xs">Mantenha margem padrão e monitore se algum item migrou para A ou
+                                    C.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-red-600">Classe C</td>
+                                <td class="p-4">50%</td>
+                                <td class="p-4 font-bold text-slate-900">5%</td>
+                                <td class="p-4">Bimestral / Sob Demanda</td>
+                                <td class="p-4 text-xs">Avalie descontinuar itens sem giro ou criar promoções de
+                                    liquidação.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Os 4 Maiores Perigos de Ignorar a Curva
+                    ABC</h2>
+                <ol class="space-y-4 list-decimal pl-6">
+                    <li><strong>Ruptura de Estoque nos Mais Vendidos:</strong> O cliente entra na loja para comprar o
+                        seu produto campeão, mas você não tem porque gastou o capital comprando itens que vendem pouco.
+                    </li>
+                    <li><strong>Obsolescência e Vencimento:</strong> Produtos parados na prateleira sofrem avarias,
+                        perdem validade ou saem de moda, virando prejuízo puro.</li>
+                    <li><strong>Falta de Capital de Giro:</strong> A empresa fatura bem no papel, mas a conta bancária
+                        está sempre no vermelho porque todo o lucro foi engolido pelo estoque parado.</li>
+                    <li><strong>Descontos Desesperados:</strong> Lojistas sem controle acabam liquidando produtos a
+                        preço de custo ou com prejuízo só para conseguir pagar boletos imediatos.</li>
+                </ol>
+
+                <!-- CONVERSION CTA BOX -->
+                <div
+                    class="my-12 bg-gradient-to-r from-blue-700 to-indigo-800 rounded-3xl p-8 text-white not-prose shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="max-w-xl">
+                        <span
+                            class="bg-blue-500/30 text-blue-200 text-xs uppercase tracking-wider font-extrabold px-3 py-1 rounded-full inline-block mb-3">
+                            Automatize sua Gestão
+                        </span>
+                        <h3 class="text-2xl font-bold mb-2">Chega de tentar montar Curva ABC em planilhas manuais</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            O <strong>Duzz Commercial</strong> calcula sua Curva ABC em tempo real a cada venda
+                            registrada no PDV, avisando quando repor o estoque e quanto seu capital está girando.
+                        </p>
+                    </div>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-white text-blue-800 hover:bg-blue-50 px-6 py-3.5 rounded-xl font-extrabold text-sm whitespace-nowrap shadow-md transition-all hover:scale-105">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Próximos Passos Recomendados</h2>
+                <p>
+                    Agora que você compreendeu o impacto da Curva ABC, o próximo passo para blindar as finanças da sua
+                    empresa é dominar a precificação de cada produto para não queimar margem:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+                    <a href="markup-vs-margem-de-lucro.html"
+                        class="p-5 bg-white border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-md transition group">
+                        <span class="text-xs font-bold text-blue-600 uppercase block mb-1">Artigo Recomendado</span>
+                        <h4 class="font-bold text-slate-900 group-hover:text-blue-600 transition">Markup vs Margem de
+                            Lucro: O Cálculo Correto</h4>
+                        <p class="text-xs text-slate-500 mt-1">Evite prejuízos na concessão de descontos e aprenda a
+                            precificar com margem real.</p>
+                    </a>
+                    <a href="../ferramentas/calculadora-margem-revenda.html"
+                        class="p-5 bg-white border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-md transition group">
+                        <span class="text-xs font-bold text-emerald-600 uppercase block mb-1">Ferramenta Gratuita</span>
+                        <h4 class="font-bold text-slate-900 group-hover:text-emerald-600 transition">Calculadora de
+                            Margem de Revenda</h4>
+                        <p class="text-xs text-slate-500 mt-1">Calcule o preço de venda ideal considerando taxas de
+                            cartão e lucro desejado.</p>
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12 text-sm mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Duzz System</h4>
+                    <p class="text-xs">Sistema de Gestão Comercial e PDV Online. Simplifique seu estoque e vendas.</p>
+                    <p class="mt-3 text-xs">CNPJ: 40.554.697/0001-67</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Blog & Conteúdo</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="curva-abc-gestao-de-estoque.html" class="hover:text-white transition">Gestão com
+                                Curva ABC</a></li>
+                        <li><a href="markup-vs-margem-de-lucro.html" class="hover:text-white transition">Markup vs
+                                Margem de Lucro</a></li>
+                        <li><a href="como-fazer-fechamento-de-caixa.html" class="hover:text-white transition">Fechamento
+                                de Caixa</a></li>
+                        <li><a href="como-criar-catalogo-digital-whatsapp.html"
+                                class="hover:text-white transition">Catálogo Digital WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Ferramentas Gratuitas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../ferramentas/calculadora-margem-revenda.html"
+                                class="hover:text-white transition">Calculadora de Margem</a></li>
+                        <li><a href="../ferramentas/calculadora-custo-produto.html"
+                                class="hover:text-white transition">Calculadora de Insumos</a></li>
+                        <li><a href="../ferramentas/gerador-link-whatsapp.html"
+                                class="hover:text-white transition">Gerador de Link WhatsApp</a></li>
+                        <li><a href="../ferramentas/gerador-qr-code-pix.html"
+                                class="hover:text-white transition">Gerador QR Code Pix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links & Suporte</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../index.html" class="hover:text-white transition">Página Inicial</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Blog Principal</a></li>
+                        <li><a href="faq-gestao-comercial-e-duzz.html" class="hover:text-white transition">Dúvidas
+                                Frequentes</a></li>
+                        <li><a href="https://wa.me/5538998588893" target="_blank"
+                                class="hover:text-white transition">WhatsApp: (38) 99858-8893</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs">
+                <p>&copy; 2026 Duzz System. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
