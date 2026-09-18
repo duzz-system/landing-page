@@ -5,15 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Seja um Revendedor Duzz | Lucratividade e Parceria de Verdade</title>
+    <title>Programa de Revendedores Duzz | Lucratividade e Renda Recorrente em Software</title>
     <link rel="shortcut icon" href="icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/reseller.html">
     <meta name="description"
-        content="Torne-se um revendedor Duzz System. Ofereça um sistema de gestão PDV completo e não fiscal para seus clientes com margens competitivas e ganhos recorrentes.">
+        content="Torne-se um revendedor parceiro Duzz Commercial. Licencie um sistema de gestão e PDV rápido com margens de até 60%, receita recorrente garantida e zero burocracia fiscal.">
+    <meta name="keywords"
+        content="revenda software pdv, revendedor sistema gestão, franquia software comercial, parceria de ti, renda recorrente software, duzz reseller">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duzzsystem.com.br/reseller.html">
+    <meta property="og:title" content="Programa de Revenda Duzz Commercial | Seja Nosso Parceiro">
+    <meta property="og:description"
+        content="Revenda o sistema de PDV e gestão mais amado pelos pequenos comerciantes. Margens de 40% a 60% com renda recorrente mensal.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/nova-venda.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <script>
@@ -28,7 +41,8 @@
                             blue: '#0056b3',
                             dark: '#0f172a',
                             light: '#f8fafc',
-                            accent: '#f59e0b'
+                            accent: '#f59e0b',
+                            emerald: '#10b981'
                         }
                     }
                 }
@@ -38,195 +52,943 @@
 
     <style>
         .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
         }
 
         .gradient-text-blue {
-            background: linear-gradient(90deg, #0056b3, #00d4ff);
+            background: linear-gradient(135deg, #0056b3, #0284c7);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .gradient-text-emerald {
+            background: linear-gradient(135deg, #059669, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #0056b3;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 86, 179, 0.4);
+            border: 2px solid white;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #0056b3;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 86, 179, 0.4);
+            border: 2px solid white;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- NAV BAR -->
-    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100">
-        <div class="container mx-auto px-6 py-4">
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8 py-3.5">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="flex items-center">
-                    <img src="icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-9 w-auto">
+                    <span
+                        class="hidden sm:inline-block bg-blue-100 text-brand-blue text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-blue-200">
+                        Programa de Revenda
+                    </span>
                 </a>
-                <a href="index.html"
-                    class="text-sm font-semibold text-brand-blue hover:underline flex items-center gap-2">
-                    <i class="bi bi-arrow-left"></i> Voltar para Home
-                </a>
+
+                <div class="flex items-center gap-4 sm:gap-6">
+                    <a href="#calculadora" class="hidden md:inline-block text-xs font-bold text-gray-600 hover:text-brand-blue transition">
+                        Simular Ganhos
+                    </a>
+                    <a href="#tabela-precos" class="hidden md:inline-block text-xs font-bold text-gray-600 hover:text-brand-blue transition">
+                        Tabela de Preços
+                    </a>
+                    <a href="#faq" class="hidden md:inline-block text-xs font-bold text-gray-600 hover:text-brand-blue transition">
+                        Dúvidas
+                    </a>
+                    <a href="index.html" class="text-xs font-semibold text-gray-500 hover:text-gray-900 transition flex items-center gap-1">
+                        <i class="bi bi-arrow-left"></i> Home
+                    </a>
+                    <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20revendedor%20Duzz!"
+                        target="_blank"
+                        class="bg-brand-blue hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm hover:shadow flex items-center gap-1.5">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>Falar com Gerente</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
-        <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center lg:text-left relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2">
-                        <span
-                            class="inline-block py-1 px-3 rounded-full bg-blue-100 text-brand-blue text-sm font-bold mb-6 tracking-wide uppercase">
-                            Parceria de Crescimento
-                        </span>
-                        <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                            Leve a Transformação para seus Clientes e <span class="text-brand-blue">Aumente seus
-                                Ganhos</span>
+        <!-- ==================== HERO SECTION ==================== -->
+        <header class="pt-32 pb-16 lg:pt-44 lg:pb-28 bg-gradient-to-b from-blue-50 via-white to-gray-50 relative overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="container mx-auto px-4 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <div class="lg:w-7/12 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-blue-100/80 border border-blue-200 text-brand-blue text-xs font-extrabold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+                            <span>💼</span>
+                            <span>Parceria Oficial de Alto Rendimento</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-[1.15] mb-6">
+                            Construa sua Carteira de <span class="gradient-text-blue">Renda Recorrente</span> com o Duzz
                         </h1>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
-                            O Duzz Commercial é a solução ideal para micro e pequenos negócios. Seja um parceiro
-                            estratégico e tenha margens exclusivas em cada licenciamento.
+
+                        <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                            Seja um <strong>Revendedor Parceiro</strong>. Licencie o sistema de gestão comercial e PDV online mais prático do mercado para lojistas, bares e prestadores de serviços. 
+                            Compre a preço de parceiro, defina seus pacotes de implantação e lucre todos os meses.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20revendedor%20Duzz!"
+
+                        <!-- Key Selling Points Badges -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8 text-xs font-bold text-gray-700">
+                            <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
+                                <i class="bi bi-check-circle-fill text-emerald-600"></i> Margem de 40% a 60%
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
+                                <i class="bi bi-check-circle-fill text-emerald-600"></i> Mensalidade garantida
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
+                                <i class="bi bi-check-circle-fill text-emerald-600"></i> Zero dor de cabeça fiscal
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
+                                <i class="bi bi-check-circle-fill text-emerald-600"></i> Sem taxa de adesão
+                            </span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20gostaria%20de%20me%20tornar%20um%20Revendedor%20Parceiro%20Duzz!"
                                 target="_blank"
-                                class="bg-brand-blue text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1 text-center">
-                                QUERO SER REVENDEDOR
+                                class="w-full sm:w-auto bg-brand-blue hover:bg-blue-700 text-white text-base font-extrabold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                                <i class="bi bi-whatsapp text-lg"></i>
+                                <span>QUERO SER REVENDEDOR</span>
+                            </a>
+                            <a href="#calculadora"
+                                class="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 text-base font-bold px-7 py-4 rounded-xl shadow-sm transition text-center flex items-center justify-center gap-2">
+                                <i class="bi bi-calculator"></i>
+                                <span>SIMULAR MEU LUCRO</span>
                             </a>
                         </div>
                     </div>
-                    <div class="lg:w-1/2">
-                        <img src="icons/nova-venda.png" alt="Duzz System em operação"
-                            class="rounded-2xl shadow-2xl border border-gray-200">
+
+                    <!-- Hero Visual Card -->
+                    <div class="lg:w-5/12 w-full max-w-md lg:max-w-none">
+                        <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border border-gray-200 relative">
+                            <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                                Oportunidade Parceiro
+                            </div>
+
+                            <div class="flex items-center gap-3 pb-5 border-b border-gray-100">
+                                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl font-bold">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-black text-gray-900">Preço Especial de Revenda</h3>
+                                    <p class="text-xs text-gray-500">Exclusivo para técnicos, consultores e agências</p>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Highlights -->
+                            <div class="grid grid-cols-2 gap-4 my-6">
+                                <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-4 text-center">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 block mb-1">Custo Mensal Revenda</span>
+                                    <div class="text-2xl font-black text-brand-blue">R$ 41,94</div>
+                                    <span class="text-[11px] text-gray-500 font-medium">/mês por cliente</span>
+                                </div>
+                                <div class="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 text-center">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 block mb-1">Custo Anual Revenda</span>
+                                    <div class="text-2xl font-black text-emerald-700">R$ 503,28</div>
+                                    <span class="text-[11px] text-gray-500 font-medium">/ano (R$ 41,94/mês)</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 text-xs text-gray-600">
+                                <div class="flex items-center justify-between p-2.5 bg-gray-50 rounded-xl">
+                                    <span class="font-medium">Preço de Referência no Site:</span>
+                                    <span class="font-bold text-gray-900">R$ 69,90/mês</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 bg-emerald-50 text-emerald-900 rounded-xl font-semibold border border-emerald-100">
+                                    <span>Sua Margem Líquida por Licença:</span>
+                                    <span class="font-black text-emerald-700">R$ 27,96 a R$ 62,91/mês</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-gray-100 text-center">
+                                <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20conhecer%20os%20termos%20de%20revenda%20Duzz!"
+                                    target="_blank"
+                                    class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
+                                    Solicitar credenciamento imediato <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- BENEFITS SECTION -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por que revender o Duzz?</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Unimos um sistema extremamente simples de usar com uma
-                        política de preços que valoriza quem está na ponta vendendo.</p>
+
+        <!-- ==================== CALCULADORA INTERATIVA DE LUCRO ==================== -->
+        <section id="calculadora" class="py-20 bg-white border-y border-gray-200 relative">
+            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                        Simulador Financeiro
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Quanto você pode faturar todo mês como Revendedor?
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Mova a barra abaixo com a quantidade de comércios que você tem capacidade de atender na sua região e veja o lucro líquido recorrente estimado caindo todo mês no seu caixa.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Benefit 1 -->
-                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-                        <div
-                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-blue">
-                            <i class="bi bi-graph-up text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Margens Competitivas</h3>
-                        <p class="text-gray-600 text-sm">Valores exclusivos para parceiros, garantindo que você tenha
-                            uma margem real e lucrativa em cada venda.</p>
-                    </div>
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Controles da Calculadora -->
+                        <div class="lg:col-span-7 space-y-6">
+                            
+                            <!-- Slider Quantidade de Clientes -->
+                            <div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <label for="clients-range" class="font-bold text-gray-800 text-sm sm:text-base">
+                                        Número de Clientes / Licenças Ativas:
+                                    </label>
+                                    <span class="bg-blue-100 text-brand-blue font-black text-xl px-4 py-1.5 rounded-xl border border-blue-200" id="clients-display">
+                                        25
+                                    </span>
+                                </div>
+                                <input type="range" id="clients-range" min="3" max="100" value="25" step="1"
+                                    class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                    oninput="updateCalculator()">
+                                <div class="flex justify-between text-[11px] text-gray-400 font-semibold mt-1">
+                                    <span>3 clientes</span>
+                                    <span>25 clientes</span>
+                                    <span>50 clientes</span>
+                                    <span>100 clientes</span>
+                                </div>
+                            </div>
 
-                    <!-- Benefit 2 -->
-                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-                        <div
-                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
-                            <i class="bi bi-arrow-repeat text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Renda Recorrente</h3>
-                        <p class="text-gray-600 text-sm">Receba por cada renovação de licença. Construa uma carteira de
-                            clientes que gera lucro todo mês.</p>
-                    </div>
+                            <!-- Modelo de Precificação Selecionado -->
+                            <div>
+                                <label class="block font-bold text-gray-800 text-sm mb-2">
+                                    Preço Cobrado do seu Cliente:
+                                </label>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                    <button type="button" onclick="setPricingMode('reference')" id="btn-mode-reference"
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition">
+                                        <span class="text-xs font-bold text-gray-900 block">Preço de Referência</span>
+                                        <span class="text-xs font-black text-brand-blue">R$ 69,90/mês</span>
+                                        <span class="text-[10px] text-gray-500 block mt-0.5">Tabela padrão do site</span>
+                                    </button>
 
-                    <!-- Benefit 3 -->
-                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-                        <div
-                            class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-600">
-                            <i class="bi bi-shield-check text-3xl"></i>
+                                    <button type="button" onclick="setPricingMode('service')" id="btn-mode-service"
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition">
+                                        <span class="text-xs font-bold text-gray-900 block">Com Suporte Local</span>
+                                        <span class="text-xs font-black text-emerald-700">R$ 89,90/mês</span>
+                                        <span class="text-[10px] text-gray-500 block mt-0.5">Sistema + Visita/Ajuda</span>
+                                    </button>
+
+                                    <button type="button" onclick="setPricingMode('max')" id="btn-mode-max"
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition">
+                                        <span class="text-xs font-bold text-gray-900 block">Teto Permitido (+50%)</span>
+                                        <span class="text-xs font-black text-purple-700">R$ 104,85/mês</span>
+                                        <span class="text-[10px] text-gray-500 block mt-0.5">Com consultoria plena</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Dica de Transparência -->
+                            <div class="bg-blue-50/60 border border-blue-200/70 rounded-2xl p-4 text-xs text-gray-600 leading-relaxed flex items-start gap-3">
+                                <i class="bi bi-info-circle-fill text-brand-blue text-base mt-0.5 flex-shrink-0"></i>
+                                <span>
+                                    <strong>Como funciona o pagamento?</strong> Você paga apenas a taxa fixa de parceiro (<strong>R$ 41,94/mês</strong> por cliente ativo) e fica com 100% da diferença líquida todo mês.
+                                </span>
+                            </div>
+
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Implantação Zero Dor de Cabeça</h3>
-                        <p class="text-gray-600 text-sm">Sistema intuitivo e não fiscal. Seus clientes aprendem a usar
-                            em minutos, reduzindo seu custo de suporte.</p>
+
+                        <!-- Card de Resultado Financeiro -->
+                        <div class="lg:col-span-5">
+                            <div class="bg-gradient-to-b from-gray-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-800 relative overflow-hidden">
+                                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl"></div>
+
+                                <div class="text-xs font-extrabold uppercase tracking-widest text-emerald-400 mb-4 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    SEU LUCRO LÍQUIDO RECORRENTE
+                                </div>
+
+                                <div class="mb-6">
+                                    <div class="text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight" id="profit-monthly">
+                                        R$ 699,00
+                                    </div>
+                                    <span class="text-xs text-gray-400 font-medium">livre no seu bolso todos os meses</span>
+                                </div>
+
+                                <div class="space-y-3 py-4 border-y border-gray-800 text-xs">
+                                    <div class="flex justify-between text-gray-300">
+                                        <span>Faturamento Bruto Mensal:</span>
+                                        <span class="font-bold text-white" id="gross-monthly">R$ 1.747,50</span>
+                                    </div>
+                                    <div class="flex justify-between text-gray-400">
+                                        <span>Custo Duzz (R$ 41,94 x <span id="clients-count-cost">25</span>):</span>
+                                        <span class="font-bold text-red-400" id="cost-monthly">- R$ 1.048,50</span>
+                                    </div>
+                                    <div class="flex justify-between text-emerald-300 font-semibold pt-1 border-t border-gray-800/80">
+                                        <span>Projeção de Lucro Anual:</span>
+                                        <span class="font-black text-emerald-400 text-sm" id="profit-annual">R$ 8.388,00/ano</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20simulei%20minha%20carteira%20de%20revendedor%20e%20gostaria%20de%20ativar%20minha%20parceria!"
+                                        target="_blank"
+                                        class="block w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-gray-950 font-black text-sm rounded-xl text-center shadow-lg transition transform hover:-translate-y-0.5">
+                                        COMEÇAR ESSA CARTEIRA AGORA
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WHO IS IT FOR -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 order-2 lg:order-1">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Um mercado gigante esperando por
-                            você</h2>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-blue-600 p-1 rounded-full text-white mt-1"><i class="bi bi-check-lg"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">MEIs e Pequenos Lojistas</h4>
-                                    <p class="text-sm text-gray-600">Precisam sair do caderninho mas fogem de sistemas
-                                        caros e complexos.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-blue-600 p-1 rounded-full text-white mt-1"><i class="bi bi-check-lg"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Bares e Lanchonetes</h4>
-                                    <p class="text-sm text-gray-600">Fichas técnicas e controle de estoque de insumos de
-                                        forma simples.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-blue-600 p-1 rounded-full text-white mt-1"><i class="bi bi-check-lg"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Prestadores de Serviços</h4>
-                                    <p class="text-sm text-gray-600">Gestão de orçamentos e vendas de serviços integrada
-                                        ao controle financeiro.</p>
-                                </div>
-                            </div>
+
+        <!-- ==================== TABELA DE PREÇOS E REGRAS DE PRECIFICAÇÃO ==================== -->
+        <section id="tabela-precos" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+                        Transparência Total
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Tabela de Preços para Parceiros Credenciados
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Sem taxas de entrada, sem royalties escondidos. Você adquire licenças com desconto de revenda e decide a forma de faturamento com seu cliente.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto mb-12">
+                    
+                    <!-- PLANO REVENDA MENSAL -->
+                    <div class="bg-white border-2 border-blue-600 rounded-3xl p-8 shadow-xl relative flex flex-col justify-between card-hover">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+                            Flexibilidade Mensal
                         </div>
-                    </div>
-                    <div class="lg:w-1/2 order-1 lg:order-2">
-                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                            <div class="text-center mb-8">
-                                <span class="text-4xl">🚀</span>
-                                <h3 class="text-2xl font-black mt-4">PRONTO PARA LUCRAR?</h3>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-black text-gray-900">Revenda Mensal</h3>
+                                <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
+                                    Por Licença
+                                </span>
                             </div>
-                            <p class="text-center text-gray-600 mb-8">Não exigimos exclusividade nem metas impossíveis.
-                                Queremos parceiros que cresçam junto conosco.</p>
-                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20revendedor%20Duzz!"
-                                class="block w-full py-4 bg-green-500 text-white font-bold rounded-xl text-center hover:bg-green-600 transition shadow-lg">
-                                Falar com nosso Gerente de Parcerias
+                            <p class="text-gray-500 text-xs mb-6">Ideal para cobrança mês a mês sem fidelidade.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-6 border-b border-gray-100">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-4xl font-black text-gray-900 tracking-tight">R$ 41,94</span>
+                                    <span class="text-gray-500 text-sm font-semibold">/mês</span>
+                                </div>
+                                <div class="mt-2 flex flex-wrap items-center gap-2">
+                                    <span class="text-xs font-bold text-gray-500">
+                                        Preço site oficial: <span class="line-through">R$ 69,90</span>
+                                    </span>
+                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                                        40% de Desconto
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Vantagens -->
+                            <ul class="space-y-3 mb-8 text-xs sm:text-sm text-gray-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Ativação Imediata:</strong> libere o acesso do cliente em menos de 2 minutos.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Cobrança Livre:</strong> cobre do cliente via Pix, boleto ou cartão próprio.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Sem Fidelidade:</strong> se o lojista fechar ou pausar, você cancela a licença sem custo.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Todos os Recursos Inclusos:</strong> PDV, estoque, etiquetas, XML, comandas e IA.</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20no%20Plano%20Mensal%20de%20R%24%2041%2C94"
+                                target="_blank"
+                                class="block w-full py-3.5 bg-brand-blue hover:bg-blue-700 text-white font-extrabold rounded-xl text-center shadow-md transition">
+                                ADQUIRIR NO PLANO MENSAL
                             </a>
                         </div>
                     </div>
+
+                    <!-- PLANO REVENDA ANUAL -->
+                    <div class="bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 rounded-3xl p-8 shadow-xl relative flex flex-col justify-between card-hover">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+                            👑 Máxima Retenção & Caixa
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-black text-gray-900">Revenda Anual</h3>
+                                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">
+                                    12 Meses
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-xs mb-6">Receba o ano todo adiantado e garanta estabilidade.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-6 border-b border-gray-100">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-4xl font-black text-emerald-700 tracking-tight">R$ 503,28</span>
+                                    <span class="text-gray-500 text-sm font-semibold">/ano</span>
+                                </div>
+                                <div class="mt-2 flex flex-wrap items-center gap-2">
+                                    <span class="text-xs font-bold text-gray-500">
+                                        Preço site oficial: <span class="line-through">R$ 699,00</span>
+                                    </span>
+                                    <span class="text-xs font-black text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">
+                                        Equivale a R$ 41,94/mês
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Vantagens -->
+                            <ul class="space-y-3 mb-8 text-xs sm:text-sm text-gray-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Caixa Antecipado:</strong> receba R$ 699 a R$ 1.048 do seu cliente à vista.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Fidelidade de 1 Ano:</strong> cliente garantido sem risco de churn mensal.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Suporte Técnico VIP:</strong> canal direto e prioritário no WhatsApp.</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Lucro Líquido Imediato:</strong> de R$ 195,72 a R$ 545,22 por venda anual.</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20no%20Plano%20Anual%20de%20R%24%20503%2C28"
+                                target="_blank"
+                                class="block w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold rounded-xl text-center shadow-md transition">
+                                ADQUIRIR NO PLANO ANUAL
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Nota de rodapé / Letras miúdas -->
+                <div class="max-w-3xl mx-auto text-center mt-6">
+                    <p class="text-[11px] text-gray-400 leading-relaxed">
+                        * O valor comercializado no site é uma referência de mercado. O parceiro possui autonomia para precificar pacotes com seus próprios serviços de suporte/implantação, desde que o valor final repassado ao cliente não seja superior a 50% do valor praticado no site oficial (teto de R$ 104,85/mês no plano mensal e R$ 1.048,50/ano no anual).
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== POR QUE É A REVENDA MAIS FÁCIL DO MERCADO ==================== -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+                        Diferenciais Competitivos
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Por que revender o Duzz é mais fácil e dá menos suporte?
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Se você já vendeu outros sistemas comerciais, sabe que o pesadelo de um técnico são chamados intermináveis de erro de certificado digital, SEFAZ fora do ar e telas confusas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- Card 1 -->
+                    <div class="p-7 rounded-3xl bg-gray-50 border border-gray-200 flex gap-4 items-start card-hover">
+                        <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-gray-900 mb-1.5">100% Gerencial e Sem Burocracia Fiscal</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Esqueça travamentos por certificado A1 vencido, rejeição de SEFAZ e configurações tributárias complexas. O Duzz foca no que o pequeno lojista precisa: vender rápido, controlar o caixa e não ter dor de cabeça.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-7 rounded-3xl bg-gray-50 border border-gray-200 flex gap-4 items-start card-hover">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-gray-900 mb-1.5">Implantação Express em 15 Minutos</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Sistema com checklist automático por nicho. O cliente aprende a operar sozinho no mesmo dia. Seu tempo é gasto conquistando novos clientes, e não tirando dúvidas básicas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-7 rounded-3xl bg-gray-50 border border-gray-200 flex gap-4 items-start card-hover">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-gray-900 mb-1.5">Inteligência Artificial Nativa (DuxIA)</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Nenhum outro sistema de entrada entrega auditoria inteligente e assistente com IA integrada. Um diferencial de vendas poderoso para você encantar e fechar clientes na primeira demonstração.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="p-7 rounded-3xl bg-gray-50 border border-gray-200 flex gap-4 items-start card-hover">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="bi bi-cloud-check-fill"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-gray-900 mb-1.5">Nuvem Completa & Funciona em Tudo</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Roda em qualquer computador fraco, notebook, tablet ou celular. Não precisa de servidor local, banco de dados pesado ou instalação de dependências no cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Comparativo Rápido -->
+                <div class="bg-gray-900 text-white rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-center text-lg sm:text-xl font-black mb-6">Comparativo de Modelo de Parceria</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead>
+                                <tr class="border-b border-gray-800 text-gray-400">
+                                    <th class="pb-3">Critério</th>
+                                    <th class="pb-3 text-red-400">Sistemas Tradicionais</th>
+                                    <th class="pb-3 text-emerald-400">Parceria Duzz System</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800 text-gray-300">
+                                <tr>
+                                    <td class="py-3 font-semibold">Taxa de Adesão / Franquia</td>
+                                    <td class="py-3 text-red-400">R$ 1.500 a R$ 5.000</td>
+                                    <td class="py-3 text-emerald-400 font-bold">R$ 0 (Zero)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-semibold">Margem de Lucro do Parceiro</td>
+                                    <td class="py-3 text-gray-400">15% a 25%</td>
+                                    <td class="py-3 text-emerald-400 font-bold">40% a 60% Líquido</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-semibold">Meta Mínima Obrigatória</td>
+                                    <td class="py-3 text-red-400">Sim (Cobram multa se não bater)</td>
+                                    <td class="py-3 text-emerald-400 font-bold">Não (Cresça no seu ritmo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-semibold">Suporte do Desenvolvedor</td>
+                                    <td class="py-3 text-gray-400">Chamados por ticket lentos</td>
+                                    <td class="py-3 text-emerald-400 font-bold">WhatsApp direto com os fundadores</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== QUEM PODE SER REVENDEDOR ==================== -->
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+                        Público-Alvo
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Para quem é o Programa de Revenda Duzz?
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Se você já tem contato com comércios locais, pode monetizar sua base imediatamente.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Técnicos de TI e Informática</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Você já conserta computadores e impressoras. Ao indicar o Duzz, transforma o serviço pontual em mensalidade recorrente.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-file-earmark-spreadsheet"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Contadores e BPO Financeiro</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Seus clientes MEI e microempresas precisam organizar entradas, saídas e estoque para fechar o mês sem bagunça de notas.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-printer"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Revendedores de Equipamentos</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Vende impressoras térmicas, leitores de código de barras ou gavetas de dinheiro? Venda o combo equipamento + sistema.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Consultores Empresariais</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Aplique o Duzz na reestruturação financeira e operacional do seu cliente e garanta que ele siga o plano de gestão.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-megaphone"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Agências de Marketing Local</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Agregue valor aos seus clientes locais fornecendo um catálogo virtual (Duzz Store) integrado à gestão de estoque e pedidos.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Empreendedores Comerciais</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Quer construir um negócio de tecnologia na sua cidade sem programar uma linha de código? Esse é o caminho mais rápido.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- CTA SECTION -->
-        <section class="py-20 bg-brand-blue text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl lg:text-5xl font-bold mb-8">Oportunidade de Ouro para Consultores e Técnicos de
-                    Informática</h2>
-                <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-                    Aproveite sua base de clientes atual para oferecer uma solução que resolve o problema deles e gera
-                    lucro para você.
+
+        <!-- ==================== COMO FUNCIONA (PASSO A PASSO) ==================== -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                        Simples e Rápido
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Como começar a faturar em 3 passos
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    
+                    <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 relative">
+                        <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-4 shadow-md">
+                            1
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-2">Credencie-se pelo WhatsApp</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Envie uma mensagem para nosso time de parcerias. Liberamos seu acesso de revenda imediatamente sem burocracia ou taxas.
+                        </p>
+                    </div>
+
+                    <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 relative">
+                        <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-4 shadow-md">
+                            2
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-2">Apresente e Ative Clientes</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Apresente a solução aos comércios da sua região. Crie a conta do cliente e faça a implantação guiada em 15 minutos.
+                        </p>
+                    </div>
+
+                    <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 relative">
+                        <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-4 shadow-md">
+                            3
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-2">Receba seu Lucro Recorrente</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Cobrança direta com sua margem ou repasse da comissão. Uma carteira segura que cresce e coloca dinheiro no bolso todo mês.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== FAQ DO REVENDEDOR ==================== -->
+        <section id="faq" class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+                        Perguntas Frequentes
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mt-3 mb-3">
+                        Dúvidas sobre a Revenda Duzz
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Existe quantidade mínima de clientes para começar?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            <strong>Não!</strong> Você pode começar credenciando apenas 1 cliente. Não exigimos compras em lote antecipadas, nem pacotes de 10 ou 20 licenças obrigatórias. Você adquire à medida que vende.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Como funciona a cobrança entre mim, a Duzz e o cliente?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Você tem total autonomia. O modelo padrão é: <strong>você fatura o seu cliente final</strong> com o seu método preferido (Pix, boleto, cartão ou junto aos seus outros serviços) e repassa para a Duzz apenas o custo de revendedor (R$ 41,94/mês ou R$ 503,28/ano). O lucro da margem fica integralmente retido com você!
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Posso cobrar pela taxa de implantação, treinamento ou visita presencial?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            <strong>Com certeza!</strong> O valor de implantação, instalação física de impressoras, cadastro inicial de estoque e visitas técnicas pertence <strong>100% a você</strong>. A Duzz cobra apenas a licença mensal do software.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Qual o preço máximo que posso cobrar do meu cliente?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            O preço praticado no site da Duzz (R$ 69,90/mês e R$ 699,00/ano) serve como valor de referência sugerido. Para manter a proteção da marca e padrões justos de mercado, o valor repassado ao cliente não pode ser mais que <strong>50% acima do preço do site oficial</strong> (teto máximo de R$ 104,85/mês no plano mensal ou R$ 1.048,50/ano no anual).
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Como funciona o suporte técnico se o cliente tiver alguma dúvida?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Você é o ponto focal de relacionamento com o seu cliente (Nível 1), o que fortalece a sua autoridade local. Se surgir qualquer questão técnica avançada de banco de dados ou desenvolvimento (Nível 2), você tem um canal direto e prioritário no WhatsApp com a equipe de engenharia da Duzz.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>E se um cliente meu cancelar a assinatura?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Você simplesmente suspende a licença dele no seu controle e nós não cobraremos mais por ela no próximo ciclo. Sem contratos leoninos, sem fidelidade forçada e sem cobranças indevidas.
+                        </p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== FINAL CTA ==================== -->
+        <section class="py-20 bg-gradient-to-r from-blue-900 via-brand-blue to-slate-900 text-white relative overflow-hidden">
+            <div class="container mx-auto px-4 lg:px-8 text-center relative z-10 max-w-4xl">
+                <span class="inline-block py-1 px-3.5 rounded-full bg-blue-500/30 text-blue-200 text-xs font-black uppercase tracking-wider mb-6 border border-blue-400/30">
+                    Credenciamento Imediato
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+                    Pronto para transformar pequenos comércios da sua região em clientes recorrentes?
+                </h2>
+                <p class="text-base sm:text-lg text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Converse agora mesmo com nosso time de parcerias. Apresentamos o modelo detalhado, liberamos seu acesso e tiramos todas as suas dúvidas.
                 </p>
-                <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20revendedor%20Duzz!"
-                    class="inline-block bg-white text-brand-blue text-lg font-bold px-12 py-5 rounded-2xl hover:bg-blue-50 transition shadow-2xl">
-                    Solicitar Tabela de Preços para Revendedor
-                </a>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20me%20credenciar%20como%20Revendedor%20Parceiro%20Duzz%20e%20come%C3%A7ar%20a%20lucrar!"
+                        target="_blank"
+                        class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-black text-base px-9 py-4 rounded-xl shadow-2xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                        <i class="bi bi-whatsapp text-xl"></i>
+                        <span>FALAR COM O GERENTE DE PARCERIAS</span>
+                    </a>
+                </div>
+                <div class="mt-8 text-xs text-blue-200/80 font-medium">
+                    ⚡ Sem taxa de adesão • Sem quantidade mínima de clientes • Liberação imediata
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="py-12 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <img src="icons/logo_sem_fundo.png" alt="Duzz" class="h-8 mx-auto mb-8 opacity-50">
-            <p class="text-gray-500 text-sm font-medium">© 2026 Duzz System. Todos os direitos reservados.</p>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="py-12 bg-white border-t border-gray-200 text-gray-600 text-xs">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+            <img src="icons/logo_sem_fundo.png" alt="Duzz System" class="h-8 mx-auto mb-6 opacity-70">
+            <div class="flex flex-wrap justify-center gap-6 mb-6 font-semibold">
+                <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+                <a href="index.html#planos" class="hover:text-brand-blue transition">Planos Oficiais</a>
+                <a href="terms.html" class="hover:text-brand-blue transition">Termos de Uso</a>
+                <a href="privacy.html" class="hover:text-brand-blue transition">Política de Privacidade</a>
+            </div>
+            <p class="text-gray-400">© 2026 Duzz System. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- ==================== CALCULATOR SCRIPT ==================== -->
+    <script>
+        const COST_MONTHLY = 41.94;
+        let currentPriceMode = 'reference'; // 'reference' (69.90), 'service' (89.90), 'max' (104.85)
+
+        const prices = {
+            'reference': 69.90,
+            'service': 89.90,
+            'max': 104.85
+        };
+
+        function setPricingMode(mode) {
+            currentPriceMode = mode;
+
+            // Reset button classes
+            const buttons = {
+                'reference': document.getElementById('btn-mode-reference'),
+                'service': document.getElementById('btn-mode-service'),
+                'max': document.getElementById('btn-mode-max')
+            };
+
+            for (const key in buttons) {
+                if (key === mode) {
+                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition';
+                } else {
+                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition';
+                }
+            }
+
+            updateCalculator();
+        }
+
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function updateCalculator() {
+            const range = document.getElementById('clients-range');
+            const clients = parseInt(range.value, 10);
+            
+            document.getElementById('clients-display').textContent = clients;
+            document.getElementById('clients-count-cost').textContent = clients;
+
+            const sellingPrice = prices[currentPriceMode];
+            const grossMonthly = clients * sellingPrice;
+            const costMonthly = clients * COST_MONTHLY;
+            const profitMonthly = grossMonthly - costMonthly;
+            const profitAnnual = profitMonthly * 12;
+
+            document.getElementById('gross-monthly').textContent = formatBRL(grossMonthly);
+            document.getElementById('cost-monthly').textContent = '- ' + formatBRL(costMonthly);
+            document.getElementById('profit-monthly').textContent = formatBRL(profitMonthly);
+            document.getElementById('profit-annual').textContent = formatBRL(profitAnnual) + '/ano';
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCalculator();
+        });
+    </script>
 
 </body>
 
