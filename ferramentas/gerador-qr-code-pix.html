@@ -24,7 +24,8 @@
     <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gerador de QR Code Pix Grátis | Duzz System">
-    <meta name="twitter:description" content="Gerador de QR Code Pix estático gratuito para empresas e autônomos. Crie seu código Pix Copia e Cola seguro no padrão do Banco Central.">
+    <meta name="twitter:description"
+        content="Gerador de QR Code Pix estático gratuito para empresas e autônomos. Crie seu código Pix Copia e Cola seguro no padrão do Banco Central.">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -265,7 +266,8 @@
                 Gerador de <span class="text-teal-600">QR Code Pix Grátis</span> e Pix Copia e Cola
             </h1>
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Ferramenta gratuita para gerar seu código **Pix Copia e Cola** estático e imagem do QR Code para cobrança presencial, redes sociais ou mensagens. 100% gratuito e seguro no padrão Banco Central.
+                Ferramenta gratuita para gerar seu código <strong>Pix Copia e Cola</strong> estático e imagem do QR Code para
+                cobrança presencial, redes sociais ou mensagens. 100% gratuito e seguro no padrão Banco Central.
             </p>
         </div>
     </header>
@@ -342,8 +344,7 @@
                     <label for="input-merchant-name" class="block text-xs font-bold text-gray-700 uppercase mb-1">
                         Nome do Negócio / Beneficiário <span class="text-gray-400 font-normal">(Opcional)</span>
                     </label>
-                    <input type="text" id="input-merchant-name" maxlength="25"
-                        placeholder="Ex: Minha Loja ou Seu Nome"
+                    <input type="text" id="input-merchant-name" maxlength="25" placeholder="Ex: Minha Loja ou Seu Nome"
                         class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-800 text-xs focus:outline-none focus:border-teal-600">
                     <p class="text-[10px] text-gray-400 mt-1">Aparece no topo da placa e no título do QR Code</p>
                 </div>
@@ -457,28 +458,35 @@
                     <!-- PLACA FOOTER BRANDING -->
                     <div class="pt-4 border-t border-gray-100 text-center">
                         <p class="text-[11px] font-medium text-gray-400">
-                            Criado com a Ferramenta Gratuita do <strong class="text-gray-600">Duzz System</strong> • duzzsystem.com.br
+                            Criado com a Ferramenta Gratuita do <strong class="text-gray-600">Duzz System</strong> •
+                            duzzsystem.com.br
                         </p>
                     </div>
                 </div>
 
-                <!-- PROMO DUZZ BANNER -->
+                <!-- CTA DUZZ SYSTEM -->
                 <div
-                    class="bg-gradient-to-br from-gray-900 via-teal-950 to-gray-900 text-white rounded-3xl p-6 shadow-xl border border-gray-800 space-y-4">
-                    <span
-                        class="bg-teal-500/20 text-teal-300 font-semibold text-[10px] uppercase px-2.5 py-1 rounded-full border border-teal-500/30">
-                        Automação de Vendas no PDV
-                    </span>
+                    class="bg-gradient-to-br from-gray-900 via-teal-950 to-gray-900 text-white rounded-3xl p-6 shadow-xl border border-gray-800 space-y-4 no-print">
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="bg-teal-500/20 text-teal-300 font-semibold text-[10px] uppercase px-2.5 py-1 rounded-full border border-teal-500/30">
+                            Frente de Caixa & Gestão
+                        </span>
+                        <span class="text-[11px] text-teal-400 font-medium flex items-center gap-1">
+                            <i class="bi bi-lightning-charge-fill text-teal-400"></i> PDV Ágil
+                        </span>
+                    </div>
                     <h4 class="text-base font-extrabold leading-snug">
-                        Quer receber Pix no caixa com baixa automática no estoque e conciliação bancária?
+                        Quer agilizar suas vendas no balcão e controlar o estoque da sua loja?
                     </h4>
                     <p class="text-xs text-gray-300 leading-relaxed">
-                        O **Duzz System** integra recebimentos Pix ao seu caixa, gera comprovantes automáticos e
-                        gerencia o estoque sem digitação manual.
+                        Com o <strong class="text-teal-300 font-semibold">Duzz System</strong>, você registra vendas em
+                        segundos aceitando Pix, cartão ou dinheiro, controla as saídas do estoque e organiza o fluxo de
+                        caixa do seu comércio sem complicações.
                     </p>
                     <a href="https://app.duzzsystem.com.br/onboarding" target="_blank"
                         onclick="gtag('event', 'click_cta', { 'button_location': 'pix_tool_banner', 'button_name': 'Testar Duzz 7 Dias Grátis' }); fbq('track', 'Lead');"
-                        class="block w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-black py-3 rounded-xl text-center text-xs shadow-md transition">
+                        class="block w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-black py-3 rounded-xl text-center text-xs shadow-md transition hover:shadow-lg">
                         Testar Duzz 7 Dias Grátis
                     </a>
                 </div>
@@ -565,40 +573,54 @@
                 </details>
 
                 <details class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
-                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">Como o Duzz System ajuda meu
-                        comércio no Pix?</summary>
-                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">No Duzz System, ao realizar uma venda no PDV
-                        ou comanda, o sistema gera o QR Code com o valor exato da compra e dá baixa automática no
-                        estoque e no fluxo de caixa ao confirmar a venda.</p>
+                    <summary class="font-bold text-gray-800 cursor-pointer text-sm">Como o Duzz System ajuda na gestão
+                        do meu negócio?</summary>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed">O Duzz System é um sistema completo de gestão
+                        comercial e PDV com inteligência artificial: permite controlar vendas, pagamentos (dinheiro,
+                        cartão e Pix), comandas, estoque e fluxo de caixa de forma simples e rápida.</p>
+                </details>
             </div>
 
             <!-- OUTRAS FERRAMENTAS GRATUITAS -->
             <div class="mt-16 pt-10 border-t border-gray-200">
-                <h3 class="text-xl font-extrabold text-gray-900 mb-6 text-center">Conheça outras ferramentas gratuitas para seu negócio</h3>
+                <h3 class="text-xl font-extrabold text-gray-900 mb-6 text-center">Conheça outras ferramentas gratuitas
+                    para seu negócio</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <a href="gerador-link-whatsapp.html" class="p-5 bg-white hover:bg-green-50 rounded-2xl border border-gray-200 hover:border-green-300 transition shadow-sm group flex flex-col justify-between">
+                    <a href="gerador-link-whatsapp.html"
+                        class="p-5 bg-white hover:bg-green-50 rounded-2xl border border-gray-200 hover:border-green-300 transition shadow-sm group flex flex-col justify-between">
                         <div>
                             <span class="text-2xl text-green-600 mb-2 block"><i class="bi bi-whatsapp"></i></span>
-                            <h4 class="font-bold text-gray-900 group-hover:text-green-700 text-sm">Gerador de Link de WhatsApp Grátis</h4>
-                            <p class="text-xs text-gray-500 mt-1">Crie links curtos personalizados wa.me com QR Code para seu Instagram e vendas.</p>
+                            <h4 class="font-bold text-gray-900 group-hover:text-green-700 text-sm">Gerador de Link de
+                                WhatsApp Grátis</h4>
+                            <p class="text-xs text-gray-500 mt-1">Crie links curtos personalizados wa.me com QR Code
+                                para seu Instagram e vendas.</p>
                         </div>
-                        <span class="text-xs font-bold text-green-600 mt-4 flex items-center gap-1">Criar Link Grátis <i class="bi bi-arrow-right"></i></span>
+                        <span class="text-xs font-bold text-green-600 mt-4 flex items-center gap-1">Criar Link Grátis <i
+                                class="bi bi-arrow-right"></i></span>
                     </a>
-                    <a href="calculadora-margem-revenda.html" class="p-5 bg-white hover:bg-blue-50 rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm group flex flex-col justify-between">
+                    <a href="calculadora-margem-revenda.html"
+                        class="p-5 bg-white hover:bg-blue-50 rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm group flex flex-col justify-between">
                         <div>
                             <span class="text-2xl text-brand-blue mb-2 block"><i class="bi bi-calculator"></i></span>
-                            <h4 class="font-bold text-gray-900 group-hover:text-brand-blue text-sm">Calculadora de Margem de Revenda</h4>
-                            <p class="text-xs text-gray-500 mt-1">Descubra o preço de venda ideal considerando frete, impostos e taxas de cartão.</p>
+                            <h4 class="font-bold text-gray-900 group-hover:text-brand-blue text-sm">Calculadora de
+                                Margem de Revenda</h4>
+                            <p class="text-xs text-gray-500 mt-1">Descubra o preço de venda ideal considerando frete,
+                                impostos e taxas de cartão.</p>
                         </div>
-                        <span class="text-xs font-bold text-brand-blue mt-4 flex items-center gap-1">Calcular Margem Grátis <i class="bi bi-arrow-right"></i></span>
+                        <span class="text-xs font-bold text-brand-blue mt-4 flex items-center gap-1">Calcular Margem
+                            Grátis <i class="bi bi-arrow-right"></i></span>
                     </a>
-                    <a href="calculadora-custo-produto.html" class="p-5 bg-white hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-orange-300 transition shadow-sm group flex flex-col justify-between">
+                    <a href="calculadora-custo-produto.html"
+                        class="p-5 bg-white hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-orange-300 transition shadow-sm group flex flex-col justify-between">
                         <div>
                             <span class="text-2xl text-orange-600 mb-2 block"><i class="bi bi-basket3"></i></span>
-                            <h4 class="font-bold text-gray-900 group-hover:text-orange-700 text-sm">Calculadora de Insumos & Receitas</h4>
-                            <p class="text-xs text-gray-500 mt-1">Monte a ficha técnica do seu produto ou prato e calcule o custo exato por porção.</p>
+                            <h4 class="font-bold text-gray-900 group-hover:text-orange-700 text-sm">Calculadora de
+                                Insumos & Receitas</h4>
+                            <p class="text-xs text-gray-500 mt-1">Monte a ficha técnica do seu produto ou prato e
+                                calcule o custo exato por porção.</p>
                         </div>
-                        <span class="text-xs font-bold text-orange-600 mt-4 flex items-center gap-1">Montar Ficha Técnica <i class="bi bi-arrow-right"></i></span>
+                        <span class="text-xs font-bold text-orange-600 mt-4 flex items-center gap-1">Montar Ficha
+                            Técnica <i class="bi bi-arrow-right"></i></span>
                     </a>
                 </div>
             </div>
