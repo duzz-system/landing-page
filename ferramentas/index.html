@@ -39,26 +39,26 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Gerador de QR Code Pix Grátis",
-              "url": "https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html"
+              "name": "Calculadora de Custo de Produto e Ficha Técnica Grátis",
+              "url": "https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html"
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Gerador de Link de WhatsApp Grátis",
-              "url": "https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
               "name": "Calculadora de Margem de Revenda Grátis",
               "url": "https://duzzsystem.com.br/ferramentas/calculadora-margem-revenda.html"
             },
             {
               "@type": "ListItem",
+              "position": 3,
+              "name": "Gerador de QR Code Pix Grátis",
+              "url": "https://duzzsystem.com.br/ferramentas/gerador-qr-code-pix.html"
+            },
+            {
+              "@type": "ListItem",
               "position": 4,
-              "name": "Calculadora de Custo de Produto e Ficha Técnica Grátis",
-              "url": "https://duzzsystem.com.br/ferramentas/calculadora-custo-produto.html"
+              "name": "Gerador de Link de WhatsApp Grátis",
+              "url": "https://duzzsystem.com.br/ferramentas/gerador-link-whatsapp.html"
             }
           ]
         }
@@ -162,6 +162,26 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Nav link effect */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0056b3, #0284c7);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -169,40 +189,62 @@
 
     <!-- NAV BAR -->
     <nav class="fixed w-full z-50 glass-effect border-b border-gray-100 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-4 lg:px-6 py-3.5">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="../index.html" class="flex items-center" aria-label="Duzz System Home">
-                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Duzz System" class="h-9 lg:h-10 w-auto">
                 </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html#planos" class="text-gray-600 hover:text-brand-blue font-medium transition">Planos</a>
-                    <a href="../index.html#segmentos" class="text-gray-600 hover:text-brand-blue font-medium transition">Versatilidade</a>
-                    <a href="../index.html#funcionalidades" class="text-gray-600 hover:text-brand-blue font-medium transition">Funcionalidades</a>
-                    <a href="index.html" class="text-brand-blue font-bold border-b-2 border-brand-blue pb-0.5">Ferramentas Gratuitas</a>
-                    <a href="../blog/index.html" class="text-gray-600 hover:text-brand-blue font-medium transition">Blog & Guias</a>
+                <!-- Desktop Menu Links -->
+                <div class="hidden lg:flex items-center space-x-7">
+                    <a href="../index.html#recursos"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Recursos</a>
+                    <a href="../index.html#duxia"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition flex items-center gap-1">
+                        <span>DuxIA</span>
+                        <span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.2 rounded-full">Exclusivo</span>
+                    </a>
+                    <a href="../index.html#segmentos"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Segmentos</a>
+                    <a href="../index.html#planos"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Planos</a>
+                    <a href="../reseller.html"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Revenda</a>
+                    <a href="../index.html#onboarding"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Como Funciona</a>
+                    <a href="index.html"
+                        class="nav-link text-brand-blue font-bold text-sm transition">Ferramentas Grátis</a>
+                    <a href="../blog/index.html"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">Blog</a>
+                    <a href="../index.html#faq"
+                        class="nav-link text-gray-600 hover:text-brand-blue text-sm font-semibold transition">FAQ</a>
                 </div>
 
-                <!-- CTA Button -->
-                <div class="hidden md:flex items-center gap-6">
-                    <a target="_blank" href="https://app.duzzsystem.com.br"
-                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition">
-                        Entrar no sistema
+                <!-- CTA & Login -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a target="_blank" href="https://app.duzzsystem.com.br/"
+                        class="text-sm font-semibold text-gray-600 hover:text-brand-blue transition duration-200">
+                        Entrar no Sistema
                     </a>
+
                     <a href="https://app.duzzsystem.com.br/onboarding" target="_blank"
-                        onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Grátis' }); fbq('track', 'Lead');"
-                        class="btn-primary text-white px-6 py-2.5 rounded-full font-bold flex items-center gap-2 text-sm">
-                        <span>Testar Grátis</span>
+                        onclick="gtag('event', 'click_cta', { 'button_location': 'navbar', 'button_name': 'Testar Duzz Grátis' }); fbq('track', 'Lead');"
+                        class="btn-primary text-white text-sm px-5 py-2.5 rounded-full font-bold flex items-center gap-2 shadow-md">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span>Testar Gratuitamente</span>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none" aria-label="Abrir Menu">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 p-2 focus:outline-none" aria-label="Abrir Menu">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -210,19 +252,29 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
-            <div class="flex flex-col px-6 py-6 space-y-4">
-                <a href="../index.html" class="text-gray-700 font-medium hover:text-brand-blue">Início</a>
-                <a href="index.html" class="text-brand-blue font-bold">Ferramentas Gratuitas</a>
-                <a href="../blog/index.html" class="text-gray-700 font-medium hover:text-brand-blue">Blog & Guias Práticos</a>
-                <a href="gerador-link-whatsapp.html" class="text-gray-600 hover:text-brand-blue pl-4 text-sm">Gerador de Link WhatsApp</a>
-                <a href="calculadora-margem-revenda.html" class="text-gray-600 hover:text-brand-blue pl-4 text-sm">Calculadora de Revenda</a>
-                <a href="calculadora-custo-produto.html" class="text-gray-600 hover:text-brand-blue pl-4 text-sm">Calculadora de Insumos</a>
-                <div class="pt-4 border-t border-gray-100">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-5 space-y-3.5">
+                <a href="../index.html#recursos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Recursos & Funcionalidades</a>
+                <a href="../index.html#duxia" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">DuxIA (Inteligência Artificial)</a>
+                <a href="../index.html#segmentos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Segmentos Atendidos</a>
+                <a href="../index.html#planos" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Planos e Preços</a>
+                <a href="../index.html#onboarding" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Checklist de Implantação</a>
+                <a href="index.html" class="text-brand-blue font-bold text-sm">Ferramentas Gratuitas</a>
+                <a href="../blog/index.html" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Blog & Guias</a>
+                <a href="../index.html#faq" class="text-gray-700 font-semibold hover:text-brand-blue text-sm">Dúvidas Frequentes</a>
+                <a href="../reseller.html" class="text-brand-blue font-bold text-sm flex items-center gap-2 pt-1 border-t border-gray-100">
+                    <span>💼</span> Seja um Revendedor Parceiro
+                </a>
+
+                <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
                     <a href="https://app.duzzsystem.com.br/onboarding" target="_blank"
                         onclick="gtag('event', 'click_cta', { 'button_location': 'mobile_nav', 'button_name': 'Criar Conta Grátis' }); fbq('track', 'Lead');"
-                        class="block w-full bg-green-500 text-white text-center py-3 rounded-xl font-bold shadow-md">
-                        CRIAR CONTA GRÁTIS
+                        class="bg-green-600 text-white text-center py-3 rounded-xl font-bold text-sm shadow-md">
+                        CRIAR CONTA GRÁTIS (15 DIAS)
+                    </a>
+                    <a href="https://app.duzzsystem.com.br/" target="_blank"
+                        class="text-brand-blue font-bold text-center py-2 text-sm">
+                        Já tenho conta (Entrar)
                     </a>
                 </div>
             </div>
@@ -248,20 +300,20 @@
     <main class="py-16 container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <!-- Tool 1: WhatsApp -->
+            <!-- Tool 1: Ficha Técnica / Custo de Produto -->
             <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                 <div>
-                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
-                        <i class="bi bi-whatsapp"></i>
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="bi bi-basket3-fill"></i>
                     </div>
-                    <span class="text-xs font-bold text-green-600 uppercase tracking-wider">Vendas e Contato</span>
-                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Gerador de Link WhatsApp</h2>
+                    <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Ficha Técnica e Gastronomia</span>
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Custo de Produto</h2>
                     <p class="text-gray-600 text-xs leading-relaxed mb-6">
-                        Crie links curtos personalizados com mensagem pronta e gere QR Codes para suas redes sociais.
+                        Monte a ficha técnica completa da sua receita ou produto artesanal. Calcule custo por porção e envie o resumo no WhatsApp.
                     </p>
                 </div>
-                <a href="gerador-link-whatsapp.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
-                    <span>Usar Gerador</span>
+                <a href="calculadora-custo-produto.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
+                    <span>Montar Ficha Técnica</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -273,9 +325,9 @@
                         <i class="bi bi-calculator-fill"></i>
                     </div>
                     <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Precificação e Lucro</span>
-                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Revenda</h2>
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Margem de Revenda</h2>
                     <p class="text-gray-600 text-xs leading-relaxed mb-6">
-                        Descubra o preço de venda ideal considerando impostos, frete, comissão e taxa de cartão.
+                        Descubra o preço de venda ideal considerando impostos, frete, comissão, markup e taxa de maquininha de cartão.
                     </p>
                 </div>
                 <a href="calculadora-margem-revenda.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
@@ -284,25 +336,7 @@
                 </a>
             </div>
 
-            <!-- Tool 3: Ficha Técnica / Insumos -->
-            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
-                <div>
-                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
-                        <i class="bi bi-basket3-fill"></i>
-                    </div>
-                    <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Ficha Técnica e Gastronomia</span>
-                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Calculadora de Insumos</h2>
-                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
-                        Monte a ficha técnica completa da sua receita ou produto artesanal. Calcule custo por porção.
-                    </p>
-                </div>
-                <a href="calculadora-custo-produto.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-brand-blue text-white font-bold text-xs rounded-xl transition duration-300">
-                    <span>Montar Ficha Técnica</span>
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Tool 4: QR Code Pix -->
+            <!-- Tool 3: QR Code Pix -->
             <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
                 <div>
                     <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
@@ -311,11 +345,29 @@
                     <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Pagamentos Pix</span>
                     <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Gerador de QR Code Pix</h2>
                     <p class="text-gray-600 text-xs leading-relaxed mb-6">
-                        Crie seu código Pix Copia e Cola estático com máscara inteligente para Celular, CPF, CNPJ ou E-mail.
+                        Crie seu código Pix Copia e Cola estático com máscara inteligente para Celular, CPF, CNPJ ou E-mail e baixe a Placa Pix.
                     </p>
                 </div>
                 <a href="gerador-qr-code-pix.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-teal-600 text-white font-bold text-xs rounded-xl transition duration-300">
                     <span>Gerar QR Code Pix</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Tool 4: WhatsApp -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                    <span class="text-xs font-bold text-green-600 uppercase tracking-wider">Vendas e Contato</span>
+                    <h2 class="text-lg font-bold text-gray-900 mt-1 mb-3">Gerador de Link WhatsApp</h2>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-6">
+                        Crie links curtos personalizados com mensagem pronta e gere QR Codes para suas redes sociais e vitrines.
+                    </p>
+                </div>
+                <a href="gerador-link-whatsapp.html" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 hover:bg-green-600 text-white font-bold text-xs rounded-xl transition duration-300">
+                    <span>Usar Gerador</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
