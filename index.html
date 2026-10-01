@@ -90,7 +90,21 @@
           "name": "O sistema emite Nota Fiscal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O Duzz Commercial é um sistema de Gestão Comercial Gerencial Não Fiscal. Ele foca no controle interno (estoque, financeiro, vendas rápidas, fiado e comissões) sem as burocracias e lentidão dos módulos fiscais."
+            "text": "O Duzz Commercial opera com foco em gestão gerencial ágil e sem burocracias. Em breve, disponibilizaremos um Módulo Fiscal opcional e altamente acessível (NFC-e e NF-e) para quem precisa de emissão fiscal integrada."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Como funciona a venda a granel e produtos fracionados no Duzz System?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode criar múltiplos formatos de venda para um mesmo produto (como garrafas em doses, fardos em latas ou frações decimais). A baixa de estoque é proporcional e automática no produto pai, com cálculo de custo por porção e margem em tempo real."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Como funciona a Ficha Técnica para pratos, drinks e produção?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na aba de composição, você vincula os insumos e suas quantidades exatas com calculadora integrada. Ao finalizar a venda no PDV ou comanda, o sistema desconta automaticamente cada ingrediente do estoque e apura o CMV real."
           }
         }]
       }
@@ -850,18 +864,22 @@
                             </p>
                             <ul class="space-y-2 text-xs text-gray-600">
                                 <li class="flex items-center gap-2"><i
-                                        class="bi bi-check2 text-green-600 font-bold"></i> Ficha técnica & kits (cálculo
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Venda fracionada & doses
+                                    (baixa proporcional no estoque pai)</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Ficha técnica & insumos
+                                    (cálculo
                                     de CMV real)</li>
                                 <li class="flex items-center gap-2"><i
-                                        class="bi bi-check2 text-green-600 font-bold"></i> Sugestão inteligente de
-                                    compra / não-compra</li>
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Importação de XML inteligente
+                                    com desmembramento de caixas</li>
                                 <li class="flex items-center gap-2"><i
-                                        class="bi bi-check2 text-green-600 font-bold"></i> Auditoria de perdas, quebras
-                                    e validades</li>
+                                        class="bi bi-check2 text-green-600 font-bold"></i> Sugestão inteligente de
+                                    compra / não-compra (Curva ABC)</li>
                             </ul>
                         </div>
                         <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-bold text-emerald-700">
-                            📦 Controle cirúrgico contra desperdícios
+                            Controle cirúrgico contra desperdícios
                         </div>
                     </div>
 
@@ -1754,10 +1772,12 @@
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            O Duzz Commercial é um <strong>sistema estritamente Gerencial Não Fiscal</strong>. Ele foca
-                            no controle interno (estoque em tempo real, caixas, comissões, vendas ágeis, fiado e
-                            inteligência) com velocidade máxima, sem as burocracias, certificados digitais e lentidão de
-                            módulos fiscais.
+                            Hoje o Duzz Commercial foca em <strong>gestão comercial ágil e gerencial</strong> (estoque
+                            em tempo real com fracionamento, frente de caixa ultrarrápida, múltiplos caixas, fiado,
+                            comissões e inteligência da duxIA), garantindo velocidade máxima sem travar suas vendas.
+                            <strong>Em breve, disponibilizaremos um Módulo Fiscal opcional e altamente
+                                acessível</strong>, permitindo que você emita NFC-e, NF-e e NFS-e de forma descomplicada
+                            quando seu negócio precisar, mantendo toda a praticidade da plataforma.
                         </p>
                     </details>
 
@@ -1862,6 +1882,48 @@
                             há um <strong>botão de ação de 1 clique</strong> que abre a duxIA no chat com a solução
                             pronta para você aprovar
                             na hora, sem gastar horas analisando planilhas manuais.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Como funciona a venda a granel e produtos fracionados (fardos em unidades, garrafas em
+                                doses)?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            No Duzz System, você cadastra o produto principal (produto pai) com sua unidade de estoque
+                            padrão e cria quantos <strong>Formatos de Venda</strong> precisar (como doses, latinhas,
+                            fardos, caixas ou frações decimais em kg/litros). Ao vender qualquer formato no PDV, o
+                            sistema faz a <strong>baixa proporcional automática no estoque do produto pai</strong> e
+                            calcula o custo por porção e margem em tempo real, sem necessidade de duplicar cadastros
+                            manuais ou controlar estoques separados.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-5 rounded-2xl border border-gray-200 cursor-pointer shadow-sm">
+                        <summary class="flex justify-between items-center font-bold text-gray-900 text-base">
+                            <span>Como funciona a Ficha Técnica para pratos, lanches, drinks e produção?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Na aba <strong>Composição</strong> do cadastro de produtos e serviços, você monta a ficha
+                            técnica vinculando cada insumo com suas quantidades exatas (em gramas, ml, unidades, etc.).
+                            O sistema conta com uma <strong>calculadora de proporção integrada</strong> que calcula o
+                            custo exato de produção, atualiza o CMV (Custo da Mercadoria Vendida) e dá baixa automática
+                            em todos os insumos do estoque assim que a venda é finalizada no PDV ou comanda.
                         </p>
                     </details>
                 </div>

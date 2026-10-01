@@ -22,12 +22,13 @@
 - **Comandas, Mesas & App Garçom:** Gestão de contas abertas com **divisão automática de valor por pessoa na mesa** e aplicativo para garçons realizarem pedidos em tempo real.
 - **Orçamentos via Sessões de Venda:** Criação de orçamentos através de comandas com impressão formatada para validação do cliente antes do fechamento da venda.
 - **Notas Promissórias ("Venda Fiada"):** **Segmentação de clientes pelo comportamento e padrão de compras**, permitindo regras próprias de conceder crédito e parcelamento com controle de quitações.
-- **Importação de XML de Fornecedor:** Entrada automatizada de produtos e atualização rápida de custos e estoques via XML de compras.
+- **Importação Inteligente de XML de Fornecedor (NFe):** Leitura e conciliação de notas fiscais com identificação automática de fardos e caixas, oferecendo 3 modos de entrada (*Só Fração* em unidades, *Caixa + Filhos* para venda combinada, ou *Fechado*), além de migração de saldo físico para produtos existentes.
 
 ### 2. Gestão de Estoque, Produtos & Insumos
 - **Cadastro Unificado:** Produtos físicos e serviços (mão de obra).
+- **Formatos de Venda / Frações (Venda a Granel, Doses e Fardos):** Controle de produtos pai (garrafas, fardos, caixas) com múltiplos formatos filhos (doses de 50ml, latas avulsas, porções a granel). Abatimento proporcional automático no estoque da embalagem principal e cálculo automático de rendimento por medida (`ml`, `g`) ou unidade.
 - **Impressão de Etiquetas de Código de Barras e Gôndola:** Suporte para impressoras térmicas contínuas (rolo) e folhas A4 (Pimaco com 30 etiquetas), com código de barras, QR Code, preço e particularidades (tamanho, cor, voltagem). Impressão unitária ou em lotes rápidos.
-- **Ficha Técnica & Insumos:** Cálculo automático de CMV (Custo de Mercadoria Vendida) e margem de lucro por composição/combo.
+- **Ficha Técnica & Insumos com Calculadora Integrada:** Cálculo automático de CMV (Custo de Mercadoria Vendida) e margem de lucro por composição/combo/receita com calculadora proporcional por ml, g, doses ou unidades e baixa multi-item automática.
 - **Curva ABC Inteligente:** Classificação financeira (A, B e C) com **sugestão de compra ou não-compra do estoque**.
 - **Ajustes de Inventário:** Log irreversível para auditoria de perdas, quebras e validade.
 

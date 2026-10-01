@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Venda a Granel, Doses e Fracionamento: Como Controlar o Estoque com Baixa Automática | Blog Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/venda-a-granel-fracionamento-controle-estoque.html">
+    <meta name="description"
+        content="Descubra como controlar a venda a granel, doses de bebidas, fardos e unidades fracionadas no estoque com baixa proporcional automática e cálculo de lucro exato.">
+    <meta name="keywords"
+        content="venda a granel controle de estoque, como vender doses no bar, fracionamento de estoque, venda fracionada sistema comercial, controle de estoque pai e filho, baixa proporcional de estoque">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/venda-a-granel-fracionamento-controle-estoque.html">
+    <meta property="og:title" content="Venda a Granel, Doses e Fracionamento de Estoque">
+    <meta property="og:description"
+        content="Como vender doses, latinhas ou porções a granel mantendo o estoque da embalagem principal 100% conciliado e com margem garantida.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Venda a Granel e Fracionamento | Duzz System">
+    <meta name="twitter:description"
+        content="Guia completo para bares, tabacarias, mercados, empórios e pet shops.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Venda a Granel, Doses e Fracionamento: Como Controlar o Estoque com Baixa Automática",
+      "image": "https://duzzsystem.com.br/icons/logo_com_fundo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duzz System"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      },
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "description": "Como gerenciar formatos de venda fracionados, doses e produtos a granel com abatimento proporcional automático no estoque físico."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #0056b3, #0284c7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 glass-effect border-b border-slate-200/80">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../icons/logo_sem_fundo.png" alt="Duzz System Logo" class="h-9 w-auto">
+                <span class="font-black text-xl text-slate-900 tracking-tight">Duzz<span
+                        class="text-blue-600">.</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="../index.html" class="hover:text-blue-600 transition">Início</a>
+                <a href="index.html" class="text-blue-600 font-bold">Blog</a>
+                <a href="../ferramentas/index.html" class="hover:text-blue-600 transition">Ferramentas Gratuitas</a>
+                <a href="../reseller.html" class="hover:text-blue-600 transition">Seja um Parceiro</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://app.duzzsystem.com.br"
+                    class="text-slate-700 hover:text-blue-600 font-bold text-sm px-4 py-2">Entrar</a>
+                <a href="https://app.duzzsystem.com.br/onboarding"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-sm transition hover:shadow-md hover:scale-[1.02]">
+                    Testar Grátis
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-700 p-2 focus:outline-none">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+            <a href="../index.html" class="block font-semibold text-slate-600">Início</a>
+            <a href="index.html" class="block font-semibold text-blue-600">Blog</a>
+            <a href="../ferramentas/index.html" class="block font-semibold text-slate-600">Ferramentas Gratuitas</a>
+            <a href="../reseller.html" class="block font-semibold text-slate-600">Seja um Parceiro</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <a href="https://app.duzzsystem.com.br" class="text-center font-bold text-slate-700 py-2">Entrar</a>
+                <a href="https://app.duzzsystem.com.br/onboarding"
+                    class="text-center bg-blue-600 text-white font-bold py-2.5 rounded-xl">Testar Grátis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE HEADER -->
+    <main class="flex-grow py-12">
+        <div class="container mx-auto px-6 max-w-4xl">
+
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-400 mb-8">
+                <a href="../index.html" class="hover:text-slate-600">Início</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-slate-600">Blog</a>
+                <span>/</span>
+                <span class="text-slate-600 font-medium">Venda a Granel e Fracionamento</span>
+            </nav>
+
+            <header class="mb-10 text-center sm:text-left">
+                <span
+                    class="bg-blue-50 text-blue-700 text-xs uppercase tracking-wider font-extrabold px-3 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
+                    Gestão de Estoque & Vendas
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                    Venda a Granel, Doses e Fracionamento: Como Controlar o Estoque com Baixa Automática
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    Se você compra em caixas, garrafas ou fardos e vende em doses, latinhas ou porções a granel, aprenda como manter o estoque físico 100% conciliado sem conversões manuais e com cálculo automático de margem.
+                </p>
+                <div class="flex items-center gap-4 text-xs text-slate-400 border-t border-b border-slate-200/60 py-3">
+                    <span class="flex items-center gap-1.5 font-medium text-slate-600">
+                        <i class="bi bi-person-circle"></i> Equipe Duzz System
+                    </span>
+                    <span>•</span>
+                    <span>Atualizado em Outubro de 2026</span>
+                    <span>•</span>
+                    <span>Leitura de 6 min</span>
+                </div>
+            </header>
+
+            <!-- ARTICLE CONTENT -->
+            <article class="prose prose-slate lg:prose-lg max-w-none text-slate-600 leading-relaxed space-y-6">
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-8">O Dilema da Venda Fracionada no Varejo e Bares</h2>
+                <p>
+                    Um dos maiores desafios operacionais em comércios, bares, empórios e pet shops é a discrepância entre <strong>como o produto é comprado</strong> e <strong>como ele é vendido</strong>:
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>O <strong>bar</strong> compra a garrafa de Vodka de 1 Litro (1000ml), mas vende em doses de 50ml no balcão.</li>
+                    <li>A <strong>conveniência</strong> compra o fardo com 12 latas de cerveja e vende tanto o fardo fechado quanto latinhas avulsas.</li>
+                    <li>O <strong>pet shop / agropecuária</strong> compra o saco de ração de 15kg e vende tanto o saco fechado quanto frações por quilo a granel.</li>
+                    <li>A <strong>tabacaria</strong> compra a caixa fechada com 20 maços e vende a caixa inteira ou maços individuais.</li>
+                </ul>
+                <p>
+                    Quando o sistema comercial não possui controle nativo de fracionamento, o lojista acaba criando cadastros duplicados (um para a caixa e outro para a unidade), gerando furos graves de estoque, descontrole no inventário e distorções na margem de lucro.
+                </p>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">A Solução Definitiva: A Estrutura de Estoque Pai-Filho</h2>
+                <p>
+                    No <strong>Duzz System</strong>, a gestão de produtos fracionados e a granel funciona através do conceito de <strong>Produto Pai (Embalagem Principal)</strong> e <strong>Formatos Filhos (Variações Fracionadas)</strong>.
+                </p>
+
+                <div class="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-6 my-8">
+                    <h3 class="text-xl font-bold text-blue-950 mb-3 flex items-center gap-2">
+                        <i class="bi bi-diagram-3-fill text-blue-600"></i> Como Funciona o Abatimento Automático
+                    </h3>
+                    <div class="space-y-3 text-sm text-blue-900">
+                        <p><strong>1. O Estoque Real fica no Produto Pai:</strong> O saldo físico real é lançado apenas na embalagem comprada (ex: 10 garrafas de 1L ou 5 fardos c/ 12).</p>
+                        <p><strong>2. Fator de Fracionamento:</strong> O lojista define quantas porções a embalagem rende (ex: 1000ml ÷ 50ml = 20 doses).</p>
+                        <p><strong>3. Baixa Proporcional Imediata:</strong> Ao vender 1 dose no PDV ou na comanda, o sistema baixa exatamente <code>1 ÷ 20 = 0,05</code> da garrafa no estoque físico.</p>
+                        <p><strong>4. Custo Rateado e Margem Livre:</strong> O custo da porção é dividido automaticamente (Custo Pai ÷ Fator), permitindo ao lojista precificar com margem exata.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Modos de Cálculo: Medidas (ml/g) vs. Unidades Físicas</h2>
+                <p>
+                    O Duzz oferece dois modos inteligentes para configurar o rendimento de cada produto:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Modo 1</span>
+                        <h4 class="font-bold text-slate-900 text-base mt-1 mb-2">Por Medida (ml, g, L, kg)</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Ideal para garrafas de destilados, xaropes, barris de chopp, sacos de grãos e ração. Você informa o recipiente total (ex: 1000ml) e o tamanho da dose servida (ex: 50ml), e o sistema calcula o fator de rendimento automaticamente.
+                        </p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Modo 2</span>
+                        <h4 class="font-bold text-slate-900 text-base mt-1 mb-2">Por Unidade (Granel / Fardos)</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Ideal para fardos de latinhas, caixas de doces, displays de chiclete e maços de cigarro. Você informa diretamente quantas unidades avulsas compõem a caixa (ex: 12, 24 ou 48 un).
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10">Importação Inteligente de XML (NFe) para Caixas e Fardos</h2>
+                <p>
+                    Ao receber notas fiscais de distribuidores com caixas ou fardos, o <strong>mecanismo de importação de XML do Duzz</strong> identifica automaticamente o volume e sugere a melhor forma de entrada:
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Só Fração:</strong> Converte a caixa diretamente em unidades no estoque físico, multiplicando o saldo e dividindo o custo da compra.</li>
+                    <li><strong>Caixa + Filhos:</strong> Dá entrada na caixa no estoque pai e cria os formatos filhos com margem e preço de venda personalizados.</li>
+                    <li><strong>Adoção de Unidades Existentes:</strong> Se você já vendia a latinha avulsa e comprou a caixa pela primeira vez na NFe, o sistema migra o saldo físico atual para a caixa automaticamente sem gerar duplicidades.</li>
+                </ul>
+
+                <!-- CONVERSION CTA BOX -->
+                <div
+                    class="my-12 bg-gradient-to-r from-blue-700 to-indigo-800 rounded-3xl p-8 text-white not-prose shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="max-w-xl">
+                        <span
+                            class="bg-blue-500/30 text-blue-200 text-xs uppercase tracking-wider font-extrabold px-3 py-1 rounded-full inline-block mb-3">
+                            Controle Automatizado de Estoque
+                        </span>
+                        <h3 class="text-2xl font-bold mb-2">Elimine os furos de estoque na venda fracionada</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            Controle doses, fardos, porções e fichas técnicas de produtos compostos com baixa automática. Experimente o Duzz grátis por 15 dias!
+                        </p>
+                    </div>
+                    <a href="https://app.duzzsystem.com.br/onboarding"
+                        class="bg-white text-blue-800 hover:bg-blue-50 px-6 py-3.5 rounded-xl font-extrabold text-sm whitespace-nowrap shadow-md transition-all hover:scale-105">
+                        Testar 15 Dias Grátis
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12 text-sm mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Duzz System</h4>
+                    <p class="text-xs">Sistema de Gestão Comercial e PDV Online. Simplifique seu estoque e vendas.</p>
+                    <p class="mt-3 text-xs">CNPJ: 40.554.697/0001-67</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Blog & Conteúdo</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="venda-a-granel-fracionamento-controle-estoque.html" class="hover:text-white transition">Venda a Granel & Doses</a></li>
+                        <li><a href="composicao-de-produtos-e-ficha-tecnica.html" class="hover:text-white transition">Ficha Técnica & Insumos</a></li>
+                        <li><a href="curva-abc-gestao-de-estoque.html" class="hover:text-white transition">Gestão com Curva ABC</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Ferramentas Gratuitas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../ferramentas/calculadora-custo-produto.html" class="hover:text-white transition">Calculadora de Insumos</a></li>
+                        <li><a href="../ferramentas/calculadora-margem-revenda.html" class="hover:text-white transition">Calculadora de Margem</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links & Suporte</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="../index.html" class="hover:text-white transition">Página Inicial</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Blog Principal</a></li>
+                        <li><a href="https://wa.me/5538998588893" target="_blank" class="hover:text-white transition">WhatsApp: (38) 99858-8893</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs">
+                <p>&copy; 2026 Duzz System. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

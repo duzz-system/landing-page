@@ -27,8 +27,20 @@ O coração operacional do sistema, focado em agilidade máxima e controle estri
 Organização inteligente de ativos focada em rentabilidade e controle contra perdas.
 
 - **Cadastro Unificado de Produtos e Serviços:** Separação e tratamento diferenciado entre itens físicos estocáveis e prestação de serviços (mão de obra).
+- **Formatos de Venda / Frações (Venda a Granel, Doses e Fardos):**
+  - **Estrutura Pai-Filho:** Permite cadastrar a embalagem principal (Caixa, Fardo, Garrafa, Saco) mantendo o estoque físico centralizado e criar múltiplos formatos de venda derivados (Doses de 50ml, Latas avulsas, Porções por quilo).
+  - **Abatimento Proporcional Automático:** Cada venda do formato filho realizada no PDV ou comanda abate instantaneamente a fração correspondente no estoque do produto pai (ex: 1 dose abate `1/20` da garrafa de 1L).
+  - **Calculadora de Rendimento:** Modos por medida (`ml`, `g`, `L`, `kg`) e por unidades físicas, com rateio automático do custo de compra e precificação com margem livre.
+  - **Herança de Atributos:** Propagação automática de categorias e particularidades para todos os formatos vinculados.
 - **Categorias e Atributos Dinâmicos:** Organização por categorias com atributos personalizados (Ex: Tamanho e Cor para roupas; Voltagem para eletrônicos; Volume para bebidas).
-- **Ficha Técnica & Insumos (Kits/Combos/Composições):** Permite vincular insumos e matérias-primas a um produto final ou serviço. O sistema calcula automaticamente o **CMV (Custo de Mercadoria Vendida)** real e a margem de lucro sugerida baseada nos custos operacionais.
+- **Ficha Técnica & Insumos em Serviços (Kits/Combos/Receitas):**
+  - Permite vincular múltiplos insumos e matérias-primas a um serviço, prato ou drink complexo.
+  - **Calculadora de Insumos Integrada:** Cálculo de frações por dosagens (`ml`, `g`, doses ou unidades) com apuração imediata do custo da receita e margem de lucro sugerida.
+  - **Baixa Multi-Item:** A venda do serviço ou combo gera baixa automática e individualizada em todos os insumos que compõem a receita.
+- **Importação Inteligente de XML (NFe) com Desmembramento de Embalagens:**
+  - Leitura automatizada de arquivos XML de Notas Fiscais com identificação inteligente de volumes (caixas, fardos, packs).
+  - **3 Modos de Entrada:** *Só Fração* (converte a caixa em unidades no estoque), *Caixa + Filhos* (cria a estrutura pai-filho para venda da caixa e das unidades) e *Fechado* (venda exclusivamente lacrada).
+  - **Adoção de Itens Existentes:** Se o lojista já possuía a unidade avulsa no estoque, o sistema vincula-a como filha da caixa importada e migra o saldo físico automaticamente.
 - **Classificação Curva ABC de Estoque Inteligente:** Classificação automática dos produtos por impacto financeiro:
   - **Classe A (Ouro):** 80% do faturamento (itens críticos de alta rentabilidade/giro).
   - **Classe B (Giro Médio):** Equilíbrio de consumo e giro constante.
