@@ -223,26 +223,26 @@
 
                             <!-- Pricing Highlights -->
                             <div class="grid grid-cols-2 gap-4 my-6">
-                                <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-4 text-center">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 block mb-1">Custo Mensal Revenda</span>
-                                    <div class="text-2xl font-black text-brand-blue">R$ 41,94</div>
-                                    <span class="text-[11px] text-gray-500 font-medium">/mês por cliente</span>
+                                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-gray-700 block mb-1">Revenda Inicial</span>
+                                    <div class="text-2xl font-black text-gray-900">R$ 29,94</div>
+                                    <span class="text-[11px] text-gray-500 font-medium">/mês (Site: R$ 49,90)</span>
                                 </div>
-                                <div class="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 text-center">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 block mb-1">Custo Anual Revenda</span>
-                                    <div class="text-2xl font-black text-emerald-700">R$ 503,28</div>
-                                    <span class="text-[11px] text-gray-500 font-medium">/ano (R$ 41,94/mês)</span>
+                                <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-4 text-center">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 block mb-1">Revenda Essencial</span>
+                                    <div class="text-2xl font-black text-brand-blue">R$ 41,94</div>
+                                    <span class="text-[11px] text-gray-500 font-medium">/mês (Site: R$ 69,90)</span>
                                 </div>
                             </div>
 
                             <div class="space-y-3 text-xs text-gray-600">
                                 <div class="flex items-center justify-between p-2.5 bg-gray-50 rounded-xl">
-                                    <span class="font-medium">Preço de Referência no Site:</span>
-                                    <span class="font-bold text-gray-900">R$ 69,90/mês</span>
+                                    <span class="font-medium">Desconto Exclusivo Parceiro:</span>
+                                    <span class="font-bold text-gray-900">40% OFF + 2 Meses Grátis no Anual</span>
                                 </div>
                                 <div class="flex items-center justify-between p-2.5 bg-emerald-50 text-emerald-900 rounded-xl font-semibold border border-emerald-100">
                                     <span>Sua Margem Líquida por Licença:</span>
-                                    <span class="font-black text-emerald-700">R$ 27,96 a R$ 62,91/mês</span>
+                                    <span class="font-black text-emerald-700">R$ 19,96 a R$ 62,91/mês</span>
                                 </div>
                             </div>
 
@@ -280,6 +280,27 @@
                         
                         <!-- Controles da Calculadora -->
                         <div class="lg:col-span-7 space-y-6">
+
+                            <!-- Escolha do Plano Base -->
+                            <div>
+                                <label class="block font-bold text-gray-800 text-sm mb-2">
+                                    Plano Revendido ao Cliente:
+                                </label>
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <button type="button" onclick="setCalculatorPlan('inicial')" id="btn-plan-inicial"
+                                        class="p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer">
+                                        <span class="text-xs font-bold text-gray-900 block">Plano Inicial</span>
+                                        <span class="text-xs font-black text-gray-700">Custo: R$ 29,94/mês</span>
+                                        <span class="text-[10px] text-gray-500 block mt-0.5">Site: R$ 49,90/mês (5 msg duxIA)</span>
+                                    </button>
+                                    <button type="button" onclick="setCalculatorPlan('essencial')" id="btn-plan-essencial"
+                                        class="p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition cursor-pointer">
+                                        <span class="text-xs font-bold text-gray-900 block">⭐ Plano Essencial</span>
+                                        <span class="text-xs font-black text-brand-blue">Custo: R$ 41,94/mês</span>
+                                        <span class="text-[10px] text-gray-500 block mt-0.5">Site: R$ 69,90/mês (Completo)</span>
+                                    </button>
+                                </div>
+                            </div>
                             
                             <!-- Slider Quantidade de Clientes -->
                             <div>
@@ -309,23 +330,23 @@
                                 </label>
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                                     <button type="button" onclick="setPricingMode('reference')" id="btn-mode-reference"
-                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition">
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition cursor-pointer">
                                         <span class="text-xs font-bold text-gray-900 block">Preço de Referência</span>
-                                        <span class="text-xs font-black text-brand-blue">R$ 69,90/mês</span>
+                                        <span class="text-xs font-black text-brand-blue" id="label-price-reference">R$ 69,90/mês</span>
                                         <span class="text-[10px] text-gray-500 block mt-0.5">Tabela padrão do site</span>
                                     </button>
 
                                     <button type="button" onclick="setPricingMode('service')" id="btn-mode-service"
-                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition">
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer">
                                         <span class="text-xs font-bold text-gray-900 block">Com Suporte Local</span>
-                                        <span class="text-xs font-black text-emerald-700">R$ 89,90/mês</span>
+                                        <span class="text-xs font-black text-emerald-700" id="label-price-service">R$ 89,90/mês</span>
                                         <span class="text-[10px] text-gray-500 block mt-0.5">Sistema + Visita/Ajuda</span>
                                     </button>
 
                                     <button type="button" onclick="setPricingMode('max')" id="btn-mode-max"
-                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition">
+                                        class="calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer">
                                         <span class="text-xs font-bold text-gray-900 block">Teto Permitido (+50%)</span>
-                                        <span class="text-xs font-black text-purple-700">R$ 104,85/mês</span>
+                                        <span class="text-xs font-black text-purple-700" id="label-price-max">R$ 104,85/mês</span>
                                         <span class="text-[10px] text-gray-500 block mt-0.5">Com consultoria plena</span>
                                     </button>
                                 </div>
@@ -335,7 +356,7 @@
                             <div class="bg-blue-50/60 border border-blue-200/70 rounded-2xl p-4 text-xs text-gray-600 leading-relaxed flex items-start gap-3">
                                 <i class="bi bi-info-circle-fill text-brand-blue text-base mt-0.5 flex-shrink-0"></i>
                                 <span>
-                                    <strong>Como funciona o pagamento?</strong> Você paga apenas a taxa fixa de parceiro (<strong>R$ 41,94/mês</strong> por cliente ativo) e fica com 100% da diferença líquida todo mês.
+                                    <strong>Como funciona o pagamento?</strong> Você paga apenas a taxa fixa de parceiro (<strong id="label-cost-info">R$ 41,94/mês</strong> por cliente ativo) e fica com 100% da diferença líquida todo mês.
                                 </span>
                             </div>
 
@@ -364,7 +385,7 @@
                                         <span class="font-bold text-white" id="gross-monthly">R$ 1.747,50</span>
                                     </div>
                                     <div class="flex justify-between text-gray-400">
-                                        <span>Custo Duzz (R$ 41,94 x <span id="clients-count-cost">25</span>):</span>
+                                        <span>Custo Duzz (<span id="unit-cost-label">R$ 41,94</span> x <span id="clients-count-cost">25</span>):</span>
                                         <span class="font-bold text-red-400" id="cost-monthly">- R$ 1.048,50</span>
                                     </div>
                                     <div class="flex justify-between text-emerald-300 font-semibold pt-1 border-t border-gray-800/80">
@@ -391,8 +412,8 @@
 
         <!-- ==================== TABELA DE PREÇOS E REGRAS DE PRECIFICAÇÃO ==================== -->
         <section id="tabela-precos" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
-                <div class="text-center mb-14">
+            <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+                <div class="text-center mb-12">
                     <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
                         Transparência Total
                     </span>
@@ -400,101 +421,198 @@
                         Tabela de Preços para Parceiros Credenciados
                     </h2>
                     <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
-                        Sem taxas de entrada, sem royalties escondidos. Você adquire licenças com desconto de revenda e decide a forma de faturamento com seu cliente.
+                        Sem taxas de entrada, sem royalties escondidos. Você adquire licenças com 40% de desconto sobre a tabela oficial e ainda aproveita 2 meses grátis no modo anual.
                     </p>
+
+                    <!-- TOGGLE MENSAL / ANUAL -->
+                    <div class="mt-8 flex justify-center">
+                        <div class="inline-flex items-center bg-gray-200/80 p-1.5 rounded-2xl border border-gray-300 shadow-inner">
+                            <button id="toggle-mensal-btn" type="button" onclick="setBillingFrequency('monthly')"
+                                class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer">
+                                Mensal
+                            </button>
+                            <button id="toggle-anual-btn" type="button" onclick="setBillingFrequency('annual')"
+                                class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5 cursor-pointer">
+                                <span>Anual</span>
+                                <span class="bg-emerald-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+                                    🎁 2 Meses Grátis
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto mb-12">
                     
-                    <!-- PLANO REVENDA MENSAL -->
-                    <div class="bg-white border-2 border-blue-600 rounded-3xl p-8 shadow-xl relative flex flex-col justify-between card-hover">
-                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
-                            Flexibilidade Mensal
-                        </div>
-
+                    <!-- PLANO INICIAL (REVENDA) -->
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 lg:p-8 shadow-lg relative flex flex-col justify-between card-hover">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-2xl font-black text-gray-900">Revenda Mensal</h3>
-                                <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
-                                    Por Licença
+                                <h3 class="text-2xl font-black text-gray-900">Plano Inicial</h3>
+                                <span id="badge-inicial-cycle" class="text-xs font-bold text-gray-700 bg-gray-100 px-2.5 py-1 rounded-lg border border-gray-200">
+                                    40% OFF
                                 </span>
                             </div>
-                            <p class="text-gray-500 text-xs mb-6">Ideal para cobrança mês a mês sem fidelidade.</p>
+                            <p class="text-gray-500 text-xs mb-5">O essencial para lojistas organizarem vendas, estoque e caixa no dia a dia.</p>
 
                             <!-- Preço -->
-                            <div class="mb-6 pb-6 border-b border-gray-100">
-                                <div class="flex items-baseline gap-2">
-                                    <span class="text-4xl font-black text-gray-900 tracking-tight">R$ 41,94</span>
-                                    <span class="text-gray-500 text-sm font-semibold">/mês</span>
+                            <div class="mb-6 pb-5 border-b border-gray-100">
+                                <div class="flex items-baseline gap-2 flex-wrap">
+                                    <span id="price-inicial-value" class="text-4xl font-black text-gray-900 tracking-tight">R$ 29,94</span>
+                                    <span id="price-inicial-period" class="text-gray-500 text-sm font-semibold">/mês</span>
                                 </div>
                                 <div class="mt-2 flex flex-wrap items-center gap-2">
-                                    <span class="text-xs font-bold text-gray-500">
-                                        Preço site oficial: <span class="line-through">R$ 69,90</span>
+                                    <span id="price-inicial-daily" class="inline-flex items-center gap-1 text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
+                                        ☕ Apenas R$ 0,99 por dia
                                     </span>
-                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                                        40% de Desconto
+                                    <span id="badge-inicial-bonus" class="inline-flex items-center gap-1 text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 hidden">
+                                        🎁 2 Meses Grátis
                                     </span>
+                                </div>
+                                <div class="mt-2 text-xs font-bold text-gray-500">
+                                    Preço site oficial: <span id="price-inicial-site" class="line-through text-gray-400">R$ 49,90/mês</span>
+                                    <span id="Daily-site-inicial" class="text-gray-400 font-medium">(R$ 1,66/dia no site)</span>
                                 </div>
                             </div>
 
                             <!-- Vantagens -->
                             <ul class="space-y-3 mb-8 text-xs sm:text-sm text-gray-700">
                                 <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Ativação Imediata:</strong> libere o acesso do cliente em menos de 2 minutos.</div>
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Frente de Caixa Ágil (PDV):</strong> vendas rápidas de produtos e serviços</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Cobrança Livre:</strong> cobre do cliente via Pix, boleto ou cartão próprio.</div>
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Controle de Estoque:</strong> entradas, baixas, grade e ficha técnica</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Sem Fidelidade:</strong> se o lojista fechar ou pausar, você cancela a licença sem custo.</div>
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Fechamento de Caixa & Fiado:</strong> sangria, turnos e promissórias</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Todos os Recursos Inclusos:</strong> PDV, estoque, etiquetas, XML, comandas e IA.</div>
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Impressão de Etiquetas:</strong> gôndola e código de barras</div>
+                                </li>
+                                <li class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <span class="text-sm">🧠</span>
+                                    <div><strong class="text-purple-900">5 mensagens duxIA/mês:</strong> assistente inteligente inclusa</div>
+                                </li>
+                                <li class="flex items-start gap-2.5 bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+                                    <i class="bi bi-cash-coin text-emerald-600 mt-0.5"></i>
+                                    <div><strong class="text-emerald-900">Lucro sugerido:</strong> R$ 19,96 a R$ 44,91/mês por licença</div>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20no%20Plano%20Mensal%20de%20R%24%2041%2C94"
+                            <a id="btn-cta-inicial" href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Inicial%20Mensal%20(R%24%2029%2C94)"
                                 target="_blank"
-                                class="block w-full py-3.5 bg-brand-blue hover:bg-blue-700 text-white font-extrabold rounded-xl text-center shadow-md transition">
-                                ADQUIRIR NO PLANO MENSAL
+                                class="block w-full py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-extrabold rounded-xl text-center shadow-md transition">
+                                REVENDER PLANO INICIAL
                             </a>
                         </div>
                     </div>
 
-                    <!-- PLANO REVENDA ANUAL -->
-                    <div class="bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 rounded-3xl p-8 shadow-xl relative flex flex-col justify-between card-hover">
-                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
-                            👑 Máxima Retenção & Caixa
+                    <!-- PLANO ESSENCIAL (REVENDA) -->
+                    <div class="bg-white border-2 border-blue-600 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between card-hover transform lg:-translate-y-2">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow">
+                            ⭐ Mais Vendido
                         </div>
 
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-2xl font-black text-gray-900">Revenda Anual</h3>
-                                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">
-                                    12 Meses
+                                <h3 class="text-2xl font-black text-gray-900">Plano Essencial</h3>
+                                <span id="badge-essencial-cycle" class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
+                                    40% OFF
                                 </span>
                             </div>
-                            <p class="text-gray-500 text-xs mb-6">Receba o ano todo adiantado e garanta estabilidade.</p>
+                            <p class="text-gray-500 text-xs mb-5">Sistema completo com comandas, XML, financeiro e IA para comércios em crescimento.</p>
 
                             <!-- Preço -->
-                            <div class="mb-6 pb-6 border-b border-gray-100">
-                                <div class="flex items-baseline gap-2">
-                                    <span class="text-4xl font-black text-emerald-700 tracking-tight">R$ 503,28</span>
-                                    <span class="text-gray-500 text-sm font-semibold">/ano</span>
+                            <div class="mb-6 pb-5 border-b border-gray-100">
+                                <div class="flex items-baseline gap-2 flex-wrap">
+                                    <span id="price-essencial-value" class="text-4xl font-black text-brand-blue tracking-tight">R$ 41,94</span>
+                                    <span id="price-essencial-period" class="text-gray-500 text-sm font-semibold">/mês</span>
                                 </div>
                                 <div class="mt-2 flex flex-wrap items-center gap-2">
-                                    <span class="text-xs font-bold text-gray-500">
-                                        Preço site oficial: <span class="line-through">R$ 699,00</span>
+                                    <span id="price-essencial-daily" class="inline-flex items-center gap-1 text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200">
+                                        ☕ Apenas R$ 1,39 por dia
                                     </span>
-                                    <span class="text-xs font-black text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">
-                                        Equivale a R$ 41,94/mês
+                                    <span id="badge-essencial-bonus" class="inline-flex items-center gap-1 text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 hidden">
+                                        🎁 2 Meses Grátis
                                     </span>
+                                </div>
+                                <div class="mt-2 text-xs font-bold text-gray-500">
+                                    Preço site oficial: <span id="price-essencial-site" class="line-through text-gray-400">R$ 69,90/mês</span>
+                                    <span id="Daily-site-essencial" class="text-gray-400 font-medium">(R$ 2,33/dia no site)</span>
+                                </div>
+                            </div>
+
+                            <!-- Vantagens -->
+                            <ul class="space-y-3 mb-8 text-xs sm:text-sm text-gray-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Tudo do Plano Inicial +</strong></div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Comandas & App Garçom:</strong> atendimento mobile sem custo extra</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Importação de XML & Curva ABC:</strong> entrada de notas em 1 clique</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
+                                    <div><strong>Financeiro Completo & Raio-X (DRE):</strong> contas a pagar e lucro real</div>
+                                </li>
+                                <li class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <span class="text-sm">🧠</span>
+                                    <div><strong class="text-purple-900">DuxIA Expandida:</strong> 20 mensagens/mês + Insights Ativos</div>
+                                </li>
+                                <li class="flex items-start gap-2.5 bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+                                    <i class="bi bi-cash-coin text-emerald-600 mt-0.5"></i>
+                                    <div><strong class="text-emerald-900">Lucro sugerido:</strong> R$ 27,96 a R$ 62,91/mês por licença</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <a id="btn-cta-essencial" href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Essencial%20Mensal%20(R%24%2041%2C94)"
+                                target="_blank"
+                                class="block w-full py-3.5 bg-brand-blue hover:bg-blue-700 text-white font-extrabold rounded-xl text-center shadow-md transition">
+                                REVENDER PLANO ESSENCIAL
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PLANO FISCAL (EM BREVE) -->
+                    <div class="bg-gradient-to-b from-slate-50 via-white to-white border-2 border-dashed border-emerald-500/70 rounded-3xl p-7 lg:p-8 shadow-lg relative flex flex-col justify-between card-hover">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow">
+                            🚀 Em Breve
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-black text-gray-900">Plano Fiscal</h3>
+                                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">
+                                    Módulo Fiscal
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-xs mb-5">Toda a gestão do Plano Essencial somada à emissão fiscal descomplicada.</p>
+
+                            <!-- Preço -->
+                            <div class="mb-6 pb-5 border-b border-gray-100">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-4xl font-black text-emerald-600 tracking-tight">Em Breve</span>
+                                </div>
+                                <div class="mt-2 flex flex-wrap items-center gap-2">
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                                        Emissão fiscal integrada sem burocracia
+                                    </span>
+                                </div>
+                                <div class="mt-2 text-xs font-bold text-gray-400">
+                                    Margem exclusiva de revenda no lançamento
                                 </div>
                             </div>
 
@@ -502,28 +620,37 @@
                             <ul class="space-y-3 mb-8 text-xs sm:text-sm text-gray-700">
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Caixa Antecipado:</strong> receba R$ 699 a R$ 1.048 do seu cliente à vista.</div>
+                                    <div><strong>Tudo incluso no Plano Essencial +</strong></div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Fidelidade de 1 Ano:</strong> cliente garantido sem risco de churn mensal.</div>
+                                    <div><strong>Emissão de NFC-e (Cupom Fiscal):</strong> direto no PDV em segundos</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Suporte Técnico VIP:</strong> canal direto e prioritário no WhatsApp.</div>
+                                    <div><strong>Emissão de NF-e (Modelo 55):</strong> vendas, devoluções e remessas</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Lucro Líquido Imediato:</strong> de R$ 195,72 a R$ 545,22 por venda anual.</div>
+                                    <div><strong>Integração SEFAZ Direta:</strong> compatível com Certificado A1</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Portal do Contador:</strong> envio automático de XMLs e relatórios</div>
+                                </li>
+                                <li class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <span class="text-sm">🧠</span>
+                                    <div><strong class="text-purple-900">DuxIA Expandida:</strong> auxílio na conferência tributária</div>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20no%20Plano%20Anual%20de%20R%24%20503%2C28"
+                            <a href="https://wa.me/5538998588893?text=Ol%C3%A1%2C%20sou%20parceiro%20e%20quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20Plano%20Fiscal!"
                                 target="_blank"
-                                class="block w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold rounded-xl text-center shadow-md transition">
-                                ADQUIRIR NO PLANO ANUAL
+                                class="block w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl text-center shadow-md transition flex items-center justify-center gap-2">
+                                <span>AVISE-ME NO LANÇAMENTO</span>
+                                <i class="bi bi-whatsapp"></i>
                             </a>
                         </div>
                     </div>
@@ -533,7 +660,7 @@
                 <!-- Nota de rodapé / Letras miúdas -->
                 <div class="max-w-3xl mx-auto text-center mt-6">
                     <p class="text-[11px] text-gray-400 leading-relaxed">
-                        * O valor comercializado no site é uma referência de mercado. O parceiro possui autonomia para precificar pacotes com seus próprios serviços de suporte/implantação, desde que o valor final repassado ao cliente não seja superior a 50% do valor praticado no site oficial (teto de R$ 104,85/mês no plano mensal e R$ 1.048,50/ano no anual).
+                        * Os valores comercializados no site (R$ 49,90/mês no Plano Inicial e R$ 69,90/mês no Plano Essencial, com 2 meses grátis no modo anual) são referências de mercado. O parceiro possui autonomia para precificar pacotes com seus próprios serviços de suporte/implantação, desde que o valor final repassado ao cliente não seja superior a 50% do valor praticado no site oficial (teto de R$ 74,85/mês no Inicial e R$ 104,85/mês no Essencial).
                     </p>
                 </div>
 
@@ -836,7 +963,7 @@
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Você tem total autonomia. O modelo padrão é: <strong>você fatura o seu cliente final</strong> com o seu método preferido (Pix, boleto, cartão ou junto aos seus outros serviços) e repassa para a Duzz apenas o custo de revendedor (R$ 41,94/mês ou R$ 503,28/ano). O lucro da margem fica integralmente retido com você!
+                            Você tem total autonomia. O modelo padrão é: <strong>você fatura o seu cliente final</strong> com o seu método preferido (Pix, boleto, cartão ou junto aos seus outros serviços) e repassa para a Duzz apenas o custo de revendedor (R$ 29,94/mês no Plano Inicial ou R$ 41,94/mês no Plano Essencial — ou com 2 meses grátis no modo anual). O lucro da margem fica integralmente retido com você!
                         </p>
                     </details>
 
@@ -864,7 +991,7 @@
                             </span>
                         </summary>
                         <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            O preço praticado no site da Duzz (R$ 69,90/mês e R$ 699,00/ano) serve como valor de referência sugerido. Para manter a proteção da marca e padrões justos de mercado, o valor repassado ao cliente não pode ser mais que <strong>50% acima do preço do site oficial</strong> (teto máximo de R$ 104,85/mês no plano mensal ou R$ 1.048,50/ano no anual).
+                            Os preços praticados no site da Duzz (R$ 49,90/mês no Plano Inicial e R$ 69,90/mês no Plano Essencial, com 2 meses grátis no modo anual) servem como valores de referência sugeridos. Para manter a proteção da marca e padrões justos de mercado, o valor repassado ao cliente não pode ser mais que <strong>50% acima do preço do site oficial</strong> (teto máximo de R$ 74,85/mês no Inicial e R$ 104,85/mês no Essencial).
                         </p>
                     </details>
 
@@ -942,16 +1069,56 @@
         </div>
     </footer>
 
-    <!-- ==================== CALCULATOR SCRIPT ==================== -->
+    <!-- ==================== CALCULATOR & PRICING SCRIPT ==================== -->
     <script>
-        const COST_MONTHLY = 41.94;
-        let currentPriceMode = 'reference'; // 'reference' (69.90), 'service' (89.90), 'max' (104.85)
+        let currentCalcPlan = 'essencial';
+        let currentPriceMode = 'reference'; // 'reference', 'service', 'max'
 
-        const prices = {
-            'reference': 69.90,
-            'service': 89.90,
-            'max': 104.85
+        const planConfig = {
+            'inicial': {
+                costMonthly: 29.94,
+                prices: {
+                    'reference': 49.90,
+                    'service': 64.90,
+                    'max': 74.85
+                }
+            },
+            'essencial': {
+                costMonthly: 41.94,
+                prices: {
+                    'reference': 69.90,
+                    'service': 89.90,
+                    'max': 104.85
+                }
+            }
         };
+
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function setCalculatorPlan(plan) {
+            currentCalcPlan = plan;
+            const btnInicial = document.getElementById('btn-plan-inicial');
+            const btnEssencial = document.getElementById('btn-plan-essencial');
+
+            if (plan === 'inicial') {
+                btnInicial.className = 'p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition cursor-pointer';
+                btnEssencial.className = 'p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer';
+            } else {
+                btnEssencial.className = 'p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition cursor-pointer';
+                btnInicial.className = 'p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer';
+            }
+
+            const cfg = planConfig[plan];
+            document.getElementById('label-price-reference').textContent = formatBRL(cfg.prices.reference) + '/mês';
+            document.getElementById('label-price-service').textContent = formatBRL(cfg.prices.service) + '/mês';
+            document.getElementById('label-price-max').textContent = formatBRL(cfg.prices.max) + '/mês';
+            document.getElementById('label-cost-info').textContent = formatBRL(cfg.costMonthly) + '/mês';
+            document.getElementById('unit-cost-label').textContent = formatBRL(cfg.costMonthly);
+
+            updateCalculator();
+        }
 
         function setPricingMode(mode) {
             currentPriceMode = mode;
@@ -965,17 +1132,13 @@
 
             for (const key in buttons) {
                 if (key === mode) {
-                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition';
+                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-blue-600 bg-blue-50/80 transition cursor-pointer';
                 } else {
-                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition';
+                    buttons[key].className = 'calc-mode-btn p-3 rounded-xl text-left border-2 border-gray-200 bg-white hover:border-gray-300 transition cursor-pointer';
                 }
             }
 
             updateCalculator();
-        }
-
-        function formatBRL(value) {
-            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
         function updateCalculator() {
@@ -985,9 +1148,10 @@
             document.getElementById('clients-display').textContent = clients;
             document.getElementById('clients-count-cost').textContent = clients;
 
-            const sellingPrice = prices[currentPriceMode];
+            const cfg = planConfig[currentCalcPlan];
+            const sellingPrice = cfg.prices[currentPriceMode];
             const grossMonthly = clients * sellingPrice;
-            const costMonthly = clients * COST_MONTHLY;
+            const costMonthly = clients * cfg.costMonthly;
             const profitMonthly = grossMonthly - costMonthly;
             const profitAnnual = profitMonthly * 12;
 
@@ -995,6 +1159,75 @@
             document.getElementById('cost-monthly').textContent = '- ' + formatBRL(costMonthly);
             document.getElementById('profit-monthly').textContent = formatBRL(profitMonthly);
             document.getElementById('profit-annual').textContent = formatBRL(profitAnnual) + '/ano';
+        }
+
+        function setBillingFrequency(freq) {
+            const mensalBtn = document.getElementById('toggle-mensal-btn');
+            const anualBtn = document.getElementById('toggle-anual-btn');
+
+            const priceInicialVal = document.getElementById('price-inicial-value');
+            const priceInicialPeriod = document.getElementById('price-inicial-period');
+            const priceInicialDaily = document.getElementById('price-inicial-daily');
+            const badgeInicialBonus = document.getElementById('badge-inicial-bonus');
+            const priceInicialSite = document.getElementById('price-inicial-site');
+            const dailySiteInicial = document.getElementById('Daily-site-inicial');
+            const btnInicial = document.getElementById('btn-cta-inicial');
+
+            const priceEssencialVal = document.getElementById('price-essencial-value');
+            const priceEssencialPeriod = document.getElementById('price-essencial-period');
+            const priceEssencialDaily = document.getElementById('price-essencial-daily');
+            const badgeEssencialBonus = document.getElementById('badge-essencial-bonus');
+            const priceEssencialSite = document.getElementById('price-essencial-site');
+            const dailySiteEssencial = document.getElementById('Daily-site-essencial');
+            const btnEssencial = document.getElementById('btn-cta-essencial');
+
+            if (freq === 'annual') {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 cursor-pointer';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center gap-1.5 cursor-pointer';
+                }
+
+                // Plano Inicial Anual: R$ 299,40 /ano (2 meses grátis + 40% OFF sobre R$ 499,00)
+                if (priceInicialVal) priceInicialVal.textContent = 'R$ 299,40';
+                if (priceInicialPeriod) priceInicialPeriod.textContent = '/ano';
+                if (priceInicialDaily) priceInicialDaily.textContent = '☕ Apenas R$ 0,82 por dia';
+                if (badgeInicialBonus) badgeInicialBonus.classList.remove('hidden');
+                if (priceInicialSite) priceInicialSite.textContent = 'R$ 499,00/ano';
+                if (dailySiteInicial) dailySiteInicial.textContent = '(R$ 1,36/dia no site)';
+                if (btnInicial) btnInicial.href = 'https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Inicial%20Anual%20(R%24%20299%2C40)';
+
+                // Plano Essencial Anual: R$ 419,40 /ano (2 meses grátis + 40% OFF sobre R$ 699,00)
+                if (priceEssencialVal) priceEssencialVal.textContent = 'R$ 419,40';
+                if (priceEssencialPeriod) priceEssencialPeriod.textContent = '/ano';
+                if (priceEssencialDaily) priceEssencialDaily.textContent = '☕ Apenas R$ 1,15 por dia';
+                if (badgeEssencialBonus) badgeEssencialBonus.classList.remove('hidden');
+                if (priceEssencialSite) priceEssencialSite.textContent = 'R$ 699,00/ano';
+                if (dailySiteEssencial) dailySiteEssencial.textContent = '(R$ 1,91/dia no site)';
+                if (btnEssencial) btnEssencial.href = 'https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Essencial%20Anual%20(R%24%20419%2C40)';
+            } else {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5 cursor-pointer';
+                }
+
+                // Plano Inicial Mensal: R$ 29,94 /mês
+                if (priceInicialVal) priceInicialVal.textContent = 'R$ 29,94';
+                if (priceInicialPeriod) priceInicialPeriod.textContent = '/mês';
+                if (priceInicialDaily) priceInicialDaily.textContent = '☕ Apenas R$ 0,99 por dia';
+                if (badgeInicialBonus) badgeInicialBonus.classList.add('hidden');
+                if (priceInicialSite) priceInicialSite.textContent = 'R$ 49,90/mês';
+                if (dailySiteInicial) dailySiteInicial.textContent = '(R$ 1,66/dia no site)';
+                if (btnInicial) btnInicial.href = 'https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Inicial%20Mensal%20(R%24%2029%2C94)';
+
+                // Plano Essencial Mensal: R$ 41,94 /mês
+                if (priceEssencialVal) priceEssencialVal.textContent = 'R$ 41,94';
+                if (priceEssencialPeriod) priceEssencialPeriod.textContent = '/mês';
+                if (priceEssencialDaily) priceEssencialDaily.textContent = '☕ Apenas R$ 1,39 por dia';
+                if (badgeEssencialBonus) badgeEssencialBonus.classList.add('hidden');
+                if (priceEssencialSite) priceEssencialSite.textContent = 'R$ 69,90/mês';
+                if (dailySiteEssencial) dailySiteEssencial.textContent = '(R$ 2,33/dia no site)';
+                if (btnEssencial) btnEssencial.href = 'https://wa.me/5538998588893?text=Ol%C3%A1%2C%20quero%20ativar%20uma%20revenda%20do%20Plano%20Essencial%20Mensal%20(R%24%2041%2C94)';
+            }
         }
 
         // Initialize on load

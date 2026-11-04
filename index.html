@@ -41,7 +41,7 @@
         "applicationCategory": "BusinessApplication",
         "offers": {
           "@type": "Offer",
-          "price": "69.90",
+          "price": "49.90",
           "priceCurrency": "BRL",
           "priceValidUntil": "2026-12-31"
         },
@@ -1361,17 +1361,115 @@
                     <div
                         class="inline-flex items-center gap-2.5 bg-blue-50 border border-blue-200 text-blue-900 rounded-2xl px-5 py-3 text-xs sm:text-sm font-semibold max-w-2xl mx-auto shadow-xs text-left sm:text-center">
                         <span class="text-base shrink-0">💡</span>
-                        <span><strong>Tudo incluso por R$ 69,90/mês:</strong> Comandas, App Garçom, Estoque e IA já
-                            estão inclusos. Você não precisa pagar planos caros de R$ 150 a R$ 220 só para ter o sistema
-                            completo.</span>
+                        <span><strong>Planos a partir de R$ 49,90/mês:</strong> Do controle essencial ao sistema completo por R$ 69,90/mês com Comandas, App Garçom, Estoque e IA inclusos — sem pagar planos caros de R$ 150 a R$ 220.</span>
+                    </div>
+
+                    <!-- TOGGLE MENSAL / ANUAL -->
+                    <div class="mt-8 flex justify-center">
+                        <div class="inline-flex items-center bg-gray-200/80 p-1.5 rounded-2xl border border-gray-300 shadow-inner">
+                            <button id="toggle-mensal-btn" type="button" onclick="setBillingFrequency('monthly')"
+                                class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer">
+                                Mensal
+                            </button>
+                            <button id="toggle-anual-btn" type="button" onclick="setBillingFrequency('annual')"
+                                class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5 cursor-pointer">
+                                <span>Anual</span>
+                                <span class="bg-emerald-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+                                    🎁 2 Meses Grátis
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 justify-center items-stretch gap-8 max-w-6xl mx-auto">
 
-                    <!-- PLANO ESSENCIAL MENSAL -->
+                    <!-- PLANO INICIAL -->
                     <div
-                        class="flex-1 bg-white border-2 border-blue-600 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300 transform lg:-translate-y-2">
+                        class="bg-white border border-gray-200 rounded-3xl p-7 lg:p-8 shadow-lg relative flex flex-col justify-between hover:shadow-xl transition duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-black text-gray-900">Plano Inicial</h3>
+                                <span id="badge-inicial-cycle"
+                                    class="text-xs font-bold text-gray-700 bg-gray-100 px-2.5 py-1 rounded-lg border border-gray-200">Mensal</span>
+                            </div>
+
+                            <p class="text-gray-500 text-xs mb-4">O essencial para organizar suas vendas, estoque e caixa no dia a dia.</p>
+
+                            <!-- Preço -->
+                            <div class="mt-2 mb-6 pb-4 border-b border-gray-100">
+                                <div class="flex items-baseline gap-1.5 flex-wrap">
+                                    <span id="price-inicial-old" class="text-xs text-gray-400 line-through font-semibold hidden">De R$ 598,80</span>
+                                    <span id="price-inicial-value" class="text-4xl font-black text-gray-900 tracking-tight">R$ 49,90</span>
+                                    <span id="price-inicial-period" class="text-gray-500 text-sm font-semibold">/mês</span>
+                                </div>
+                                <div class="mt-2 flex flex-wrap items-center gap-2">
+                                    <span id="price-inicial-daily"
+                                        class="inline-flex items-center gap-1 text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
+                                        ☕ Apenas R$ 1,66 por dia
+                                    </span>
+                                    <span id="badge-inicial-bonus"
+                                        class="inline-flex items-center gap-1 text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 hidden">
+                                        🎁 2 Meses Grátis
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Lista de Recursos -->
+                            <ul class="space-y-3 mb-8 text-left text-xs sm:text-sm">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Frente de Caixa Ágil (PDV):</strong> vendas rápidas de produtos e serviços</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Controle de Estoque:</strong> entradas, baixas, grade e ficha técnica</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Fechamento de Caixa:</strong> abertura, sangria e conferência por turno</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Fiado Organizado:</strong> notas promissórias e controle de pendências</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Impressão de Etiquetas:</strong> código de barras para gôndola e produtos</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-green-600 mt-0.5"></i>
+                                    <div><strong>Acesso 100% Online:</strong> use no computador e no celular</div>
+                                </li>
+                                <li
+                                    class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <span class="text-sm">🧠</span>
+                                    <div><strong class="text-purple-900">5 mensagens duxIA/mês:</strong> assistente inteligente para apoiar sua gestão</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p
+                                class="text-xs text-center text-gray-600 font-bold mb-2 flex items-center justify-center gap-1">
+                                <span>⚡</span> 15 Dias de Teste Grátis • Sem cartão de crédito
+                            </p>
+
+                            <a id="btn-cta-inicial" target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=basic"
+                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Inicial 15 Dias' }); fbq('track', 'Lead');"
+                                class="block w-full py-3.5 bg-gray-900 text-white font-extrabold rounded-xl text-center hover:bg-gray-800 transition shadow-md flex items-center justify-center gap-2">
+                                <span>TESTAR 15 DIAS GRÁTIS</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PLANO ESSENCIAL -->
+                    <div
+                        class="bg-white border-2 border-blue-600 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300 transform lg:-translate-y-2">
                         <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
                             <span
                                 class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
@@ -1382,30 +1480,37 @@
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <h3 class="text-2xl font-black text-gray-900">Plano Essencial</h3>
-                                <span
-                                    class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">Mensal</span>
+                                <span id="badge-essencial-cycle"
+                                    class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">Completo</span>
                             </div>
 
-                            <p class="text-gray-500 text-xs mb-4">Frente de caixa ágil, estoque e controle financeiro
+                            <p class="text-gray-500 text-xs mb-4">Frente de caixa ágil, estoque, comandas e controle financeiro
                                 completo para quem quer crescer.</p>
 
                             <!-- Preço -->
-                            <div class="mt-2 mb-6 flex items-baseline gap-1.5 pb-4 border-b border-gray-100">
-                                <span class="text-4xl font-black text-gray-900 tracking-tight">R$ 69,90</span>
-                                <span class="text-gray-500 text-sm font-semibold">/mês</span>
+                            <div class="mt-2 mb-6 pb-4 border-b border-gray-100">
+                                <div class="flex items-baseline gap-1.5 flex-wrap">
+                                    <span id="price-essencial-old" class="text-xs text-gray-400 line-through font-semibold hidden">De R$ 838,80</span>
+                                    <span id="price-essencial-value" class="text-4xl font-black text-gray-900 tracking-tight">R$ 69,90</span>
+                                    <span id="price-essencial-period" class="text-gray-500 text-sm font-semibold">/mês</span>
+                                </div>
+                                <div class="mt-2 flex flex-wrap items-center gap-2">
+                                    <span id="price-essencial-daily"
+                                        class="inline-flex items-center gap-1 text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200">
+                                        ☕ Apenas R$ 2,33 por dia
+                                    </span>
+                                    <span id="badge-essencial-bonus"
+                                        class="inline-flex items-center gap-1 text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 hidden">
+                                        🎁 2 Meses Grátis
+                                    </span>
+                                </div>
                             </div>
 
                             <!-- Lista de Recursos -->
                             <ul class="space-y-3 mb-8 text-left text-xs sm:text-sm">
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Frente de Caixa Ágil (PDV):</strong> vendas no balcão sem filas e sem
-                                        travar</div>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Cadastro pela Nota (XML):</strong> cadastre produtos e estoque em 1
-                                        clique</div>
+                                    <div><strong>Tudo do Plano Inicial +</strong></div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
@@ -1414,29 +1519,25 @@
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Impressão de Etiquetas:</strong> código de barras para gôndola e
-                                        produtos</div>
+                                    <div><strong>Cadastro pela Nota (XML):</strong> cadastre produtos e estoque em 1
+                                        clique</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Estoque Inteligente:</strong> saiba o que mais dá lucro e evite
-                                        produtos vencidos</div>
+                                    <div><strong>Estoque Inteligente (Curva ABC):</strong> saiba o que mais dá lucro e o ponto de compra</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Fechamento de Caixa sem Erro:</strong> conferência de dinheiro, Pix e
-                                        cartão</div>
+                                    <div><strong>Financeiro e Contas a Pagar:</strong> controle de despesas, múltiplos caixas e fornecedores</div>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-blue-600 mt-0.5"></i>
-                                    <div><strong>Fiado Organizado:</strong> extrato por cliente para enviar direto no
-                                        WhatsApp</div>
+                                    <div><strong>Visão Geral & Raio-X (DRE):</strong> métricas de saúde, lucro real e previsão mensal</div>
                                 </li>
                                 <li
                                     class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Assistente Inteligente:</strong> alertas
-                                        de compras e resumo do dia</div>
+                                    <div><strong class="text-purple-900">DuxIA Assistente Inteligente:</strong> 20 mensagens/mês + Insights Ativos na Home</div>
                                 </li>
                             </ul>
                         </div>
@@ -1447,7 +1548,7 @@
                                 <span>⚡</span> 15 Dias de Teste Grátis • Sem cartão de crédito
                             </p>
 
-                            <a target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=pro"
+                            <a id="btn-cta-essencial" target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=pro"
                                 onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Testar Essencial 15 Dias' }); fbq('track', 'Lead');"
                                 class="block w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold rounded-xl text-center hover:from-blue-700 hover:to-indigo-700 transition shadow-md flex items-center justify-center gap-2">
                                 <span>TESTAR 15 DIAS GRÁTIS</span>
@@ -1459,42 +1560,35 @@
                         </div>
                     </div>
 
-                    <!-- PLANO ESSENCIAL ANUAL -->
+                    <!-- PLANO FISCAL (EM BREVE) -->
                     <div
-                        class="flex-1 bg-gradient-to-b from-emerald-50/50 via-white to-white border-2 border-emerald-500 rounded-3xl p-7 lg:p-8 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition duration-300">
+                        class="bg-gradient-to-b from-slate-50 via-white to-white border-2 border-dashed border-emerald-500/70 rounded-3xl p-7 lg:p-8 shadow-lg relative flex flex-col justify-between hover:shadow-xl transition duration-300">
                         <div class="absolute top-0 right-0 left-0 -mt-3.5 flex justify-center">
                             <span
                                 class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
-                                🎁 GANHE 2 MESES GRÁTIS
+                                🚀 Em Breve
                             </span>
                         </div>
 
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-2xl font-black text-gray-900">Essencial Anual</h3>
+                                <h3 class="text-2xl font-black text-gray-900">Plano Fiscal</h3>
                                 <span
-                                    class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">Plano
-                                    Anual</span>
+                                    class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">Módulo
+                                    Fiscal</span>
                             </div>
 
-                            <p class="text-gray-500 text-xs mb-4">O poder total do Duzz com a máxima economia e suporte
-                                VIP.</p>
+                            <p class="text-gray-500 text-xs mb-4">Toda a gestão do Plano Essencial somada à emissão fiscal descomplicada.</p>
 
                             <!-- Preço -->
                             <div class="mt-2 mb-6 pb-4 border-b border-gray-100">
                                 <div class="flex items-baseline gap-2">
-                                    <span class="text-4xl font-black text-emerald-600 tracking-tight">R$ 699,00</span>
-                                    <span class="text-gray-500 text-sm font-semibold">/ano</span>
-                                    <span class="text-xs text-gray-400 line-through">R$ 838,80</span>
+                                    <span class="text-4xl font-black text-emerald-600 tracking-tight">Em Breve</span>
                                 </div>
                                 <div class="mt-1 flex flex-wrap items-center gap-2">
                                     <span
-                                        class="text-xs font-black text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">
-                                        Equivale a apenas R$ 58,25/mês
-                                    </span>
-                                    <span
                                         class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">
-                                        Pague 10, leve 12 meses
+                                        Emissão fiscal integrada sem burocracia
                                     </span>
                                 </div>
                             </div>
@@ -1503,51 +1597,43 @@
                             <ul class="space-y-3 mb-8 text-left text-xs sm:text-sm">
                                 <li class="flex items-start gap-2.5">
                                     <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Tudo incluso no Plano Mensal</strong> (PDV, Etiquetas, XML, Comandas,
-                                        Estoque)
-                                    </div>
+                                    <div><strong>Tudo incluso no Plano Essencial +</strong></div>
                                 </li>
-                                <li
-                                    class="flex items-start gap-2.5 bg-emerald-50 p-2 rounded-lg border border-emerald-200/60">
-                                    <span class="text-sm">🎁</span>
-                                    <div><strong class="text-emerald-900">Ganha 2 Meses Grátis</strong> (12 meses pelo
-                                        preço de 10)</div>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Emissão de NFC-e (Cupom Fiscal):</strong> direto no PDV em segundos</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Emissão de NF-e (Modelo 55):</strong> notas de venda, devolução e remessa</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Integração SEFAZ Direta:</strong> compatível com Certificado Digital A1</div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
+                                    <div><strong>Portal do Contador:</strong> envio automático de XMLs e relatórios fiscais</div>
                                 </li>
                                 <li
                                     class="flex items-start gap-2.5 bg-purple-50 p-2 rounded-lg border border-purple-100">
                                     <span class="text-sm">🧠</span>
-                                    <div><strong class="text-purple-900">DuxIA Expandida & Insights Ativos</strong>
-                                        (auditoria na Home + 50 consultas/mês)</div>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>15 Dias de Teste Grátis</strong></div>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Suporte Prioritário VIP</strong> direto no WhatsApp</div>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="bi bi-check-circle-fill text-emerald-600 mt-0.5"></i>
-                                    <div><strong>Garantia Incondicional de 30 Dias</strong></div>
+                                    <div><strong class="text-purple-900">DuxIA Expandida:</strong> auxílio inteligente na conferência tributária</div>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
                             <p
-                                class="text-xs text-center text-emerald-600 font-bold mb-2 flex items-center justify-center gap-1">
-                                <span>🎉</span> 15 Dias Grátis • Ganha 2 Meses no Anual
+                                class="text-xs text-center text-emerald-700 font-bold mb-2 flex items-center justify-center gap-1">
+                                <span>🔔</span> Seja avisado em primeira mão no lançamento
                             </p>
 
-                            <a target="_blank" href="https://app.duzzsystem.com.br/onboarding?plan=enterprise"
-                                onclick="gtag('event', 'click_cta', { 'button_location': 'pricing', 'button_name': 'Assinar Anual' }); fbq('track', 'Lead');"
-                                class="block w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold rounded-xl text-center hover:from-emerald-700 hover:to-teal-700 transition shadow-md flex items-center justify-center gap-2">
-                                <span>APROVEITAR COM 2 MESES GRÁTIS</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
+                            <a href="#"
+                                onclick="handleWhatsAppClick(event, 'Olá! Vi o Plano Fiscal (Em Breve) no site da Duzz e gostaria de ser avisado assim que for lançado.', 'pricing_fiscal_waitlist');"
+                                class="block w-full py-3.5 bg-emerald-600 text-white font-extrabold rounded-xl text-center hover:bg-emerald-700 transition shadow-md flex items-center justify-center gap-2">
+                                <span>AVISE-ME NO LANÇAMENTO</span>
+                                <i class="bi bi-whatsapp"></i>
                             </a>
                         </div>
                     </div>
@@ -2394,6 +2480,87 @@
                 });
             }
         });
+
+        function setBillingFrequency(freq) {
+            const mensalBtn = document.getElementById('toggle-mensal-btn');
+            const anualBtn = document.getElementById('toggle-anual-btn');
+
+            const priceInicialOld = document.getElementById('price-inicial-old');
+            const priceInicialVal = document.getElementById('price-inicial-value');
+            const priceInicialPeriod = document.getElementById('price-inicial-period');
+            const priceInicialDaily = document.getElementById('price-inicial-daily');
+            const badgeInicialBonus = document.getElementById('badge-inicial-bonus');
+            const badgeInicialCycle = document.getElementById('badge-inicial-cycle');
+            const btnInicial = document.getElementById('btn-cta-inicial');
+
+            const priceEssencialOld = document.getElementById('price-essencial-old');
+            const priceEssencialVal = document.getElementById('price-essencial-value');
+            const priceEssencialPeriod = document.getElementById('price-essencial-period');
+            const priceEssencialDaily = document.getElementById('price-essencial-daily');
+            const badgeEssencialBonus = document.getElementById('badge-essencial-bonus');
+            const badgeEssencialCycle = document.getElementById('badge-essencial-cycle');
+            const btnEssencial = document.getElementById('btn-cta-essencial');
+
+            if (freq === 'annual') {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 cursor-pointer';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center gap-1.5 cursor-pointer';
+                }
+
+                // Plano Inicial Anual: R$ 499,00 /ano (2 meses grátis)
+                if (priceInicialOld) priceInicialOld.classList.remove('hidden');
+                if (priceInicialVal) priceInicialVal.textContent = 'R$ 499,00';
+                if (priceInicialPeriod) priceInicialPeriod.textContent = '/ano';
+                if (priceInicialDaily) priceInicialDaily.textContent = '☕ Apenas R$ 1,36 por dia';
+                if (badgeInicialBonus) badgeInicialBonus.classList.remove('hidden');
+                if (badgeInicialCycle) {
+                    badgeInicialCycle.textContent = 'Anual';
+                    badgeInicialCycle.className = 'text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200';
+                }
+                if (btnInicial) btnInicial.href = 'https://app.duzzsystem.com.br/onboarding?plan=basic&billing=annual';
+
+                // Plano Essencial Anual: R$ 699,00 /ano (2 meses grátis)
+                if (priceEssencialOld) priceEssencialOld.classList.remove('hidden');
+                if (priceEssencialVal) priceEssencialVal.textContent = 'R$ 699,00';
+                if (priceEssencialPeriod) priceEssencialPeriod.textContent = '/ano';
+                if (priceEssencialDaily) priceEssencialDaily.textContent = '☕ Apenas R$ 1,91 por dia';
+                if (badgeEssencialBonus) badgeEssencialBonus.classList.remove('hidden');
+                if (badgeEssencialCycle) {
+                    badgeEssencialCycle.textContent = 'Anual';
+                    badgeEssencialCycle.className = 'text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200';
+                }
+                if (btnEssencial) btnEssencial.href = 'https://app.duzzsystem.com.br/onboarding?plan=enterprise';
+            } else {
+                if (mensalBtn && anualBtn) {
+                    mensalBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer';
+                    anualBtn.className = 'px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 text-gray-600 hover:text-gray-900 flex items-center gap-1.5 cursor-pointer';
+                }
+
+                // Plano Inicial Mensal: R$ 49,90 /mês
+                if (priceInicialOld) priceInicialOld.classList.add('hidden');
+                if (priceInicialVal) priceInicialVal.textContent = 'R$ 49,90';
+                if (priceInicialPeriod) priceInicialPeriod.textContent = '/mês';
+                if (priceInicialDaily) priceInicialDaily.textContent = '☕ Apenas R$ 1,66 por dia';
+                if (badgeInicialBonus) badgeInicialBonus.classList.add('hidden');
+                if (badgeInicialCycle) {
+                    badgeInicialCycle.textContent = 'Mensal';
+                    badgeInicialCycle.className = 'text-xs font-bold text-gray-700 bg-gray-100 px-2.5 py-1 rounded-lg border border-gray-200';
+                }
+                if (btnInicial) btnInicial.href = 'https://app.duzzsystem.com.br/onboarding?plan=basic';
+
+                // Plano Essencial Mensal: R$ 69,90 /mês
+                if (priceEssencialOld) priceEssencialOld.classList.add('hidden');
+                if (priceEssencialVal) priceEssencialVal.textContent = 'R$ 69,90';
+                if (priceEssencialPeriod) priceEssencialPeriod.textContent = '/mês';
+                if (priceEssencialDaily) priceEssencialDaily.textContent = '☕ Apenas R$ 2,33 por dia';
+                if (badgeEssencialBonus) badgeEssencialBonus.classList.add('hidden');
+                if (badgeEssencialCycle) {
+                    badgeEssencialCycle.textContent = 'Completo';
+                    badgeEssencialCycle.className = 'text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100';
+                }
+                if (btnEssencial) btnEssencial.href = 'https://app.duzzsystem.com.br/onboarding?plan=pro';
+            }
+        }
 
         function handleWhatsAppClick(event, copyText, trackingLocation) {
             event.preventDefault();
