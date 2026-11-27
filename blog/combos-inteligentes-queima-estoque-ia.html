@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Combos Inteligentes e Queima de Estoque com IA: Venda Itens Parados Sem Prejuízo | Blog Duzz System</title>
+    <link rel="shortcut icon" href="../icons/logo_com_fundo.png">
+    <link rel="canonical" href="https://duzzsystem.com.br/blog/combos-inteligentes-queima-estoque-ia.html">
+    <meta name="description"
+        content="Aprenda como a duxIA Comercial cruza itens Curva A e Curva C com curadoria semântica e precificação matemática para desovar estoque parado e elevar o ticket médio.">
+    <meta name="keywords"
+        content="combos inteligentes ia, queima de estoque sem prejuizo, duxia comercial duzz, curadoria semantica vendas, como desovar estoque encalhado, kits promocionais comercio">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0056b3">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://duzzsystem.com.br/blog/combos-inteligentes-queima-estoque-ia.html">
+    <meta property="og:title" content="Combos Inteligentes e Queima de Estoque com IA: Venda Itens Parados Sem Prejuízo">
+    <meta property="og:description"
+        content="Como a IA cruza produtos âncora da Curva A com itens encalhados da Curva C, calcula margens seguras e cadastra combos no sistema em 1 clique.">
+    <meta property="og:image" content="https://duzzsystem.com.br/icons/logo_com_fundo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Combos Inteligentes com IA no Comércio | duxIA Comercial">
+    <meta name="twitter:description" content="Recupere capital parado em estoque com bundles estratégicos e precificação científica sem queimar sua margem de lucro.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Combos Inteligentes e Queima de Estoque com IA: Como Vender Itens Parados Sem Prejuízo",
+      "image": "https://duzzsystem.com.br/icons/logo_com_fundo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duzz System"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Duzz System",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://duzzsystem.com.br/icons/logo_sem_fundo.png"
+        }
+      },
+      "datePublished": "2026-03-14",
+      "dateModified": "2026-03-17",
+      "description": "Metodologia prática e automação com inteligência artificial para criar bundles lucrativos entre campeões de vendas e itens parados no estoque."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QF739MXBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QF739MXBB');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            purple: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gradient-text-purple {
+            background: linear-gradient(135deg, #7c3aed, #0284c7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Duzz System Home">
+                    <img src="../icons/logo_sem_fundo.png" alt="Logotipo Duzz System" class="h-10 w-auto">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100 hidden sm:inline-block">Blog & Guias</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Início</a>
+                    <a href="index.html" class="text-brand-blue text-sm font-bold transition">Artigos & Blog</a>
+                    <a href="../ferramentas/index.html" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Ferramentas Grátis</a>
+                    <a href="../index.html#planos" class="text-slate-600 hover:text-brand-blue text-sm font-semibold transition">Planos</a>
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition shadow-md shadow-blue-500/20 hover:shadow-lg">Experimentar Grátis</a>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue text-white text-xs font-semibold px-4 py-2 rounded-full">Testar</a>
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-blue focus:outline-none" aria-label="Abrir Menu">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-slate-100 flex flex-col space-y-3 pb-2">
+                <a href="../index.html" class="text-slate-600 font-medium py-1">Início</a>
+                <a href="index.html" class="text-brand-blue font-bold py-1">Artigos & Blog</a>
+                <a href="../ferramentas/index.html" class="text-slate-600 font-medium py-1">Ferramentas Grátis</a>
+                <a href="../index.html#planos" class="text-slate-600 font-medium py-1">Planos</a>
+                <a href="https://app.duzzsystem.com.br/onboarding" class="bg-brand-blue text-white text-center font-semibold py-2.5 rounded-xl mt-2">Começar Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / BREADCRUMB -->
+    <header class="pt-32 pb-12 bg-gradient-to-b from-purple-50/60 via-slate-50 to-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-brand-blue transition">Home</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <a href="index.html" class="hover:text-brand-blue transition">Blog</a>
+                <i class="bi bi-chevron-right text-[10px]"></i>
+                <span class="text-purple-700 font-semibold">duxIA & Vendas</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold mb-4 border border-purple-200">
+                <i class="bi bi-robot"></i> duxIA Comercial & Vendas
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                Combos Inteligentes e Queima de Estoque com IA: Como Vender Itens Parados <span class="gradient-text-purple">Sem Prejuízo</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal mb-6">
+                Reduzir preço em 50% para queimar mercadoria encalhada destrói a percepção de valor da sua marca e devora o lucro líquido. Descubra como a <strong>duxIA Comercial</strong> utiliza curadoria semântica e matemática de margens para destravar o capital de giro em 1 clique.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-4 border-t border-slate-200">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-xs">DX</div>
+                    <span class="font-medium text-slate-700">Equipe duxIA & Duzz System</span>
+                </div>
+                <span>•</span>
+                <span><i class="bi bi-clock me-1"></i> Leitura: 7 min</span>
+                <span>•</span>
+                <span><i class="bi bi-calendar-check me-1"></i> Atualizado em Março/2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container mx-auto px-6 max-w-4xl py-8 flex-1">
+        <article class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand-blue hover:prose-a:text-blue-700">
+
+            <!-- Context / The Trap of Liquidations -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-2xl mb-8">
+                <div class="flex items-start gap-3">
+                    <i class="bi bi-exclamation-triangle-fill text-amber-600 text-xl mt-0.5"></i>
+                    <div>
+                        <h2 class="text-amber-900 font-bold text-base not-prose mb-1">A armadilha mortal do "Bota-Fora" tradicional</h2>
+                        <p class="text-amber-800 text-sm leading-relaxed not-prose">
+                            Quando um lojista percebe que comprou mercadorias demais que ficaram 90 dias paradas na prateleira, seu reflexo imediato costuma ser anunciar "Liquidação 50% OFF". O resultado? Os clientes se acostumam com preços baixos, o caixa recebe menos do que o custo de reposição e os produtos nobres perdem atratividade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                Todo varejista e prestador de serviços com produtos tem no estoque itens da <a href="curva-abc-gestao-de-estoque.html" class="font-semibold underline">Curva C</a>: produtos de baixo giro que consomem espaço de armazenagem e congelam o capital de giro.
+            </p>
+
+            <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                A estratégia mais eficiente e lucrativa praticada pelos grandes players globais (e agora automatizada no pequeno varejo pela <strong>duxIA Comercial</strong>) é o <em>Product Bundling Inteligente</em>: associar um campeão de vendas incontestável da sua loja com o item parado, embalados em uma oferta que parece irresistível para o consumidor final e lucrativa para o seu balanço.
+            </p>
+
+            <!-- Curadoria Semântica -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-cpu text-purple-600"></i>
+                1. O que é a Curadoria Semântica da duxIA?
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Sistemas tradicionais de ERP tentam montar kits cruzando dados de estoque cegamente — por exemplo, sugerindo juntar uma cafeteira com uma capa de celular só porque ambos estão parados. O consumidor rejeita combos desconexos.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed">
+                A <strong>duxIA</strong> opera com modelos de linguagem e embeddings semânticos para entender o <strong>hábito de consumo e a sinergia de uso</strong>:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-700 block mb-1">
+                        <i class="bi bi-x-circle-fill me-1"></i> Bundle sem inteligência
+                    </span>
+                    <p class="text-slate-800 font-semibold text-sm mb-2">Hambúrguer Gourmet + Suco de Tomate 300ml encalhado</p>
+                    <p class="text-xs text-slate-600">O cliente não quer suco de tomate no almoço. O produto C continua parado e o combo não vende.</p>
+                </div>
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-1">
+                        <i class="bi bi-check-circle-fill me-1"></i> Bundle Curado pela duxIA
+                    </span>
+                    <p class="text-slate-800 font-semibold text-sm mb-2">Hambúrguer Campeão (Curva A) + Batata Rústica com Molho Artesanal em Excesso de Insumo (Curva C)</p>
+                    <p class="text-xs text-slate-600">Alta complementaridade biológica e gastronômica. O consumidor percebe um super upgrade por poucos reais a mais.</p>
+                </div>
+            </div>
+
+            <!-- Fórmula Matemática -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-calculator text-brand-blue"></i>
+                2. A Fórmula Matemática de Precificação do Combo
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Como precificar o combo sem queimar a margem de lucro do produto principal? A duxIA adota a regra de <strong>Margem Marginal Segura</strong>:
+            </p>
+
+            <div class="bg-slate-900 text-white rounded-2xl p-6 my-6 not-prose shadow-xl">
+                <div class="text-xs font-mono text-purple-400 uppercase tracking-widest mb-2">// Algoritmo de Precificação duxIA</div>
+                <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mb-3">
+                    Preço Combo = Preço de Venda (Item A) + [Custo de Aquisição (Item C) × 1.15]
+                </div>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    <strong>Por que 1.15?</strong> O fator de 15% cobre impostos operacionais, taxas de cartão/pix e garante um pequeno ganho marginal sobre o custo do produto que estava 100% empatado.
+                </p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 my-6 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-base mb-3">Exemplo Prático em Loja de Roupas / Acessórios:</h3>
+                <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+                    <li><strong>Item A (Chamariz):</strong> Vestido Canelado Sucesso — Preço normal: <strong>R$ 119,90</strong> (Custo: R$ 50,00).</li>
+                    <li><strong>Item C (Encalhado há 80 dias):</strong> Cinto Fino Sintético — Preço de tabela: R$ 49,90 (Custo de compra: R$ 15,00). Ninguém compra avulso.</li>
+                    <li><strong>Preço Combo Calculado pela duxIA:</strong> R$ 119,90 + (R$ 15,00 × 1.15 = R$ 17,25) = <strong class="text-emerald-600">R$ 137,15 (arredondado para R$ 139,00)</strong>.</li>
+                </ul>
+                <div class="mt-4 p-3 bg-blue-50 rounded-xl text-xs text-blue-900">
+                    <strong>Efeito Psicológico no Cliente:</strong> Por apenas R$ 19,10 a mais (menos da metade do valor original do cinto), ela leva o look completo pronto. O lojista resgata os R$ 15,00 que estavam apodrecendo no estoque com sobra de margem.
+                </div>
+            </div>
+
+            <!-- Ação em 1 clique -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-lightning-charge text-amber-500"></i>
+                3. Operação Action-First: Do Chat ao PDV em 1 Clique
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Em outros softwares, criar um combo exige abrir 3 cadastros, calcular fichas de insumo manualmente, ajustar tabelas de preços e republicar catálogos.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed">
+                Com o agente <strong>duxIA Comercial</strong> integrado ao Duzz System, tudo acontece de maneira automatizada:
+            </p>
+
+            <ol class="space-y-4 my-6 text-slate-700">
+                <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs mt-0.5 shrink-0">1</span>
+                    <div>
+                        <strong>Identificação Proativa:</strong> A IA monitora os produtos sem giro nos últimos 60 dias e encontra o par perfeito no seu catálogo.
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs mt-0.5 shrink-0">2</span>
+                    <div>
+                        <strong>Proposta no Chat:</strong> Você recebe a mensagem: <em>"Detectei 24 unidades do Cinto Slim paradas há 75 dias. Sugiro criar o combo 'Look Completo' com o Vestido Canelado por R$ 139,00. Deseja criar o produto agora?"</em>.
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs mt-0.5 shrink-0">3</span>
+                    <div>
+                        <strong>Criação Instantânea:</strong> Ao clicar em <strong>[Criar Combo Agora]</strong>, o Duzz cadastra a <a href="composicao-de-produtos-e-ficha-tecnica.html" class="underline">composição de produtos</a>, programa a baixa automática dos dois itens no estoque e publica na vitrine do seu <a href="como-criar-catalogo-digital-whatsapp.html" class="underline">catálogo virtual para WhatsApp</a>.
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Copywriting de Escassez -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+                <i class="bi bi-megaphone text-purple-600"></i>
+                4. Copywriting Persuasivo com Escassez Real
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed">
+                Junto com o cadastro do combo, a duxIA sugere o texto de divulgação para a sua lista de transmissão ou status do WhatsApp. Em vez do batido "Promoção imperdível", a IA aplica gatilhos de <strong>escassez honesta</strong>:
+            </p>
+
+            <div class="bg-slate-100 border border-slate-200 rounded-2xl p-5 my-4 not-prose font-mono text-xs sm:text-sm text-slate-800">
+                <div class="text-xs font-sans text-slate-500 font-semibold mb-2 uppercase tracking-wide flex items-center gap-1.5">
+                    <i class="bi bi-whatsapp text-emerald-600"></i> Mensagem gerada pela duxIA:
+                </div>
+                <p class="mb-2">"Oi, [Nome do Cliente]! ✨</p>
+                <p class="mb-2">Separamos um lote exclusivo do nosso <strong>Vestido Canelado Campeão</strong> acompanhado do <strong>Cinto Slim de acabamento fino</strong> por apenas R$ 139,00 (o conjunto sairia por R$ 169,80 avulso).</p>
+                <p class="mb-2">⚠️ Temos apenas 15 conjuntos montados com essa condição especial.</p>
+                <p>Acesse o catálogo e garanta o seu antes que esgote: [Link do Catálogo]"</p>
+            </div>
+
+            <!-- Conclusão e CTA -->
+            <div class="bg-gradient-to-br from-purple-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 my-12 not-prose shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                <span class="text-xs font-bold uppercase tracking-widest text-purple-300 bg-purple-800/60 px-3 py-1 rounded-full border border-purple-600/50 inline-block mb-4">
+                    duxIA Comercial
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-black mb-4 tracking-tight">
+                    Pare de queimar dinheiro com mercadoria parada na prateleira
+                </h3>
+                <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-2xl">
+                    Deixe os agentes autônomos da duxIA identificarem seus gargalos de estoque e sugerirem combos altamente lucrativos com execução em um único toque.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.duzzsystem.com.br/onboarding" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3.5 rounded-full transition shadow-lg shadow-purple-600/30 text-center flex items-center justify-center gap-2">
+                        <span>Experimentar duxIA no Duzz</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="como-usar-ia-na-gestao-do-comercio-duxia.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-full transition border border-white/20 text-center flex items-center justify-center gap-2">
+                        <span>Conhecer todos os 6 Agentes</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Artigos Relacionados -->
+            <div class="mt-12 pt-8 border-t border-slate-200 not-prose">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">Artigos recomendados para turbinar suas vendas:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="ia-para-controle-de-estoque-e-compras.html" class="block p-5 bg-white border border-slate-200 rounded-2xl hover:border-purple-300 hover:shadow-md transition">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-wider block mb-1">Agente Estoque</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">IA para Gestão de Estoque: Ciclos de Reposição e Compras sem Ruptura</h4>
+                        <p class="text-slate-600 text-xs">Aprenda como a duxIA gera listas de compras agrupadas por fornecedor para WhatsApp.</p>
+                    </a>
+                    <a href="composicao-de-produtos-e-ficha-tecnica.html" class="block p-5 bg-white border border-slate-200 rounded-2xl hover:border-brand-blue hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">Engenharia de Cardápio</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Composição de Produtos, Kits e Ficha Técnica no Comércio</h4>
+                        <p class="text-slate-600 text-xs">Entenda como funciona a baixa fracionada de componentes e cálculo de CMV.</p>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="../icons/logo_sem_fundo.png" alt="Duzz System Logo" class="h-8 brightness-0 invert">
+                    <span class="text-slate-500 text-xs">© 2026 Duzz System. Todos os direitos reservados.</span>
+                </div>
+                <div class="flex flex-wrap gap-6 text-xs">
+                    <a href="../index.html" class="hover:text-white transition">Início</a>
+                    <a href="index.html" class="hover:text-white transition">Blog</a>
+                    <a href="../ferramentas/index.html" class="hover:text-white transition">Ferramentas</a>
+                    <a href="../termos.html" class="hover:text-white transition">Termos de Uso</a>
+                    <a href="../privacidade.html" class="hover:text-white transition">Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
