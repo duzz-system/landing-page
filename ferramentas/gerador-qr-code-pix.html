@@ -333,11 +333,10 @@
                 <i class="bi bi-qr-code-scan text-teal-600"></i> Padrão Banco Central do Brasil (BCB)
             </div>
             <h1 class="text-3xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
-                Gerador de <span class="text-teal-600">QR Code Pix Grátis</span> e Pix Copia e Cola
+                Gerador de <span class="text-teal-600">QR Code Pix Gratuito</span> e Pix Copia e Cola Online
             </h1>
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Ferramenta gratuita para gerar seu código <strong>Pix Copia e Cola</strong> estático e imagem do QR Code para
-                cobrança presencial, redes sociais ou mensagens. 100% gratuito e seguro no padrão Banco Central.
+                Ferramenta 100% online e segura para <strong>gerar QR Code Pix gratuito</strong>, código <strong>Pix Copia e Cola</strong> estático e Placa de Balcão para imprimir. Totalmente compatível com o padrão do Banco Central do Brasil.
             </p>
         </div>
     </header>
@@ -523,6 +522,22 @@
                     <div id="toast"
                         class="hidden text-center text-xs text-teal-800 bg-teal-100 font-bold py-2 rounded-lg border border-teal-200 shadow-sm no-print">
                         ✅ Código Pix Copia e Cola copiado com sucesso!
+                    </div>
+
+                    <!-- DUZZ STORE & PDV MINI CALLOUT -->
+                    <div class="mt-4 p-3.5 bg-teal-50 border border-teal-200 rounded-2xl text-left no-print flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+                        <div class="text-[11px] text-teal-950 leading-snug">
+                            <span class="font-extrabold block text-teal-800 flex items-center gap-1.5 mb-0.5">
+                                <i class="bi bi-shop"></i> Catálogo Online Integrado ao PDV Duzz
+                            </span>
+                            Receba pedidos via Pix no WhatsApp com baixa automática no estoque no <strong class="text-teal-700">Duzz Commercial</strong>.
+                        </div>
+                        <a href="https://app.duzzsystem.com.br/onboarding?plan=basico&feature=pix_catalogo"
+                            target="_blank"
+                            onclick="gtag('event', 'click_cta', { 'button_location': 'pix_result_card', 'button_name': 'Testar Duzz com Pix Integrado', 'tool_name': 'gerador_qr_code_pix' }); if (typeof fbq === 'function') fbq('track', 'Lead');"
+                            class="flex-shrink-0 bg-teal-600 hover:bg-teal-500 text-white font-extrabold text-[11px] px-3.5 py-2.5 rounded-xl shadow-sm transition text-center whitespace-nowrap">
+                            Testar 7 Dias Grátis
+                        </a>
                     </div>
 
                     <!-- PLACA FOOTER BRANDING -->
@@ -940,6 +955,14 @@
                 const payload = payloadOutput.value;
                 if (!payload) return;
 
+                if (typeof gtag === 'function') {
+                    gtag('event', 'click_cta', {
+                        'button_location': 'pix_tool_copy',
+                        'button_name': 'Copiar Pix Copia e Cola',
+                        'tool_name': 'gerador_qr_code_pix'
+                    });
+                }
+
                 navigator.clipboard.writeText(payload).then(() => {
                     toast.classList.remove('hidden');
                     setTimeout(() => toast.classList.add('hidden'), 3500);
@@ -948,6 +971,14 @@
 
             // Download Branded QR Code Handler (Canvas HTML5 Client-Side HD)
             downloadQrBtn.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'click_cta', {
+                        'button_location': 'pix_tool_download',
+                        'button_name': 'Baixar QR Code Pix',
+                        'tool_name': 'gerador_qr_code_pix'
+                    });
+                }
+
                 const imgEl = document.querySelector('#qrcode img');
                 const canvasEl = document.querySelector('#qrcode canvas');
                 let qrSource = null;
